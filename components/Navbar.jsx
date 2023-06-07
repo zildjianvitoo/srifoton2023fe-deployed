@@ -14,6 +14,14 @@ export default function Navbar() {
     setIsOpen((prev) => !prev);
   };
 
+  const toggleTheme = () => {
+    if (theme === "dark") {
+      setTheme("light");
+    } else if (theme === "light") {
+      setTheme("dark");
+    }
+  };
+
   return (
     <div
       className="fixed top-0 z-50 font-normal bg-[#FCF2FF] shadow-md text-primary navbar dark:bg-neutral dark:text-white"
@@ -49,23 +57,23 @@ export default function Navbar() {
             onClick={handleDropdownClick}
           >
             <li>
-              <a href="#course" className="active:bg-transparent">
-                Course
+              <a href="#" className="active:bg-transparent">
+                Beranda
               </a>
             </li>
             <li>
-              <a href="#promo" className="active:bg-transparent">
-                Promo
+              <a href="#" className="active:bg-transparent">
+                Kompetisi
               </a>
             </li>
             <li>
-              <a href="#testimonial" className="active:bg-transparent">
-                Testimonial
+              <a href="#" className="active:bg-transparent">
+                Seminar
               </a>
             </li>
             <li>
-              <a href="#contact" className="active:bg-transparent">
-                Hubungi kami
+              <a href="#" className="active:bg-transparent">
+                Kontak
               </a>
             </li>
           </ul>
@@ -81,39 +89,40 @@ export default function Navbar() {
       <div className={`hidden navbar-center lg:flex  `}>
         <ul className="px-1 menu menu-horizontal">
           <li>
-            <a href="#course" className="active:bg-transparent">
+            <a href="#" className="active:bg-transparent">
               Beranda
             </a>
           </li>
           <li>
-            <a href="#promo" className="active:bg-transparent">
+            <a href="#" className="active:bg-transparent">
               Kompetisi
             </a>
           </li>
           <li>
-            <a href="#testimonial" className="active:bg-transparent">
+            <a href="#" className="active:bg-transparent">
               Seminar
             </a>
           </li>
 
           <li>
-            <a href="#contact" className="active:bg-transparent">
+            <a href="#" className="active:bg-transparent">
               Kontak
             </a>
           </li>
+          {theme === "light" && (
+            <li>
+              <a href="#" className="active:bg-transparent">
+                Test
+              </a>
+            </li>
+          )}
         </ul>
       </div>
-      <div className="flex mr-10 gap-x-4 navbar-end">
-        {theme === "light" && (
-          <div className="cursor-pointer" onClick={() => setTheme("dark")}>
-            <img src="/moon-icon.svg" alt="sun icon" />
-          </div>
-        )}
-        {theme === "dark" && (
-          <div className="cursor-pointer" onClick={() => setTheme("light")}>
-            <img src="/sun-icon.svg" alt="sun icon" />
-          </div>
-        )}
+      <div className="flex lg:mr-10 gap-x-4 navbar-end">
+        <div className="cursor-pointer" onClick={toggleTheme}>
+          {theme === "light" && <img src="/moon-icon.svg" alt="moon icon" />}
+          {theme === "dark" && <img src="/sun-icon.svg" alt="sun icon" />}
+        </div>
         <Link href="/register">
           <button
             className={`text-[#DB66DA] relative px-10 py-2 border-none shadow-sm bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${

@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <HydrationContext>
-      <ThemeProvider attribute="class" enableSystem value={theme}>
+      <ThemeProvider attribute="class" value={theme} enableSystem={false}>
         <div className={outfit.className}>
           <Navbar />
           <Component {...pageProps} />
