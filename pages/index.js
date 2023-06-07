@@ -1,8 +1,11 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import Jumbotron from "@/components/LandingPage/Jumbotron";
 
 export default function Home() {
-  return <h1>aaaaaaaaaaa</h1>;
+  return (
+    <>
+      <Jumbotron />
+    </>
+  );
 }

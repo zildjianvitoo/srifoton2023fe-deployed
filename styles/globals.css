@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #ffff;
+  color: black;
+  scroll-behavior: smooth;
+  --card-color: #dee8fb;
+  --neutral: #05003e;
+}
+
+.button-navbar {
+  --border-width: 3px;
+  --border-radius: 44px;
+  font: inherit;
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  -webkit-border-radius: calc(var(--border-radius) - var(--border-width));
+  -moz-border-radius: calc(var(--border-radius) - var(--border-width));
+  -ms-border-radius: calc(var(--border-radius) - var(--border-width));
+  -o-border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: 2;
+}
+
+.button-navbar-light {
+  --border-width: 3px;
+  --border-radius: 44px;
+  font: inherit;
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  -webkit-border-radius: calc(var(--border-radius) - var(--border-width));
+  -moz-border-radius: calc(var(--border-radius) - var(--border-width));
+  -ms-border-radius: calc(var(--border-radius) - var(--border-width));
+  -o-border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: 2;
+  color: #2a89f8;
+}
+.button-navbar::before {
+  content: "";
+  display: block;
+  height: calc(100% - calc(var(--border-width) * 2));
+  width: calc(100% - calc(var(--border-width) * 2));
+  background: var(--neutral);
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+.button-navbar-light::before {
+  content: "";
+  display: block;
+  height: calc(100% - calc(var(--border-width) * 2));
+  width: calc(100% - calc(var(--border-width) * 2));
+  background: #fcf2ff;
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+.button-navbar:hover::before,
+.button-navbar-light:hover::before {
+  background: none;
+}
+
+.button-navbar:hover,
+.button-navbar-light:hover {
+  background-image: linear-gradient(to right, #2b8af9, #ff92fe);
+  color: white;
+}
