@@ -172,8 +172,11 @@ export default function Navbar() {
       </div>
       <div className="flex lg:mr-10 gap-x-4 navbar-end">
         <div className="cursor-pointer" onClick={toggleTheme}>
-          {theme === "light" && <img src="/moon-icon.svg" alt="moon icon" />}
-          {theme === "dark" && <img src="/sun-icon.svg" alt="sun icon" />}
+          <img
+            src={theme === "light" ? "/moon-icon.svg" : "/sun-icon.svg"}
+            alt="moon icon"
+          />
+          {/* <img src="/sun-icon.svg" alt="sun icon" /> */}
         </div>
         <Link href="/register">
           <button
