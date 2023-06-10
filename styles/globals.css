@@ -78,3 +78,40 @@
   background-image: linear-gradient(to right, #2b8af9, #ff92fe);
   color: white;
 }
+
+.intro-header {
+  text-shadow: -1px 1px 0 #494b7c, 1px 1px 0 #494b7c, 1px -1px 0 #494b7c,
+    -1px -1px 0 #494b7c;
+}
+
+.intro-header-dark {
+  text-shadow: -1px 1px 0 #e5eeff, 1px 1px 0 #e5eeff, 1px -1px 0 #e5eeff,
+    -1px -1px 0 #e5eeff;
+}
+
+.benefit-header {
+  color: #fcf2ff;
+  text-shadow: -1px 1px 0 #515151, 1px 1px 0 #515151, 1px -1px 0 #515151,
+    -1px -1px 0 #515151;
+}
+
+.benefit-header-dark {
+  color: #02053e;
+  text-shadow: -1px 1px 0 #fde5ff, 1px 1px 0 #fde5ff, 1px -1px 0 #fde5ff,
+    -1px -1px 0 #fde5ff;
+}
+
+.slide {
+  filter: blur(4px);
+  opacity: 0.7;
+  -webkit-filter: blur(4px);
+}
+
+/* .swiper-container {
+  width: 750px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  width: 300px;
+} */

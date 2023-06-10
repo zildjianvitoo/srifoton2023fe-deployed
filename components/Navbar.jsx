@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,13 @@ export default function Navbar() {
     }
   };
 
+  const routerNameEquals = (name) => {
+    return router.pathname === name;
+  };
+
   return (
     <div
-      className="fixed top-0 z-50 font-normal bg-[#FCF2FF] shadow-md text-primary navbar dark:bg-neutral dark:text-white"
+      className="fixed top-0 z-50 font-normal bg-[#FCF2FF] shadow-md text-[#464646] navbar dark:bg-neutral dark:text-white"
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="py-2 lg:py-0 navbar-start">
@@ -57,65 +62,112 @@ export default function Navbar() {
             onClick={handleDropdownClick}
           >
             <li>
-              <a href="#" className="active:bg-transparent">
+              <Link
+                href="/"
+                className={`active:bg-transparent ${
+                  routerNameEquals("/") && "text-[#DE55E8] dark:text-[#F56AFF]"
+                }`}
+              >
                 Beranda
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="active:bg-transparent">
+              <Link
+                href="/kompetisi"
+                className={`active:bg-transparent ${
+                  routerNameEquals("/kompetisi") &&
+                  "text-[#DE55E8] dark:text-[#F56AFF]"
+                }`}
+              >
                 Kompetisi
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="active:bg-transparent">
+              <Link
+                href="/seminar"
+                className={`active:bg-transparent ${
+                  routerNameEquals("/seminar") &&
+                  "text-[#DE55E8] dark:text-[#F56AFF]"
+                }`}
+              >
                 Seminar
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="active:bg-transparent">
+              <Link
+                href="/kontak"
+                className={`active:bg-transparent ${
+                  routerNameEquals("/kontak") &&
+                  "text-[#DE55E8] dark:text-[#F56AFF]"
+                }`}
+              >
                 Kontak
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
-        <Link href="/" className="text-xl normal-case btn btn-ghost">
-          <img
+        <Link
+          href="/"
+          className="text-xl normal-case xs:ml-2 lg:ml-10 btn btn-ghost"
+        >
+          {/* <img
             src="/assets/logo-srifoton2023.svg"
-            alt="Logo Ambisin"
-            className=" w-[100px] -translate-x-3 h-[25px] sm:w-[110px] sm:h-[30px] lg:w-[160px] lg:h-[40px]"
+            className=" w-[110px] -translate-x-3 h-[25px] sm:w-[110px] sm:h-[30px] lg:w-[160px] lg:h-[40px]"
+          /> */}
+          <Image
+            src="/assets/logo-srifoton2023.svg"
+            alt="Logo Srifoton"
+            width={50}
+            height={30}
+            quality={100}
           />
         </Link>
       </div>
       <div className={`hidden navbar-center lg:flex  `}>
         <ul className="px-1 menu menu-horizontal">
           <li>
-            <a href="#" className="active:bg-transparent">
+            <Link
+              href="/"
+              className={`active:bg-transparent ${
+                routerNameEquals("/") && "text-[#DE55E8] dark:text-[#F56AFF]"
+              }`}
+            >
               Beranda
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="active:bg-transparent">
+            <Link
+              href="/kompetisi"
+              className={`active:bg-transparent ${
+                routerNameEquals("/kompetisi") &&
+                "text-[#DE55E8] dark:text-[#F56AFF]"
+              }`}
+            >
               Kompetisi
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="active:bg-transparent">
+            <Link
+              href="/seminar"
+              className={`active:bg-transparent ${
+                routerNameEquals("/seminar") &&
+                "text-[#DE55E8] dark:text-[#F56AFF]"
+              }`}
+            >
               Seminar
-            </a>
+            </Link>
           </li>
-
           <li>
-            <a href="#" className="active:bg-transparent">
+            <Link
+              href="/kontak"
+              className={`active:bg-transparent ${
+                routerNameEquals("/kontak") &&
+                "text-[#DE55E8] dark:text-[#F56AFF]"
+              }`}
+            >
               Kontak
-            </a>
+            </Link>
           </li>
-          {theme === "light" && (
-            <li>
-              <a href="#" className="active:bg-transparent">
-                Test
-              </a>
-            </li>
-          )}
         </ul>
       </div>
       <div className="flex lg:mr-10 gap-x-4 navbar-end">
