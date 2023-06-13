@@ -107,11 +107,14 @@
   -webkit-filter: blur(4px);
 }
 
-/* .swiper-container {
-  width: 750px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.timeline-header {
+  color: #e8eeff;
+  text-shadow: -1px 1px 0 #75497c, 1px 1px 0 #75497c, 1px -1px 0 #75497c,
+    -1px -1px 0 #75497c;
 }
-.swiper-slide {
-  width: 300px;
-} */
+
+.timeline-header-dark {
+  color: #332f62;
+  text-shadow: -1px 1px 0 #efdfff, 1px 1px 0 #efdfff, 1px -1px 0 #efdfff,
+    -1px -1px 0 #efdfff;
+}

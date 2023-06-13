@@ -7,6 +7,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
   const router = useRouter();
 
   const { theme, setTheme } = useTheme();
