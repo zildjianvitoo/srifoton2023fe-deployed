@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,8 +14,7 @@ function SwiperSlider() {
   const { theme } = useTheme();
 
   const handleSlideChange = (swiper) => {
-    console.log(swiper.realIndex);
-    const currentIndex = swiper.realIndex; // Dapatkan indeks slide aktual
+    const currentIndex = swiper.realIndex;
     setCurrentSlideIndex(currentIndex);
   };
 

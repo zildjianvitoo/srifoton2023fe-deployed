@@ -4,6 +4,7 @@ import Jumbotron from "@/components/LandingPage/Jumbotron";
 import Intro from "@/components/LandingPage/Intro";
 import Benefit from "@/components/LandingPage/Benefit";
 import Timeline from "@/components/LandingPage/Timeline";
+import Sponsor from "@/components/LandingPage/Sponsor";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Intro />
       <Timeline />
       <Benefit />
+      <Sponsor />
       <div className="mb-96"></div>
     </div>
   );

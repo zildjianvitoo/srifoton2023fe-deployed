@@ -39,7 +39,7 @@ export default function TimeLine() {
         {/* component */}
         <div className="flex flex-col gap-4 lg:gap-8 lg:w-[40%] mt-5 ">
           <h1
-            className={`text-4xl font-semibold tracking-wider text-transparent lg:text-6xl ${
+            className={`text-4xl font-semibold tracking-wider lg:text-6xl ${
               theme === "light" ? "timeline-header" : "timeline-header-dark"
             }`}
           >

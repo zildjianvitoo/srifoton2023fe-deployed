@@ -6,8 +6,8 @@ export default function Benefit() {
   const { theme } = useTheme();
 
   return (
-    <section className="lg:mt-10 xs:mt-20">
-      <div className="flex flex-col p-6 lg:gap-2 lg:p-16 lg:flex-row-reverse ">
+    <section className="mt-10 lg:mt-20">
+      <div className="flex flex-col gap-6 p-6 lg:gap-2 lg:p-16 lg:flex-row-reverse ">
         <div className={`lg:w-[35%] lg:mr-10 flex flex-col justify-start `}>
           <h1
             className={`mt-6 text-4xl font-semibold tracking-wider lg:text-6xl ${
@@ -22,7 +22,7 @@ export default function Benefit() {
             ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div className="lg:max-w-[55%] justify-center items-center lg:mr-10">
+        <div className=" md:max-w-[70%] lg:max-w-[55%] justify-center items-center lg:mr-10">
           <SwiperSlider />
         </div>
       </div>

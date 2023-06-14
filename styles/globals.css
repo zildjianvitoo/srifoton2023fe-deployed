@@ -118,3 +118,15 @@
   text-shadow: -1px 1px 0 #efdfff, 1px 1px 0 #efdfff, 1px -1px 0 #efdfff,
     -1px -1px 0 #efdfff;
 }
+
+.sponsor-header {
+  color: #fcf2ff;
+  text-shadow: -1px 1px 0 #494949, 1px 1px 0 #494949, 1px -1px 0 #494949,
+    -1px -1px 0 #494949;
+}
+
+.sponsor-header-dark {
+  color: #02053e;
+  text-shadow: -1px 1px 0 #fde5ff, 1px 1px 0 #fde5ff, 1px -1px 0 #fde5ff,
+    -1px -1px 0 #fde5ff;
+}
