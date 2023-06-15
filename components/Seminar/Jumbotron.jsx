@@ -7,7 +7,7 @@ export default function Jumbotron() {
   return (
     <section
       id="#"
-      className="relative overflow-hidden h-full  bg-gradient-to-b  from-[#E5AFE5] to-[#337EF0] dark:from-[#E5AFE5] dark:to-[#1AB5E4] lg:h-screen opacity-90 mt-12 lg:mt-6"
+      className="relative overflow-hidden h-full  bg-gradient-to-b  from-[#E5AFE5] to-[#337EF0]/80 dark:from-[#E5AFE5]/70 dark:to-[#1AB5E4]/60 lg:h-screen opacity-90 mt-12 lg:mt-6"
     >
       <div
         className="absolute inset-0 h-full lg:h-screen bg-center bg-no-repeat bg-cover opacity-60 z-[-1] "
@@ -15,7 +15,7 @@ export default function Jumbotron() {
           backgroundImage: "url(assets/Seminar/jumbotron-seminar-bgimg.svg)",
         }}
       ></div>
-      <div className="flex flex-col-reverse w-full h-full gap-20 p-10 mt-8 lg:mt-16 lg:flex-row">
+      <div className="flex flex-col-reverse w-full h-full gap-20 p-10 mt-12 lg:mt-16 lg:flex-row">
         <div className="flex items-center  lg:w-[50%] ">
           <Image
             width={600}
@@ -37,13 +37,13 @@ export default function Jumbotron() {
           </p>
           <div className="flex gap-x-6">
             <button
-              className={`text-white  text-base lg:text-xl rounded-3xl font-bold px-10 lg:px-14 py-3 border-none shadow-sm 
+              className={`text-white  text-base lg:text-xl rounded-3xl font-bold px-10 lg:px-14 py-2 border-none shadow-sm 
                bg-[#F164F0]/80  dark:bg-[#D54CF0] hover:-translate-y-[6px] duration-300`}
             >
               Daftar
             </button>
             <button
-              className={`text-white text-sm lg:text-lg rounded-3xl font-bold px-7  lg:px-10 py-3 shadow-sm 
+              className={`text-white text-sm lg:text-lg rounded-3xl font-bold px-7  lg:px-10 py-2 shadow-sm 
                bg-transparent  border-[3px] border-white hover:-translate-y-[6px] duration-300`}
             >
               Info Lainnya

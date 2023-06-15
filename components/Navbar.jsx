@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="fixed top-0 z-50 font-normal bg-[#FCF2FF] shadow-md text-[#464646] navbar dark:bg-neutral dark:text-white"
+      className="fixed top-0 z-50 font-normal bg-[#FCF2FF] shadow-md dark:shadow-lg text-[#464646] navbar dark:bg-neutral dark:text-white"
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="py-2 lg:py-0 navbar-start">
@@ -181,7 +181,7 @@ export default function Navbar() {
         </div>
         <Link href="/register">
           <button
-            className={`text-[#DB66DA] relative px-10 py-2 border-none shadow-sm bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
+            className={`text-[#DB66DA] relative px-10 py-2 border-none shadow-lg bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
               theme === "dark" ? "button-navbar" : "button-navbar-light"
             } `}
           >
