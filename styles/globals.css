@@ -130,3 +130,10 @@
   text-shadow: -1px 1px 0 #fde5ff, 1px 1px 0 #fde5ff, 1px -1px 0 #fde5ff,
     -1px -1px 0 #fde5ff;
 }
+
+.field-header {
+  background: -webkit-linear-gradient(0deg, #e924e8 0%, #d5da00 65%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #2f3159;
+}

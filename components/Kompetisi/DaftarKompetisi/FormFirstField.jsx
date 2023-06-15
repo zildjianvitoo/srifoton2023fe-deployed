@@ -2,7 +2,7 @@ import { BsImage } from "react-icons/bs";
 
 export default function FormFirstField() {
   return (
-    <form className="mt-12">
+    <form className="-mt-5 lg:mt-0">
       <div className="flex flex-col w-full gap-6 dark:text-[#EDEDED]">
         <div className="flex flex-col">
           <label htmlFor="name" className="text-lg font-medium ">
@@ -16,7 +16,7 @@ export default function FormFirstField() {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="name" className="text-lg font-medium ">
+          <label htmlFor="email" className="text-lg font-medium ">
             Email
           </label>
           <input
@@ -27,7 +27,7 @@ export default function FormFirstField() {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="name" className="text-lg font-medium ">
+          <label htmlFor="universitas" className="text-lg font-medium ">
             Universitas
           </label>
           <input
@@ -38,10 +38,13 @@ export default function FormFirstField() {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="name" className="text-lg font-medium ">
+          <label htmlFor="pembayaran" className="text-lg font-medium ">
             Metode Pembayaran
           </label>
-          <select className="w-[60%] lg:w-[35%] p-[6px] bg-transparent border border-black dark:border-[#E0E0E0] rounded-lg ">
+          <select
+            id="pembayaran"
+            className="w-[60%] lg:w-[35%] p-[6px] bg-transparent border border-black dark:border-[#E0E0E0] rounded-lg "
+          >
             <option value="" disabled selected hidden>
               Pilih Opsi
             </option>
@@ -72,26 +75,31 @@ export default function FormFirstField() {
           </select>
         </div>
 
-        <div className="flex items-center w-full font-sans ">
-          <label
-            for="dropzone-file"
-            className="flex flex-col items-center w-full p-6 mx-auto text-center bg-transparent border border-black dark:border-[#E0E0E0] cursor-pointer rounded-xl"
-          >
-            <div className=" h-[8rem] flex items-center justify-center">
-              <div className="flex items-center justify-center gap-2 rounded-md border border-[#D0D0D0] py-1 px-4 bg-[#E2E2E2] dark:bg-[#BDBDBD]">
-                <BsImage className="dark:text-black" />
-                <p className="text-sm font-medium dark:text-black">Unggah</p>
-              </div>
-            </div>
-            <input id="dropzone-file" type="file" className="hidden" />
+        <div className="flex flex-col">
+          <label htmlFor="dropzone-file" className="text-lg font-medium ">
+            Bukti Pembayaran
           </label>
+          <div className="flex items-center w-full font-sans ">
+            <label
+              for="dropzone-file"
+              className="flex flex-col items-center w-full p-6 mx-auto text-center bg-transparent border border-black dark:border-[#E0E0E0] cursor-pointer rounded-xl"
+            >
+              <div className=" h-[8rem] flex items-center justify-center">
+                <div className="flex items-center justify-center gap-2 rounded-md border border-[#D0D0D0] py-1 px-4 bg-[#E2E2E2] dark:bg-[#BDBDBD]">
+                  <BsImage className="dark:text-black" />
+                  <p className="text-sm font-medium dark:text-black">Unggah</p>
+                </div>
+              </div>
+              <input id="dropzone-file" type="file" className="hidden" />
+            </label>
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100 text-[#FCFCFC] py-3 mt-11 rounded-lg font-semibold text-lg"
+          >
+            Lanjut
+          </button>
         </div>
-        <button
-          type="submit"
-          className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100 text-[#FCFCFC] py-3 mt-6 rounded-lg font-semibold text-lg"
-        >
-          Lanjut
-        </button>
       </div>
     </form>
   );
