@@ -11,7 +11,7 @@ export default function InputFile({ labelText, labelFor }) {
       </label>
       <div className="flex items-center w-full mt-1 font-sans ">
         <label
-          for={labelFor}
+          htmlFor={labelFor}
           className="flex flex-col items-center w-full p-6 mx-auto text-center bg-transparent border border-black dark:border-[#E0E0E0] cursor-pointer rounded-xl"
         >
           <div className=" h-[7.5rem] flex items-center justify-center">

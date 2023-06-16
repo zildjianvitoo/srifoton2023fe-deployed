@@ -2,24 +2,30 @@ import InputDropdown from "@/components/Atom/InputDropdown";
 import InputFile from "@/components/Atom/InputFile";
 import InputForm from "@/components/Atom/InputForm";
 import { useFieldNumber } from "@/store/useFieldNumber";
-import { useState } from "react";
+import { shallow } from "zustand/shallow";
+import { useTeamDataStore } from "@/store/useTeamData";
 
+//todo ganti state management pake zustand biar lebih gampang
 export default function FormFirstField() {
   const { setFieldNumber } = useFieldNumber();
-  const [field, setField] = useState({
-    teamName: "",
-    email: "",
-    universitas: "",
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setField((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-    console.log(field);
-  };
+  const {
+    teamName,
+    email,
+    universitas,
+    setTeamName,
+    setEmail,
+    setUniversitas,
+  } = useTeamDataStore(
+    (state) => ({
+      teamName: state.teamName,
+      email: state.email,
+      universitas: state.universitas,
+      setTeamName: state.setTeamName,
+      setEmail: state.setEmail,
+      setUniversitas: state.setUniversitas,
+    }),
+    shallow
+  );
 
   return (
     <form className="-mt-5 lg:-mt-2">
@@ -30,8 +36,8 @@ export default function FormFirstField() {
           placeholder={"Contoh: Tim PakeNanya"}
           type={"text"}
           name="teamName"
-          value={field.teamName}
-          onChangeHandler={handleInputChange}
+          value={teamName}
+          onChangeHandler={(e) => setTeamName(e.target.value)}
         />
         <InputForm
           labelFor={"email"}
@@ -39,8 +45,8 @@ export default function FormFirstField() {
           placeholder={"Contoh: srifoton2023@gmail.com"}
           type={"email"}
           name={"email"}
-          value={field.email}
-          onChangeHandler={handleInputChange}
+          value={email}
+          onChangeHandler={(e) => setEmail(e.target.value)}
         />
         <InputForm
           labelFor={"universitas"}
@@ -48,8 +54,8 @@ export default function FormFirstField() {
           placeholder={"Contoh: Universitas Sriwijaya"}
           type={"text"}
           name={"universitas"}
-          value={field.universitas}
-          onChangeHandler={handleInputChange}
+          value={universitas}
+          onChangeHandler={(e) => setUniversitas(e.target.value)}
         />
         <InputDropdown />
         <InputFile labelFor={"bukti-pembayaran"} labelText="Bukti Pembayaran" />
