@@ -22,7 +22,7 @@ export default function FormCard({ header }) {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-6 rounded-lg w-full border-2 border-dashed border-[#E924E8] lg:w-1/2  dark:text-[#EDEDED">
+    <div className="flex flex-col gap-6 p-4 lg:p-6 rounded-lg w-full border-2 border-dashed border-[#E924E8] lg:w-[50%]  dark:text-[#EDEDED">
       <h3 className="text-3xl font-medium text-center text-black dark:text-[#EDEDED]">
         {header}
       </h3>

@@ -1,16 +1,16 @@
-import React from "react";
-
-export default function InputDropdown() {
+export default function InputDropdown({ value, onChangeHandler }) {
   return (
     <div className="flex flex-col">
       <label htmlFor="pembayaran" className="text-lg font-medium ">
         Metode Pembayaran
       </label>
       <select
+        value={value}
+        onChange={(e) => onChangeHandler(e)}
         id="pembayaran"
         className="w-[60%] mt-1 lg:w-[35%] p-[6px] bg-transparent border border-black dark:border-[#E0E0E0] rounded-lg "
       >
-        <option value="" disabled selected hidden>
+        <option value="" selected disabled hidden>
           Pilih Opsi
         </option>
         <option value="ovo" className="dark:bg-[#2B2D55] dark:text-[#EDEDED] ">

@@ -15,7 +15,7 @@ export default function FirstField() {
   return (
     <section id="daftar-kompetisi-1">
       <LayoutField>
-        <div className="z-10 flex flex-col w-full gap-8 px-10 pt-14">
+        <div className="z-10 flex flex-col w-full gap-8 px-6 pb-12 pt-14 lg:pb-0 lg:px-10 ">
           <Steps />
 
           <div className="flex flex-col gap-0 lg:mt-3  lg:pb-[6px]  font-semibold leading-loose text-4xl lg:text-5xl field-header">

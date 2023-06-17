@@ -4,6 +4,7 @@ import InputForm from "@/components/Atom/InputForm";
 import { useFieldNumber } from "@/store/useFieldNumber";
 import { shallow } from "zustand/shallow";
 import { useTeamDataStore } from "@/store/useTeamData";
+import { useEffect } from "react";
 
 //todo ganti state management pake zustand biar lebih gampang
 export default function FormFirstField() {
@@ -12,17 +13,21 @@ export default function FormFirstField() {
     teamName,
     email,
     universitas,
+    paymentMethod,
     setTeamName,
     setEmail,
     setUniversitas,
+    setPaymentMethod,
   } = useTeamDataStore(
     (state) => ({
       teamName: state.teamName,
       email: state.email,
       universitas: state.universitas,
+      paymentMethod: state.paymentMethod,
       setTeamName: state.setTeamName,
       setEmail: state.setEmail,
       setUniversitas: state.setUniversitas,
+      setPaymentMethod: state.setPaymentMethod,
     }),
     shallow
   );
@@ -57,11 +62,14 @@ export default function FormFirstField() {
           value={universitas}
           onChangeHandler={(e) => setUniversitas(e.target.value)}
         />
-        <InputDropdown />
+        <InputDropdown
+          value={paymentMethod}
+          onChangeHandler={(e) => setPaymentMethod(e.target.value)}
+        />
         <InputFile labelFor={"bukti-pembayaran"} labelText="Bukti Pembayaran" />
         <button
           onClick={() => setFieldNumber(2)}
-          className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100  tracking-wider text-[#FCFCFC] py-3 mt-5 rounded-lg font-semibold text-xl"
+          className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100  tracking-wider text-[#FCFCFC] py-3 mt-5 rounded-lg font-semibold text-lg lg:text-xl "
         >
           Lanjut
         </button>
