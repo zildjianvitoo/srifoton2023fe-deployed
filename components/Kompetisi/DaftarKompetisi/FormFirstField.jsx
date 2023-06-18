@@ -6,7 +6,6 @@ import { shallow } from "zustand/shallow";
 import { useTeamDataStore } from "@/store/useTeamData";
 import { useEffect } from "react";
 
-//todo ganti state management pake zustand biar lebih gampang
 export default function FormFirstField() {
   const { setFieldNumber } = useFieldNumber();
   const {
@@ -14,27 +13,35 @@ export default function FormFirstField() {
     email,
     universitas,
     paymentMethod,
+    proofOfPayment,
     setTeamName,
     setEmail,
     setUniversitas,
     setPaymentMethod,
+    setProofOfPayment,
   } = useTeamDataStore(
     (state) => ({
       teamName: state.teamName,
       email: state.email,
       universitas: state.universitas,
       paymentMethod: state.paymentMethod,
+      proofOfPayment: state.proofOfPayment,
       setTeamName: state.setTeamName,
       setEmail: state.setEmail,
       setUniversitas: state.setUniversitas,
       setPaymentMethod: state.setPaymentMethod,
+      setProofOfPayment: state.setProofOfPayment,
     }),
     shallow
   );
 
+  useEffect(() => {
+    console.log(proofOfPayment);
+    //tidak bisa disimpan ke sessionstorage karena berupa file
+  }, [proofOfPayment]);
   return (
     <form className="-mt-5 lg:-mt-2">
-      <div className="flex flex-col w-full gap-6 dark:text-[#EDEDED]">
+      <div className="flex flex-col gap-6 w-full dark:text-[#EDEDED]">
         <InputForm
           labelFor="name"
           labelText={"Nama Tim"}
@@ -66,10 +73,15 @@ export default function FormFirstField() {
           value={paymentMethod}
           onChangeHandler={(e) => setPaymentMethod(e.target.value)}
         />
-        <InputFile labelFor={"bukti-pembayaran"} labelText="Bukti Pembayaran" />
+        <InputFile
+          labelFor={"bukti-pembayaran"}
+          labelText="Bukti Pembayaran"
+          value={proofOfPayment}
+          setProof={setProofOfPayment}
+        />
         <button
           onClick={() => setFieldNumber(2)}
-          className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100  tracking-wider text-[#FCFCFC] py-3 mt-5 rounded-lg font-semibold text-lg lg:text-xl "
+          className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100  tracking-wider text-[#FCFCFC] py-3 mt-5 rounded-lg font-semibold text-lg lg:text-xl"
         >
           Lanjut
         </button>

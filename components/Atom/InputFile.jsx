@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BsImage } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 
-export default function InputFile({ labelText, labelFor }) {
+export default function InputFile({ labelText, labelFor, value, setProof }) {
   const [image, setImage] = useState(null);
   const [wrongType, setWrongType] = useState(false);
 
@@ -22,7 +22,11 @@ export default function InputFile({ labelText, labelFor }) {
       };
       reader.readAsDataURL(selectedImage);
       setWrongType(false);
+      setProof(selectedImage);
       alert("Gambar berhasil diunggah");
+    } else {
+      setWrongType(true);
+      alert("Gambar gagal diunggah");
     }
   };
 
@@ -54,7 +58,7 @@ export default function InputFile({ labelText, labelFor }) {
                     className="flex justify-end "
                     onClick={() => setImage(null)}
                   >
-                    <AiOutlineClose className="absolute z-10 text-lg font-semibold translate-x-5 " />
+                    <AiOutlineClose className="absolute z-10 text-lg font-semibold text-black translate-x-5 dark:text-white " />
                   </div>
                 </div>
               ) : (
