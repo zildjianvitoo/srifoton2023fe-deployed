@@ -1,4 +1,4 @@
-export default function InputRadio() {
+export default function InputRadio({ setGender }) {
   return (
     <div className="flex flex-col text-black dark:text-[#EDEDED]">
       <p className="text-lg font-medium ">Jenis Kelamin</p>
@@ -9,6 +9,7 @@ export default function InputRadio() {
             id="pria"
             value="pria"
             name="gender"
+            onChange={(e) => setGender(e.target.value)}
             className="scale-[1.3] cursor-pointer"
           />
           <label htmlFor="pria" className="font-medium ">
@@ -21,6 +22,7 @@ export default function InputRadio() {
             id="wanita"
             value="wanita"
             name="gender"
+            onChange={(e) => setGender(e.target.value)}
             className="scale-[1.3] cursor-pointer"
           />
           <label htmlFor="wanita" className="font-medium ">

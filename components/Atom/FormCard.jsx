@@ -11,6 +11,7 @@ export default function FormCard({ header }) {
     nomorTelepon: "",
     instagram: "",
   });
+  const [gender, setGender] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +33,7 @@ export default function FormCard({ header }) {
         type={"text"}
         name={"nama"}
         value={field.nama}
-        onChangeHandler={handleInputChange}
+        onChange={handleInputChange}
         placeholder={"Contoh: Zildjian Vito"}
       />
       <InputForm
@@ -41,7 +42,7 @@ export default function FormCard({ header }) {
         type={"number"}
         name={"idMahasiswa"}
         value={field.idMahasiswa}
-        onChangeHandler={handleInputChange}
+        onChange={handleInputChange}
         placeholder={"Contoh: 090211382383929"}
       />
       <InputForm
@@ -50,7 +51,7 @@ export default function FormCard({ header }) {
         type={"number"}
         name={"nomorTelepon"}
         value={field.nomorTelepon}
-        onChangeHandler={handleInputChange}
+        onChange={handleInputChange}
         placeholder={"Contoh: 08123456789"}
       />
       <InputForm
@@ -59,10 +60,10 @@ export default function FormCard({ header }) {
         type={"text"}
         name={"instagram"}
         value={field.instagram}
-        onChangeHandler={handleInputChange}
+        onChange={handleInputChange}
         placeholder={"Contoh: @zildjianvitoo"}
       />
-      <InputRadio />
+      <InputRadio setGender={setGender} />
       <InputFile labelFor="kartu-mahasiswa-1" labelText="Kartu Mahasiswa" />
     </div>
   );

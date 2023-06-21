@@ -1,12 +1,11 @@
-export default function InputDropdown({ value, onChangeHandler }) {
+export default function InputDropdown({ ...props }) {
   return (
     <div className="flex flex-col">
       <label htmlFor="pembayaran" className="text-lg font-medium ">
         Metode Pembayaran
       </label>
       <select
-        value={value}
-        onChange={(e) => onChangeHandler(e)}
+        {...props}
         id="pembayaran"
         className="w-[60%] mt-1 lg:w-[35%] p-[6px] bg-transparent border border-black dark:border-[#E0E0E0] rounded-lg "
       >

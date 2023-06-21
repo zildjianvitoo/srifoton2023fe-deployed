@@ -35,12 +35,19 @@ export default function FormFirstField() {
     shallow
   );
 
-  useEffect(() => {
-    console.log(proofOfPayment);
-    //tidak bisa disimpan ke sessionstorage karena berupa file
-  }, [proofOfPayment]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({
+      teamName,
+      email,
+      universitas,
+      paymentMethod,
+      proofOfPayment,
+    });
+  };
+
   return (
-    <form className="-mt-5 lg:-mt-2">
+    <form className="-mt-5 lg:-mt-2" onSubmit={handleSubmit}>
       <div className="flex flex-col gap-6 w-full dark:text-[#EDEDED]">
         <InputForm
           labelFor="name"
@@ -49,7 +56,7 @@ export default function FormFirstField() {
           type={"text"}
           name="teamName"
           value={teamName}
-          onChangeHandler={(e) => setTeamName(e.target.value)}
+          onChange={(e) => setTeamName(e.target.value)}
         />
         <InputForm
           labelFor={"email"}
@@ -58,7 +65,7 @@ export default function FormFirstField() {
           type={"email"}
           name={"email"}
           value={email}
-          onChangeHandler={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <InputForm
           labelFor={"universitas"}
@@ -67,11 +74,11 @@ export default function FormFirstField() {
           type={"text"}
           name={"universitas"}
           value={universitas}
-          onChangeHandler={(e) => setUniversitas(e.target.value)}
+          onChange={(e) => setUniversitas(e.target.value)}
         />
         <InputDropdown
           value={paymentMethod}
-          onChangeHandler={(e) => setPaymentMethod(e.target.value)}
+          onChange={(e) => setPaymentMethod(e.target.value)}
         />
         <InputFile
           labelFor={"bukti-pembayaran"}
@@ -79,6 +86,7 @@ export default function FormFirstField() {
           value={proofOfPayment}
           setProof={setProofOfPayment}
         />
+
         <button
           onClick={() => setFieldNumber(2)}
           className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100  tracking-wider text-[#FCFCFC] py-3 mt-5 rounded-lg font-semibold text-lg lg:text-xl"
