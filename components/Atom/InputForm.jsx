@@ -19,6 +19,7 @@ export default function InputForm({
         type={type}
         id={labelFor}
         placeholder={placeholder}
+        required
         {...props}
         className="w-full p-2 pl-3 bg-transparent border mt-1 border-black dark:border-[#E0E0E0] rounded-lg placeholder:text-[#969696] text-black dark:text-[#EDEDED]"
       />

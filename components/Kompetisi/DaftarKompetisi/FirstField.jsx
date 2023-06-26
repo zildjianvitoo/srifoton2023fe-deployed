@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
-import Steps from "@/components/Atom/Steps";
 import FormFirstField from "./FormFirstField";
-import LayoutField from "./LayoutField";
+import Head from "next/head";
+import PaymentNote from "../../Atom/PaymentNote";
 
 export default function FirstField() {
   const { theme } = useTheme();
@@ -12,22 +12,39 @@ export default function FirstField() {
       : "/assets/Kompetisi/daftarkompetisi-imgdark.svg";
 
   return (
-    <section id="daftar-kompetisi-1">
-      <LayoutField>
-        <div className="z-10 flex flex-col w-full gap-8 px-6 pb-12 pt-14 lg:pb-0 lg:px-10 ">
-          <Steps />
-
-          <div className="flex flex-col gap-0 lg:mt-3  lg:pb-[6px]  font-semibold leading-loose text-4xl lg:text-5xl field-header">
-            <h1 className="tracking-[5%]">Competitive</h1>
-            <h1 className="tracking-[5%] -mt-6 lg:mt-3 ">Programming</h1>
+    <>
+      <Head>
+        <link
+          href="https://fonts.cdnfonts.com/css/ethnocentric"
+          rel="stylesheet"
+        />
+      </Head>
+      <section id="daftar-kompetisi-1" className="z-10">
+        <div className="flex flex-col w-full gap-8 px-6 pt-6 lg:pt-12 lg:pb-0 lg:px-10">
+          <div
+            className={`flex flex-col gap-0 lg:mt-3 lg:pb-[6px] mx-auto font-semibold leading-loose text-[20px] xs:text-2xl lg:text-5xl  ${
+              theme === "light" ? "field-header" : "field-header-dark"
+            }`}
+          >
+            <h1 className="tracking-[10%] mx-auto line-clamp-2 text-center lg:leading-[3.5rem] ">
+              Competitive
+            </h1>
+            <h1 className="tracking-[10%] -mt-4 xs:mt-0 lg:mt-3 mx-auto ">
+              Programming
+            </h1>
           </div>
-
-          <FormFirstField />
+          <div className="flex flex-col gap-8 lg:flex-row">
+            <FormFirstField />
+            <div className="flex flex-col w-full lg:mt-2 lg:w-1/2">
+              <PaymentNote />
+              <img
+                src={imageSource}
+                className="hidden mt-6 lg:flex w-[80%] mx-auto"
+              />
+            </div>
+          </div>
         </div>
-        <div className="relative hidden w-full h-full md:flex lg:justify-end ">
-          <img src={imageSource} alt="Background Pattern" />
-        </div>
-      </LayoutField>
-    </section>
+      </section>
+    </>
   );
 }

@@ -37,6 +37,7 @@ export default function InputFile({ labelText, labelFor, value, setProof }) {
         className="text-lg font-medium dark:text-[#EDEDED] "
       >
         {labelText}
+        <span className=" text-[#F86E45] dark:text-[#D5DA00]">*</span>
       </label>
       <div className={"flex items-center w-full z-10 mt-1 font-sans  "}>
         <label

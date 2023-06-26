@@ -19,12 +19,11 @@ export default function FormCard({ header }) {
       ...prevState,
       [name]: value,
     }));
-    console.log(field);
   };
 
   return (
     <div className="flex flex-col gap-6 p-4 lg:p-6 rounded-lg w-full border-2 border-dashed border-[#E924E8] lg:w-[50%]  dark:text-[#EDEDED">
-      <h3 className="text-3xl font-medium text-center text-black dark:text-[#EDEDED]">
+      <h3 className=" text-xl lg:text-3xl font-medium text-center text-[#F86E45] dark:text-[#D5DA00]">
         {header}
       </h3>
       <InputForm

@@ -132,10 +132,36 @@
 }
 
 .field-header {
-  background: -webkit-linear-gradient(0deg, #e924e8 0%, #d5da00 65%);
+  background: -webkit-linear-gradient(0deg, #2e7bef 0%, #f86e45 95%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  color: #ebe9f6;
+  font-family: "Ethnocentric Rg", sans-serif;
+  letter-spacing: 3px;
+}
+
+.field-header-dark {
+  background: -webkit-linear-gradient(0deg, #e924e8 0%, #d5da00 95%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
-  color: #2f3159;
+  color: #242750;
+  font-family: "Ethnocentric Rg", sans-serif;
+  letter-spacing: 3px;
+}
+
+.member-form-header {
+  background: -webkit-linear-gradient(0deg, #f86e45 0%, #f86e45 95%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #ebe9f6;
+  letter-spacing: 3px;
+}
+.member-form-header-dark {
+  background: -webkit-linear-gradient(0deg, #d5da00 0%, #d5da00 95%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #252851;
+  letter-spacing: 3px;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

@@ -1,13 +1,11 @@
 import InputDropdown from "@/components/Atom/InputDropdown";
 import InputFile from "@/components/Atom/InputFile";
 import InputForm from "@/components/Atom/InputForm";
-import { useFieldNumber } from "@/store/useFieldNumber";
 import { shallow } from "zustand/shallow";
-import { useTeamDataStore } from "@/store/useTeamData";
+import { useTeamData } from "@/store/useTeamData";
 import { useEffect } from "react";
 
 export default function FormFirstField() {
-  const { setFieldNumber } = useFieldNumber();
   const {
     teamName,
     email,
@@ -19,7 +17,7 @@ export default function FormFirstField() {
     setUniversitas,
     setPaymentMethod,
     setProofOfPayment,
-  } = useTeamDataStore(
+  } = useTeamData(
     (state) => ({
       teamName: state.teamName,
       email: state.email,
@@ -35,19 +33,8 @@ export default function FormFirstField() {
     shallow
   );
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log({
-      teamName,
-      email,
-      universitas,
-      paymentMethod,
-      proofOfPayment,
-    });
-  };
-
   return (
-    <form className="-mt-5 lg:-mt-2" onSubmit={handleSubmit}>
+    <div className="w-full lg:w-1/2">
       <div className="flex flex-col gap-6 w-full dark:text-[#EDEDED]">
         <InputForm
           labelFor="name"
@@ -86,14 +73,7 @@ export default function FormFirstField() {
           value={proofOfPayment}
           setProof={setProofOfPayment}
         />
-
-        <button
-          onClick={() => setFieldNumber(2)}
-          className="w-full bg-[#2E7BEF] opacity-90 hover:opacity-100  tracking-wider text-[#FCFCFC] py-3 mt-5 rounded-lg font-semibold text-lg lg:text-xl"
-        >
-          Lanjut
-        </button>
       </div>
-    </form>
+    </div>
   );
 }
