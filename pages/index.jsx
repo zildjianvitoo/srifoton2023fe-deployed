@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import Jumbotron from "@/components/LandingPage/Jumbotron";
-import Intro from "@/components/LandingPage/Intro";
-import Benefit from "@/components/LandingPage/Benefit";
-import Timeline from "@/components/LandingPage/Timeline";
-import Sponsor from "@/components/LandingPage/Sponsor";
+import Jumbotron from "@/components/organisms/LandingPage/Jumbotron";
+import Intro from "@/components/organisms/LandingPage/Intro";
+import Benefit from "@/components/organisms/LandingPage/Benefit";
+import Timeline from "@/components/organisms/LandingPage/Timeline";
+import Sponsor from "@/components/organisms/LandingPage/Sponsor";
 
 export default function Home() {
   return (

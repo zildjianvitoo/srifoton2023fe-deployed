@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
 import FormFirstField from "./FormFirstField";
 import Head from "next/head";
-import PaymentNote from "../../Atom/PaymentNote";
+import PaymentNote from "../../../molecules/PaymentNote";
 
 export default function FirstField() {
   const { theme } = useTheme();

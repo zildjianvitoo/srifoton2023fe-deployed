@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import Button from "../Atom/Button";
+import Button from "../../atoms/Button";
 
 export default function Intro() {
   const text = [

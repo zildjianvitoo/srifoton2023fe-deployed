@@ -1,6 +1,6 @@
-import InputDropdown from "@/components/Atom/InputDropdown";
-import InputFile from "@/components/Atom/InputFile";
-import InputForm from "@/components/Atom/InputForm";
+import InputDropdown from "@/components/atoms/InputDropdown";
+import InputFile from "@/components/atoms/InputFile";
+import InputForm from "@/components/atoms/InputForm";
 import { shallow } from "zustand/shallow";
 import { useTeamData } from "@/store/useTeamData";
 import { useEffect } from "react";

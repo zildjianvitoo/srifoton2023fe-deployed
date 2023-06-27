@@ -1,8 +1,8 @@
 import {
   FirstField,
   SecondField,
-} from "@/components/Kompetisi/DaftarKompetisi";
-import LayoutField from "@/components/Kompetisi/DaftarKompetisi/LayoutField";
+} from "@/components/organisms/Kompetisi/DaftarKompetisi";
+import LayoutField from "@/components/organisms/Kompetisi/DaftarKompetisi/LayoutField";
 import { useTeamData } from "@/store/useTeamData";
 
 export default function DaftarKompetisi() {

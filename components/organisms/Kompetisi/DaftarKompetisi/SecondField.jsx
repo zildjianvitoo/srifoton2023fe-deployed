@@ -1,4 +1,4 @@
-import FormCard from "@/components/Atom/FormCard";
+import FormCard from "@/components/molecules/FormCard";
 import { useTheme } from "next-themes";
 
 export default function SecondField() {

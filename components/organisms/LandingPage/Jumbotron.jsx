@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../Atom/Button";
+import Button from "../../atoms/Button";
 
 const Jumbotron = () => {
   return (

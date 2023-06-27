@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import InputForm from "./InputForm";
-import InputRadio from "./InputRadio";
-import InputFile from "./InputFile";
+import InputForm from "../atoms/InputForm";
+import InputRadio from "../atoms/InputRadio";
+import InputFile from "../atoms/InputFile";
 import { useState } from "react";
 
 export default function FormCard({ header }) {

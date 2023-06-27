@@ -1,4 +1,4 @@
-import Jumbotron from "@/components/Seminar/Jumbotron";
+import Jumbotron from "@/components/organisms/Seminar/Jumbotron";
 import React from "react";
 
 function seminar() {

@@ -1,7 +1,7 @@
 import { sponsorImage, medpartImage, isBorderBlue } from "@/utils/sponsorUtils";
 import { useTheme } from "next-themes";
 import React from "react";
-import SponsorCard from "../Atom/SponsorCard";
+import SponsorCard from "../../atoms/SponsorCard";
 
 export default function Sponsor() {
   const { theme } = useTheme();

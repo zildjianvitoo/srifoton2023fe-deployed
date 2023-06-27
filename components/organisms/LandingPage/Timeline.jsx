@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import React from "react";
-import TimelineBox from "../Atom/TimelineBox";
+import TimelineBox from "../../molecules/TimelineBox";
 
 const timelineContent = [
   {
