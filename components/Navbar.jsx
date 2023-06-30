@@ -1,5 +1,4 @@
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";

@@ -136,7 +136,7 @@
   -webkit-background-clip: text;
   -webkit-text-stroke: 5px transparent;
   color: #ebe9f6;
-  font-family: "Ethnocentric Rg", sans-serif;
+  /* font-family: "Ethnocentric Rg", sans-serif; */
   letter-spacing: 3px;
 }
 
@@ -145,7 +145,7 @@
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
   color: #242750;
-  font-family: "Ethnocentric Rg", sans-serif;
+  /* font-family: "Ethnocentric Rg", sans-serif; */
   letter-spacing: 3px;
 }
 
