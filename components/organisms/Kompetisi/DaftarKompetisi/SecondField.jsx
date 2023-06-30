@@ -28,7 +28,7 @@ export default function SecondField() {
           </div>
           <div className="flex w-full gap-8">
             <FormCard key={"anggota-3"} header={"Anggota 3"} />
-            <div className="items-center justify-center hidden h-full mt-20 ml-auto lg:flex ">
+            <div className="items-center justify-center hidden w-1/2 h-full mt-20 ml-auto lg:flex ">
               <img src={imageSource} alt={"decoration"} />
             </div>
           </div>
