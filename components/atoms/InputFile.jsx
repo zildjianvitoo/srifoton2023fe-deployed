@@ -12,8 +12,7 @@ export default function InputFile({ labelText, labelFor, value, setProof }) {
       "image/png",
       "image/jpeg",
       "image/jpg",
-      "image/svg+xml",
-      "image/svg",
+      "image/heic",
     ];
     if (selectedImage && ALLOWED_TYPES.includes(selectedImage.type)) {
       let reader = new FileReader();

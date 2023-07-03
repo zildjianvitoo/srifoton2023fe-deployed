@@ -6,7 +6,7 @@ export default function TimelineBox({ title, description, date, right }) {
       <div className="flex md:contents">
         <div className="relative col-start-5 col-end-6 mr-10 md:mx-auto">
           <div className="flex items-center justify-center w-6 h-full">
-            <div className="w-1 h-full dark:bg-[#75497C] bg-[#E4B0F6] pointer-events-none" />
+            <div className="w-2 h-full dark:bg-[#75497C] bg-[#E4B0F6] pointer-events-none" />
           </div>
           <div className="absolute w-6 h-6 -mt-3 dark:bg-[#75497C] bg-[#E4B0F6] rounded-full shadow top-1/2" />
         </div>
@@ -31,7 +31,7 @@ export default function TimelineBox({ title, description, date, right }) {
       </div>
       <div className="relative col-start-5 col-end-6 mr-10 md:mx-auto">
         <div className="flex items-center justify-center w-6 h-full">
-          <div className="w-1 h-full dark:bg-[#75497C] bg-[#E4B0F6] pointer-events-none" />
+          <div className="w-2 h-full dark:bg-[#75497C] bg-[#E4B0F6] pointer-events-none" />
         </div>
         <div className="absolute w-6 h-6 -mt-3 dark:bg-[#75497C] bg-[#E4B0F6] rounded-full shadow top-1/2" />
       </div>

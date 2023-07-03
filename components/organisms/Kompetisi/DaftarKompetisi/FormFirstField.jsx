@@ -2,7 +2,7 @@ import InputDropdown from "@/components/atoms/InputDropdown";
 import InputFile from "@/components/atoms/InputFile";
 import InputForm from "@/components/atoms/InputForm";
 import { shallow } from "zustand/shallow";
-import { useTeamData } from "@/store/useTeamData";
+import { useTeamData } from "@/store/teamData";
 import { useEffect } from "react";
 
 export default function FormFirstField() {

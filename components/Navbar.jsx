@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { ethnocentric } from "@/public/fonts/ethnocentric";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -108,7 +109,7 @@ export default function Navbar() {
         </div>
         <Link
           href="/"
-          className="text-xl normal-case xs:ml-2 lg:ml-10 btn btn-ghost"
+          className="flex gap-2 text-xl normal-case xs:ml-2 lg:ml-10 btn btn-ghost"
         >
           {/* <img
             src="/assets/logo-srifoton2023.svg"
@@ -121,6 +122,11 @@ export default function Navbar() {
             height={30}
             quality={100}
           />
+          <h3
+            className={`hidden bg-gradient-to-r bggradien bg-clip-text text-transparent from-[#FC39FC] to-[#428AE0] gap-2 lg:flex ${ethnocentric.className}`}
+          >
+            SRIFOTON
+          </h3>
         </Link>
       </div>
       <div className={`hidden navbar-center lg:flex  `}>
