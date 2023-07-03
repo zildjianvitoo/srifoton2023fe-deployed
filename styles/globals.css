@@ -10,6 +10,7 @@
   --neutral: #05003e;
 }
 
+/* Button Styles */
 .button-navbar {
   --border-width: 3px;
   --border-radius: 44px;
@@ -79,6 +80,9 @@
   color: white;
 }
 
+/*End Button Styles */
+
+/* Landing Page */
 .intro-header {
   text-shadow: -1px 1px 0 #494b7c, 1px 1px 0 #494b7c, 1px -1px 0 #494b7c,
     -1px -1px 0 #494b7c;
@@ -130,13 +134,14 @@
   text-shadow: -1px 1px 0 #fde5ff, 1px 1px 0 #fde5ff, 1px -1px 0 #fde5ff,
     -1px -1px 0 #fde5ff;
 }
+/*End Landing Page */
 
+/* DaftarKompetisi Page */
 .field-header {
   background: -webkit-linear-gradient(0deg, #2e7bef 0%, #f86e45 95%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 5px transparent;
   color: #ebe9f6;
-  /* font-family: "Ethnocentric Rg", sans-serif; */
   letter-spacing: 3px;
 }
 
@@ -145,7 +150,6 @@
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
   color: #242750;
-  /* font-family: "Ethnocentric Rg", sans-serif; */
   letter-spacing: 3px;
 }
 
@@ -163,14 +167,27 @@
   color: #252851;
   letter-spacing: 3px;
 }
+/*End DaftarKompetisi Page */
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.intro-seminar-header {
+  background: -webkit-linear-gradient(0deg, #494b7c 0%, #494b7c 95%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #fcf2ff;
+  letter-spacing: 3px;
 }
 
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+.intro-seminar-header-dark {
+  text-shadow: -1px 1px 0 #494b7c, 1px 1px 0 #494b7c, 1px -1px 0 #494b7c,
+    -1.5px -1.5px 0 #494b7c;
+  color: #fcf2ff;
 }
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(23px);
+  -webkit-backdrop-filter: blur(23px);
+}
+
+/*End Seminar Page */
