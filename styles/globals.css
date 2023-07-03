@@ -83,6 +83,17 @@
 /*End Button Styles */
 
 /* Landing Page */
+
+.srifoton-big-header {
+  background: -webkit-linear-gradient(-90deg, #fc39fc 0%, #428ae0 105%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  /* text-shadow: -4px 4px 0 #c750c2, 4px 4px 0 #c750c2, 4px -4px 0 #0054b8,
+    -4px -4px 0 #0054b8; */
+  width: fit-content;
+  letter-spacing: 3px;
+}
+
 .intro-header {
   text-shadow: -1px 1px 0 #494b7c, 1px 1px 0 #494b7c, 1px -1px 0 #494b7c,
     -1px -1px 0 #494b7c;
