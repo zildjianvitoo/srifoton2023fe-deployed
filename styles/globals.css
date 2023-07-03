@@ -178,9 +178,11 @@
 }
 
 .intro-seminar-header-dark {
-  text-shadow: -1px 1px 0 #494b7c, 1px 1px 0 #494b7c, 1px -1px 0 #494b7c,
-    -1.5px -1.5px 0 #494b7c;
-  color: #fcf2ff;
+  background: -webkit-linear-gradient(0deg, #e5eeff 0%, #e5eeff 95%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #02053e;
+  letter-spacing: 3px;
 }
 
 .glassmorphism {
