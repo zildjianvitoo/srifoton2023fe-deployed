@@ -124,14 +124,15 @@
 
 .timeline-header {
   color: #e8eeff;
-  text-shadow: -1px 1px 0 #75497c, 1px 1px 0 #75497c, 1px -1px 0 #75497c,
-    -1px -1px 0 #75497c;
+  background: -webkit-linear-gradient(0deg, #75497c 0%, #75497c 95%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
 }
 
 .timeline-header-dark {
-  color: #332f62;
-  text-shadow: -1px 1px 0 #efdfff, 1px 1px 0 #efdfff, 1px -1px 0 #efdfff,
-    -1px -1px 0 #efdfff;
+  color: #0f3a70;
+  text-shadow: -1px 1px 0 #fde5ff, 1px 1px 0 #fde5ff, 1px -1px 0 #fde5ff,
+    -1px -1px 0 #fde5ff;
 }
 
 .sponsor-header {

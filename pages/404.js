@@ -8,10 +8,14 @@ export default function ErrorPage() {
   const router = useRouter();
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       router.push("/");
     }, 3000);
-  }, []);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [router]);
 
   return (
     <section className="flex px-6 lg:mt-10 flex-col items-center justify-center w-full h-screen bg-[#FCF2FF] dark:bg-[#02053E] ">

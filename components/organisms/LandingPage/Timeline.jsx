@@ -35,7 +35,7 @@ export default function TimeLine() {
 
   return (
     <section id="timeline" className="mt-16">
-      <div className="flex flex-col lg:flex-row bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#2F3164] dark:to-[#4B2052] p-4  lg:p-10 lg:px-16">
+      <div className="flex flex-col lg:flex-row bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#1AB5E4]/30 dark:to-[#E5AFE5]/[35%] p-4  lg:p-10 lg:px-16">
         {/* component */}
         <div className="flex flex-col gap-4 lg:gap-8 lg:w-[40%] mt-5 ">
           <h1
