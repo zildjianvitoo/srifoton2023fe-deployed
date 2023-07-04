@@ -212,8 +212,8 @@
 }
 
 .register-seminar-header-dark {
-  color: #e8eeff;
-  background: -webkit-linear-gradient(0deg, #75497c 0%, #75497c 95%);
+  color: #050b47;
+  background: -webkit-linear-gradient(0deg, #e5eeff 0%, #e5eeff 95%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
 }
@@ -221,15 +221,43 @@
 .gradient-border {
   border-radius: 16px;
   border: 3.5px dashed #fff;
-  background: linear-gradient(#f3f5ff 0 0) padding-box,
+  background: linear-gradient(#f3edfe 0 0) padding-box,
     linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   -ms-border-radius: 16px;
   -o-border-radius: 16px;
 }
-.alt {
-  border: 2px dashed #fff;
+.gradient-border-dark {
+  border-radius: 16px;
+  border: 3.5px dashed #050b47;
+  background: linear-gradient(#050b47 0 0) padding-box,
+    linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.gradient-border-pn {
+  border-radius: 16px;
+  border: 3.5px dashed #fff;
+  background: linear-gradient(#f3edfe 0 0) padding-box,
+    linear-gradient(to bottom left, #337ef0, #fc39fc) border-box;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.gradient-border-pn-dark {
+  border-radius: 16px;
+  border: 3.5px dashed #050b47;
+  background: linear-gradient(#050b47 0 0) padding-box,
+    linear-gradient(to bottom left, #337ef0, #fc39fc) border-box;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
 }
 
 /*End Seminar Page */

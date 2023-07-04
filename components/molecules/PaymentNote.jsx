@@ -5,9 +5,9 @@ export default function PaymentNote({ seminarPage }) {
     <div
       className={`text-sm lg:text-lg  px-4 py-2 mt-2 ${
         seminarPage
-          ? "text-[#000000]"
+          ? "text-[#000000] dark:text-[#EDEDED]"
           : "text-[#464646] border-[3px] border-dashed border-[#2E7BEF] dark:border-[#E924E8]"
-      } lg:text-[#464646] dark:text-[#EDEDED] rounded-lg leading-snug `}
+      } lg:text-[#464646]  rounded-lg leading-snug `}
     >
       <p>Pembayaran dapat dikirimkan melalui :</p>
       <ul className="px-2 lg:px-4">
