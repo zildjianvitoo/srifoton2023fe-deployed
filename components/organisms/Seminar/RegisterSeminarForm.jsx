@@ -1,3 +1,4 @@
+import Button from "@/components/atoms/Button";
 import InputDropdown from "@/components/atoms/InputDropdown";
 import InputFile from "@/components/atoms/InputFile";
 import InputForm from "@/components/atoms/InputForm";
@@ -26,6 +27,9 @@ export default function RegisterSeminarForm() {
         />
         <InputDropdown />
         <InputFile labelFor={"bukti-pembayaran"} labelText="Bukti Pembayaran" />
+        <Button variant={"submitButton"} style={"w-3/4 mx-auto mt-2 lg:mt-4"}>
+          Daftar
+        </Button>
       </div>
     </form>
   );

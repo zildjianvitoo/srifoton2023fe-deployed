@@ -1,3 +1,4 @@
+import Button from "@/components/atoms/Button";
 import {
   FirstField,
   SecondField,
@@ -25,12 +26,12 @@ export default function DaftarKompetisi() {
           <form className="z-10 flex flex-col">
             <FirstField jenisKompetisi={validJenisKompetisi} />
             <SecondField jenisKompetisi={validJenisKompetisi} />
-            <button
-              type="submit"
-              className="w-[87%] lg:w-3/5 mx-auto text-[#FCFCFC] mt-6 text-lg lg:text-xl font-semibold tracking-wider rounded-lg bg-[#2E7BEF] py-2 opacity-90 hover:opacity-100 "
+            <Button
+              variant="submitButton"
+              style={"w-[87%] lg:w-3/5 mx-auto mt-6"}
             >
               Submit
-            </button>
+            </Button>
           </form>
         </LayoutField>
       </div>
