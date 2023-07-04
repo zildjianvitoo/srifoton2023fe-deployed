@@ -37,7 +37,7 @@ export default function TimeLine() {
     <section id="timeline" className="mt-16">
       <div className="flex flex-col lg:flex-row bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#1AB5E4]/30 dark:to-[#E5AFE5]/[35%] p-4  lg:p-10 lg:px-16">
         {/* component */}
-        <div className="flex flex-col gap-4 lg:gap-8 lg:w-[40%] mt-5 ">
+        <div className="flex flex-col gap-4 lg:gap-8 ml-3  lg:ml-6 lg:w-[40%] mt-5 ">
           <h1
             className={`text-4xl font-semibold tracking-wider lg:text-6xl ${
               theme === "light" ? "timeline-header" : "timeline-header-dark"
