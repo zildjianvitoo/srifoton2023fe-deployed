@@ -5,7 +5,7 @@ const Jumbotron = () => {
   return (
     <section
       id="#"
-      className="relative overflow-hidden h-[90vh]   bg-[#FCF2FF] dark:bg-[#02053E] lg:h-screen opacity-85 mt-12 lg:mt-6"
+      className="relative overflow-hidden h-[90vh]  bg-[#FCF2FF] dark:bg-[#02053E] lg:h-screen opacity-85 mt-12 lg:mt-6"
     >
       <div
         className="absolute inset-0 h-screen bg-center bg-no-repeat bg-cover"
