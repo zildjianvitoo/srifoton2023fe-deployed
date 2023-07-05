@@ -262,14 +262,28 @@
 /*End Seminar Page */
 
 /* Credentials Page */
-.gradient-border-credentials {
-  border-radius: 16px;
-  border: 3.5px dashed #fff;
-  background: linear-gradient(#edecf6 0 0) padding-box,
-    linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
+
+@layer utilities {
+  .gradient-border-credentials {
+    border-radius: 30px;
+    border: 3.5px dashed #fff;
+    background: linear-gradient(#edeef9 0 0) padding-box,
+      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  }
+  .gradient-border-credentials-dark {
+    border-radius: 30px;
+    border: 3.5px dashed #050b47;
+    background: linear-gradient(#383b6a 0 0) padding-box,
+      linear-gradient(to bottom right, #fc39fc, #337ef0) border-box;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
 }
+
 /* End Credentials Page */

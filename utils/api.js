@@ -20,5 +20,5 @@ export async function doRegister({
     throw new Error(res.data.message);
   }
 
-  return { data: res.data, status: res.status, message: res.data.message };
+  return { data: res.data };
 }
