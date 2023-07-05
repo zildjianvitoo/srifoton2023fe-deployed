@@ -24,13 +24,13 @@ export default function Register() {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {
-      const { datas } = await doRegister({
+      const { data } = await doRegister({
         name,
         email,
         password,
         password_confirmation: confirmPassword,
       });
-      console.log(datas);
+      console.log(data);
     } catch (error) {
       console.log(error);
       setErrorMessage(error.response.data.errors);
