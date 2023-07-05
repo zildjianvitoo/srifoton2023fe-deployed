@@ -4,8 +4,12 @@ import InputFile from "@/components/atoms/InputFile";
 import InputForm from "@/components/atoms/InputForm";
 
 export default function RegisterSeminarForm() {
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className={`w-full z-10 relative`}>
+    <form className={`w-full z-10 relative`} onSubmit={onSubmitHandler}>
       <div className="flex flex-col gap-6 w-full dark:text-[#EDEDED]">
         <InputForm
           labelFor="name"

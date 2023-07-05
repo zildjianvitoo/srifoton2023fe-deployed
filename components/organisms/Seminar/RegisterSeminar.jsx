@@ -34,7 +34,7 @@ export default function RegisterSeminar() {
           </div>
 
           <div
-            className={`flex flex-col w-full lg:mt-3 gradient-border lg:w-1/2 h-fit ${
+            className={`flex flex-col w-full lg:mt-3 gradient-border lg:w-[65%] h-fit ${
               theme === "light"
                 ? "gradient-border-pn"
                 : "gradient-border-pn-dark"

@@ -1,8 +1,6 @@
 import LayoutMain from "@/components/LayoutMain";
 import React from "react";
 
-const kontak = () => {
+export default function Register() {
   return <LayoutMain></LayoutMain>;
-};
-
-export default kontak;
+}

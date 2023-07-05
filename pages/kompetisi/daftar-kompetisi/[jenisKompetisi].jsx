@@ -4,6 +4,7 @@ import {
   SecondField,
 } from "@/components/organisms/Kompetisi/DaftarKompetisi";
 import LayoutField from "@/components/organisms/Kompetisi/DaftarKompetisi/LayoutField";
+import LayoutMain from "@/components/LayoutMain";
 import { useTeamData } from "@/store/teamData";
 import { useRouter } from "next/router";
 
@@ -20,7 +21,7 @@ export default function DaftarKompetisi() {
   };
 
   return (
-    <div className="bg-[#FCF2FF] dark:bg-[#02053E] overflow-x-hidden w-full ">
+    <LayoutMain>
       <div className="p-8 lg:px-24" onSubmit={handleSubmit}>
         <LayoutField>
           <form className="z-10 flex flex-col">
@@ -35,7 +36,7 @@ export default function DaftarKompetisi() {
           </form>
         </LayoutField>
       </div>
-    </div>
+    </LayoutMain>
   );
 }
 
