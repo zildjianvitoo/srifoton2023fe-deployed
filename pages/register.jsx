@@ -1,21 +1,23 @@
-import { useState } from "react";
 import LayoutMain from "@/components/LayoutMain";
 import Button from "@/components/atoms/Button";
 import CredentialsCard from "@/components/atoms/CredentialsCard";
 import InputForm from "@/components/atoms/InputForm";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
-import Link from "next/link";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import { doRegister } from "@/utils/api";
 
 export default function Register() {
-  const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
+  const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
 
   const handleShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -30,6 +32,7 @@ export default function Register() {
         password,
         password_confirmation: confirmPassword,
       });
+      router.push("/login");
       console.log(data);
     } catch (error) {
       console.log(error);

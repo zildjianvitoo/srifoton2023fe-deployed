@@ -264,6 +264,14 @@
 /* Credentials Page */
 
 @layer utilities {
+  .shadow-navbar {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .shadow-navbar-dark {
+    box-shadow: 0 4px 25px rgba(203, 203, 203, 0.2) !important;
+  }
+
   .gradient-border-credentials {
     border-radius: 30px;
     border: 3.5px dashed #fff;

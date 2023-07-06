@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { ethnocentric } from "@/public/fonts/ethnocentric";
+import { useUserStore } from "@/store/userStore";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const router = useRouter();
-
   const { theme, setTheme } = useTheme();
+  const user = useUserStore((state) => state.user);
 
   const handleDropdownClick = () => {
     setIsOpen((prev) => !prev);
@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="fixed top-0 z-50 font-normal bg-[#FCF2FF] shadow-md dark:shadow-lg text-[#464646] navbar dark:bg-neutral dark:text-white"
+      className="fixed top-0 z-50 font-normal navbar bg-[#FCF2FF] text-[#464646]  dark:bg-neutral dark:text-white shadow-navbar dark:shadow-navbar-dark "
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="py-2 lg:py-0 navbar-start">
@@ -57,7 +57,7 @@ export default function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className={`p-2 mt-3 shadow menu menu-compact dropdown-content bg-white dark:bg-neutral dark:text-white ${
+            className={`p-2 mt-3 shadow-lg  menu menu-compact dropdown-content bg-white dark:bg-neutral dark:text-white ${
               !isOpen && "hidden"
             } rounded-box w-52`}
             onClick={handleDropdownClick}
@@ -177,6 +177,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="flex lg:mr-10 gap-x-4 navbar-end">
+        <p>{user?.name}</p>
         <div className="cursor-pointer" onClick={toggleTheme}>
           <img
             src={theme === "light" ? "/moon-icon.svg" : "/sun-icon.svg"}

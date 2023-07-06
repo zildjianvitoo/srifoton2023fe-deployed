@@ -1,8 +1,13 @@
 import api from "./axiosInstance";
+import { useTokenStore } from "@/store/tokenStore";
 
-function getAccessToken() {}
+function getAccessToken() {
+  return localStorage.getItem("token-srifoton");
+}
 
-function setAccesToken() {}
+function setAccesToken() {
+  return;
+}
 
 async function doRegister({ name, email, password, password_confirmation }) {
   const { data, status } = await api.post("/api/register", {
@@ -27,7 +32,7 @@ async function doLogin({ email, password }) {
     throw new Error(res.data.message);
   }
 
-  return { data };
+  return { data, status };
 }
 
 async function getDataUser() {
