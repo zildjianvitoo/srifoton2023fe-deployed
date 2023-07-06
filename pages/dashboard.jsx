@@ -1,6 +1,9 @@
 import LayoutMain from "@/components/LayoutMain";
 import React from "react";
+import RequireLogin from "@/components/HOC/WithAuth";
 
-export default function dashboard() {
+function Dashboard() {
   return <LayoutMain></LayoutMain>;
 }
+
+export default RequireLogin(Dashboard);

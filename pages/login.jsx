@@ -11,8 +11,9 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { useUserStore } from "@/store/userStore";
 import { doLogin } from "@/utils/api";
+import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 
-export default function Login() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
@@ -118,3 +119,5 @@ export default function Login() {
     </LayoutMain>
   );
 }
+
+export default RedirectIfLoggedIn(Login);

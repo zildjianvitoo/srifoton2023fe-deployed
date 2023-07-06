@@ -4,13 +4,14 @@ import CredentialsCard from "@/components/atoms/CredentialsCard";
 import InputForm from "@/components/atoms/InputForm";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
+import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { doRegister } from "@/utils/api";
 
-export default function Register() {
+function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -147,3 +148,5 @@ export default function Register() {
     </LayoutMain>
   );
 }
+
+export default RedirectIfLoggedIn(Register);
