@@ -1,13 +1,10 @@
 import { useTheme } from "next-themes";
-import { useEffect } from "react";
+import { forwardRef } from "react";
 
-export default function InputForm({
-  labelText,
-  labelFor,
-  type,
-  placeholder,
-  ...props
-}) {
+const InputForm = forwardRef(function InputForm(
+  { labelText, labelFor, type, placeholder, ...props },
+  ref
+) {
   const { theme } = useTheme();
 
   const onFocusHandler = (e) => {
@@ -32,9 +29,10 @@ export default function InputForm({
         className="w-full p-2 pl-3 bg-transparent border mt-1 border-[#7B7B7B] dark:border-[#E0E0E0] rounded-lg placeholder:text-[#A3A3A3] text-black dark:text-[#EDEDED] focus:border-[#2E7BEF] focus:outline-[#2E7BEF] "
         onFocus={onFocusHandler}
         onBlur={onBlurHandler}
-        required
         {...props}
       />
     </div>
   );
-}
+});
+
+export default InputForm;
