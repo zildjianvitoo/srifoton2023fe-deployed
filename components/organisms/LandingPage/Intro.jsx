@@ -1,4 +1,3 @@
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Button from "../../atoms/Button";
 
@@ -28,8 +27,6 @@ export default function Intro() {
 }
 
 function Content({ header, text, buttonText, isPink, isBlue }) {
-  const { theme } = useTheme();
-
   const buttonStyle = isBlue
     ? "border-[#494B7C] text-[#494B7C]  hover:bg-[#494B7C] w-[35%] mt-3 dark:border-[#E5EEFF] dark:text-[#E5EEFF] dark:hover:bg-[#E5EEFF] dark:hover:text-[#494B7C]"
     : "border-[#75497C] text-[#75497C]  hover:bg-[#75497C] w-[35%] mt-3 dark:border-[#FDE5FF] dark:text-[#FDE5FF] dark:hover:bg-[#FDE5FF] dark:hover:text-[#75497C]";
@@ -61,23 +58,23 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           />
         </div>
         <div
-          className={`flex flex-col lg:w-[55%] gap-y-6 p-6 lg:p-0 lg:px-10 ${
+          className={`flex flex-col gap-y-6 p-6 lg:w-[55%]  lg:p-0 lg:px-10 ${
             isPink && "items-end"
           } `}
         >
           <h1
-            className={`text-[30px] xs:text-4xl lg:text-6xl font-semibold  tracking-wider ${
+            className={`text-[30px] xs:text-4xl lg:text-6xl font-semibold  tracking-wider intro-header dark:intro-header-dark ${
               isBlue
                 ? "text-[#E5EEFF]  dark:text-[#494B7C]"
                 : "text-[#FDE5FF] dark:text-[#75497C]"
-            }   ${theme == "light" ? "intro-header" : "intro-header-dark"} `}
+            }`}
           >
             {header}
           </h1>
           <p
-            className={`text-base md:text-lg lg:text-xl ${
+            className={`text-base md:text-lg lg:text-xl text-[#747474] dark:text-[#CFCFCF] lg:w-[80%]  ${
               isPink && "text-right"
-            }  text-[#747474] dark:text-[#CFCFCF] lg:w-[80%] `}
+            }  `}
           >
             {text}
           </p>

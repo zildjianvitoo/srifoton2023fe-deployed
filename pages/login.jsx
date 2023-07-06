@@ -18,10 +18,10 @@ export default function Login() {
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
-  const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
-  const setUser = useUserStore((state) => state.setUser);
+  const { setAccessToken } = useAccessTokenStore();
+  const { setUser } = useUserStore();
 
-  const handleShowPassword = () => {
+  const showPasswordHandler = () => {
     setShowPassword((prev) => !prev);
   };
 
@@ -77,12 +77,12 @@ export default function Login() {
                   {showPassword ? (
                     <AiOutlineEye
                       className={`absolute right-4 top-[57%] cursor-pointer text-[#464646] dark:text-white text-2xl `}
-                      onClick={handleShowPassword}
+                      onClick={showPasswordHandler}
                     />
                   ) : (
                     <AiOutlineEyeInvisible
                       className="absolute cursor-pointer right-4 top-[57%] text-[#464646] dark:text-white text-2xl"
-                      onClick={handleShowPassword}
+                      onClick={showPasswordHandler}
                     />
                   )}
                 </div>
