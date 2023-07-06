@@ -1,5 +1,4 @@
 import TimelineBox from "@/components/molecules/TimelineBox";
-import { useTheme } from "next-themes";
 import React from "react";
 
 const timelineContent = [
@@ -21,18 +20,10 @@ const timelineContent = [
 ];
 
 export default function TimeLineSeminar() {
-  const { theme } = useTheme();
-
   return (
     <section id="timeline" className="mt-4 lg:mt-12">
       <div className="flex flex-col items-center justify-center w-full gap-6 p-8 lg:gap-10">
-        <h1
-          className={` text-[36px] xs:text-[44px]  leading-[3rem] lg:text-[60px] lg:leading-[4rem] font-semibold tracking-wider  p-1 pb-2 text-center lg:text-start mt-10 ${
-            theme === "light"
-              ? "intro-seminar-header"
-              : " intro-seminar-header-dark"
-          }`}
-        >
+        <h1 className=" text-[36px] xs:text-[44px]  leading-[3rem] lg:text-[60px] lg:leading-[4rem] font-semibold tracking-wider  p-1 pb-2 text-center lg:text-start mt-10 intro-seminar-header dark:intro-seminar-header-dark">
           Alur <span className="text-[#494B7C] dark:text-[#E5EEFF]">Acara</span>
         </h1>
         <div className="container mt-8 lg:w-3/5 lg:mt-0">

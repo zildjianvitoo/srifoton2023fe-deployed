@@ -15,13 +15,7 @@ export default function RegisterSeminar() {
         }}
       />
       <div className="flex flex-col w-[85%] md:w-[80%] lg:w-[74%] px-3 gap-4  py-10 lg:pb-16 mx-auto rounded-[50px]">
-        <h1
-          className={`text-4xl pb-2 text-center font-semibold tracking-wider lg:text-6xl ${
-            theme === "light"
-              ? "register-seminar-header"
-              : "register-seminar-header-dark"
-          }`}
-        >
+        <h1 className="pb-2 text-4xl font-semibold tracking-wider text-center lg:text-6xl register-seminar-header dark:register-seminar-header-dark">
           Registrasi Sekarang!
         </h1>
         <div className="flex flex-col gap-8 lg:mt-6 lg:flex-row">
@@ -34,11 +28,8 @@ export default function RegisterSeminar() {
           </div>
 
           <div
-            className={`flex flex-col w-full lg:mt-3 gradient-border lg:w-[65%] h-fit ${
-              theme === "light"
-                ? "gradient-border-pn"
-                : "gradient-border-pn-dark"
-            }`}
+            className="flex flex-col w-full lg:mt-3 gradient-border lg:w-[65%] h-fit gradient-border-pn
+             dark:gradient-border-pn-dark"
           >
             <PaymentNote seminarPage />
           </div>
