@@ -13,13 +13,7 @@ export default function SecondField({ jenisKompetisi }) {
     <section id="daftar-kompetisi-2" className="z-10">
       <div className="z-10 flex flex-col w-full gap-8 px-6 py-6 lg:px-10 ">
         <div className="flex flex-col gap-8 mt-6">
-          <h1
-            className={`text-2xl font-extrabold lg:text-[42px] text-center pt-1 pb-3 ${
-              theme === "light"
-                ? "member-form-header"
-                : "member-form-header-dark"
-            }`}
-          >
+          <h1 className="text-2xl font-extrabold lg:text-[42px] text-center pt-1 pb-3 member-form-header dark:member-form-header-dark tracking-widest">
             Formulir Anggota
           </h1>
           <div className="flex flex-col w-full gap-8 lg:flex-row">

@@ -5,7 +5,7 @@ import { shallow } from "zustand/shallow";
 import { useTeamData } from "@/store/teamData";
 import { useEffect } from "react";
 
-export default function FormFirstField({ registerPage }) {
+export default function FormFirstField() {
   const {
     teamName,
     email,
@@ -34,7 +34,7 @@ export default function FormFirstField({ registerPage }) {
   );
 
   return (
-    <div className={`w-full  lg:w-1/2`}>
+    <div className="w-full lg:w-1/2">
       <div className="flex flex-col gap-6 w-full dark:text-[#EDEDED]">
         <InputForm
           labelFor="name"
