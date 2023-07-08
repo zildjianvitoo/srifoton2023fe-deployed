@@ -6,23 +6,25 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-import { useForm } from "react-hook-form";
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import { get, useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 import { doRegister } from "@/utils/api";
+import { formRules } from "@/utils/formRules";
+
+let renderCount = 0;
 
 function Register() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const {
+    control,
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
   } = useForm();
 
@@ -30,8 +32,9 @@ function Register() {
     setShowPassword((prev) => !prev);
   };
 
-  const onSubmitHandler = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
+    console.log(data);
+    const { name, email, password, confirmPassword } = data;
     try {
       const { data } = await doRegister({
         name,
@@ -43,18 +46,20 @@ function Register() {
       console.log(data);
     } catch (error) {
       console.log(error);
-      setErrorMessage(error.response.data.errors);
+      setErrorMessage(error.response?.data.errors);
     }
   };
+
+  renderCount++;
 
   return (
     <LayoutMain>
       <LayoutCredentials>
-        <form className="w-full " onSubmit={handleSubmit(onSubmitHandler)}>
+        <form className="w-full " onSubmit={handleSubmit(onSubmit)}>
           <CredentialsCard>
             <div className="relative z-10 flex flex-col w-full gap-4 ">
               <h1 className="mt-5 text-4xl text-[#464646] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
-                Registrasi Akun
+                Registrasi Akun {renderCount / 2}
               </h1>
               <div className="flex flex-col mt-4 ">
                 <InputForm
@@ -62,9 +67,10 @@ function Register() {
                   placeholder={"Contoh: Cristiano Ronaldo"}
                   type={"text"}
                   labelFor={"name"}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  register={register}
+                  rules={formRules.name}
                 />
+                {errors.name && <ErrorMessage message={errors.name?.message} />}
               </div>
               <div className="flex flex-col">
                 <InputForm
@@ -72,10 +78,14 @@ function Register() {
                   placeholder={"Contoh : ronaldogoat@goat.com"}
                   type={"email"}
                   labelFor={"email"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  register={register}
+                  rules={formRules.email}
                 />
-                {errorMessage && <ErrorMessage message={errorMessage.email} />}
+                {(errorMessage || errors.email) && (
+                  <ErrorMessage
+                    message={errorMessage.email || errors.email?.message}
+                  />
+                )}
               </div>
               <div className="flex flex-col">
                 <div className="relative">
@@ -84,9 +94,8 @@ function Register() {
                     placeholder={"Masukan kata sandi anda"}
                     type={showPassword ? "text" : "password"}
                     labelFor={"password"}
-                    min={8}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    register={register}
+                    rules={formRules.password}
                   />
                   {showPassword ? (
                     <AiOutlineEye
@@ -100,8 +109,12 @@ function Register() {
                     />
                   )}
                 </div>
-                {errorMessage && (
-                  <ErrorMessage message={errorMessage.password[1]} />
+                {(errorMessage || errors.password) && (
+                  <ErrorMessage
+                    message={
+                      errorMessage.password[0] || errors.password?.message
+                    }
+                  />
                 )}
               </div>
               <div className="flex flex-col">
@@ -110,10 +123,10 @@ function Register() {
                     labelText={"Konfirmasi Kata Sandi"}
                     placeholder={"Konfirmasi kata sandi anda"}
                     type={showPassword ? "text" : "password"}
-                    labelFor={"confirm-password"}
+                    labelFor={"confirmPassword"}
                     min={8}
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    register={register}
+                    rules={formRules.confirmPassword}
                   />
                   {showPassword ? (
                     <AiOutlineEye
@@ -127,8 +140,8 @@ function Register() {
                     />
                   )}
                 </div>
-                {errorMessage && (
-                  <ErrorMessage message={errorMessage.password[0]} />
+                {errors.confirmPassword && (
+                  <ErrorMessage message={errors.confirmPassword?.message} />
                 )}
               </div>
               <div className="flex flex-col-reverse gap-y-5 lg:flex-row lg:mt-6 lg:justify-between">
@@ -149,6 +162,7 @@ function Register() {
               </div>
             </div>
           </CredentialsCard>
+          <DevTool control={control} />
         </form>
       </LayoutCredentials>
     </LayoutMain>
