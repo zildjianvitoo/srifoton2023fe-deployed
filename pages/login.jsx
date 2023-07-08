@@ -5,29 +5,37 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import InputForm from "@/components/atoms/InputForm";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import Button from "@/components/atoms/Button";
+import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { useUserStore } from "@/store/userStore";
 import { doLogin } from "@/utils/api";
-import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
+import { formRules } from "@/utils/formRules";
+import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const { setAccessToken } = useAccessTokenStore();
   const { setUser } = useUserStore();
+  const {
+    control,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const showPasswordHandler = () => {
     setShowPassword((prev) => !prev);
   };
 
-  const onSubmitHandler = async (e) => {
-    e.preventDefault();
+  const onSubmitHandler = async (formValues) => {
+    console.log(formValues);
+    const { email, password } = formValues;
     try {
       const { data } = await doLogin({ email, password });
       console.log(data);
@@ -36,14 +44,14 @@ function Login() {
       router.push("/dashboard");
     } catch (error) {
       console.log(error);
-      setErrorMessage(error.response.data.errors);
+      setErrorMessage(error.response?.data.errors);
       console.log(errorMessage);
     }
   };
   return (
     <LayoutMain>
       <LayoutCredentials loginPage>
-        <form className="w-full" onSubmit={onSubmitHandler}>
+        <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
           <CredentialsCard>
             <div className="relative z-10 flex flex-col w-full gap-4">
               <h1 className="mt-5 text-4xl text-[#464646] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
@@ -55,12 +63,15 @@ function Login() {
                   placeholder={"Contoh : ronaldogoat@goat.com"}
                   type={"email"}
                   labelFor={"email"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  register={register}
+                  rules={formRules.email}
                 />
-                {errorMessage.email.length > 0 && (
+                {(errorMessage.email.length > 0 || errors.email) && (
                   <ErrorMessage
-                    message={"Password atau Email yang Anda masukkan salah"}
+                    message={
+                      errors.email?.message ||
+                      "Password atau Email yang Anda masukkan salah"
+                    }
                   />
                 )}
               </div>
@@ -71,9 +82,8 @@ function Login() {
                     placeholder={"Masukan kata sandi anda"}
                     type={showPassword ? "text" : "password"}
                     labelFor={"password"}
-                    min={8}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    register={register}
+                    rules={formRules.password}
                   />
                   {showPassword ? (
                     <AiOutlineEye
@@ -87,6 +97,9 @@ function Login() {
                     />
                   )}
                 </div>
+                {errors.password && (
+                  <ErrorMessage message={errors.password.message} />
+                )}
                 <Link
                   href="/forgot-password"
                   className="flex self-end justify-end"
@@ -114,6 +127,7 @@ function Login() {
               </div>
             </div>
           </CredentialsCard>
+          <DevTool control={control} />
         </form>
       </LayoutCredentials>
     </LayoutMain>

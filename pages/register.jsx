@@ -9,22 +9,17 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { get, useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
+import { useForm } from "react-hook-form";
 import { doRegister } from "@/utils/api";
 import { formRules } from "@/utils/formRules";
-
-let renderCount = 0;
 
 function Register() {
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const {
-    control,
     register,
     handleSubmit,
-    getValues,
     formState: { errors },
   } = useForm();
 
@@ -32,9 +27,9 @@ function Register() {
     setShowPassword((prev) => !prev);
   };
 
-  const onSubmit = async (data) => {
-    console.log(data);
-    const { name, email, password, confirmPassword } = data;
+  const onSubmitHandler = async (formValues) => {
+    console.log(formValues);
+    const { name, email, password, confirmPassword } = formValues;
     try {
       const { data } = await doRegister({
         name,
@@ -50,16 +45,14 @@ function Register() {
     }
   };
 
-  renderCount++;
-
   return (
     <LayoutMain>
       <LayoutCredentials>
-        <form className="w-full " onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-full " onSubmit={handleSubmit(onSubmitHandler)}>
           <CredentialsCard>
             <div className="relative z-10 flex flex-col w-full gap-4 ">
               <h1 className="mt-5 text-4xl text-[#464646] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
-                Registrasi Akun {renderCount / 2}
+                Registrasi Akun
               </h1>
               <div className="flex flex-col mt-4 ">
                 <InputForm
@@ -70,7 +63,7 @@ function Register() {
                   register={register}
                   rules={formRules.name}
                 />
-                {errors.name && <ErrorMessage message={errors.name?.message} />}
+                {errors.name && <ErrorMessage message={errors.name.message} />}
               </div>
               <div className="flex flex-col">
                 <InputForm
@@ -81,9 +74,9 @@ function Register() {
                   register={register}
                   rules={formRules.email}
                 />
-                {(errorMessage || errors.email) && (
+                {(errors.email || errorMessage.email.length > 0) && (
                   <ErrorMessage
-                    message={errorMessage.email || errors.email?.message}
+                    message={errors.email?.message || errorMessage?.email}
                   />
                 )}
               </div>
@@ -109,10 +102,10 @@ function Register() {
                     />
                   )}
                 </div>
-                {(errorMessage || errors.password) && (
+                {(errors.password || errorMessage.password.length > 0) && (
                   <ErrorMessage
                     message={
-                      errorMessage.password[0] || errors.password?.message
+                      errors.password?.message || errorMessage?.password[0]
                     }
                   />
                 )}
@@ -162,7 +155,6 @@ function Register() {
               </div>
             </div>
           </CredentialsCard>
-          <DevTool control={control} />
         </form>
       </LayoutCredentials>
     </LayoutMain>
