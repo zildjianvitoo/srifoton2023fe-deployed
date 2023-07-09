@@ -1,4 +1,4 @@
-export const formRules = {
+export const credentialsFormRules = {
   name: {
     required: {
       value: true,
@@ -20,16 +20,21 @@ export const formRules = {
   password: {
     required: {
       value: true,
-      message: "Password tidak boleh kosong",
+      message: "Kata sandi tidak boleh kosong",
     },
     minLength: {
       value: 8,
-      message: "Password harus minimal 8 huruf",
+      message: "Kata sandi harus minimal 8 huruf",
     },
   },
   confirmPassword: {
+    required: {
+      value: true,
+      message: "Konfirmasi Kata sandi tidak boleh kosong",
+    },
+
     validate: (value, formValue) => {
-      return value === formValue.password || "Password tidak cocok";
+      return value === formValue.password || "Kata sandi tidak cocok";
     },
   },
 };

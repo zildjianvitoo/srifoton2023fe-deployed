@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { doRegister } from "@/utils/api";
-import { formRules } from "@/utils/formRules";
+import { credentialsFormRules } from "@/utils/formRules";
 
 function Register() {
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
@@ -21,7 +21,7 @@ function Register() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({ mode: "onChange" });
 
   const handleShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -61,7 +61,7 @@ function Register() {
                   type={"text"}
                   labelFor={"name"}
                   register={register}
-                  rules={formRules.name}
+                  rules={credentialsFormRules.name}
                 />
                 {errors.name && <ErrorMessage message={errors.name.message} />}
               </div>
@@ -72,7 +72,7 @@ function Register() {
                   type={"email"}
                   labelFor={"email"}
                   register={register}
-                  rules={formRules.email}
+                  rules={credentialsFormRules.email}
                 />
                 {(errors.email || errorMessage.email.length > 0) && (
                   <ErrorMessage
@@ -88,7 +88,7 @@ function Register() {
                     type={showPassword ? "text" : "password"}
                     labelFor={"password"}
                     register={register}
-                    rules={formRules.password}
+                    rules={credentialsFormRules.password}
                   />
                   {showPassword ? (
                     <AiOutlineEye
@@ -119,7 +119,7 @@ function Register() {
                     labelFor={"confirmPassword"}
                     min={8}
                     register={register}
-                    rules={formRules.confirmPassword}
+                    rules={credentialsFormRules.confirmPassword}
                   />
                   {showPassword ? (
                     <AiOutlineEye

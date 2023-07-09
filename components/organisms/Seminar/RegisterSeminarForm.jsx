@@ -2,8 +2,11 @@ import Button from "@/components/atoms/Button";
 import InputDropdown from "@/components/atoms/InputDropdown";
 import InputFile from "@/components/atoms/InputFile";
 import InputForm from "@/components/atoms/InputForm";
+import { useForm } from "react-hook-form";
 
 export default function RegisterSeminarForm() {
+  const { register, control } = useForm();
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
   };

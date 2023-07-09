@@ -12,10 +12,11 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { useUserStore } from "@/store/userStore";
 import { doLogin } from "@/utils/api";
-import { formRules } from "@/utils/formRules";
+import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
+let renderCount = 0;
 function Login() {
   const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
   const [showPassword, setShowPassword] = useState(false);
@@ -33,6 +34,7 @@ function Login() {
     setShowPassword((prev) => !prev);
   };
 
+  renderCount++;
   const onSubmitHandler = async (formValues) => {
     console.log(formValues);
     const { email, password } = formValues;
@@ -43,7 +45,7 @@ function Login() {
       setUser(data.user);
       router.push("/dashboard");
     } catch (error) {
-      console.log(error);
+      console.error(error);
       setErrorMessage(error.response?.data.errors);
       console.log(errorMessage);
     }
@@ -55,7 +57,7 @@ function Login() {
           <CredentialsCard>
             <div className="relative z-10 flex flex-col w-full gap-4">
               <h1 className="mt-5 text-4xl text-[#464646] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
-                Masuk Akun
+                Masuk Akun {renderCount / 2}
               </h1>
               <div className="flex flex-col mt-12">
                 <InputForm
@@ -64,7 +66,7 @@ function Login() {
                   type={"email"}
                   labelFor={"email"}
                   register={register}
-                  rules={formRules.email}
+                  rules={credentialsFormRules.email}
                 />
                 {(errorMessage.email.length > 0 || errors.email) && (
                   <ErrorMessage
@@ -83,7 +85,7 @@ function Login() {
                     type={showPassword ? "text" : "password"}
                     labelFor={"password"}
                     register={register}
-                    rules={formRules.password}
+                    rules={credentialsFormRules.password}
                   />
                   {showPassword ? (
                     <AiOutlineEye
@@ -104,7 +106,7 @@ function Login() {
                   href="/forgot-password"
                   className="flex self-end justify-end"
                 >
-                  <p className="text-[#2E7BEF] dark:text-[#E924E8] font-medium text-base bg-black">
+                  <p className="text-[#2E7BEF] dark:text-[#E924E8] font-medium text-base ">
                     Lupa Kata Sandi?
                   </p>
                 </Link>
