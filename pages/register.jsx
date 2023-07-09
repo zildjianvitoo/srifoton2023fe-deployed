@@ -10,11 +10,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
+import useErrorMessage from "@/hooks/useErrorMessage";
 import { doRegister } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 
 function Register() {
-  const [errorMessage, setErrorMessage] = useState({ email: "", password: [] });
+  const [errorMessage, setErrorMessage] = useErrorMessage({});
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const {
@@ -27,9 +28,8 @@ function Register() {
     setShowPassword((prev) => !prev);
   };
 
-  const onSubmitHandler = async (formValues) => {
-    console.log(formValues);
-    const { name, email, password, confirmPassword } = formValues;
+  const onSubmitHandler = async (formValue) => {
+    const { name, email, password, confirmPassword } = formValue;
     try {
       const { data } = await doRegister({
         name,
@@ -38,10 +38,8 @@ function Register() {
         password_confirmation: confirmPassword,
       });
       router.push("/login");
-      console.log(data);
     } catch (error) {
-      console.log(error);
-      setErrorMessage(error.response?.data.errors);
+      setErrorMessage(error.response.data.errors);
     }
   };
 
@@ -61,7 +59,7 @@ function Register() {
                   type={"text"}
                   labelFor={"name"}
                   register={register}
-                  rules={credentialsFormRules.name}
+                  rules={credentialsFormRules.register.name}
                 />
                 {errors.name && <ErrorMessage message={errors.name.message} />}
               </div>
@@ -72,11 +70,11 @@ function Register() {
                   type={"email"}
                   labelFor={"email"}
                   register={register}
-                  rules={credentialsFormRules.email}
+                  rules={credentialsFormRules.register.email}
                 />
-                {(errors.email || errorMessage.email.length > 0) && (
+                {(errors.email || errorMessage?.email) && (
                   <ErrorMessage
-                    message={errors.email?.message || errorMessage?.email}
+                    message={errors.email?.message || errorMessage.email}
                   />
                 )}
               </div>
@@ -88,7 +86,7 @@ function Register() {
                     type={showPassword ? "text" : "password"}
                     labelFor={"password"}
                     register={register}
-                    rules={credentialsFormRules.password}
+                    rules={credentialsFormRules.register.password}
                   />
                   {showPassword ? (
                     <AiOutlineEye
@@ -102,10 +100,10 @@ function Register() {
                     />
                   )}
                 </div>
-                {(errors.password || errorMessage.password.length > 0) && (
+                {(errors.password || errorMessage?.password?.length > 0) && (
                   <ErrorMessage
                     message={
-                      errors.password?.message || errorMessage?.password[0]
+                      errors.password?.message || errorMessage?.password[1]
                     }
                   />
                 )}
@@ -119,7 +117,7 @@ function Register() {
                     labelFor={"confirmPassword"}
                     min={8}
                     register={register}
-                    rules={credentialsFormRules.confirmPassword}
+                    rules={credentialsFormRules.register.confirmPassword}
                   />
                   {showPassword ? (
                     <AiOutlineEye

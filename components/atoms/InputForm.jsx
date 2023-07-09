@@ -1,4 +1,4 @@
-const InputForm = function InputForm({
+const InputForm = function DInputForm({
   labelText,
   labelFor,
   type,

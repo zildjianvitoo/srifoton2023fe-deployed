@@ -17,7 +17,7 @@ async function doRegister({ name, email, password, password_confirmation }) {
     password_confirmation,
   });
   if (status !== 200) {
-    throw new Error(res.data.message);
+    throw new Error(data.message);
   }
 
   return { data };
@@ -29,7 +29,7 @@ async function doLogin({ email, password }) {
     password,
   });
   if (status !== 200) {
-    throw new Error(res.data.message);
+    throw new Error(data.message);
   }
 
   return { data, status };
@@ -52,7 +52,7 @@ async function doLogout() {
     { headers: { Authorization: `Bearer ${getAccessToken()}` } }
   );
   if (status !== 200) {
-    throw new Error(res.data.message);
+    throw new Error(data.message);
   }
 
   return { data };
@@ -67,7 +67,7 @@ async function sendEmailVerification({ email }) {
     { headers: { Authorization: `Bearer ${getAccessToken()}` } }
   );
   if (status !== 200) {
-    throw new Error(res.data.message);
+    throw new Error(data.message);
   }
 
   return { data };
@@ -80,7 +80,7 @@ async function doVerifyUser({ id, hash }) {
     { headers: { Authorization: `Bearer ${getAccessToken()}` } }
   );
   if (status !== 200) {
-    throw new Error(res.data.message);
+    throw new Error(data.message);
   }
 
   return { data }; // get ?? post ??
@@ -109,7 +109,7 @@ async function updateDataUser({
     }
   );
   if (status !== 200) {
-    throw new Error(res.data.message);
+    throw new Error(data.message);
   }
   return { data };
 }
@@ -124,8 +124,8 @@ async function doSeminarRegistration({
   poof,
   payment_method,
 }) {
-  const { data } = await api.post(
-    "api/seminar/register",
+  const { data, status } = await api.post(
+    "/api/seminar/register",
     {
       name,
       email,
@@ -142,6 +142,22 @@ async function doSeminarRegistration({
       Accept: "application/json",
     }
   );
+
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
+}
+
+async function sendEmailForgotPassword({ email }) {
+  const { data, status } = await api.post("/api/forgot-password", {
+    email,
+  });
+
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
 }
 
 export {
@@ -152,4 +168,6 @@ export {
   sendEmailVerification,
   doVerifyUser,
   updateDataUser,
+  doSeminarRegistration,
+  sendEmailForgotPassword,
 };
