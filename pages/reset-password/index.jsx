@@ -6,7 +6,6 @@ import CredentialsCard from "@/components/atoms/CredentialsCard";
 import InputForm from "@/components/atoms/InputForm";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
 import SuccessMessage from "@/components/atoms/SuccessMessage";
-import useErrorMessage from "@/hooks/useErrorMessage";
 import Button from "@/components/atoms/Button";
 import { credentialsFormRules } from "@/utils/formRules";
 import { doResetPassword } from "@/utils/api";
@@ -17,7 +16,7 @@ import { DevTool } from "@hookform/devtools";
 export default function ResetPassword({ token, email }) {
   const [successMessage, setSuccessMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [errorMessage, setErrorMessage] = useErrorMessage("");
+  const [errorMessage, setErrorMessage] = useState("");
   const {
     control,
     register,

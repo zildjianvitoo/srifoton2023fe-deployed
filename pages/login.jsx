@@ -9,7 +9,6 @@ import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import useErrorMessage from "@/hooks/useErrorMessage";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { useUserStore } from "@/store/userStore";
 import { doLogin } from "@/utils/api";
@@ -17,7 +16,7 @@ import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
 
 function Login() {
-  const [errorMessage, setErrorMessage] = useErrorMessage({});
+  const [errorMessage, setErrorMessage] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const { setAccessToken } = useAccessTokenStore();

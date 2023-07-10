@@ -177,7 +177,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="flex lg:mr-10 gap-x-4 navbar-end">
-        <p>{user?.name}</p>
+        {/* <p>{user?.name}</p> */}
         <div className="cursor-pointer" onClick={toggleTheme}>
           <img
             src={theme === "light" ? "/moon-icon.svg" : "/sun-icon.svg"}

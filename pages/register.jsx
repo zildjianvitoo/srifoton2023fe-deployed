@@ -10,12 +10,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import useErrorMessage from "@/hooks/useErrorMessage";
 import { doRegister } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 
 function Register() {
-  const [errorMessage, setErrorMessage] = useErrorMessage({});
+  const [errorMessage, setErrorMessage] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const {
