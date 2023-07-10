@@ -51,6 +51,7 @@ export default function ForgotPassword() {
                 <InputForm
                   labelFor={"email"}
                   labelText={"Email"}
+                  type={"email"}
                   placeholder={"Contoh: ronaldogoat@gmail.com"}
                   register={register}
                   rules={credentialsFormRules.forgotPassword.email}

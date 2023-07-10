@@ -31,7 +31,7 @@ export default function FirstField({ jenisKompetisi }) {
               UI/UX DESIGN
             </h1>
           ) : (
-            <h1 className="tracking-[10%] mx-auto p-0 lg:p-3  line-clamp-2 text-center lg:leading-[3.5rem]">
+            <h1 className="tracking-[10%] mx-auto p-0 lg:p-3 text-center lg:leading-[3.5rem]">
               {jenisKompetisi}
             </h1>
           )}

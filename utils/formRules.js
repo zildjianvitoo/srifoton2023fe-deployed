@@ -56,6 +56,32 @@ export const credentialsFormRules = {
       },
     },
   },
+  resetPassword: {
+    newPassword: {
+      required: {
+        value: true,
+        message: "Kata sandi tidak boleh kosong",
+      },
+      minLength: {
+        value: 8,
+        message: "Kata sandi harus minimal 8 huruf",
+      },
+      pattern: {
+        value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
+        message: "Kata sandi harus terdapat huruf besar,kecil dan angka ",
+      },
+    },
+    confirmNewPassword: {
+      required: {
+        value: true,
+        message: "Konfirmasi Kata sandi tidak boleh kosong",
+      },
+
+      validate: (value, formValue) => {
+        return value === formValue.newPassword || "Kata sandi tidak cocok";
+      },
+    },
+  },
 };
 
 export const seminarFormRules = {};

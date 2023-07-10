@@ -160,6 +160,24 @@ async function sendEmailForgotPassword({ email }) {
   return { data };
 }
 
+async function doResetPassword({
+  token,
+  email,
+  password,
+  password_confirmation,
+}) {
+  const { data, status } = await api.post("/api/reset-password", {
+    token,
+    email,
+    password,
+    password_confirmation,
+  });
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
+}
+
 export {
   doRegister,
   doLogin,
@@ -170,4 +188,5 @@ export {
   updateDataUser,
   doSeminarRegistration,
   sendEmailForgotPassword,
+  doResetPassword,
 };
