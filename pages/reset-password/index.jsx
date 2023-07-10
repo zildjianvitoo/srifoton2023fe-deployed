@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { DevTool } from "@hookform/devtools";
 
-export default function ResetPassword({ email, token }) {
+export default function ResetPassword({ token, email }) {
   const [successMessage, setSuccessMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useErrorMessage("");
@@ -28,6 +28,7 @@ export default function ResetPassword({ email, token }) {
   const showPasswordHandler = () => {
     setShowPassword((prev) => !prev);
   };
+  console.log({ token, email });
 
   const onSubmitHandler = async (formValue) => {
     console.log(formValue);
