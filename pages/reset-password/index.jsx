@@ -14,11 +14,10 @@ import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { DevTool } from "@hookform/devtools";
 
-export default function ResetPassword() {
+export default function ResetPassword({ email, token }) {
   const [successMessage, setSuccessMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useErrorMessage("");
-  const router = useRouter();
   const {
     control,
     register,
@@ -26,15 +25,9 @@ export default function ResetPassword() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const { email, token } = router.query;
-
   const showPasswordHandler = () => {
     setShowPassword((prev) => !prev);
   };
-
-  // useEffect(() => {
-  //   console.log({ email, token });
-  // }, [email, token]);
 
   const onSubmitHandler = async (formValue) => {
     console.log(formValue);
@@ -129,3 +122,23 @@ export default function ResetPassword() {
     </LayoutMain>
   );
 }
+
+export const getServerSideProps = async ({ query }) => {
+  const { token, email } = query;
+  console.log({ token, email });
+
+  if (!token || !email) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {
+      token,
+      email,
+    },
+  };
+};
