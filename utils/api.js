@@ -475,4 +475,7 @@ export {
   doMobileLegendRegistration,
   sendEmailForgotPassword,
   doResetPassword,
+  doCompetitiveProgrammingRegistration,
+  doUiUXRegistration,
+  doWebDevelopmentRegistration,
 };
