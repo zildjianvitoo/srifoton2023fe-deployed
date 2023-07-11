@@ -84,4 +84,60 @@ export const credentialsFormRules = {
   },
 };
 
-export const seminarFormRules = {};
+export const seminarFormRules = {
+  name: {
+    required: {
+      value: true,
+      message: "Nama tidak boleh kosong",
+    },
+  },
+  email: {
+    required: {
+      value: true,
+      message: "Email tidak boleh kosong",
+    },
+    pattern: {
+      value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
+      message: "Format Email Salah",
+    },
+  },
+  college: {
+    required: {
+      value: true,
+      message: "Universitas tidak boleh kosong",
+    },
+  },
+
+  nim: {
+    required: {
+      value: true,
+      message: "NIM tidak boleh kosong",
+    },
+    pattern: {
+      value: /^\d+$/,
+      message: "NIM harus berupa angka",
+    },
+  },
+  phoneNumber: {
+    required: {
+      value: true,
+      message: "Nomor telepon tidak boleh kosong",
+    },
+    pattern: {
+      value: /^\d+$/,
+      message: "Nomor telepon harus berupa angka",
+    },
+  },
+  paymentMethod: {
+    required: {
+      value: true,
+      message: "Metode pembayaran tidak boleh kosong",
+    },
+  },
+  seminarType: {
+    required: {
+      value: true,
+      message: "Tipe seminar tidak boleh kosong",
+    },
+  },
+};

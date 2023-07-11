@@ -63,10 +63,7 @@ export default function FormFirstField() {
           value={universitas}
           onChange={(e) => setUniversitas(e.target.value)}
         />
-        <InputDropdown
-          value={paymentMethod}
-          onChange={(e) => setPaymentMethod(e.target.value)}
-        />
+        <InputDropdown />
         <InputFile
           labelFor={"bukti-pembayaran"}
           labelText="Bukti Pembayaran"

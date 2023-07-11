@@ -1,11 +1,22 @@
-export default function InputDropdown({ ...props }) {
+import { forwardRef } from "react";
+import ErrorMessage from "./ErrorMessage";
+
+const InputDropdown = forwardRef(function InputDropDown(
+  { onChange, onBlur, name, errors },
+  ref
+) {
+  const aaa = "asasa";
+
   return (
     <div className="flex flex-col">
       <label htmlFor="pembayaran" className="text-lg font-medium ">
         Metode Pembayaran
       </label>
       <select
-        {...props}
+        name={name}
+        ref={ref}
+        onChange={onChange}
+        onBlur={onBlur}
         id="pembayaran"
         className="w-[60%] mt-1 lg:w-[35%] p-[6px] bg-transparent border border-black dark:border-[#E0E0E0] rounded-lg "
       >
@@ -34,6 +45,9 @@ export default function InputDropdown({ ...props }) {
           LINKAJA
         </option>
       </select>
+      {errors && <ErrorMessage message={errors.message} />}
     </div>
   );
-}
+});
+
+export default InputDropdown;

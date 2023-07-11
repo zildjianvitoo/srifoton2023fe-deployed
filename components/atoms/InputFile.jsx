@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { BsImage } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
+import ErrorMessage from "./ErrorMessage";
 
-export default function InputFile({ labelText, labelFor, value, setProof }) {
+const InputFile = forwardRef(function InputFIle({
+  labelText,
+  labelFor,
+  setProof,
+}) {
   const [image, setImage] = useState(null);
   const [wrongType, setWrongType] = useState(false);
 
@@ -14,7 +19,12 @@ export default function InputFile({ labelText, labelFor, value, setProof }) {
       "image/jpg",
       "image/heic",
     ];
-    if (selectedImage && ALLOWED_TYPES.includes(selectedImage.type)) {
+    const ALLOWED_SIZE = 2000000;
+    if (
+      selectedImage &&
+      ALLOWED_TYPES.includes(selectedImage.type) &&
+      selectedImage.size <= ALLOWED_SIZE
+    ) {
       let reader = new FileReader();
       reader.onloadend = () => {
         setImage(reader.result);
@@ -27,6 +37,11 @@ export default function InputFile({ labelText, labelFor, value, setProof }) {
       setWrongType(true);
       alert("Gambar gagal diunggah");
     }
+  };
+
+  const removeImage = () => {
+    setProof(null);
+    setImage(null);
   };
 
   return (
@@ -51,14 +66,11 @@ export default function InputFile({ labelText, labelFor, value, setProof }) {
                     <img
                       src={image}
                       alt="image yang diupload"
-                      className="object-contain max-w-[280px] md:max-w-sm rounded-md max-h-[10rem] md:max-h-[10rem] "
+                      className="object-contain max-w-[240px]  lg:max-w-[280px] md:max-w-sm rounded-md max-h-[10rem] md:max-h-[10rem] z-10"
                     />
                   </div>
-                  <div
-                    className="flex justify-end "
-                    onClick={() => setImage(null)}
-                  >
-                    <AiOutlineClose className="absolute z-10 text-lg font-semibold text-black translate-x-5 dark:text-white " />
+                  <div className="flex justify-end " onClick={removeImage}>
+                    <AiOutlineClose className="absolute z-40 text-lg font-semibold text-black translate-x-5 dark:text-white " />
                   </div>
                 </div>
               ) : (
@@ -73,10 +85,13 @@ export default function InputFile({ labelText, labelFor, value, setProof }) {
             id={labelFor}
             type="file"
             className="hidden"
+            accept="image/png, image/jpeg, image/jpg, image/heic"
             onChange={uploadImage}
           />
         </label>
       </div>
+      {wrongType && <ErrorMessage message="Ukuran File terlalu besar" />}
     </div>
   );
-}
+});
+export default InputFile;

@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Jumbotron() {
@@ -36,12 +37,14 @@ export default function Jumbotron() {
             interdum, ac aliquet odio mattis.
           </p>
           <div className="flex gap-x-6">
-            <button
-              className={`text-white  text-base lg:text-xl rounded-3xl font-bold px-10 lg:px-14 py-2 border-none shadow-sm 
+            <Link href="#register-seminar">
+              <button
+                className={`text-white  text-base lg:text-xl rounded-3xl font-bold px-10 lg:px-14 py-2 border-none shadow-sm 
                bg-[#F164F0]/80  dark:bg-[#D54CF0] hover:-translate-y-[6px] duration-300`}
-            >
-              Daftar
-            </button>
+              >
+                Daftar
+              </button>
+            </Link>
             <button
               className={`text-white text-sm lg:text-lg rounded-3xl font-bold px-7  lg:px-10 py-2 shadow-sm 
                bg-transparent  border-[3px] border-white hover:-translate-y-[6px] duration-300`}
