@@ -22,9 +22,9 @@ export default function TimelineBox({
           />
         </div>
         <div className="col-start-6 col-end-10 p-4 my-4 mr-auto rounded-xl ">
-          <h3 className={`text-2xl font-semibold lg:text-3xl  ${titleColor} `}>
+          <h2 className={`text-2xl font-semibold lg:text-3xl  ${titleColor} `}>
             {title}
-          </h3>
+          </h2>
           <p className={` mb-1 font-semibold  ${dateColor} `}>{date}</p>
           <p className={`leading-tight text-justify ${descColor} `}>
             {description}
@@ -36,9 +36,9 @@ export default function TimelineBox({
   return (
     <div className="flex flex-row-reverse md:contents">
       <div className="col-start-1 col-end-5 p-4 my-4 ml-auto rounded-xl">
-        <h3 className={`text-2xl font-semibold lg:text-3xl  ${titleColor}`}>
+        <h2 className={`text-2xl font-semibold lg:text-3xl  ${titleColor}`}>
           {title}
-        </h3>
+        </h2>
         <p className={`font-semibold  ${dateColor}`}>{date}</p>
         <p className={`mt-1 leading-tight text-justify ${descColor} `}>
           {description}

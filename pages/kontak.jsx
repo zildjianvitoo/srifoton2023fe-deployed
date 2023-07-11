@@ -1,8 +1,15 @@
+import Head from "next/head";
 import LayoutMain from "@/components/LayoutMain";
-import React from "react";
 
 const kontak = () => {
-  return <LayoutMain></LayoutMain>;
+  return (
+    <>
+      <Head>
+        <title>SRIFOTON | Kontak</title>
+      </Head>
+      <LayoutMain></LayoutMain>
+    </>
+  );
 };
 
 export default kontak;

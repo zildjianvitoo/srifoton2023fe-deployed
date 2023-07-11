@@ -12,7 +12,7 @@ export default function Sponsor() {
         <div className="flex flex-wrap justify-center gap-8 px-6 mt-10 lg:px-16">
           {sponsorImage.map((image, index) => (
             <SponsorCard
-              key={image}
+              key={index}
               image={image}
               blue={isBorderBlue(index) ? true : false}
             />
@@ -25,7 +25,7 @@ export default function Sponsor() {
         <div className="flex flex-wrap justify-center gap-8 px-6 mt-10 lg:px-16">
           {medpartImage.map((image, index) => (
             <SponsorCard
-              key={image}
+              key={index}
               image={image}
               blue={isBorderBlue(index) ? true : false}
             />

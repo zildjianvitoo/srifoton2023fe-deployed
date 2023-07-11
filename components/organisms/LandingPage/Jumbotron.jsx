@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../../atoms/Button";
+import Button from "@/components/atoms/Button";
 
 const Jumbotron = () => {
   return (
@@ -21,7 +21,11 @@ const Jumbotron = () => {
               SRIFOTON
             </h1> */}
             <div className="z-10">
-              <img src="./SRIFOTON.png" className="lg:w-[85%] py-4" />
+              <img
+                src="./SRIFOTON.png"
+                alt="big text srifoton"
+                className="lg:w-[85%] py-4"
+              />
             </div>
             <h3 className="text-xl md:text-2xl lg:text-2xl z-[1] lg:w-[55%] text-[#797979] dark:text-[#CFCFCF]  lg:-mt-14 ">
               Sriwijaya Informatics Exhibition atau yang biasa dikenali dengan

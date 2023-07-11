@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Head from "next/head";
 import Jumbotron from "@/components/organisms/LandingPage/Jumbotron";
 import Intro from "@/components/organisms/LandingPage/Intro";
 import Benefit from "@/components/organisms/LandingPage/Benefit";
@@ -8,13 +8,18 @@ import LayoutMain from "@/components/LayoutMain";
 
 export default function Home() {
   return (
-    <LayoutMain>
-      <Jumbotron />
-      <Intro />
-      <Timeline />
-      <Benefit />
-      <Sponsor />
-      <div className="mb-96"></div>
-    </LayoutMain>
+    <>
+      <Head>
+        <title>SRIFOTON | Home</title>
+      </Head>
+      <LayoutMain>
+        <Jumbotron />
+        <Intro />
+        <Timeline />
+        <Benefit />
+        <Sponsor />
+        <div className="mb-96"></div>
+      </LayoutMain>
+    </>
   );
 }

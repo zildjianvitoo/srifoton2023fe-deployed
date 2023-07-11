@@ -12,6 +12,7 @@ import { doResetPassword } from "@/utils/api";
 import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { DevTool } from "@hookform/devtools";
+import Head from "next/head";
 
 export default function ResetPassword({ token, email }) {
   const [successMessage, setSuccessMessage] = useState("");
@@ -47,79 +48,86 @@ export default function ResetPassword({ token, email }) {
   };
 
   return (
-    <LayoutMain>
-      <LayoutCredentials>
-        <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
-          <CredentialsCard>
-            <div className="relative z-10 flex flex-col w-full gap-4">
-              <h1 className="mt-5 text-4xl text-[#464646] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
-                Atur Ulang <span className="block lg:mt-4">Kata Sandi</span>
-              </h1>
-              <div className="flex flex-col mt-10 ">
-                <div className="relative">
-                  <InputForm
-                    labelText={"Kata Sandi Baru"}
-                    placeholder={"Masukan kata sandi baru"}
-                    type={showPassword ? "text" : "password"}
-                    labelFor={"newPassword"}
-                    register={register}
-                    rules={credentialsFormRules.resetPassword.newPassword}
-                  />
-                  {showPassword ? (
-                    <AiOutlineEye
-                      className={`absolute right-4 top-[57%] cursor-pointer text-[#464646] dark:text-white text-2xl `}
-                      onClick={showPasswordHandler}
+    <>
+      <Head>
+        <title>SRIFOTON | Reset Password</title>
+      </Head>
+      <LayoutMain>
+        <LayoutCredentials>
+          <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
+            <CredentialsCard>
+              <div className="relative z-10 flex flex-col w-full gap-4">
+                <h1 className="mt-5 text-4xl text-[#464646] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
+                  Atur Ulang <span className="block lg:mt-4">Kata Sandi</span>
+                </h1>
+                <div className="flex flex-col mt-10 ">
+                  <div className="relative">
+                    <InputForm
+                      labelText={"Kata Sandi Baru"}
+                      placeholder={"Masukan kata sandi baru"}
+                      type={showPassword ? "text" : "password"}
+                      labelFor={"newPassword"}
+                      register={register}
+                      rules={credentialsFormRules.resetPassword.newPassword}
                     />
-                  ) : (
-                    <AiOutlineEyeInvisible
-                      className="absolute cursor-pointer right-4 top-[57%] text-[#464646] dark:text-white text-2xl"
-                      onClick={showPasswordHandler}
+                    {showPassword ? (
+                      <AiOutlineEye
+                        className={`absolute right-4 top-[57%] cursor-pointer text-[#464646] dark:text-white text-2xl `}
+                        onClick={showPasswordHandler}
+                      />
+                    ) : (
+                      <AiOutlineEyeInvisible
+                        className="absolute cursor-pointer right-4 top-[57%] text-[#464646] dark:text-white text-2xl"
+                        onClick={showPasswordHandler}
+                      />
+                    )}
+                  </div>
+                  {errors.newPassword && (
+                    <ErrorMessage message={errors.newPassword?.message} />
+                  )}
+                </div>
+                <div className="flex flex-col ">
+                  <div className="relative">
+                    <InputForm
+                      labelText={"Konfirmasi Kata Sandi"}
+                      placeholder={"Konfirmasi kata sandi baru"}
+                      type={showPassword ? "text" : "password"}
+                      labelFor={"confirmNewPassword"}
+                      register={register}
+                      rules={
+                        credentialsFormRules.resetPassword.confirmNewPassword
+                      }
+                    />
+                    {showPassword ? (
+                      <AiOutlineEye
+                        className={`absolute right-4 top-[57%] cursor-pointer text-[#464646] dark:text-white text-2xl `}
+                        onClick={showPasswordHandler}
+                      />
+                    ) : (
+                      <AiOutlineEyeInvisible
+                        className="absolute cursor-pointer right-4 top-[57%] text-[#464646] dark:text-white text-2xl"
+                        onClick={showPasswordHandler}
+                      />
+                    )}
+                  </div>
+                  {errors.confirmNewPassword && (
+                    <ErrorMessage
+                      message={errors.confirmNewPassword?.message}
                     />
                   )}
                 </div>
-                {errors.newPassword && (
-                  <ErrorMessage message={errors.newPassword?.message} />
-                )}
-              </div>
-              <div className="flex flex-col ">
-                <div className="relative">
-                  <InputForm
-                    labelText={"Konfirmasi Kata Sandi"}
-                    placeholder={"Konfirmasi kata sandi baru"}
-                    type={showPassword ? "text" : "password"}
-                    labelFor={"confirmNewPassword"}
-                    register={register}
-                    rules={
-                      credentialsFormRules.resetPassword.confirmNewPassword
-                    }
-                  />
-                  {showPassword ? (
-                    <AiOutlineEye
-                      className={`absolute right-4 top-[57%] cursor-pointer text-[#464646] dark:text-white text-2xl `}
-                      onClick={showPasswordHandler}
-                    />
-                  ) : (
-                    <AiOutlineEyeInvisible
-                      className="absolute cursor-pointer right-4 top-[57%] text-[#464646] dark:text-white text-2xl"
-                      onClick={showPasswordHandler}
-                    />
-                  )}
+                <div className="flex justify-end mt-20">
+                  <Button variant={"submitButton"} style={"w-3/5 lg:w-2/5"}>
+                    Submit
+                  </Button>
                 </div>
-                {errors.confirmNewPassword && (
-                  <ErrorMessage message={errors.confirmNewPassword?.message} />
-                )}
               </div>
-              <div className="flex justify-end mt-20">
-                <Button variant={"submitButton"} style={"w-3/5 lg:w-2/5"}>
-                  Submit
-                </Button>
-              </div>
-            </div>
-          </CredentialsCard>
-        </form>
-        <DevTool control={control} />
-      </LayoutCredentials>
-    </LayoutMain>
+            </CredentialsCard>
+          </form>
+          <DevTool control={control} />
+        </LayoutCredentials>
+      </LayoutMain>
+    </>
   );
 }
 
