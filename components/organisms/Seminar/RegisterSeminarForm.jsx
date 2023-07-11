@@ -3,11 +3,13 @@ import Button from "@/components/atoms/Button";
 import InputDropdown from "@/components/atoms/InputDropdown";
 import InputFile from "@/components/atoms/InputFile";
 import InputForm from "@/components/atoms/InputForm";
-import { seminarFormRules } from "@/utils/formRules";
-import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import InputRadio from "@/components/atoms/InputRadio";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
+import { seminarFormRules } from "@/utils/formRules";
+import { doSeminarRegistration } from "@/utils/api";
+import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
+import { data } from "autoprefixer";
 
 let renderCount = 0;
 
@@ -22,9 +24,32 @@ export default function RegisterSeminarForm() {
     mode: "onChange",
   });
 
-  const onSubmitHandler = (data) => {
-    console.log(data);
-    console.log(proof);
+  const onSubmitHandler = async (formValue) => {
+    console.log(formValue);
+    const {
+      name,
+      email,
+      nim,
+      college,
+      phoneNumber,
+      seminarType,
+      paymentMethod,
+    } = formValue;
+    try {
+      const { data } = await doSeminarRegistration({
+        name,
+        email,
+        nim,
+        college,
+        phone_number: phoneNumber,
+        type: seminarType,
+        payment_method: paymentMethod,
+        proof: proof,
+      });
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {

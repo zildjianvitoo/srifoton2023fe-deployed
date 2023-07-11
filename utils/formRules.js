@@ -109,10 +109,6 @@ export const seminarFormRules = {
   },
 
   nim: {
-    required: {
-      value: true,
-      message: "NIM tidak boleh kosong",
-    },
     pattern: {
       value: /^\d+$/,
       message: "NIM harus berupa angka",

@@ -10,3 +10,8 @@ const useAccessToken = (set) => ({
 export const useAccessTokenStore = create(
   persist(useAccessToken, { name: "token-srifoton" })
 );
+
+export const getToken = () => {
+  const { accessToken } = useAccessTokenStore.getState();
+  return accessToken;
+};

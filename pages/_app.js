@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Outfit } from "next/font/google";
 import { ThemeProvider, useTheme } from "next-themes";
 import Head from "next/head";
+import { getToken } from "@/store/tokenStore";
 
 const outfit = Outfit({ subsets: ["latin"] });
 

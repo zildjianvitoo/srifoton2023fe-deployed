@@ -1,8 +1,11 @@
+import { get } from "react-hook-form";
 import api from "./axiosInstance";
-import { useTokenStore } from "@/store/tokenStore";
+import { getToken } from "@/store/tokenStore";
+
+const token = getToken();
 
 function getAccessToken() {
-  return localStorage.getItem("token-srifoton");
+  return token;
 }
 
 function setAccesToken() {
@@ -121,7 +124,7 @@ async function doSeminarRegistration({
   college,
   phone_number,
   type,
-  poof,
+  proof,
   payment_method,
 }) {
   const { data, status } = await api.post(
@@ -133,7 +136,7 @@ async function doSeminarRegistration({
       college,
       phone_number,
       type,
-      poof,
+      proof,
       payment_method,
     },
     {
