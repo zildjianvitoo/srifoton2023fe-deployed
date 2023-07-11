@@ -42,6 +42,7 @@ export default function FirstField({ jenisKompetisi }) {
             <PaymentNote />
             <img
               src={imageSource}
+              alt="icon register kompetisi"
               className="hidden mt-6 lg:flex w-[80%] mx-auto"
             />
           </div>
