@@ -1,10 +1,8 @@
-import { get } from "react-hook-form";
 import api from "./axiosInstance";
 import { getToken } from "@/store/tokenStore";
 
-const token = getToken();
-
 function getAccessToken() {
+  const token = getToken();
   return token;
 }
 
@@ -80,7 +78,10 @@ async function doVerifyUser({ id, hash }) {
   const { data, status } = await api.get(
     `/api/email/verify/${id}/${hash}`,
     {},
-    { headers: { Authorization: `Bearer ${getAccessToken()}` } }
+    {
+      headers: { Authorization: `Bearer ${getAccessToken()}` },
+      // withCredentials: true,
+    }
   );
   if (status !== 200) {
     throw new Error(data.message);

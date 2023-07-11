@@ -10,14 +10,17 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-import { useForm } from "react-hook-form";
-import { doRegister } from "@/utils/api";
+import { useAccessTokenStore } from "@/store/tokenStore";
+import { set, useForm } from "react-hook-form";
+import { doRegister, sendEmailVerification } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 
 function Register() {
+  const [isLoading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
+  const { setAccessToken } = useAccessTokenStore();
   const {
     register,
     handleSubmit,
@@ -31,15 +34,23 @@ function Register() {
   const onSubmitHandler = async (formValue) => {
     const { name, email, password, confirmPassword } = formValue;
     try {
+      setLoading(true);
       const { data } = await doRegister({
         name,
         email,
         password,
         password_confirmation: confirmPassword,
       });
+      console.log(data);
+      await setAccessToken(data.token);
+      const res = await sendEmailVerification({ email });
+      console.log(res);
       router.push("/login");
     } catch (error) {
+      console.log(error);
       setErrorMessage(error.response.data.errors);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -153,7 +164,11 @@ function Register() {
                       Masuk
                     </Link>
                   </div>
-                  <Button variant={"submitButton"} style={"w-3/5 lg:w-2/5"}>
+                  <Button
+                    variant={"submitButton"}
+                    style={"w-3/5 lg:w-2/5"}
+                    disabled={isLoading}
+                  >
                     Daftar
                   </Button>
                 </div>
