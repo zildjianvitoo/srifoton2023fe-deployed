@@ -49,7 +49,6 @@ export const getStaticProps = async () => {
 export const getStaticPaths = async () => {
   return {
     paths: [
-      { params: { jenisKompetisi: "mobile-legend" } },
       { params: { jenisKompetisi: "uiux-design" } },
       { params: { jenisKompetisi: "web-development" } },
       { params: { jenisKompetisi: "competitive-programming" } },

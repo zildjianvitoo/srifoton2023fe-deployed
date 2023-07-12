@@ -20,28 +20,12 @@ export default function SecondField({ jenisKompetisi }) {
             <FormCard key={"anggota-1"} header={"Anggota 1"} />
             <FormCard key={"anggota-2"} header={"Anggota 2"} />
           </div>
-          {jenisKompetisi === "mobile legend" ? (
-            <>
-              <div className="flex w-full gap-8">
-                <FormCard key={"anggota-3"} header={"Anggota 3"} />
-
-                <FormCard key={"anggota-3"} header={"Anggota 4"} />
-              </div>
-              <div className="flex w-full gap-8">
-                <FormCard key={"anggota-5"} header={"Anggota 5"} />
-                <div className="items-center justify-center hidden w-1/2 h-full mt-20 ml-auto lg:flex ">
-                  <img src={imageSource} alt={"decoration"} />
-                </div>
-              </div>
-            </>
-          ) : (
-            <div className="flex w-full gap-8">
-              <FormCard key={"anggota-3"} header={"Anggota 3"} />
-              <div className="items-center justify-center hidden w-1/2 h-full mt-20 ml-auto lg:flex ">
-                <img src={imageSource} alt={"decoration"} />
-              </div>
+          <div className="flex w-full gap-8">
+            <FormCard key={"anggota-3"} header={"Anggota 3"} />
+            <div className="items-center justify-center hidden w-1/2 h-full mt-20 ml-auto lg:flex ">
+              <img src={imageSource} alt={"decoration"} />
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>

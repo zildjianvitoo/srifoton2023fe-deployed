@@ -11,9 +11,9 @@ import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredenti
 import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useAccessTokenStore } from "@/store/tokenStore";
-import { set, useForm } from "react-hook-form";
 import { doRegister, sendEmailVerification } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
+import { useForm } from "react-hook-form";
 
 function Register() {
   const [isLoading, setLoading] = useState(false);
@@ -45,7 +45,7 @@ function Register() {
       await setAccessToken(data.token);
       const res = await sendEmailVerification({ email });
       console.log(res);
-      router.push("/login");
+      router.push("/login"); // push ke login ?? dashboard
     } catch (error) {
       console.log(error);
       setErrorMessage(error.response.data.errors);

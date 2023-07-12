@@ -28,13 +28,10 @@ export default function ResetPassword({ token, email }) {
   const showPasswordHandler = () => {
     setShowPassword((prev) => !prev);
   };
-  console.log({ token, email });
 
   const onSubmitHandler = async (formValue) => {
-    console.log(formValue);
-    console.log({ token, email });
+    const { newPassword, confirmNewPassword } = formValue;
     try {
-      const { newPassword, confirmNewPassword } = formValue;
       const { data } = await doResetPassword({
         token,
         email,
@@ -133,7 +130,6 @@ export default function ResetPassword({ token, email }) {
 
 export const getServerSideProps = async ({ query }) => {
   const { token, email } = query;
-  console.log({ token, email });
 
   if (!token || !email) {
     return {
