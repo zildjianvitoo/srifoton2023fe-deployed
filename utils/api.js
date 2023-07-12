@@ -330,6 +330,7 @@ async function doUiUXRegistration({
   team_name,
   email,
   college,
+  name1,
   nim1,
   phone_number1,
   instagram1,
@@ -353,6 +354,7 @@ async function doUiUXRegistration({
       team_name,
       email,
       college,
+      name1,
       nim1,
       phone_number1,
       instagram1,
@@ -378,12 +380,17 @@ async function doUiUXRegistration({
       },
     }
   );
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
 }
 
 async function doWebDevelopmentRegistration({
   team_name,
   email,
   college,
+  name1,
   nim1,
   phone_number1,
   instagram1,
@@ -407,6 +414,7 @@ async function doWebDevelopmentRegistration({
       team_name,
       email,
       college,
+      name1,
       nim1,
       phone_number1,
       instagram1,

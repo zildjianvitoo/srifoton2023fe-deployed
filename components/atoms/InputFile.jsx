@@ -3,10 +3,11 @@ import { BsImage } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import ErrorMessage from "./ErrorMessage";
 
-const InputFile = forwardRef(function InputFIle({
+export default function InputFile({
   labelText,
   labelFor,
   setProof,
+  errorMessage,
 }) {
   const [image, setImage] = useState(null);
   const [wrongType, setWrongType] = useState(false);
@@ -33,6 +34,8 @@ const InputFile = forwardRef(function InputFIle({
       setWrongType(false);
       setProof(selectedImage);
       alert("Gambar berhasil diunggah");
+    } else if (!selectedImage) {
+      return;
     } else {
       setWrongType(true);
       alert("Gambar gagal diunggah");
@@ -91,7 +94,7 @@ const InputFile = forwardRef(function InputFIle({
         </label>
       </div>
       {wrongType && <ErrorMessage message="Ukuran File terlalu besar" />}
+      {errorMessage && <ErrorMessage message={errorMessage} />}
     </div>
   );
-});
-export default InputFile;
+}

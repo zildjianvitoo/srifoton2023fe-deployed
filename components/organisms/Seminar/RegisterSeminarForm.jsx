@@ -52,10 +52,6 @@ export default function RegisterSeminarForm() {
     }
   };
 
-  useEffect(() => {
-    errors.seminarType && console.log(errors.seminarType.message);
-  }, [errors]);
-
   renderCount++;
   return (
     <>
@@ -105,7 +101,7 @@ export default function RegisterSeminarForm() {
               labelFor={"nim"}
               labelText={"NIM (optional)"}
               placeholder={"Contoh: 09021382227140"}
-              type={"text"}
+              type={"number"}
               register={register}
               rules={seminarFormRules.nim}
             />
@@ -116,7 +112,7 @@ export default function RegisterSeminarForm() {
               labelFor={"phoneNumber"}
               labelText={"No Hp"}
               placeholder={"Contoh: 08123456789"}
-              type={"text"}
+              type={"number"}
               register={register}
               rules={seminarFormRules.phoneNumber}
             />

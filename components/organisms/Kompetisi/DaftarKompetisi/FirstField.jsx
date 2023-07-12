@@ -3,7 +3,13 @@ import FormFirstField from "./FormFirstField";
 import PaymentNote from "@/components/molecules/PaymentNote";
 import { ethnocentric } from "@/public/fonts/ethnocentric";
 
-export default function FirstField({ jenisKompetisi }) {
+export default function FirstField({
+  jenisKompetisi,
+  register,
+  errors,
+  setProof,
+  errorMessageProof,
+}) {
   const { theme } = useTheme();
 
   const imageSource =
@@ -37,7 +43,12 @@ export default function FirstField({ jenisKompetisi }) {
           )}
         </div>
         <div className="flex flex-col gap-8 lg:flex-row">
-          <FormFirstField />
+          <FormFirstField
+            register={register}
+            errors={errors}
+            setProof={setProof}
+            errorMessageProof={errorMessageProof}
+          />
           <div className="flex flex-col w-full lg:mt-2 lg:w-1/2">
             <PaymentNote />
             <img

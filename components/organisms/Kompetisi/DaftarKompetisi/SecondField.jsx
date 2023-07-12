@@ -1,7 +1,17 @@
-import FormCard from "@/components/molecules/FormCard";
+import FormCard1 from "@/components/molecules/FormCard1";
+import FormCard2 from "@/components/molecules/FormCard2";
+import FormCard3 from "@/components/molecules/FormCard3";
 import { useTheme } from "next-themes";
+import { set } from "react-hook-form";
 
-export default function SecondField({ jenisKompetisi }) {
+export default function SecondField({
+  register,
+  errors,
+  setIdCard1,
+  setIdCard2,
+  setIdCard3,
+  errorMessageIdCard1,
+}) {
   const { theme } = useTheme();
 
   const imageSource =
@@ -17,11 +27,30 @@ export default function SecondField({ jenisKompetisi }) {
             Formulir Anggota
           </h1>
           <div className="flex flex-col w-full gap-8 lg:flex-row">
-            <FormCard key={"anggota-1"} header={"Anggota 1"} />
-            <FormCard key={"anggota-2"} header={"Anggota 2"} />
+            <FormCard1
+              key={"anggota-1"}
+              header={"Anggota 1"}
+              register={register}
+              errors={errors}
+              setIdCard1={setIdCard1}
+              errorMessageIdCard1={errorMessageIdCard1}
+            />
+            <FormCard2
+              key={"anggota-2"}
+              header={"Anggota 2"}
+              register={register}
+              errors={errors}
+              setIdCard2={setIdCard2}
+            />
           </div>
           <div className="flex w-full gap-8">
-            <FormCard key={"anggota-3"} header={"Anggota 3"} />
+            <FormCard3
+              key={"anggota-3"}
+              header={"Anggota 3"}
+              register={register}
+              errors={errors}
+              setIdCard3={setIdCard3}
+            />
             <div className="items-center justify-center hidden w-1/2 h-full mt-20 ml-auto lg:flex ">
               <img src={imageSource} alt={"decoration"} />
             </div>

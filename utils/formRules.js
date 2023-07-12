@@ -137,3 +137,100 @@ export const seminarFormRules = {
     },
   },
 };
+
+export const competitionFormRules = {
+  firstField: {
+    teamName: {
+      required: {
+        value: true,
+        message: "Nama tim tidak boleh kosong",
+      },
+    },
+    email: {
+      required: {
+        value: true,
+        message: "Email tidak boleh kosong",
+      },
+      pattern: {
+        value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
+        message: "Format Email Salah",
+      },
+    },
+    college: {
+      required: {
+        value: true,
+        message: "Universitas tidak boleh kosong",
+      },
+    },
+    paymentMethod: {
+      required: {
+        value: true,
+        message: "Metode pembayaran tidak boleh kosong",
+      },
+    },
+  },
+  secondField: {
+    name1: {
+      required: {
+        value: true,
+        message: "Nama tidak boleh kosong",
+      },
+    },
+    nim1: {
+      required: {
+        value: true,
+        message: "NIM tidak boleh kosong",
+      },
+      pattern: {
+        value: /^\d+$/,
+        message: "NIM harus berupa angka",
+      },
+    },
+    phoneNumber1: {
+      required: {
+        value: true,
+        message: "Nomor telepon tidak boleh kosong",
+      },
+      pattern: {
+        value: /^\d+$/,
+        message: "Nomor telepon harus berupa angka",
+      },
+    },
+    instagram1: {
+      required: {
+        value: true,
+        message: "Instagram tidak boleh kosong",
+      },
+    },
+    gender1: {
+      required: {
+        value: true,
+        message: "Jenis kelamin tidak boleh kosong",
+      },
+    },
+    nim2: {
+      pattern: {
+        value: /^\d+$/,
+        message: "NIM harus berupa angka",
+      },
+    },
+    phoneNumber2: {
+      pattern: {
+        value: /^\d+$/,
+        message: "Nomor telepon harus berupa angka",
+      },
+    },
+    nim3: {
+      pattern: {
+        value: /^\d+$/,
+        message: "NIM harus berupa angka",
+      },
+    },
+    phoneNumber3: {
+      pattern: {
+        value: /^\d+$/,
+        message: "Nomor telepon harus berupa angka",
+      },
+    },
+  },
+};
