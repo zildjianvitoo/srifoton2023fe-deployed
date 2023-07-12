@@ -31,9 +31,7 @@ export default function DaftarKompetisi() {
     formState: { errors },
   } = useForm();
 
-  const { jenisKompetisi } = router.query;
-
-  const validJenisKompetisi = jenisKompetisi?.split("-").join(" ");
+  const jenisKompetisi = router.query.jenisKompetisi.split("-").join(" ");
 
   const onSubmitHandler = async (formValue) => {
     console.log(formValue);
@@ -68,7 +66,7 @@ export default function DaftarKompetisi() {
       instagram3,
     } = formValue;
     try {
-      if (validJenisKompetisi === "web development") {
+      if (jenisKompetisi === "web development") {
         const { data } = await doWebDevelopmentRegistration({
           team_name: teamName,
           email,
@@ -92,8 +90,8 @@ export default function DaftarKompetisi() {
           proof,
         });
         console.log(data);
-      } else if (validJenisKompetisi === "competitive programming") {
-        const { data } = await doWebDevelopmentRegistration({
+      } else if (jenisKompetisi === "competitive programming") {
+        const { data } = await doCompetitiveProgrammingRegistration({
           team_name: teamName,
           email,
           college,
@@ -116,8 +114,8 @@ export default function DaftarKompetisi() {
           proof,
         });
         console.log(data);
-      } else if (validJenisKompetisi === "uiux design") {
-        const { data } = await doWebDevelopmentRegistration({
+      } else if (jenisKompetisi === "uiux design") {
+        const { data } = await doUiUXRegistration({
           team_name: teamName,
           email,
           college,
@@ -155,7 +153,7 @@ export default function DaftarKompetisi() {
             onSubmit={handleSubmit(onSubmitHandler)}
           >
             <FirstField
-              jenisKompetisi={validJenisKompetisi}
+              jenisKompetisi={jenisKompetisi}
               register={register}
               errors={errors}
               errorMessageProof={errorMessageProof}

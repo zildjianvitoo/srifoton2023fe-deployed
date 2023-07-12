@@ -3,6 +3,7 @@ import React from "react";
 export default function Modal({ showModal, setShowModal, message }) {
   return (
     <>
+      <label htmlFor="my_modal_6" className="hidden" />
       <input
         type="checkbox"
         id="my_modal_6"
@@ -14,13 +15,13 @@ export default function Modal({ showModal, setShowModal, message }) {
           <h3 className="text-lg font-bold">Berhasil</h3>
           <p className="py-4">{message}!</p>
           <div className="modal-action">
-            <button
+            <label
               htmlFor="my_modal_6"
               className="text-white btn dark:btn-active btn-primary"
               onClick={() => setShowModal(false)}
             >
               Close
-            </button>
+            </label>
           </div>
         </div>
       </div>
