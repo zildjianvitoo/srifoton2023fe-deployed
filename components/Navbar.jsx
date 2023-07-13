@@ -116,12 +116,12 @@ export default function Navbar() {
             className=" w-[110px] -translate-x-3 h-[25px] sm:w-[110px] sm:h-[30px] lg:w-[160px] lg:h-[40px]"
           /> */}
           <Image
+            priority
             src="/assets/logo-srifoton2023.svg"
             alt="Logo Srifoton"
             width={50}
             height={30}
             quality={100}
-            priority
           />
           <h3
             className={`hidden bg-gradient-to-r bggradien bg-clip-text text-transparent from-[#FC39FC] to-[#428AE0] gap-2 lg:flex ${ethnocentric.className}`}

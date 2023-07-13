@@ -20,8 +20,8 @@ function Login() {
   const [errorMessage, setErrorMessage] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
-  const { setAccessToken } = useAccessTokenStore();
-  const { setUser } = useUserStore();
+  const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
+  const setUser = useUserStore((state) => state.setUser);
   const {
     control,
     register,

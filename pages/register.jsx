@@ -15,14 +15,15 @@ import { useUserStore } from "@/store/userStore";
 import { doRegister } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
+let renderCount = 0;
 
 function Register() {
   const [isLoading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
-  const { setAccessToken } = useAccessTokenStore();
-  const { setUser } = useUserStore();
+  const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
+  const setUser = useUserStore((state) => state.setUser);
   const {
     register,
     handleSubmit,
@@ -55,6 +56,7 @@ function Register() {
     }
   };
 
+  renderCount++;
   return (
     <>
       <Head>
@@ -66,7 +68,7 @@ function Register() {
             <CredentialsCard>
               <div className="relative z-10 flex flex-col w-full gap-4 ">
                 <h1 className="mt-5 text-4xl text-[#494B7C] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
-                  Registrasi Akun
+                  Registrasi Akun {renderCount / 2}
                 </h1>
                 <div className="flex flex-col mt-4 ">
                   <InputForm

@@ -1,10 +1,7 @@
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Jumbotron() {
-  const { theme } = useTheme();
-
   return (
     <section
       id="#"
@@ -19,6 +16,7 @@ export default function Jumbotron() {
       <div className="flex flex-col-reverse w-full h-full gap-20 p-8 mt-12 lg:mt-16 lg:flex-row">
         <div className="flex items-center  lg:w-[50%] ">
           <Image
+            priority
             width={600}
             height={580}
             src="/assets/Seminar/jumbotron-seminar-img.png"
