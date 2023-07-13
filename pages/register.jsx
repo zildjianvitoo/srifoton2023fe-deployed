@@ -15,7 +15,6 @@ import { useUserStore } from "@/store/userStore";
 import { doRegister } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
-let renderCount = 0;
 
 function Register() {
   const [isLoading, setLoading] = useState(false);

@@ -63,7 +63,7 @@ function Login() {
                 <div className="flex flex-col mt-12">
                   <InputForm
                     labelText={"Email"}
-                    placeholder={"Contoh : ronaldogoat@goat.com"}
+                    placeholder={"Contoh:ronaldogoat@goat.com"}
                     type={"email"}
                     labelFor={"email"}
                     register={register}
@@ -78,7 +78,7 @@ function Login() {
                     />
                   )}
                 </div>
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                   <div className="relative">
                     <InputForm
                       labelText={"Kata Sandi"}

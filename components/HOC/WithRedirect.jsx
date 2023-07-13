@@ -10,7 +10,7 @@ const RedirectIfLoggedIn = (WrappedComponent) => {
       if (isLoggedIn) {
         router.replace("/dashboard");
       }
-    }, [isLoggedIn]);
+    }, [isLoggedIn, router]);
     return isLoggedIn ? null : <WrappedComponent />;
   };
   return WithRedirect;

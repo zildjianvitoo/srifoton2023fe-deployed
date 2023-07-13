@@ -1,4 +1,4 @@
-const InputForm = function DInputForm({
+export default function InputForm({
   labelText,
   labelFor,
   type,
@@ -23,6 +23,4 @@ const InputForm = function DInputForm({
       />
     </div>
   );
-};
-
-export default InputForm;
+}
