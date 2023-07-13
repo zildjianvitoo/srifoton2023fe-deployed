@@ -10,7 +10,7 @@ export default function SponsorCard({ image, blue }) {
       <img
         src="/assets/LandingPage/sponsor-adidas.svg"
         alt="Logo Sponsor"
-        className="w-full h-full "
+        className="object-cover w-full h-full "
       />
     </div>
   );

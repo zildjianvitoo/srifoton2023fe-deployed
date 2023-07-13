@@ -27,6 +27,7 @@ const Jumbotron = () => {
                 src="/SRIFOTON.png"
                 alt="big text srifoton"
                 priority
+                loading="eager"
                 quality={100}
                 className="lg:w-[85%] py-4"
               />
