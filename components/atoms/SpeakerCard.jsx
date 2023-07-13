@@ -18,9 +18,9 @@ export default function SpeakerCard({ secondCard }) {
       <div className="absolute -bottom-1  w-full h-[25%] md:h-1/5">
         <div className="absolute inset-0 z-0 w-full glassmorphism rounded-b-[28px] lg:rounded-b-[50px]" />
         <div className="relative z-10 flex flex-col py-3 lg:pt-3 px-7">
-          <h3 className="font-bold tracking-wide text-[26px] text-white lg:text-3xl w-fit lg:tracking-normal">
+          <h2 className="font-bold tracking-wide text-[26px] text-white lg:text-3xl w-fit lg:tracking-normal">
             Lucas Ibrahim
-          </h3>
+          </h2>
           <div className="rounded-[50px] mt-2 md:text-sm text-[#505050] bg-[#EDEDED] w-fit py-1 px-2 font-medium">
             <p>UI/UX Designer</p>
           </div>

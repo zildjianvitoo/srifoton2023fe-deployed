@@ -26,6 +26,7 @@ const Jumbotron = () => {
                 height={180}
                 src="/SRIFOTON.png"
                 alt="big text srifoton"
+                priority
                 quality={100}
                 className="lg:w-[85%] py-4"
               />
