@@ -1,6 +1,12 @@
 import LoadingIcon from "./LoadingIcon";
 
-export default function Button({ style, children, variant, disabled }) {
+export default function Button({
+  style,
+  children,
+  variant,
+  disabled,
+  onClickHandler,
+}) {
   const isSubmitButton = variant === "submitButton";
 
   const getClassName = () => {
@@ -19,6 +25,7 @@ export default function Button({ style, children, variant, disabled }) {
     <button
       type={isSubmitButton ? "submit" : "button"}
       className={getClassName()}
+      onClick={onClickHandler}
       disabled={disabled}
     >
       {children}

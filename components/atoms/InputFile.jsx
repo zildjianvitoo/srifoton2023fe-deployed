@@ -77,7 +77,7 @@ export default function InputFile({
                   </div>
                 </div>
               ) : (
-                <div className="flex items-center justify-center gap-2 border border-[#D0D0D0] bg-[#E2E2E2] dark:border-none dark:bg-transparent py-1 px-4  rounded-md">
+                <div className="flex items-center justify-center gap-2 border border-[#D0D0D0]  dark:border-none dark:bg-transparent py-1 px-4  rounded-md">
                   <BsImage className="dark:text-white" />
                   <p className="text-sm font-medium dark:text-white">Unggah</p>
                 </div>

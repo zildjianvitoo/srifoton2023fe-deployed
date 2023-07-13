@@ -40,7 +40,7 @@ export default function Jumbotron() {
             <Link href="#register-seminar">
               <button
                 className={`text-white  text-base lg:text-xl rounded-3xl font-bold px-10 lg:px-14 py-2 border-none shadow-sm 
-               bg-[#F164F0]/80  dark:bg-[#D54CF0] hover:-translate-y-[6px] duration-300`}
+               bg-[#F164F0]  dark:bg-[#D54CF0] hover:-translate-y-[6px] duration-300`}
               >
                 Daftar
               </button>

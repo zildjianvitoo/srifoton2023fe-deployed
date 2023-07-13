@@ -121,6 +121,7 @@ export default function Navbar() {
             width={50}
             height={30}
             quality={100}
+            priority
           />
           <h3
             className={`hidden bg-gradient-to-r bggradien bg-clip-text text-transparent from-[#FC39FC] to-[#428AE0] gap-2 lg:flex ${ethnocentric.className}`}

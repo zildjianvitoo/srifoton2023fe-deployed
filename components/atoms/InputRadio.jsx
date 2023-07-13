@@ -5,7 +5,7 @@ const InputRadio = forwardRef(function InputRadio(
   ref
 ) {
   return (
-    <div className="flex gap-2">
+    <div className="flex items-center gap-2">
       <input
         type="radio"
         id={labelFor}
@@ -14,7 +14,7 @@ const InputRadio = forwardRef(function InputRadio(
         onBlur={onBlur}
         name={name}
         ref={ref}
-        className="scale-[1.3] cursor-pointer"
+        className="lg:scale-[1.3] cursor-pointer"
       />
       <label htmlFor={labelFor} className="font-medium">
         {labelText}

@@ -12,7 +12,7 @@ import RedirectIfLoggedIn from "@/components/HOC/WithRedirect";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { useUserStore } from "@/store/userStore";
-import { doRegister, sendEmailVerification } from "@/utils/api";
+import { doRegister } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
 
@@ -46,9 +46,7 @@ function Register() {
       console.log(data);
       await setAccessToken(data.token);
       await setUser(data.user);
-      const res = await sendEmailVerification({ email });
-      console.log(res);
-      router.push("/dashboard"); // push ke login ?? dashboard
+      router.push(`/verify-email?email=${email}`); // push ke login ?? dashboard
     } catch (error) {
       console.log(error);
       setErrorMessage(error.response.data.errors);
@@ -67,7 +65,7 @@ function Register() {
           <form className="w-full " onSubmit={handleSubmit(onSubmitHandler)}>
             <CredentialsCard>
               <div className="relative z-10 flex flex-col w-full gap-4 ">
-                <h1 className="mt-5 text-4xl text-[#464646] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
+                <h1 className="mt-5 text-4xl text-[#494B7C] lg:text-[44px] font-bold mx-auto text-center dark:text-white">
                   Registrasi Akun
                 </h1>
                 <div className="flex flex-col mt-4 ">
