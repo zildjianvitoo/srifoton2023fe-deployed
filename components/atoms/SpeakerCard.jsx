@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 export default function SpeakerCard({ secondCard }) {
   const imageSource =
@@ -14,7 +13,6 @@ export default function SpeakerCard({ secondCard }) {
         alt="Pembicara Seminar Srifoton"
         width={340}
         height={320}
-        quality={100}
         className="rounded-[28px] lg:rounded-[50px] "
       />
       <div className="absolute -bottom-1  w-full h-[25%] md:h-1/5">

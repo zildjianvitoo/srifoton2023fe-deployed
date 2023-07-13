@@ -37,11 +37,13 @@ export default function Home() {
         <Benefit />
         <Sponsor />
         <div className="mb-96"></div>
-        <Modal
-          showModal={showModal}
-          setShowModal={setShowModal}
-          message={message}
-        />
+        {showModal && (
+          <Modal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            message={message}
+          />
+        )}
       </LayoutMain>
     </>
   );

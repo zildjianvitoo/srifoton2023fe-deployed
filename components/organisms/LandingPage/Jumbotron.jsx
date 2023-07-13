@@ -21,9 +21,12 @@ const Jumbotron = () => {
               SRIFOTON
             </h1> */}
             <div className="z-10">
-              <img
-                src="./SRIFOTON.png"
+              <Image
+                width={1050}
+                height={180}
+                src="/SRIFOTON.png"
                 alt="big text srifoton"
+                quality={100}
                 className="lg:w-[85%] py-4"
               />
             </div>

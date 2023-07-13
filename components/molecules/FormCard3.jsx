@@ -1,6 +1,4 @@
-import { useState } from "react";
 import InputForm from "../atoms/InputForm";
-import InputRadio from "../atoms/InputRadio";
 import InputFile from "../atoms/InputFile";
 
 export default function FormCard1({ header, register, setIdCard3 }) {

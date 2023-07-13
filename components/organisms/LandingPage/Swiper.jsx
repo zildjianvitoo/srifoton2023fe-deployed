@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import Image from "next/image";
 
 function SwiperSlider() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -61,7 +62,9 @@ function SwiperSlider() {
             currentSlideIndex != 0 ? "slide" : ""
           } `}
         >
-          <img
+          <Image
+            width={430}
+            height={315}
             src={swiperImage[0]}
             alt="benefit image"
             className="grid object-cover min-w-full place-items-center rounded-4xl"
@@ -72,7 +75,9 @@ function SwiperSlider() {
             currentSlideIndex != 1 && "slide"
           } `}
         >
-          <img
+          <Image
+            width={430}
+            height={315}
             src={swiperImage[1]}
             alt="benefit image"
             className="grid object-cover min-w-full place-items-center rounded-4xl"
@@ -83,7 +88,9 @@ function SwiperSlider() {
             currentSlideIndex != 2 ? "slide" : ""
           } `}
         >
-          <img
+          <Image
+            width={430}
+            height={315}
             src={swiperImage[2]}
             alt="benefit image"
             className="grid object-cover min-w-full place-items-center rounded-4xl"

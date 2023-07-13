@@ -1,4 +1,4 @@
-import { useState, forwardRef } from "react";
+import { useState } from "react";
 import { BsImage } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import ErrorMessage from "./ErrorMessage";

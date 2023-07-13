@@ -23,7 +23,6 @@ export default function Jumbotron() {
             height={580}
             src="/assets/Seminar/jumbotron-seminar-img.png"
             alt="Gambar robot"
-            quality={100}
           />
         </div>
         <div className="flex flex-col gap-6 text-white lg:mt-24 lg:w-[70%]">

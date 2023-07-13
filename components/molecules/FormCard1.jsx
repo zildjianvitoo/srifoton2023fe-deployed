@@ -1,6 +1,4 @@
-import React from "react";
 import InputForm from "../atoms/InputForm";
-import InputRadio from "../atoms/InputRadio";
 import InputFile from "../atoms/InputFile";
 import { competitionFormRules } from "@/utils/formRules";
 import ErrorMessage from "../atoms/ErrorMessage";

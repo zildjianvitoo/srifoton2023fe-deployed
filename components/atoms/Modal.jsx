@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Modal({
   showModal,
   setShowModal,
@@ -8,7 +6,7 @@ export default function Modal({
 }) {
   return (
     <>
-      <label htmlFor="my_modal_6" className="hidden" />
+      <label htmlFor="my_modal_6" />
       <input
         type="checkbox"
         id="my_modal_6"
