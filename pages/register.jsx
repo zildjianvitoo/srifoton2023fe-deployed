@@ -63,8 +63,8 @@ function Register() {
         <title>SRIFOTON | Register</title>
       </Head>
       <LayoutMain>
-        <LayoutCredentials>
-          <form className="w-full " onSubmit={handleSubmit(onSubmitHandler)}>
+        <LayoutCredentials id={"register-section"}>
+          <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
             <CredentialsCard>
               <div className="relative z-10 flex flex-col w-full gap-4 ">
                 <h1 className="mt-5 text-4xl text-[#494B7C] lg:text-[44px] font-bold mx-auto text-center dark:text-white">

@@ -50,7 +50,7 @@ export default function ResetPassword({ token, email }) {
         <title>SRIFOTON | Reset Password</title>
       </Head>
       <LayoutMain>
-        <LayoutCredentials>
+        <LayoutCredentials id={"reset-password-section"}>
           <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
             <CredentialsCard>
               <div className="relative z-10 flex flex-col w-full gap-4">

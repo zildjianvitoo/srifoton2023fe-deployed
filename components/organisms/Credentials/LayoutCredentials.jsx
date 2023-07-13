@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-export default function LayoutCredentials({ loginPage, children }) {
+export default function LayoutCredentials({ loginPage, children, id }) {
   return (
     <section
-      id="register-seminar"
+      id={id}
       className={`relative mt-24 mb-10 ${loginPage && "mt-36 lg:mt-28"}  `}
     >
       <div className="p-10 lg:p-[72px]">

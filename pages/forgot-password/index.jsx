@@ -44,7 +44,7 @@ export default function ForgotPassword() {
         <title>SRIFOTON | Forgot Password</title>
       </Head>
       <LayoutMain>
-        <LayoutCredentials>
+        <LayoutCredentials id={"forgot-password-section"}>
           <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
             <CredentialsCard>
               <div className="relative z-10 flex flex-col w-full gap-4 ">
