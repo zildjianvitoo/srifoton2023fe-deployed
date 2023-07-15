@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import { useTheme } from "next-themes";
 import { ethnocentric } from "@/public/fonts/ethnocentric";
 import { useUserStore } from "@/store/userStore";
 
-export default function Navbar() {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const { theme, setTheme } = useTheme();
@@ -201,3 +202,7 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default dynamic(() => Promise.resolve(Navbar), {
+  ssr: false,
+});
