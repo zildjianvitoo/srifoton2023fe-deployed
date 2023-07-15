@@ -21,14 +21,14 @@ export default function App({ Component, pageProps }) {
         <meta name="author" content="IT LEAD DEVELOPER TEAM SRIFOTON 2023" />
         <link rel="icon" href="/assets/logo-srifoton2023.svg" />
       </Head>
-      <HydrationContext>
-        <ThemeProvider attribute="class" value={theme} enableSystem={false}>
-          <div className={outfit.className}>
-            <Navbar />
-            <Component {...pageProps} />
-          </div>
-        </ThemeProvider>
-      </HydrationContext>
+      {/* <HydrationContext> */}
+      <ThemeProvider attribute="class" value={theme} enableSystem={false}>
+        <div className={outfit.className}>
+          <Navbar />
+          <Component {...pageProps} />
+        </div>
+      </ThemeProvider>
+      {/* </HydrationContext> */}
     </>
   );
 }

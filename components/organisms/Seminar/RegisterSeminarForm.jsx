@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Button from "@/components/atoms/Button";
 import InputDropdown from "@/components/atoms/InputDropdown";
 import InputFile from "@/components/atoms/InputFile";
@@ -8,10 +9,6 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import { seminarFormRules } from "@/utils/formRules";
 import { doSeminarRegistration } from "@/utils/api";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
-import { data } from "autoprefixer";
-
-let renderCount = 0;
 
 export default function RegisterSeminarForm() {
   const [proof, setProof] = useState(null);
@@ -52,10 +49,8 @@ export default function RegisterSeminarForm() {
     }
   };
 
-  renderCount++;
   return (
     <>
-      <p className="text-white">{renderCount / 2}</p>
       <form
         className={`w-full z-10 relative`}
         onSubmit={handleSubmit(onSubmitHandler)}
@@ -158,7 +153,6 @@ export default function RegisterSeminarForm() {
           </Button>
         </div>
       </form>
-      <DevTool control={control} />
     </>
   );
 }

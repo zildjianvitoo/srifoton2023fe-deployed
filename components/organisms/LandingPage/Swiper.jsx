@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTheme } from "next-themes";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import dynamic from "next/dynamic";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -101,4 +101,6 @@ function SwiperSlider() {
   );
 }
 
-export default SwiperSlider;
+export default dynamic(() => Promise.resolve(SwiperSlider), {
+  ssr: false,
+});
