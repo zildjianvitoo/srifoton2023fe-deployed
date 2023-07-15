@@ -9,28 +9,17 @@ import { useUserStore } from "@/store/userStore";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const user = useUserStore((state) => state.user);
 
   const handleDropdownClick = () => {
     setIsOpen((prev) => !prev);
   };
 
-  let themeIconSrc;
-
-  if (resolvedTheme === "light") {
-    themeIconSrc = "/moon-icon.svg";
-  } else if (resolvedTheme === "dark") {
-    themeIconSrc = "/sun-icon.svg";
-  } else {
-    themeIconSrc =
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-  }
-
   const toggleTheme = () => {
-    if (resolvedTheme === "dark") {
+    if (theme === "dark") {
       setTheme("light");
-    } else if (resolvedTheme === "light") {
+    } else if (theme === "light") {
       setTheme("dark");
     }
   };
@@ -191,18 +180,28 @@ export default function Navbar() {
       <div className="flex lg:mr-10 gap-x-4 navbar-end">
         {/* <p>{user?.name}</p> */}
         <div className="cursor-pointer" onClick={toggleTheme}>
-          <Image
-            src={themeIconSrc}
-            width={40}
-            height={40}
-            alt="icon dark and light mode"
-            priority
-          />
+          {theme === "light" ? (
+            <Image
+              src="/moon-img.svg"
+              width={40}
+              height={40}
+              alt="icon dark and light mode"
+              priority
+            />
+          ) : (
+            <Image
+              src="/sun-img.svg"
+              width={40}
+              height={40}
+              alt="icon dark and light mode"
+              priority
+            />
+          )}
         </div>
         <Link href="/register">
           <button
             className={`text-[#DB66DA] relative px-10 py-2 border-none shadow-lg bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
-              resolvedTheme === "dark" ? "button-navbar" : "button-navbar-light"
+              theme === "dark" ? "button-navbar" : "button-navbar-light"
             } `}
           >
             Mulai
