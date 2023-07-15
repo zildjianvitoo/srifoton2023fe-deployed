@@ -19,6 +19,7 @@ export default function Jumbotron() {
             priority
             width={600}
             height={580}
+            loading="eager"
             src="/assets/Seminar/jumbotron-seminar-img.png"
             alt="Gambar robot"
           />
