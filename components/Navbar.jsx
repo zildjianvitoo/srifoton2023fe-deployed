@@ -136,8 +136,9 @@ function Navbar() {
           <li>
             <Link
               href="/"
-              className={`active:bg-transparent ${
-                routerNameEquals("/") && "text-[#DE55E8] dark:text-[#F56AFF]"
+              className={`active:!bg-transparent active:!text-[#DE55E8] ${
+                routerNameEquals("/") &&
+                "  !text-[#DE55E8] dark:!text-[#F56AFF]"
               }`}
             >
               Beranda
@@ -146,9 +147,9 @@ function Navbar() {
           <li>
             <Link
               href="/kompetisi"
-              className={`active:bg-transparent ${
+              className={`active:!bg-transparent active:!text-[#DE55E8] ${
                 routerNameEquals("/kompetisi") &&
-                "text-[#DE55E8] dark:text-[#F56AFF]"
+                "!text-[#DE55E8] dark:!text-[#F56AFF]"
               }`}
             >
               Kompetisi
@@ -157,9 +158,9 @@ function Navbar() {
           <li>
             <Link
               href="/seminar"
-              className={`active:bg-transparent ${
+              className={`active:!bg-transparent active:!text-[#DE55E8] ${
                 routerNameEquals("/seminar") &&
-                "text-[#DE55E8] dark:text-[#F56AFF]"
+                "!text-[#DE55E8] dark:!text-[#F56AFF]"
               }`}
             >
               Seminar
@@ -168,9 +169,9 @@ function Navbar() {
           <li>
             <Link
               href="/kontak"
-              className={`active:bg-transparent ${
+              className={`active:!bg-transparent active:!text-[#DE55E8] ${
                 routerNameEquals("/kontak") &&
-                "text-[#DE55E8] dark:text-[#F56AFF]"
+                "!text-[#DE55E8] dark:!text-[#F56AFF]"
               }`}
             >
               Kontak
