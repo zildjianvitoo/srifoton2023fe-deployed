@@ -132,7 +132,7 @@ function Navbar() {
         </Link>
       </div>
       <div className={`hidden navbar-center lg:flex  `}>
-        <ul className="px-1 menu menu-horizontal">
+        <ul className="px-1 text-base menu menu-horizontal">
           <li>
             <Link
               href="/"
