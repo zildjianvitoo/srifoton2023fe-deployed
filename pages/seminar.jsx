@@ -5,6 +5,7 @@ import Jumbotron from "@/components/organisms/Seminar/Jumbotron";
 import RegisterSeminar from "@/components/organisms/Seminar/RegisterSeminar";
 import TimeLineSeminar from "@/components/organisms/Seminar/TimeLineSeminar";
 import Narahubung from "@/components/organisms/Seminar/Narahubung";
+import QNA from "@/components/organisms/Seminar/QNA";
 
 function seminar() {
   return (
@@ -18,6 +19,7 @@ function seminar() {
         <TimeLineSeminar />
         <RegisterSeminar />
         <Narahubung />
+        <QNA />
         <div className="mb-96"></div>
       </LayoutMain>
     </>

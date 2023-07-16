@@ -11,7 +11,6 @@
   "dependencies": {
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
-    "daisyui": "^2.51.6",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "flowbite": "^1.6.5",
@@ -28,6 +27,7 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
-    "@hookform/devtools": "^4.3.1"
+    "@hookform/devtools": "^4.3.1",
+    "daisyui": "^3.2.1"
   }
 }
