@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
-import { ethnocentric } from "@/public/fonts/ethnocentric";
+import { ethnocentric } from "@/public/fonts/fonts";
 import { useUserStore } from "@/store/userStore";
 
 function Navbar() {
@@ -125,7 +125,7 @@ function Navbar() {
             quality={100}
           />
           <h3
-            className={`hidden bg-gradient-to-r bggradien bg-clip-text text-transparent from-[#FC39FC] to-[#428AE0] gap-2 lg:flex ${ethnocentric.className}`}
+            className={`hidden bg-gradient-to-r text-2xl bg-clip-text text-transparent from-[#FC39FC] to-[#428AE0] gap-2 lg:flex ${ethnocentric.className}`}
           >
             SRIFOTON
           </h3>
@@ -192,8 +192,8 @@ function Navbar() {
         </div>
         <Link href="/register">
           <button
-            className={`text-[#DB66DA] relative px-10 py-2 border-none shadow-lg bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
-              theme === "dark" ? "button-navbar" : "button-navbar-light"
+            className={`text-[#DB66DA] relative px-10 py-2 border-none  bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
+              theme === "light" ? "button-navbar" : "button-navbar-dark"
             } `}
           >
             Mulai

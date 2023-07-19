@@ -32,7 +32,7 @@ const Jumbotron = () => {
                 className="lg:w-[85%] py-4"
               />
             </div>
-            <h3 className="text-xl md:text-2xl lg:text-2xl z-[1] lg:w-[55%] text-[#797979] dark:text-[#CFCFCF]  lg:-mt-14 ">
+            <h3 className="font-poppins text-xl md:text-2xl lg:text-2xl z-[1] lg:w-[55%] text-[#797979] dark:text-[#CFCFCF]  lg:-mt-14 ">
               Sriwijaya Informatics Exhibition atau yang biasa dikenali dengan
               Srifoton adalah forum kompetitif berskala nasional yang mewadahi
               mahasiswa untuk menyalurkan minat dan bakat mereka dalam dunia
@@ -40,12 +40,10 @@ const Jumbotron = () => {
               dan Seminar.
             </h3>
             <div className="flex gap-6 mt-4 z-[3]">
-              <Button
-                style={"border-[#F56AFF] text-[#F56AFF]  hover:bg-[#F56AFF]"}
-              >
+              <Button style="border-[#F56AFF] text-[#F56AFF] hover:bg-[#F56AFF] lg:py-3">
                 Info Lainnya
               </Button>
-              <Button style="px-2 border-[#A47EF2] text-[#A47EF2] hover:bg-[#A47EF2]">
+              <Button style="px-2 border-[#337EF0] text-[#337EF0] hover:bg-[#337EF0] lg:py-3">
                 Mulai Sekarang!
               </Button>
             </div>

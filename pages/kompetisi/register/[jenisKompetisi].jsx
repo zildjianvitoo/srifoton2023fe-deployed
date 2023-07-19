@@ -8,7 +8,6 @@ import {
 import LayoutField from "@/components/organisms/Kompetisi/DaftarKompetisi/LayoutField";
 import LayoutMain from "@/components/LayoutMain";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import {
   doWebDevelopmentRegistration,
   doCompetitiveProgrammingRegistration,
@@ -111,7 +110,6 @@ export default function DaftarKompetisi() {
               Submit
             </Button>
           </form>
-          <DevTool control={control} />
         </LayoutField>
       </div>
     </LayoutMain>

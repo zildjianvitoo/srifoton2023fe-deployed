@@ -8,7 +8,7 @@ export default function SpeakerCard({ secondCard }) {
   useEffect(() => {
     const showTextTimeOut = setTimeout(() => {
       setShowText(true);
-    }, 100);
+    }, 125);
 
     return () => {
       setShowText(false);

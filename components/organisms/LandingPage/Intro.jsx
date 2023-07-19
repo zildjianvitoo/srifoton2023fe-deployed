@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../../atoms/Button";
+import { ethnocentric } from "@/public/fonts/fonts";
 
 export default function Intro() {
   const text = [
@@ -38,12 +39,12 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
   return (
     <section className="mt-24 ">
       <div
-        className={`flex   ${
+        className={`flex ${
           isBlue ? " flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"
         } gap-10 `}
       >
         <div
-          className={`flex justify-center p-6   ${
+          className={`flex justify-center p-6 ${
             isBlue
               ? "rounded-br-[200px] bg-[#E5EEFF] dark:bg-[#494B7C]  "
               : "rounded-bl-[200px] bg-[#FDE5FF] dark:bg-[#75497C]"
@@ -58,15 +59,15 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           />
         </div>
         <div
-          className={`flex flex-col gap-y-6 p-6 lg:w-[55%]  lg:p-0 lg:px-10 ${
-            isPink && "items-end"
+          className={`flex flex-col gap-y-6 p-6 lg:w-[55%] lg:p-0 lg:px-10 ${
+            isPink && "items-end "
           } `}
         >
           <h1
-            className={`text-[30px] xs:text-4xl lg:text-6xl font-semibold  tracking-wider intro-header dark:intro-header-dark ${
+            className={`text-[30px] lg:pb-2 xs:text-4xl pl-[2px] lg:text-6xl font-semibold  tracking-wider intro-header dark:intro-header-dark ${
               isBlue
                 ? "text-[#E5EEFF]  dark:text-[#494B7C]"
-                : "text-[#FDE5FF] dark:text-[#75497C]"
+                : "text-[#FDE5FF] dark:text-[#75497C] text-right"
             }`}
           >
             {header}

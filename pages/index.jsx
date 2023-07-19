@@ -29,6 +29,13 @@ export default function Home() {
     <>
       <Head>
         <title>SRIFOTON | Home</title>
+        <style>
+          {/* {`
+            h1 {
+              font-family: "Ethnocentric", arial;
+            }
+          `} */}
+        </style>
       </Head>
       <LayoutMain>
         <Jumbotron />
@@ -36,7 +43,7 @@ export default function Home() {
         <Timeline />
         <Benefit />
         <Sponsor />
-        <div className="mb-96"></div>
+        <div className="mb-96 bg-gradient-to-r"></div>
         {showModal && (
           <Modal
             showModal={showModal}

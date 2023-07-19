@@ -22,7 +22,8 @@ input[type="number"] {
 }
 
 /* Button Styles */
-.button-navbar {
+.button-navbar-dark {
+  box-shadow: 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
   --border-width: 3px;
   --border-radius: 44px;
   font: inherit;
@@ -34,7 +35,8 @@ input[type="number"] {
   z-index: 2;
 }
 
-.button-navbar-light {
+.button-navbar {
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
   --border-width: 3px;
   --border-radius: 44px;
   font: inherit;
@@ -46,7 +48,7 @@ input[type="number"] {
   z-index: 2;
   color: #2a89f8;
 }
-.button-navbar::before {
+.button-navbar-dark::before {
   content: "";
   display: block;
   height: calc(100% - calc(var(--border-width) * 2));
@@ -63,7 +65,7 @@ input[type="number"] {
   z-index: -1;
 }
 
-.button-navbar-light::before {
+.button-navbar::before {
   content: "";
   display: block;
   height: calc(100% - calc(var(--border-width) * 2));
@@ -80,13 +82,13 @@ input[type="number"] {
   z-index: -1;
 }
 
-.button-navbar:hover::before,
-.button-navbar-light:hover::before {
+.button-navbar-dark:hover::before,
+.button-navbar:hover::before {
   background: none;
 }
 
-.button-navbar:hover,
-.button-navbar-light:hover {
+.button-navbar-dark:hover,
+.button-navbar:hover {
   background-image: linear-gradient(to right, #2b8af9, #ff92fe);
   color: white;
 }
@@ -149,7 +151,7 @@ input[type="number"] {
 
   .timeline-header-dark {
     color: #0f3a70;
-    background: -webkit-linear-gradient(0deg, #fde5ff 0%, #75497c 95%);
+    background: -webkit-linear-gradient(0deg, #fde5ff 0%, #fde5ff 95%);
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }

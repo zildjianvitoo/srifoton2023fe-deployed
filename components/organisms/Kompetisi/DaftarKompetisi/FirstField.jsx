@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
 import FormFirstField from "./FormFirstField";
 import PaymentNote from "@/components/molecules/PaymentNote";
-import { ethnocentric } from "@/public/fonts/ethnocentric";
+import { ethnocentric } from "@/public/fonts/fonts";
 
 export default function FirstField({
   jenisKompetisi,
@@ -28,7 +28,7 @@ export default function FirstField({
               <h1 className="tracking-[10%]  mx-auto  text-center lg:leading-[3.5rem] ">
                 Competitive
               </h1>
-              <h1 className="tracking-[10%] -mt-3 xs:mt-0 lg:mt-3 mx-auto ">
+              <h1 className="tracking-[10%] pl-[2px] -mt-3 xs:mt-0 lg:mt-3 mx-auto ">
                 Programming
               </h1>
             </>

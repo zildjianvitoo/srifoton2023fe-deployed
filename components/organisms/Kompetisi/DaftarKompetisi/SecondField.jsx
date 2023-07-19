@@ -2,7 +2,6 @@ import FormCard1 from "@/components/molecules/FormCard1";
 import FormCard2 from "@/components/molecules/FormCard2";
 import FormCard3 from "@/components/molecules/FormCard3";
 import { useTheme } from "next-themes";
-import { set } from "react-hook-form";
 
 export default function SecondField({
   register,
