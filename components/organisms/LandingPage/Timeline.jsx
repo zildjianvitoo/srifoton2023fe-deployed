@@ -1,6 +1,5 @@
 import React from "react";
 import TimelineBox from "../../molecules/TimelineBox";
-import { ethnocentric } from "@/public/fonts/fonts";
 
 const timelineContent = [
   {

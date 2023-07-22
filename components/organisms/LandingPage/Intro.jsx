@@ -64,16 +64,16 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           } `}
         >
           <h1
-            className={`text-[30px] lg:pb-2 xs:text-4xl pl-[2px] lg:text-6xl font-semibold  tracking-wider intro-header dark:intro-header-dark ${
+            className={`text-[30px] lg:pb-2 xs:text-4xl pl-[2px] lg:text-6xl font-semibold tracking-widest lg:tracking-wider  ${
               isBlue
-                ? "text-[#E5EEFF]  dark:text-[#494B7C]"
-                : "text-[#FDE5FF] dark:text-[#75497C] text-right"
+                ? "intro-header-kompetisi dark:intro-header-kompetisi-dark"
+                : "bg-white text-right intro-header-seminar dark:intro-header-seminar-dark justify-items-end items-end w-fit "
             }`}
           >
             {header}
           </h1>
           <p
-            className={`text-base md:text-lg lg:text-xl text-[#747474] dark:text-[#CFCFCF] lg:w-[80%]  ${
+            className={`text-base font-poppins md:text-lg lg:text-xl text-[#747474] dark:text-[#CFCFCF] lg:w-[80%]  ${
               isPink && "text-right"
             }  `}
           >

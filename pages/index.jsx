@@ -30,11 +30,11 @@ export default function Home() {
       <Head>
         <title>SRIFOTON | Home</title>
         <style>
-          {/* {`
+          {`
             h1 {
               font-family: "Ethnocentric", arial;
             }
-          `} */}
+          `}
         </style>
       </Head>
       <LayoutMain>
