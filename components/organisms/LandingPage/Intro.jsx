@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Button from "../../atoms/Button";
 import { ethnocentric } from "@/public/fonts/fonts";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 
 export default function Intro() {
   const text = [
@@ -28,10 +31,8 @@ export default function Intro() {
 }
 
 function Content({ header, text, buttonText, isPink, isBlue }) {
-  const buttonStyle = isBlue
-    ? "border-[#494B7C] text-[#494B7C]  hover:bg-[#494B7C] w-[35%] mt-3 dark:border-[#E5EEFF] dark:text-[#E5EEFF] dark:hover:bg-[#E5EEFF] dark:hover:text-[#494B7C]"
-    : "border-[#75497C] text-[#75497C]  hover:bg-[#75497C] w-[35%] mt-3 dark:border-[#FDE5FF] dark:text-[#FDE5FF] dark:hover:bg-[#FDE5FF] dark:hover:text-[#75497C]";
-
+  const router = useRouter();
+  const { theme } = useTheme();
   const introImage = isBlue
     ? "/assets/LandingPage/intro-kompetisi-img.png"
     : "/assets/LandingPage/intro-seminar-img.png";
@@ -74,12 +75,20 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           </h1>
           <p
             className={`text-base font-poppins md:text-lg lg:text-xl text-[#747474] dark:text-[#CFCFCF] lg:w-[80%]  ${
-              isPink && "text-right"
+              isPink && "text-right "
             }  `}
           >
             {text}
           </p>
-          <Button style={buttonStyle}>{buttonText}</Button>
+
+          <Button
+            style={` mt-3 w-[35%] md:w-[30%] lg:w-[25%]  relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-intro ${
+              theme === "light" ? "button-intro" : "button-intro-dark"
+            }`}
+            onClickHandler={() => router.push(`/${buttonText.toLowerCase()}`)}
+          >
+            {buttonText}
+          </Button>
         </div>
       </div>
     </section>

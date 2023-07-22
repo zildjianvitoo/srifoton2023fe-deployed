@@ -4,7 +4,7 @@ export default function TimelineBox({
   date,
   right,
   barColor = "bg-gradient-to-b from-[#FC39FC] to-[#337EF0]",
-  titleColor = "text-[#75497C] dark:text-[#FDE5FF]",
+  titleColor = "bg-gradient-to-br from-[#FC39FC] to-[#337EF0] bg-clip-text text-transparent",
   descColor = "text-[#75497C] dark:text-[#FDE5FF]",
   dateColor = "text-[#9B829F] dark:text-[#C196C5]",
 }) {

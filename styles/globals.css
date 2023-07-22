@@ -83,13 +83,79 @@ input[type="number"] {
 }
 
 .button-navbar-dark:hover::before,
-.button-navbar:hover::before {
+.button-navbar:hover::before,
+.button-intro:hover::before {
   background: none;
 }
 
 .button-navbar-dark:hover,
 .button-navbar:hover {
   background-image: linear-gradient(to right, #2b8af9, #ff92fe);
+  color: white;
+}
+
+.button-intro {
+  --border-width: 3px;
+  --border-radius: 26px;
+  font: inherit;
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  -webkit-border-radius: calc(var(--border-radius) - var(--border-width));
+  -moz-border-radius: calc(var(--border-radius) - var(--border-width));
+  -ms-border-radius: calc(var(--border-radius) - var(--border-width));
+  -o-border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: 2;
+  color: #1a73d9;
+}
+
+.button-intro::before {
+  content: "";
+  display: block;
+  height: calc(100% - calc(var(--border-width) * 2));
+  width: calc(100% - calc(var(--border-width) * 2));
+  background: #fcf2ff;
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+.button-intro-dark {
+  --border-width: 3px;
+  --border-radius: 26px;
+  font: inherit;
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  -webkit-border-radius: calc(var(--border-radius) - var(--border-width));
+  -moz-border-radius: calc(var(--border-radius) - var(--border-width));
+  -ms-border-radius: calc(var(--border-radius) - var(--border-width));
+  -o-border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: 2;
+  color: #fb5dfb;
+}
+
+.button-intro-dark::before {
+  content: "";
+  display: block;
+  height: calc(100% - calc(var(--border-width) * 2));
+  width: calc(100% - calc(var(--border-width) * 2));
+  background: #02053e;
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+.button-intro:hover {
+  background-image: linear-gradient(to right, #fc39fc, #337ef0);
   color: white;
 }
 

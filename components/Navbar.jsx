@@ -192,7 +192,7 @@ function Navbar() {
         </div>
         <Link href="/register">
           <button
-            className={`text-[#DB66DA] relative px-10 py-2 border-none  bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
+            className={`text-[#DB66DA] relative px-10 py-2 border-none font-semibold  bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
               theme === "light" ? "button-navbar" : "button-navbar-dark"
             } `}
           >
