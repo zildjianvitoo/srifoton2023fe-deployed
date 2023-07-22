@@ -289,20 +289,20 @@ input[type="number"] {
   /* Seminar Page */
   .intro-seminar-header,
   .qna-seminar-header {
-    background: -webkit-linear-gradient(0deg, #494b7c 0%, #494b7c 95%);
+    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 65%);
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
+    -webkit-text-stroke: 5px transparent;
     color: #fcf2ff;
     letter-spacing: 3px;
   }
 
   .intro-seminar-header-dark,
   .qna-seminar-header-dark {
-    background: -webkit-linear-gradient(0deg, #e5eeff 0%, #e5eeff 95%);
+    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 65%);
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
+    -webkit-text-stroke: 5px transparent;
     color: #02053e;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
   }
 
   .glassmorphism {
@@ -314,71 +314,97 @@ input[type="number"] {
 
   .register-seminar-header {
     color: #f4eefe;
-    background: -webkit-linear-gradient(0deg, #494b7c 0%, #494b7c 95%);
+    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 75%);
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
+    -webkit-text-stroke: 5px transparent;
+    letter-spacing: 3px;
   }
 
   .register-seminar-header-dark {
     color: #050b47;
-    background: -webkit-linear-gradient(0deg, #e5eeff 0%, #e5eeff 95%);
+    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 75%);
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
+    -webkit-text-stroke: 5px transparent;
+    letter-spacing: 3px;
+  }
+
+  .gradient-border-qna {
+    border-radius: 20px;
+    border: 3.5px dashed #fff;
+    background: linear-gradient(#f3edfe 0 0) padding-box,
+      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+
+  .gradient-border-qna-dark {
+    border-radius: 20px;
+    border: 3.5px dashed #02053e;
+    background: linear-gradient(#02053e 0 0) padding-box,
+      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
   }
 
   .gradient-border {
-    border-radius: 16px;
+    border-radius: 30px;
     border: 3.5px dashed #fff;
     background: linear-gradient(#f3edfe 0 0) padding-box,
       linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
   }
   .gradient-border-dark {
-    border-radius: 16px;
+    border-radius: 30px;
     border: 3.5px dashed #050b47;
     background: linear-gradient(#050b47 0 0) padding-box,
       linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
   }
 
   .gradient-border-pn {
-    border-radius: 16px;
+    border-radius: 30px;
     border: 3.5px dashed #fff;
     background: linear-gradient(#f3edfe 0 0) padding-box,
       linear-gradient(to bottom left, #337ef0, #fc39fc) border-box;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
   }
   .gradient-border-pn-dark {
-    border-radius: 16px;
+    border-radius: 30px;
     border: 3.5px dashed #050b47;
     background: linear-gradient(#050b47 0 0) padding-box,
       linear-gradient(to bottom left, #337ef0, #fc39fc) border-box;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
   }
 
   .narahubung-header {
     color: #e7eeff;
-    background: -webkit-linear-gradient(0deg, #494b7c 0%, #494b7c 95%);
+    background: -webkit-linear-gradient(0deg, #337ef0 0%, #fc39fc 95%);
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
+    -webkit-text-stroke: 5px transparent;
+    letter-spacing: 3px;
   }
   .narahubung-header-dark {
     color: #08356b;
-    background: -webkit-linear-gradient(0deg, #e5eeff 0%, #e5eeff 95%);
+    background: -webkit-linear-gradient(0deg, #337ef0 0%, #fc39fc 95%);
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
+    -webkit-text-stroke: 5px transparent;
+    letter-spacing: 3px;
   }
   /*End Seminar Page */
 

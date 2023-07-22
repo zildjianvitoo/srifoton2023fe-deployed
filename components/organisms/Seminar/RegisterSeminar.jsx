@@ -14,13 +14,13 @@ export default function RegisterSeminar() {
           backgroundImage: "url(assets/Seminar/register-seminar-bgimg.svg)",
         }}
       />
-      <div className="flex flex-col w-[85%] md:w-[80%] lg:w-[74%] px-3 gap-4  py-10 lg:pb-16 mx-auto rounded-[50px]">
-        <h1 className="pb-2 text-4xl font-semibold tracking-wider text-center lg:text-6xl register-seminar-header dark:register-seminar-header-dark">
-          Registrasi Sekarang!
+      <div className="flex  flex-col w-[85%] md:w-[80%] lg:w-[74%] px-3 gap-4  py-10 lg:pb-16 mx-auto rounded-[50px]">
+        <h1 className="pb-2 text-4xl font-semibold tracking-wider text-center  lg:text-6xl register-seminar-header dark:register-seminar-header-dark">
+          Daftarkan Dirimu!
         </h1>
         <div className="flex flex-col gap-8 lg:mt-6 lg:flex-row">
           <div
-            className={`w-full lg:w-4/5 mt-[14px] py-8 px-3 lg:px-6  ${
+            className={`w-full lg:w-4/5 mt-[14px] py-8 px-3 lg:px-8  ${
               theme === "light" ? "gradient-border" : "gradient-border-dark"
             }`}
           >
@@ -28,7 +28,7 @@ export default function RegisterSeminar() {
           </div>
 
           <div
-            className="flex flex-col w-full lg:mt-3 gradient-border lg:w-[65%] h-fit gradient-border-pn
+            className="flex flex-col w-full lg:mt-3  lg:w-[65%] h-fit gradient-border-pn
              dark:gradient-border-pn-dark"
           >
             <PaymentNote seminarPage />

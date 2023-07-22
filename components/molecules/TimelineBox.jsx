@@ -5,8 +5,8 @@ export default function TimelineBox({
   right,
   barColor = "bg-gradient-to-b from-[#FC39FC] to-[#337EF0]",
   titleColor = "bg-gradient-to-br from-[#FC39FC] to-[#337EF0] bg-clip-text text-transparent",
-  descColor = "text-[#75497C] dark:text-[#FDE5FF]",
-  dateColor = "text-[#9B829F] dark:text-[#C196C5]",
+  descColor = "text-[#75497C] dark:text-[#EDEDED]",
+  dateColor = "text-[#FC39FC]/80 ",
 }) {
   if (right) {
     return (
@@ -24,7 +24,9 @@ export default function TimelineBox({
             {title}
           </h2>
           <p className={` mb-1 font-semibold  ${dateColor} `}>{date}</p>
-          <p className={`leading-tight text-justify ${descColor} `}>
+          <p
+            className={`leading-tight font-poppins font-light text-justify ${descColor} `}
+          >
             {description}
           </p>
         </div>
@@ -38,7 +40,9 @@ export default function TimelineBox({
           {title}
         </h2>
         <p className={`font-semibold  ${dateColor}`}>{date}</p>
-        <p className={`mt-1 leading-tight text-justify ${descColor} `}>
+        <p
+          className={`mt-1 font-poppins font-light leading-tight text-justify ${descColor} `}
+        >
           {description}
         </p>
       </div>

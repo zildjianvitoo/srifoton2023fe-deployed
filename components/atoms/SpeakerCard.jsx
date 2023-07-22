@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function SpeakerCard({ secondCard }) {
+export default function SpeakerCard({ speaker, secondCard }) {
   const [isHover, setIsHover] = useState(false);
   const [showText, setShowText] = useState(false);
 
@@ -15,9 +15,6 @@ export default function SpeakerCard({ secondCard }) {
       clearTimeout(showTextTimeOut);
     };
   }, [isHover, setIsHover]);
-
-  const imageSource =
-    "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80";
 
   return (
     <>
@@ -40,10 +37,11 @@ export default function SpeakerCard({ secondCard }) {
         onMouseLeave={() => setIsHover(false)}
       >
         <Image
-          src={imageSource}
+          src={speaker.img}
           alt="Pembicara Seminar Srifoton"
           width={340}
           height={320}
+          quality={100}
           className="rounded-[28px] lg:rounded-[50px] "
         />
         <div
@@ -54,10 +52,10 @@ export default function SpeakerCard({ secondCard }) {
           <div className="absolute inset-0 z-0 w-full glassmorphism rounded-b-[28px] lg:rounded-b-[50px]" />
           <div className="relative z-10 flex flex-col py-3 lg:pt-3 px-7">
             <h2 className="font-bold tracking-wide text-[26px] text-white lg:text-3xl w-fit lg:tracking-normal">
-              Lucas Ibrahim
+              {speaker.name}
             </h2>
             <div className="rounded-[50px] mt-2 md:text-sm text-[#505050] bg-[#EDEDED] w-fit py-1 px-2 font-medium">
-              <p>UI/UX Designer</p>
+              <p>{speaker.role}</p>
             </div>
 
             {/* {isHover && (
@@ -75,9 +73,7 @@ export default function SpeakerCard({ secondCard }) {
               <div className={`${isHover ? "wrapper.open" : "wrapper"}`}>
                 <p className="min-h-0 mt-3 text-sm text-white">
                   {" "}
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Corrupti distinctio consequuntur laborum nisi aliquid
-                  molestias iure quidem neque vitae et!
+                  {speaker.description}
                 </p>
               </div>
             )}

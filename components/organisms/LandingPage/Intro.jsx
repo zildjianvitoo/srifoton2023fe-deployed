@@ -4,6 +4,7 @@ import { ethnocentric } from "@/public/fonts/fonts";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
+import NoSSR from "@/components/NoSSR";
 
 export default function Intro() {
   const text = [
@@ -80,15 +81,16 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           >
             {text}
           </p>
-
-          <Button
-            style={` mt-3 w-[35%] md:w-[30%] lg:w-[25%]  relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-intro ${
-              theme === "light" ? "button-intro" : "button-intro-dark"
-            }`}
-            onClickHandler={() => router.push(`/${buttonText.toLowerCase()}`)}
-          >
-            {buttonText}
-          </Button>
+          <NoSSR>
+            <Button
+              style={` mt-3 w-[35%] md:w-[30%] lg:w-[25%]  relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0]  ${
+                theme === "light" ? "button-intro" : "button-intro-dark"
+              }`}
+              onClickHandler={() => router.push(`/${buttonText.toLowerCase()}`)}
+            >
+              {buttonText}
+            </Button>
+          </NoSSR>
         </div>
       </div>
     </section>
