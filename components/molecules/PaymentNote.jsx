@@ -5,7 +5,7 @@ export default function PaymentNote({ seminarPage }) {
         seminarPage
           ? "text-[#000000] dark:text-[#EDEDED]"
           : "text-[#464646] border-[3px] border-dashed border-[#2E7BEF] dark:border-[#E924E8]"
-      } lg:text-[#464646] dark:text-[#EDEDED]  rounded-lg leading-snug`}
+      } lg:text-[#464646] dark:text-[#EDEDED] rounded-lg leading-snug`}
     >
       <p>Pembayaran dapat dikirimkan melalui :</p>
       <ul className="px-2 lg:px-4">
