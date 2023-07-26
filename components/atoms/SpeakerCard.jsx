@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 
-export default function SpeakerCard({ speaker, secondCard }) {
+function SpeakerCard({ speaker, secondCard }) {
   const [isHover, setIsHover] = useState(false);
   const [showText, setShowText] = useState(false);
 
@@ -83,3 +84,7 @@ export default function SpeakerCard({ speaker, secondCard }) {
     </>
   );
 }
+
+export default dynamic(() => Promise.resolve(SpeakerCard), {
+  ssr: false,
+});

@@ -1,7 +1,7 @@
 export default function Accordion({ toggle, isOpen }) {
   return (
     <div
-      className={`relative justify-start font-poppins text-black dark:text-white collapse collapse-plus gradient-border-qna dark:gradient-border-qna-dark ${
+      className={`relative justify-start font-poppins text-[#494B7C] dark:text-[#E5EEFF] collapse collapse-plus gradient-border-qna dark:gradient-border-qna-dark ${
         !isOpen && "h-[90px] md:h-[80px] lg:h-[70px] items-center"
       }`}
       onClick={toggle}

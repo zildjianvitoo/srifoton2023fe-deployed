@@ -2,6 +2,7 @@ import { useTheme } from "next-themes";
 import FormFirstField from "../Kompetisi/DaftarKompetisi/FormFirstField";
 import PaymentNote from "@/components/molecules/PaymentNote";
 import RegisterSeminarForm from "./RegisterSeminarForm";
+import NoSSR from "@/components/NoSSR";
 
 export default function RegisterSeminar() {
   const { theme } = useTheme();
@@ -15,17 +16,19 @@ export default function RegisterSeminar() {
         }}
       />
       <div className="flex  flex-col w-[85%] md:w-[80%] lg:w-[74%] px-3 gap-4  py-10 lg:pb-16 mx-auto rounded-[50px]">
-        <h1 className="pb-2 text-4xl font-semibold tracking-wider text-center  lg:text-6xl register-seminar-header dark:register-seminar-header-dark">
+        <h1 className="pb-2 text-4xl font-semibold tracking-wider text-center lg:text-6xl register-seminar-header dark:register-seminar-header-dark">
           Daftarkan Dirimu!
         </h1>
         <div className="flex flex-col gap-8 lg:mt-6 lg:flex-row">
-          <div
-            className={`w-full lg:w-4/5 mt-[14px] py-8 px-3 lg:px-8  ${
-              theme === "light" ? "gradient-border" : "gradient-border-dark"
-            }`}
-          >
-            <RegisterSeminarForm />
-          </div>
+          <NoSSR>
+            <div
+              className={`w-full lg:w-4/5 mt-[14px] py-8 px-3 lg:px-8  ${
+                theme === "light" ? "gradient-border" : "gradient-border-dark"
+              }`}
+            >
+              <RegisterSeminarForm />
+            </div>
+          </NoSSR>
 
           <div
             className="flex flex-col w-full lg:mt-3  lg:w-[65%] h-fit gradient-border-pn
