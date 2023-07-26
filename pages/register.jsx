@@ -17,17 +17,13 @@ import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
 
 function Register() {
-  const [isLoading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
   const setUser = useUserStore((state) => state.setUser);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, formState } = useForm({ mode: "onChange" });
+  const { errors, isSubmitting } = formState;
 
   const handleShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -36,7 +32,6 @@ function Register() {
   const onSubmitHandler = async (formValue) => {
     const { name, email, password, confirmPassword } = formValue;
     try {
-      setLoading(true);
       const { data } = await doRegister({
         name,
         email,
@@ -50,8 +45,6 @@ function Register() {
     } catch (error) {
       console.log(error);
       setErrorMessage(error.response.data.errors);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -168,7 +161,7 @@ function Register() {
                   <Button
                     variant={"submitButton"}
                     style={"w-3/5 lg:w-2/5"}
-                    disabled={isLoading}
+                    disabled={isSubmitting}
                   >
                     Daftar
                   </Button>

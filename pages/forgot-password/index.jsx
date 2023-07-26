@@ -14,17 +14,12 @@ import { useForm } from "react-hook-form";
 export default function ForgotPassword() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState({});
-  const [isLoading, setLoading] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, formState } = useForm({ mode: "onChange" });
+  const { errors, isSubmitting } = formState;
 
   const onSubmitHandler = async (formValue) => {
     const { email } = formValue;
     try {
-      setLoading(true);
       const { data } = await sendEmailForgotPassword({ email });
       console.log(data);
       setErrorMessage({});
@@ -33,8 +28,6 @@ export default function ForgotPassword() {
       console.log(error);
       setSuccessMessage("");
       setErrorMessage(error.response.data.errors);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -73,7 +66,7 @@ export default function ForgotPassword() {
                   <Button
                     variant={"submitButton"}
                     style={"w-3/5 lg:w-2/5"}
-                    disabled={isLoading}
+                    disabled={isSubmitting}
                   >
                     Verifikasi
                   </Button>
