@@ -286,14 +286,28 @@ input[type="number"] {
 
   .jumbotron-kompetisi-header {
     color: #fcf2ff;
-    background: -webkit-linear-gradient(0deg, #fc39fc 35%, #337ef0 75%);
+    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 75%);
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .jumbotron-kompetisi-header-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(0deg, #fc39fc 35%, #337ef0 75%);
+    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 75%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+  }
+
+  .qna-kompetisi-header {
+    color: #fcf2ff;
+    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 75%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+  }
+
+  .qna-kompetisi-header-dark {
+    color: #02053e;
+    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 65%);
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
@@ -373,6 +387,7 @@ input[type="number"] {
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     letter-spacing: 3px;
+    z-index: 10;
   }
 
   .gradient-border-qna {

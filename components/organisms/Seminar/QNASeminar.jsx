@@ -1,7 +1,7 @@
 import Accordion from "@/components/atoms/Accordion";
 import React, { useState } from "react";
 
-export default function QNA() {
+export default function QNASeminar() {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -18,7 +18,7 @@ export default function QNA() {
         <div className="flex flex-col p-8 ">
           <h1 className="flex flex-col pb-2 pl-0 mt-2 text-4xl font-semibold tracking-wider text-center lg:gap-3 lg:text-6xl qna-seminar-header dark:qna-seminar-header-dark">
             Tanya Jawab Singkat{" "}
-            <span className="lg:block bg-gradient-to-br from-[#FC39FC] to-[#337EF0] bg-clip-text text-transparent  to-85% mt-1">
+            <span className="lg:block bg-gradient-to-r from-[#FC39FC] to-[#337EF0] bg-clip-text text-transparent  mx-auto w-fit mt-1">
               Yuk...
             </span>
           </h1>
