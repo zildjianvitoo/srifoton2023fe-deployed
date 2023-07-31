@@ -14,8 +14,8 @@ export default function FirstField({
 
   const imageSource =
     theme === "light"
-      ? "/assets/Kompetisi/daftarkompetisi-img.svg"
-      : "/assets/Kompetisi/daftarkompetisi-imgdark.svg";
+      ? "/assets/Kompetisi/DaftarKompetisi/daftarkompetisi-img.svg"
+      : "/assets/Kompetisi/DaftarKompetisi/daftarkompetisi-imgdark.svg";
 
   return (
     <section id="daftar-kompetisi-1" className="z-10">

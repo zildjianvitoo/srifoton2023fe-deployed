@@ -15,8 +15,8 @@ export default function SecondField({
 
   const imageSource =
     theme === "light"
-      ? "/assets/Kompetisi/daftarkompetisi-memberimg.svg"
-      : "/assets/Kompetisi/daftarkompetisi-memberimg-dark.svg";
+      ? "/assets/Kompetisi/DaftarKompetisi/daftarkompetisi-memberimg.svg"
+      : "/assets/Kompetisi/DaftarKompetisi/daftarkompetisi-memberimg-dark.svg";
 
   return (
     <section id="daftar-kompetisi-2" className="z-10">

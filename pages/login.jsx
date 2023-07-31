@@ -15,6 +15,7 @@ import { useUserStore } from "@/store/userStore";
 import { doLogin } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
+import { AxiosError } from "axios";
 
 function Login() {
   const [errorMessage, setErrorMessage] = useState({});
@@ -42,8 +43,13 @@ function Login() {
       setUser(data.user);
       router.push("/dashboard");
     } catch (error) {
-      console.error(error);
-      setErrorMessage(error.response.data.errors);
+      if (error instanceof AxiosError) {
+        console.error(error);
+        setErrorMessage(error.response.data.errors);
+      } else {
+        alert("Terjadi Kesalahan Pada Server,Silahkan Coba Lagi");
+      }
+
       console.log(errorMessage);
     }
   };

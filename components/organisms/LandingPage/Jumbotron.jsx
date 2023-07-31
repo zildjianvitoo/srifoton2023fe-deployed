@@ -13,7 +13,7 @@ const Jumbotron = () => {
           backgroundImage: "url(assets/LandingPage/jumbotron-bgimg.svg)",
         }}
       >
-        <div className="relative flex h-full px-10 pt-10">
+        <div className="relative flex h-full px-10 pt-10 lg:px-20">
           <div className="flex flex-col h-full gap-8 mt-20 lg:gap-8 lg:px-10">
             {/* <h1
               className={`text-[2.75rem] md:text-[7rem] lg:text-[10rem] tracking-wider z-10  font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#FC39FC] to-[#428AE0] srifoton-big-header ${ethnocentric.className} `}

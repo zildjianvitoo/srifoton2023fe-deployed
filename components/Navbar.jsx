@@ -31,7 +31,7 @@ function Navbar() {
 
   return (
     <div
-      className="fixed top-0 z-50 font-normal navbar bg-[#FCF2FF] text-[#464646]  dark:bg-neutral dark:text-white shadow-navbar dark:shadow-navbar-dark "
+      className="fixed top-0 z-50 font-normal navbar bg-[#FCF2FF] text-[#464646]  dark:bg-neutral dark:text-white shadow-navbar dark:shadow-navbar-dark lg:px-[4.5rem] "
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="py-2 lg:py-0 navbar-start">
@@ -131,7 +131,7 @@ function Navbar() {
           </h3>
         </Link>
       </div>
-      <div className={`hidden navbar-center lg:flex  `}>
+      <div className={`hidden navbar-center lg:flex`}>
         <ul className="px-1 text-base menu menu-horizontal">
           <li>
             <Link
@@ -166,17 +166,6 @@ function Navbar() {
               Seminar
             </Link>
           </li>
-          <li>
-            <Link
-              href="/kontak"
-              className={`active:!bg-transparent active:!text-[#DE55E8] ${
-                routerNameEquals("/kontak") &&
-                "!text-[#DE55E8] dark:!text-[#F56AFF]"
-              }`}
-            >
-              Kontak
-            </Link>
-          </li>
         </ul>
       </div>
       <div className="flex lg:mr-10 gap-x-4 navbar-end">
@@ -190,15 +179,34 @@ function Navbar() {
             priority
           />
         </div>
-        <Link href="/register">
-          <button
-            className={`text-[#DB66DA] relative px-10 py-2 border-none font-semibold  bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
-              theme === "light" ? "button-navbar" : "button-navbar-dark"
-            } `}
-          >
-            Mulai
-          </button>
-        </Link>
+        {user ? (
+          <div className="dropdown dropdown-bottom">
+            <label tabIndex={0} className="m-1 ">
+              Click
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link href="/register">
+            <button
+              className={`text-[#DB66DA] relative px-10 py-2 border-none font-semibold  bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
+                theme === "light" ? "button-navbar" : "button-navbar-dark"
+              } `}
+            >
+              Mulai
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );
