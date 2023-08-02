@@ -7,7 +7,7 @@ export default function Accordion({ toggle, isOpen }) {
       onClick={toggle}
     >
       <input type="radio" name="my-accordion-3" checked={isOpen} />
-      <div className="text-xl font-medium cursor-pointer lg:text-2xl collapse-title">
+      <div className="text-xl font-medium cursor-pointer collapse-title">
         Lorem ipsum dolor sit amet, consectetur elit?
       </div>
       <div className="collapse-content">

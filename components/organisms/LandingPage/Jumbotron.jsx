@@ -4,7 +4,7 @@ import Button from "@/components/atoms/Button";
 const Jumbotron = () => {
   return (
     <section
-      id="#"
+      id="#jumbotron-landingpage"
       className="relative overflow-hidden h-[90vh]  bg-[#FCF2FF] dark:bg-[#02053E] lg:h-screen opacity-85 mt-12 lg:mt-6"
     >
       <div

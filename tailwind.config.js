@@ -16,6 +16,10 @@ module.exports = {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
       },
+      colors: {
+        "pink-srifoton": "#FC39FC",
+        "blue-srifoton": "#337EF0",
+      },
     },
     screens: {
       xs: "390px",
