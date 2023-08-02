@@ -166,11 +166,11 @@ export default function CompetitiveProgramming() {
               velit interdum, ac aliquet odio mattis.
             </p>
             <div className="flex flex-col gap-x-6 gap-y-2 lg:flex-row">
-              <Link
-                href="/kompetisi/register/uiux-design"
-                className="w-3/4 md:w-[35%] lg:w-[35%] "
-              >
-                <NoSSR>
+              <NoSSR>
+                <Link
+                  href="/kompetisi/register/uiux-design"
+                  className="w-3/4 md:w-[35%] lg:w-[35%] "
+                >
                   <Button
                     style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-competition-type ${
                       theme === "light"
@@ -180,13 +180,13 @@ export default function CompetitiveProgramming() {
                   >
                     Daftar
                   </Button>
-                </NoSSR>
-              </Link>
-              <Link
-                href="/kompetisi/register"
-                className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%]"
-              >
-                <NoSSR>
+                </Link>
+              </NoSSR>
+              <NoSSR>
+                <Link
+                  href="/kompetisi/register"
+                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%]"
+                >
                   <Button
                     style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
                       theme === "light"
@@ -196,8 +196,8 @@ export default function CompetitiveProgramming() {
                   >
                     Buku Panduan
                   </Button>
-                </NoSSR>
-              </Link>
+                </Link>
+              </NoSSR>
             </div>
           </div>
         </div>
