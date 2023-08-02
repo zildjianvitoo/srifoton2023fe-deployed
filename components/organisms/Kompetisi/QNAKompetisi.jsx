@@ -1,7 +1,8 @@
 import Accordion from "@/components/atoms/Accordion";
+import { ethnocentric } from "@/public/fonts/fonts";
 import React, { useState } from "react";
 
-export default function QNAKompetisi() {
+export default function QNAKompetisi({ competitionTypePage }) {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -16,7 +17,13 @@ export default function QNAKompetisi() {
     <section id="qna-kompetisi" className="mt-8 lg:mt-12">
       <div className="min-h-screen ">
         <div className="flex flex-col p-8 ">
-          <h1 className="flex flex-col pb-2 pl-0 mt-2 text-4xl font-semibold tracking-wider text-center lg:gap-3 lg:text-6xl qna-kompetisi-header dark:qna-kompetisi-header-dark">
+          <h1
+            className={`flex flex-col pb-2 pl-0 mt-2 text-3xl md:text-4xl font-semibold tracking-wider text-center lg:gap-3  qna-kompetisi-header dark:qna-kompetisi-header-dark ${
+              competitionTypePage
+                ? ethnocentric.className + " lg:text-5xl"
+                : "lg:text-6xl"
+            }`}
+          >
             Tanya Jawab Singkat{" "}
             <span className="lg:block bg-gradient-to-r from-[#FC39FC] to-[#337EF0] bg-clip-text text-transparent  w-fit mx-auto  mt-1">
               Yuk...

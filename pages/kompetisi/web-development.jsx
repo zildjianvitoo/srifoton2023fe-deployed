@@ -52,7 +52,7 @@ export default function CompetitiveProgramming() {
         <div className="relative flex flex-col mt-12 lg:gap-16 md:mt-20 lg:mt-24">
           <div className="flex items-center justify-center w-full mx-auto relative lg:w-[70%] h-[70vh] lg:h-full">
             <Image
-              src={"/assets/Kompetisi/jumbotron-cp-img.png"}
+              src={"/assets/Kompetisi/jumbotron-webdev-img.png"}
               alt="Jumbotron Big Icon"
               width={500}
               height={450}
@@ -97,10 +97,10 @@ export default function CompetitiveProgramming() {
               className={`text-3xl text-center lg:p-2 pl-[2px] md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
             >
               <span className="text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
-                Competitive{" "}
+                Web{" "}
               </span>
               <span className="competition-type-header dark:text-[#02053e]">
-                Programming
+                Development
               </span>
             </h1>
             <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-9 px-4 lg:px-8 w-full lg:w-[65%] mx-auto text-center">
@@ -167,12 +167,12 @@ export default function CompetitiveProgramming() {
             </p>
             <div className="flex flex-col gap-x-6 gap-y-2 lg:flex-row">
               <Link
-                href="/kompetisi/register/competitive-programming"
-                className="mt-3 w-3/4 md:w-[35%] lg:w-[35%]"
+                href="/kompetisi/register/web-development"
+                className="w-3/4 md:w-[35%] lg:w-[35%] "
               >
                 <NoSSR>
                   <Button
-                    style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0]  ${
+                    style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-competition-type ${
                       theme === "light"
                         ? "button-competition-type"
                         : "button-competition-type-dark"
@@ -183,7 +183,7 @@ export default function CompetitiveProgramming() {
                 </NoSSR>
               </Link>
               <Link
-                href="/kompetisi/register/"
+                href="/kompetisi/register"
                 className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%]"
               >
                 <NoSSR>
