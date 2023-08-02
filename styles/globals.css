@@ -233,7 +233,8 @@ input[type="number"] {
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
-  .intro-header-seminar {
+  .intro-header-seminar,
+  .benefit-header {
     color: #fcf2ff;
     background: -webkit-linear-gradient(
       0deg,
@@ -246,17 +247,6 @@ input[type="number"] {
 
   .intro-header-seminar-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(
-      0deg,
-      var(--pink-srifoton) 40%,
-      var(--blue-srifoton) 85%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
-  }
-
-  .benefit-header {
-    color: #fcf2ff;
     background: -webkit-linear-gradient(
       0deg,
       var(--pink-srifoton) 40%,
@@ -330,7 +320,8 @@ input[type="number"] {
 
   /* Kompetisi Page */
 
-  .jumbotron-kompetisi-header {
+  .jumbotron-kompetisi-header,
+  .qna-kompetisi-header {
     color: #fcf2ff;
     background: -webkit-linear-gradient(
       -45deg,
@@ -343,17 +334,6 @@ input[type="number"] {
 
   .jumbotron-kompetisi-header-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(
-      -45deg,
-      var(--pink-srifoton) 35%,
-      var(--blue-srifoton) 75%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
-  }
-
-  .qna-kompetisi-header {
-    color: #fcf2ff;
     background: -webkit-linear-gradient(
       -45deg,
       var(--pink-srifoton) 35%,
