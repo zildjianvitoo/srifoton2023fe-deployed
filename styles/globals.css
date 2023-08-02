@@ -8,6 +8,8 @@
   scroll-behavior: smooth;
   --card-color: #dee8fb;
   --neutral: #05003e;
+  --pink-srifoton: #fc39fc;
+  --blue-srifoton: #337ef0;
 }
 
 input::-webkit-outer-spin-button,
@@ -155,7 +157,11 @@ input[type="number"] {
 }
 
 .button-intro:hover {
-  background-image: linear-gradient(to right, #fc39fc, #337ef0);
+  background-image: linear-gradient(
+    to right,
+    var(--pink-srifoton),
+    var(--blue-srifoton)
+  );
   color: white;
 }
 
@@ -208,41 +214,65 @@ input[type="number"] {
 
   .intro-header-kompetisi {
     color: #fcf2ff;
-    background: -webkit-linear-gradient(0deg, #fc39fc 0%, #337ef0 55%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 55%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .intro-header-kompetisi-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(0deg, #fc39fc 0%, #337ef0 55%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 55%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
   .intro-header-seminar {
     color: #fcf2ff;
-    background: -webkit-linear-gradient(0deg, #fc39fc 40%, #337ef0 85%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 40%,
+      var(--blue-srifoton) 85%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .intro-header-seminar-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(0deg, #fc39fc 40%, #337ef0 85%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 40%,
+      var(--blue-srifoton) 85%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .benefit-header {
     color: #fcf2ff;
-    background: -webkit-linear-gradient(0deg, #fc39fc 40%, #337ef0 85%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 40%,
+      var(--blue-srifoton) 85%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .benefit-header-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(0deg, #fc39fc 10%, #337ef0 65%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 10%,
+      var(--blue-srifoton) 65%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
@@ -255,28 +285,44 @@ input[type="number"] {
 
   .timeline-header {
     color: #e8eeff;
-    background: -webkit-linear-gradient(0deg, #fc39fc 0%, #337ef0 95%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 95%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .timeline-header-dark {
     color: #0f3a70;
-    background: -webkit-linear-gradient(0deg, #fc39fc 0%, #337ef0 95%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 95%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .sponsor-header {
     color: #fcf2ff;
-    background: -webkit-linear-gradient(0deg, #fc39fc 35%, #337ef0 75%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 35%,
+      var(--blue-srifoton) 75%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .sponsor-header-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(0deg, #fc39fc 35%, #337ef0 75%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 35%,
+      var(--blue-srifoton) 75%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
@@ -286,28 +332,44 @@ input[type="number"] {
 
   .jumbotron-kompetisi-header {
     color: #fcf2ff;
-    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 75%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 35%,
+      var(--blue-srifoton) 75%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .jumbotron-kompetisi-header-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 75%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 35%,
+      var(--blue-srifoton) 75%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .qna-kompetisi-header {
     color: #fcf2ff;
-    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 75%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 35%,
+      var(--blue-srifoton) 75%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
 
   .qna-kompetisi-header-dark {
     color: #02053e;
-    background: -webkit-linear-gradient(-45deg, #fc39fc 35%, #337ef0 65%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 35%,
+      var(--blue-srifoton) 65%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
   }
@@ -350,7 +412,11 @@ input[type="number"] {
   /* Seminar Page */
   .intro-seminar-header,
   .qna-seminar-header {
-    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 65%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 65%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     color: #fcf2ff;
@@ -359,7 +425,11 @@ input[type="number"] {
 
   .intro-seminar-header-dark,
   .qna-seminar-header-dark {
-    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 65%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 65%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     color: #02053e;
@@ -375,7 +445,11 @@ input[type="number"] {
 
   .register-seminar-header {
     color: #f4eefe;
-    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 75%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 75%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     letter-spacing: 3px;
@@ -383,7 +457,11 @@ input[type="number"] {
 
   .register-seminar-header-dark {
     color: #050b47;
-    background: -webkit-linear-gradient(-45deg, #fc39fc 0%, #337ef0 75%);
+    background: -webkit-linear-gradient(
+      -45deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 75%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     letter-spacing: 3px;
@@ -394,7 +472,12 @@ input[type="number"] {
     border-radius: 20px;
     border: 3.5px dashed #fff;
     background: linear-gradient(#f3edfe 0 0) padding-box,
-      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+      linear-gradient(
+          to bottom right,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -405,7 +488,12 @@ input[type="number"] {
     border-radius: 20px;
     border: 3.5px dashed #02053e;
     background: linear-gradient(#02053e 0 0) padding-box,
-      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+      linear-gradient(
+          to bottom right,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -416,7 +504,12 @@ input[type="number"] {
     border-radius: 30px;
     border: 3.5px dashed #fff;
     background: linear-gradient(#f3edfe 0 0) padding-box,
-      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+      linear-gradient(
+          to bottom right,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -426,7 +519,12 @@ input[type="number"] {
     border-radius: 30px;
     border: 3.5px dashed #050b47;
     background: linear-gradient(#050b47 0 0) padding-box,
-      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+      linear-gradient(
+          to bottom right,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -437,7 +535,12 @@ input[type="number"] {
     border-radius: 30px;
     border: 3.5px dashed #fff;
     background: linear-gradient(#f3edfe 0 0) padding-box,
-      linear-gradient(to bottom left, #337ef0, #fc39fc) border-box;
+      linear-gradient(
+          to bottom left,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -447,7 +550,12 @@ input[type="number"] {
     border-radius: 30px;
     border: 3.5px dashed #050b47;
     background: linear-gradient(#050b47 0 0) padding-box,
-      linear-gradient(to bottom left, #337ef0, #fc39fc) border-box;
+      linear-gradient(
+          to bottom left,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -456,14 +564,22 @@ input[type="number"] {
 
   .narahubung-header {
     color: #e7eeff;
-    background: -webkit-linear-gradient(0deg, #337ef0 0%, #fc39fc 95%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--blue-srifoton) 0%,
+      var(--pink-srifoton) 95%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     letter-spacing: 3px;
   }
   .narahubung-header-dark {
     color: #08356b;
-    background: -webkit-linear-gradient(0deg, #337ef0 0%, #fc39fc 95%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--blue-srifoton) 0%,
+      var(--pink-srifoton) 95%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     letter-spacing: 3px;
@@ -476,7 +592,12 @@ input[type="number"] {
     border-radius: 30px;
     border: 3.5px dashed #fff;
     background: linear-gradient(#edeef9 0 0) padding-box,
-      linear-gradient(to bottom right, #337ef0, #fc39fc) border-box;
+      linear-gradient(
+          to bottom right,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
@@ -486,7 +607,12 @@ input[type="number"] {
     border-radius: 30px;
     border: 3.5px dashed #050b47;
     background: linear-gradient(#383b6a 0 0) padding-box,
-      linear-gradient(to bottom right, #fc39fc, #337ef0) border-box;
+      linear-gradient(
+          to bottom right,
+          var(--pink-srifoton),
+          var(--blue-srifoton)
+        )
+        border-box;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
