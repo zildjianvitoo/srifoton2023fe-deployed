@@ -23,7 +23,7 @@ export default function TimeLineSeminar() {
   return (
     <section id="timeline" className="mt-4 lg:mt-12">
       <div className="flex flex-col items-center justify-center w-full gap-6 p-8 lg:gap-10">
-        <h1 className=" text-[36px] xs:text-[44px]  leading-[3rem] lg:text-[60px] lg:leading-[4rem] font-semibold tracking-wider  p-1 pb-2 text-center lg:text-start mt-10 intro-seminar-header dark:intro-seminar-header-dark">
+        <h1 className=" text-[36px] xs:text-[44px]  leading-[3rem] lg:text-[60px] lg:leading-[4rem] font-semibold tracking-wider  p-1 pb-2 text-center lg:text-start mt-10 timeline-seminar-header dark:timeline-seminar-header-dark">
           Alur{" "}
           <span className="bg-gradient-to-br from-[#FC39FC] to-[#337EF0 bg-clip-text text-transparent">
             Acara
