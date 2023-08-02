@@ -19,7 +19,7 @@ export default function Sponsor() {
           ))}
         </div>
 
-        <h1 className="pb-3 mx-auto mt-32 text-5xl font-semibold tracking-wider text-center w-fit lg:text-6xl sponsor-header dark:sponsor-header-dark ">
+        <h1 className="p-3 pt-0 mx-auto mt-32 text-5xl font-semibold tracking-wider text-center w-fit lg:text-6xl sponsor-header dark:sponsor-header-dark ">
           Media Partner
         </h1>
         <div className="flex flex-wrap justify-center gap-8 px-6 mt-10 lg:px-16">
