@@ -20,7 +20,12 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/assets/logo-srifoton2023.svg" />
       </Head>
       {/* <HydrationContext> */}
-      <ThemeProvider attribute="class" value={theme} enableSystem={false}>
+      <ThemeProvider
+        attribute="class"
+        value={theme}
+        enableSystem={false}
+        defaultTheme="dark"
+      >
         <div className={` ${poppins.variable} ${outfit.className}`}>
           <Navbar />
           <Component {...pageProps} />
