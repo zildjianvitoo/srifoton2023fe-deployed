@@ -1,11 +1,9 @@
 import Navbar from "@/components/Navbar";
 import HydrationContext from "@/context/HydrationContext";
 import "@/styles/globals.css";
-import { Outfit } from "next/font/google";
+import { outfit, poppins } from "@/public/fonts/fonts";
 import { ThemeProvider, useTheme } from "next-themes";
 import Head from "next/head";
-
-const outfit = Outfit({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   const { theme } = useTheme();
@@ -23,7 +21,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       {/* <HydrationContext> */}
       <ThemeProvider attribute="class" value={theme} enableSystem={false}>
-        <div className={outfit.className}>
+        <div className={` ${poppins.variable} ${outfit.className}`}>
           <Navbar />
           <Component {...pageProps} />
         </div>

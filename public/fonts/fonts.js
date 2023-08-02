@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
-import { Poppins } from "next/font/google";
+import { Poppins, Outfit } from "next/font/google";
+
+export const outfit = Outfit({ subsets: ["latin"] });
 
 export const ethnocentric = localFont({
   src: "./Ethnocentric-Rg.ttf",

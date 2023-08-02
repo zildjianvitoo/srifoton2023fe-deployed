@@ -75,7 +75,7 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
             {header}
           </h1>
           <p
-            className={`text-base font-poppins md:text-lg lg:text-xl text-[#747474] dark:text-[#CFCFCF] lg:w-[80%]  ${
+            className={`text-base font-poppins md:text-lg  text-[#747474] dark:text-[#CFCFCF] lg:w-[80%]  ${
               isPink && "text-right "
             }  `}
           >
