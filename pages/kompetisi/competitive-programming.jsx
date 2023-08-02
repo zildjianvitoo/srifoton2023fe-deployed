@@ -1,8 +1,12 @@
 import LayoutMain from "@/components/LayoutMain";
+import NoSSR from "@/components/NoSSR";
+import Button from "@/components/atoms/Button";
 import TimelineBox from "@/components/molecules/TimelineBox";
+import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import { ethnocentric } from "@/public/fonts/fonts";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const timelineContent = [
@@ -24,6 +28,8 @@ const timelineContent = [
 ];
 
 export default function CompetitiveProgramming() {
+  const router = useRouter();
+
   const { theme } = useTheme();
 
   const blueCirlceImgSource =
@@ -111,11 +117,11 @@ export default function CompetitiveProgramming() {
         className="relative h-full mt-12 overflow-hidden lg:mt-48"
       >
         <div className="flex flex-col items-center justify-center gap-6 lg:gap-10">
-          <h1
-            className={`text-2xl pl-0.5 font-semibold tracking-wider lg:text-5xl competition-type-timeline-header dark:text-[#02053e] ${ethnocentric.className}`}
+          <h2
+            className={`text-2xl pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-5xl competition-type-timeline-header dark:text-[#02053e] ${ethnocentric.className}`}
           >
             Alur Acara
-          </h1>
+          </h2>
           <div className="container mt-8 lg:w-3/5 lg:mt-0">
             <div className="flex flex-col grid-cols-9 p-2 mx-auto md:grid  text-[#75497C] dark:text-[#fde5ff]">
               {timelineContent.map((item, index) => (
@@ -132,6 +138,63 @@ export default function CompetitiveProgramming() {
           </div>
         </div>
       </section>
+      <LayoutCredentials>
+        <div className="z-10 flex flex-col gap-10 px-6 lg:flex-row lg:py-12">
+          <Image
+            src={"/assets/Kompetisi/competition-type-cta-img.svg"}
+            alt="CTA icon"
+            width={300}
+            height={300}
+          />
+          <div className="flex flex-col gap-10 ">
+            <h2
+              className={`text-2xl pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-[45px] competition-type-cta-header  dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
+            >
+              <span className="competition-type-cta-header dark:text-[#02053e]">
+                {" "}
+                Daftarkan{" "}
+              </span>{" "}
+              <span className="competition-type-cta-header dark:text-[#02053e]">
+                Dirimu!
+              </span>
+            </h2>
+            <p className="text-base  dark:text-white text-[#767676] font-poppins lg:w-4/5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. et
+              velit interdum, ac aliquet odio mattis.
+            </p>
+            <div className="flex flex-col gap-6 lg:flex-row">
+              <NoSSR>
+                <Button
+                  style={` mt-3 w-1/2 md:w-[35%] lg:w-[35%] relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-competition-type ${
+                    theme === "light"
+                      ? "button-competition-type"
+                      : "button-competition-type-dark"
+                  } `}
+                  onClickHandler={() =>
+                    router.push(`/kompetisi/register/competitive-programming`)
+                  }
+                >
+                  Daftar
+                </Button>
+              </NoSSR>
+
+              <NoSSR>
+                <Button
+                  style={` mt-3 w-3/4 md:w-[50%] lg:w-[35%] relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
+                    theme === "light"
+                      ? "button-competition-type"
+                      : "button-competition-type-dark"
+                  }  `}
+                  onClickHandler={() => router.push(`/kompetisi/register/`)}
+                >
+                  Buku Panduan
+                </Button>
+              </NoSSR>
+            </div>
+          </div>
+        </div>
+      </LayoutCredentials>
       <div className="mb-60"></div>
     </LayoutMain>
   );
