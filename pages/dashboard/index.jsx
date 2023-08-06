@@ -126,8 +126,8 @@ function Dashboard() {
                       )}
                     </div>
                     <div className="flex flex-col">
-                      <label className="text-lg font-medium lg:text-xl text-[#494B7C]">
-                        Pilih Tipe Seminar
+                      <label className="text-lg font-medium lg:text-xl text-[#494B7C] dark:text-white">
+                        Jenis Kelamin
                       </label>
 
                       <div className="flex gap-8">
