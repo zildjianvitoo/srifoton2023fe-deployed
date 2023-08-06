@@ -14,18 +14,22 @@ import { useUserStore } from "@/store/userStore";
 function Dashboard() {
   const user = useUserStore((state) => state.user);
 
-  const { register, handleSubmit } = useForm({
+  console.log(user);
+  const { register, handleSubmit, formState } = useForm({
     defaultValues: {
       name: user.name,
       college: user?.college,
+      nim: user.nim,
+      phoneNumber: user.phone_number,
+      genderType: user.gender,
     },
   });
+  const { isSubmitting, isDirty } = formState;
   const errors = false;
 
   const onSubmitHandler = async (formValue) => {
     console.log(formValue);
     const { name, college, nim, phoneNumber, genderType } = formValue;
-    const phone_number = phoneNumber;
     try {
       const { data } = await updateDataUser(
         name,
@@ -34,7 +38,10 @@ function Dashboard() {
         phoneNumber,
         genderType
       );
-    } catch (error) {}
+      console.log(data);
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
   };
   return (
     <>
@@ -127,6 +134,7 @@ function Dashboard() {
                   <Button
                     variant={"submitButton"}
                     style={"ml-auto mt-10 lg:mt-28 w-1/2 lg:w-1/4"}
+                    disabled={!isDirty}
                   >
                     Simpan
                   </Button>

@@ -61,7 +61,7 @@ export default function VerifyEmail({ email }) {
             variant={"submitButton"}
             style={"w-full lg:w-1/5 py-3"}
             onClickHandler={() => onClickHandler()}
-            disabled={isLoading}
+            loading={isLoading}
           >
             Verifikasi Email
           </Button>

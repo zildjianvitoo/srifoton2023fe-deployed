@@ -234,3 +234,48 @@ export const competitionFormRules = {
     },
   },
 };
+
+export const updateUserRules = {
+  name: {
+    required: {
+      value: true,
+      message: "Nama tidak boleh kosong",
+    },
+  },
+  college: {
+    required: {
+      value: true,
+      message: "Universitas tidak boleh kosong",
+    },
+  },
+  nim: {
+    required: {
+      value: true,
+      message: "NIM tidak boleh kosong",
+    },
+  },
+
+  phoneNumber: {
+    required: {
+      value: true,
+      message: "Nomor telepon tidak boleh kosong",
+    },
+    pattern: {
+      value: /^\d+$/,
+      message: "Nomor telepon harus berupa angka",
+    },
+  },
+
+  genderType: {
+    required: {
+      value: true,
+      message: "Tipe seminar tidak boleh kosong",
+    },
+  },
+  instagram: {
+    required: {
+      value: true,
+      message: "Instagram tidak boleh kosong",
+    },
+  },
+};
