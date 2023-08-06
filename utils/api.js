@@ -1,6 +1,8 @@
 import api from "./axiosInstance";
 import { getToken } from "@/store/tokenStore";
 
+const token = getToken();
+
 function getAccessToken() {
   const token = getToken();
   return token;

@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 import { ethnocentric } from "@/public/fonts/fonts";
+import { PiUserCircleFill } from "react-icons/pi";
+import { MdDashboardCustomize } from "react-icons/md";
+import { TbLogout } from "react-icons/tb";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { useUserStore } from "@/store/userStore";
+import { useAccessTokenStore } from "@/store/tokenStore";
+import useBreakpoint from "@/hooks/useBreakPoint";
+import { doLogout } from "@/utils/api";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownActive, setDropdownActive] = useState(false);
+  const breakpoint = useBreakpoint();
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const user = useUserStore((state) => state.user);
+  const removeUser = useUserStore((state) => state.removeUser);
+  const removeAccessToken = useAccessTokenStore(
+    (state) => state.removeAccessToken
+  );
+
+  const userNameForMobile = user?.name.split(" ");
 
   const handleDropdownClick = () => {
     setIsOpen((prev) => !prev);
@@ -27,6 +42,14 @@ function Navbar() {
 
   const routerNameEquals = (name) => {
     return router.pathname === name;
+  };
+
+  const onLogoutHandler = async () => {
+    await doLogout();
+    removeUser();
+    removeAccessToken();
+    localStorage.removeItem("user-srifoton");
+    localStorage.removeItem("token-srifoton");
   };
 
   return (
@@ -168,7 +191,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="flex lg:mr-10 gap-x-4 navbar-end">
+      <div className="flex lg:mr-10 md:gap-x-4 navbar-end">
         {/* <p>{user?.name}</p> */}
         <div className="cursor-pointer" onClick={toggleTheme}>
           <Image
@@ -180,21 +203,45 @@ function Navbar() {
           />
         </div>
         {user ? (
-          <div className="dropdown dropdown-bottom">
-            <label tabIndex={0} className="m-1 ">
-              Click
-            </label>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Item 2</a>
-              </li>
-            </ul>
+          <div className="md:ml-3 lg:ml-6 text-[#494B7C] dark:text-white font-medium relative">
+            <div className="flex items-center justify-center">
+              <div className="flex flex-col p-2 rounded-xl">
+                <div
+                  className="z-10 flex items-center gap-2 p-2 cursor-pointer"
+                  onClick={() => setDropdownActive((prev) => !prev)}
+                >
+                  <PiUserCircleFill className="hidden text-xl md:block" />
+                  <p className="text-sm  lg:text-lg">
+                    {" "}
+                    {breakpoint !== "sm"
+                      ? user?.name
+                      : userNameForMobile[0] + " " + userNameForMobile[1]}
+                  </p>
+                  {isDropdownActive ? (
+                    <IoIosArrowDown className="lg:text-xl" />
+                  ) : (
+                    <IoIosArrowUp className="lg:text-xl" />
+                  )}
+                </div>
+
+                {isDropdownActive && (
+                  <ul className="absolute z-[2] flex flex-col pt-[68px] xs:pt-12  lg:pt-11 lg:px-4 gap-y-3 lg:gap-y-[6px] bg-gradient-to-r from-pink-srifoton/20 to-blue-srifoton/20 rounded-xl p-2 pb-4 lg:pl-10">
+                    <Link href="/dashboard" className="flex items-center gap-2">
+                      <MdDashboardCustomize />
+                      <p>Dashboard</p>
+                    </Link>
+                    <div
+                      href="/dashboard"
+                      className="flex items-center gap-2 cursor-pointer"
+                      onClick={onLogoutHandler}
+                    >
+                      <TbLogout />
+                      <p>Keluar</p>
+                    </div>
+                  </ul>
+                )}
+              </div>
+            </div>
           </div>
         ) : (
           <Link href="/register">

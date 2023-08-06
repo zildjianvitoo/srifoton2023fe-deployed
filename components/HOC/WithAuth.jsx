@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useUserStore } from "@/store/userStore";
+import NoSSR from "../NoSSR";
 
 const RequireLogin = (WrappedComponent) => {
   const WithAuthentication = () => {
@@ -8,11 +9,15 @@ const RequireLogin = (WrappedComponent) => {
     const isLoggedIn = useUserStore((state) => state.user);
     useEffect(() => {
       if (!isLoggedIn) {
-        router.replace("/login");
+        router.replace("/");
       }
     }, [isLoggedIn]);
 
-    return isLoggedIn ? <WrappedComponent /> : null;
+    return isLoggedIn ? (
+      <NoSSR>
+        <WrappedComponent />
+      </NoSSR>
+    ) : null;
   };
 
   return WithAuthentication;
