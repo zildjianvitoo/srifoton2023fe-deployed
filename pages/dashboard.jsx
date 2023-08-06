@@ -6,7 +6,9 @@ function Dashboard() {
   return (
     <>
       <Navbar />
-      <LayoutMain></LayoutMain>
+      <LayoutMain>
+        <div>kocakkk</div>
+      </LayoutMain>
     </>
   );
 }
