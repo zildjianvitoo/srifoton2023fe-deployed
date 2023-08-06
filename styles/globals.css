@@ -268,7 +268,7 @@ input[type="number"] {
   }
 
   .shadow-navbar-dark {
-    box-shadow: 0 4px 25px rgba(203, 203, 203, 0.2) !important;
+    box-shadow: 0 4px 20px rgba(203, 203, 203, 0.2) !important;
   }
 
   /* Landing Page */

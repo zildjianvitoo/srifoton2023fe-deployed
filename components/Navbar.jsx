@@ -32,6 +32,10 @@ function Navbar() {
     setIsOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    setDropdownActive(false);
+  }, [router]);
+
   const toggleTheme = () => {
     if (theme === "dark") {
       setTheme("light");
@@ -211,7 +215,7 @@ function Navbar() {
                   onClick={() => setDropdownActive((prev) => !prev)}
                 >
                   <PiUserCircleFill className="hidden text-xl md:block" />
-                  <p className="text-sm  lg:text-lg">
+                  <p className="text-sm lg:text-lg">
                     {" "}
                     {breakpoint !== "sm"
                       ? user?.name
@@ -225,7 +229,7 @@ function Navbar() {
                 </div>
 
                 {isDropdownActive && (
-                  <ul className="absolute z-[2] flex flex-col pt-[68px] xs:pt-12  lg:pt-11 lg:px-4 gap-y-3 lg:gap-y-[6px] bg-gradient-to-r from-pink-srifoton/20 to-blue-srifoton/20 rounded-xl p-2 pb-4 lg:pl-10">
+                  <ul className="absolute z-[2] flex flex-col pt-[68px] xs:pt-12  lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6 lg:pl-10">
                     <Link href="/dashboard" className="flex items-center gap-2">
                       <MdDashboardCustomize />
                       <p>Dashboard</p>
