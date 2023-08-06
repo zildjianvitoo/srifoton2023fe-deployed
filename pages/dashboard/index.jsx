@@ -8,10 +8,34 @@ import { useForm } from "react-hook-form";
 import InputRadio from "@/components/atoms/InputRadio";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
 import Button from "@/components/atoms/Button";
+import { updateDataUser } from "@/utils/api";
+import { useUserStore } from "@/store/userStore";
 
 function Dashboard() {
-  const { register } = useForm();
+  const user = useUserStore((state) => state.user);
+
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      name: user.name,
+      college: user?.college,
+    },
+  });
   const errors = false;
+
+  const onSubmitHandler = async (formValue) => {
+    console.log(formValue);
+    const { name, college, nim, phoneNumber, genderType } = formValue;
+    const phone_number = phoneNumber;
+    try {
+      const { data } = await updateDataUser(
+        name,
+        college,
+        nim,
+        phoneNumber,
+        genderType
+      );
+    } catch (error) {}
+  };
   return (
     <>
       <Navbar />
@@ -27,7 +51,10 @@ function Dashboard() {
                 <h1 className="text-[#494B7C] text-4xl lg:text-6xl font-bold text-center -translate-y-4">
                   Data Diri
                 </h1>
-                <form className="w-full mr-auto">
+                <form
+                  className="w-full mr-auto"
+                  onSubmit={handleSubmit(onSubmitHandler)}
+                >
                   <div className="flex flex-col w-full gap-4">
                     <div className="flex flex-col w-full">
                       <InputForm
@@ -60,7 +87,7 @@ function Dashboard() {
                       <InputForm
                         type={"number"}
                         labelText={"No Telepon (WA)"}
-                        labelFor={"nim"}
+                        labelFor={"phoneNumber"}
                         placeholder={"contoh: 0902123456789"}
                         register={register}
                       />
@@ -88,7 +115,7 @@ function Dashboard() {
                     </div>
                     <div className="flex flex-col">
                       <InputForm
-                        type={"number"}
+                        type={"text"}
                         labelText={"Instagram"}
                         labelFor={"instagram"}
                         placeholder={"contoh: @srifoton.official"}
