@@ -9,7 +9,9 @@ export default function LayoutCredentials({
   return (
     <section
       id={id}
-      className={`relative mt-24 mb-10 ${loginPage && "mt-36 lg:mt-28"}  `}
+      className={`relative mt-24 mb-10 ${
+        authPage && "mt-0 md:mt-16 lg:mt-24"
+      }  ${loginPage && "mt-36 lg:mt-28"}  `}
     >
       <div className="p-10 lg:p-[72px]">
         <div
@@ -26,7 +28,11 @@ export default function LayoutCredentials({
             />
           </div>
         </div>
-        <div className="mx-auto flex md:w-[85%] lg:w-4/5 gap-6 ">
+        <div
+          className={` ${
+            !authPage && "mx-auto md:w-[85%] lg:w-4/5"
+          } flex  gap-6 `}
+        >
           {children}
         </div>
       </div>

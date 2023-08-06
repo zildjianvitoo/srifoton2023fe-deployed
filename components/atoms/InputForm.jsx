@@ -10,7 +10,7 @@ export default function InputForm({
     <div className="flex flex-col w-full">
       <label
         htmlFor={labelFor}
-        className="text-lg font-medium text-[#494B7C] dark:text-[#EDEDED]"
+        className="text-lg lg:text-xl font-medium text-[#494B7C] dark:text-white"
       >
         {labelText}
       </label>

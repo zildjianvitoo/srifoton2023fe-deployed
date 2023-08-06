@@ -16,7 +16,10 @@ const InputRadio = forwardRef(function InputRadio(
         ref={ref}
         className="lg:scale-[1.3] cursor-pointer"
       />
-      <label htmlFor={labelFor} className="font-medium">
+      <label
+        htmlFor={labelFor}
+        className="font-medium text-[#494B7C] dark:text-white"
+      >
         {labelText}
       </label>
     </div>

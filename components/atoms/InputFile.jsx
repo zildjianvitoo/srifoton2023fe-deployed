@@ -51,7 +51,7 @@ export default function InputFile({
     <div className="flex flex-col ">
       <label
         htmlFor="dropzone-file"
-        className="text-lg font-medium dark:text-[#EDEDED] "
+        className="text-lg lg:text-xl font-medium text-[#494B7C] dark:text-white "
       >
         {labelText}
         <span className=" text-[#F86E45] dark:text-[#D5DA00]">*</span>

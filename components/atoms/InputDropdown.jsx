@@ -9,7 +9,7 @@ const InputDropdown = forwardRef(function InputDropDown(
 
   return (
     <div className="flex flex-col">
-      <label htmlFor="pembayaran" className="text-lg font-medium ">
+      <label htmlFor="pembayaran" className="text-lg font-medium lg:text-xl ">
         Metode Pembayaran
       </label>
       <select
