@@ -94,7 +94,7 @@ export default function CompetitiveProgramming() {
           </div>
           <div className="flex flex-col items-center justify-center gap-6 px-6 lg:px-8">
             <h1
-              className={`text-3xl text-center  lg:p-2 md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
+              className={`text-[27px] xs:text-3xl text-center lg:p-2 md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
             >
               <span className="text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton">
                 Web{" "}

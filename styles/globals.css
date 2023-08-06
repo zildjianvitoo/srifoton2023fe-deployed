@@ -441,7 +441,7 @@ input[type="number"] {
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
     color: #fcf2ff;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
   }
 
   .competition-type-cta-header {
