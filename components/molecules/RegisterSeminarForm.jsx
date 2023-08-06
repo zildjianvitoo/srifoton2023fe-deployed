@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
+import { useState } from "react";
 import Button from "@/components/atoms/Button";
 import InputDropdown from "@/components/atoms/InputDropdown";
 import InputFile from "@/components/atoms/InputFile";
@@ -14,7 +13,6 @@ export default function RegisterSeminarForm() {
   const [proof, setProof] = useState(null);
   const {
     register,
-    control,
     handleSubmit,
     formState: { errors },
   } = useForm({

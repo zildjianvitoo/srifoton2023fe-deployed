@@ -10,7 +10,7 @@ export default function LayoutCredentials({
     <section
       id={id}
       className={`relative mt-24 mb-10 ${
-        authPage && "mt-0 md:mt-16 lg:mt-24"
+        authPage && "!mt-10 md:mt-16 lg:mt-24"
       }  ${loginPage && "mt-36 lg:mt-28"}  `}
     >
       <div className="p-10 sm:p-20 lg:p-[72px]">

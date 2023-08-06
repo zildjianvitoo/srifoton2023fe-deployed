@@ -24,7 +24,6 @@ function Login() {
   const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
   const setUser = useUserStore((state) => state.setUser);
   const {
-    control,
     register,
     handleSubmit,
     formState: { errors },

@@ -49,10 +49,13 @@ async function getDataUser() {
 }
 
 async function doLogout() {
+  console.log(getAccessToken());
   const { data, status } = await api.post(
     "/api/logout",
     {},
-    { headers: { Authorization: `Bearer ${getAccessToken()}` } }
+    {
+      headers: { Authorization: `Bearer ${getAccessToken()}` },
+    }
   );
   if (status !== 200) {
     throw new Error(data.message);

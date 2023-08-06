@@ -1,7 +1,6 @@
 import { useTheme } from "next-themes";
-import FormFirstField from "../Kompetisi/DaftarKompetisi/FormFirstField";
 import PaymentNote from "@/components/molecules/PaymentNote";
-import RegisterSeminarForm from "./RegisterSeminarForm";
+import RegisterSeminarForm from "@/components/molecules/RegisterSeminarForm";
 import NoSSR from "@/components/NoSSR";
 import { ethnocentric } from "@/public/fonts/fonts";
 

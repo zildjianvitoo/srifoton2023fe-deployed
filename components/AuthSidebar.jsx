@@ -16,7 +16,7 @@ export default function AuthSidebar() {
     "hover:bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] ";
 
   return (
-    <div className="flex flex-col md:gap-x-8 md:flex-row lg:flex-col text-[#494B7C] dark:text-white relative mt-24 mb-10 xs:gap-x-2  font-medium w-full gap-y-[8px] px-1 justify-center">
+    <div className="flex flex-row lg:flex-col justify-center items-start lg:items-stretch text-[#494B7C] dark:text-white relative mt-24 gap-x-4 font-medium w-full gap-y-2 px-1">
       {/* <Link
         href="/dashboard/data-akun"
         className={`flex items-center gap-2 p-2 cursor-pointer ${
@@ -33,7 +33,7 @@ export default function AuthSidebar() {
         }`}
       >
         <PiUserCircleFill className="text-xl" />
-        <p className="text-base lg:text-xl hover:font-semibold">Data Diri</p>
+        <p className="text-xl hover:font-semibold">Data Diri</p>
       </Link>
       <div
         className={`flex items-center p-2 px-3 cursor-pointer rounded-xl ${hoverStyle} ${
@@ -48,11 +48,11 @@ export default function AuthSidebar() {
         >
           <div className="flex items-center gap-2">
             <BsCalendarWeek className="text-xl" />
-            <p className="text-base lg:text-xl hover:font-semibold">Kegiatan</p>
+            <p className="text-xl hover:font-semibold">Kegiatan</p>
           </div>
 
           {showActivity && (
-            <div className="flex flex-col gap-2 my-2 ml-7">
+            <div className="flex flex-col gap-2 my-2 text-lg ml-7">
               <Link
                 href="/dashboard/kegiatan/kompetisi"
                 className="flex items-center"
