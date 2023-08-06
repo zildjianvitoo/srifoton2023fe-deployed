@@ -209,7 +209,7 @@ export default function CompetitiveProgramming() {
         <div className="bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#5F7AC2]/30 dark:to-[#E5AFE5]/40 min-h-screen">
           <div className="flex flex-col p-8">
             <h2
-              className={`pb-2 mt-6 text-2xl md:text-4xl font-semibold tracking-wider  text-center lg:text-6xl narahubung-header dark:narahubung-header-dark ${ethnocentric.className}`}
+              className={`pb-2 mt-6 text-2xl md:text-4xl font-semibold text-center lg:text-6xl narahubung-header dark:narahubung-header-dark ${ethnocentric.className}`}
             >
               Narahubung
             </h2>
