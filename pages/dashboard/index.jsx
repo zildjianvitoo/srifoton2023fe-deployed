@@ -10,22 +10,22 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import Button from "@/components/atoms/Button";
 import { updateDataUser } from "@/utils/api";
 import { useUserStore } from "@/store/userStore";
+import { updateUserRules } from "@/utils/formRules";
 
 function Dashboard() {
   const user = useUserStore((state) => state.user);
 
-  console.log(user);
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
       name: user.name,
+      email: user?.email,
       college: user?.college,
-      nim: user.nim,
-      phoneNumber: user.phone_number,
-      genderType: user.gender,
+      nim: user?.nim,
+      phoneNumber: user?.phone_number,
+      genderType: user?.gender,
     },
   });
-  const { isSubmitting, isDirty } = formState;
-  const errors = false;
+  const { isSubmitting, isDirty, errors } = formState;
 
   const onSubmitHandler = async (formValue) => {
     console.log(formValue);
@@ -70,6 +70,20 @@ function Dashboard() {
                         labelFor={"name"}
                         placeholder={"contoh: Zildjian Vito"}
                         register={register}
+                        rules={updateUserRules.name}
+                      />
+                      {errors.name && (
+                        <ErrorMessage message={errors.name.message} />
+                      )}
+                    </div>
+                    <div className="flex flex-col">
+                      <InputForm
+                        type={"email"}
+                        labelText={"Email"}
+                        labelFor={"email"}
+                        register={register}
+                        disabled
+                        style={"opacity-60"}
                       />
                     </div>
                     <div className="flex flex-col">
@@ -79,7 +93,11 @@ function Dashboard() {
                         labelFor={"college"}
                         placeholder={"contoh: Universitas Sriwijaya"}
                         register={register}
+                        rules={updateUserRules.college}
                       />
+                      {errors.college && (
+                        <ErrorMessage message={errors.college.message} />
+                      )}
                     </div>
                     <div className="flex flex-col">
                       <InputForm
@@ -88,7 +106,11 @@ function Dashboard() {
                         labelFor={"nim"}
                         placeholder={"contoh: 0902123456789"}
                         register={register}
+                        rules={updateUserRules.nim}
                       />
+                      {errors.nim && (
+                        <ErrorMessage message={errors.nim.message} />
+                      )}
                     </div>
                     <div className="flex flex-col">
                       <InputForm
@@ -97,7 +119,11 @@ function Dashboard() {
                         labelFor={"phoneNumber"}
                         placeholder={"contoh: 0902123456789"}
                         register={register}
+                        rules={updateUserRules.phoneNumber}
                       />
+                      {errors.phoneNumber && (
+                        <ErrorMessage message={errors.phoneNumber.message} />
+                      )}
                     </div>
                     <div className="flex flex-col">
                       <label className="text-lg font-medium lg:text-xl text-[#494B7C]">
@@ -109,16 +135,24 @@ function Dashboard() {
                           labelFor={"pria"}
                           labelText={"Pria"}
                           value={"pria"}
-                          {...register("genderType")}
+                          {...register(
+                            "genderType",
+                            updateUserRules.genderType
+                          )}
                         />
                         <InputRadio
                           labelFor={"wanita"}
                           labelText={"Wanita"}
                           value={"wanita"}
-                          {...register("genderType")}
+                          {...register(
+                            "genderType",
+                            updateUserRules.genderType
+                          )}
                         />
                       </div>
-                      {errors && <ErrorMessage />}
+                      {errors.genderType && (
+                        <ErrorMessage message={errors.genderType.message} />
+                      )}
                     </div>
                     <div className="flex flex-col">
                       <InputForm
@@ -127,7 +161,11 @@ function Dashboard() {
                         labelFor={"instagram"}
                         placeholder={"contoh: @srifoton.official"}
                         register={register}
+                        rules={updateUserRules.instagram}
                       />
+                      {errors.instagram && (
+                        <ErrorMessage message={errors.instagram.message} />
+                      )}
                     </div>
                   </div>
 
@@ -135,6 +173,7 @@ function Dashboard() {
                     variant={"submitButton"}
                     style={"ml-auto mt-10 lg:mt-28 w-1/2 lg:w-1/4"}
                     disabled={!isDirty}
+                    loading={isSubmitting}
                   >
                     Simpan
                   </Button>
