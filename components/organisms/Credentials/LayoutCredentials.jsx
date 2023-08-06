@@ -13,7 +13,7 @@ export default function LayoutCredentials({
         authPage && "mt-0 md:mt-16 lg:mt-24"
       }  ${loginPage && "mt-36 lg:mt-28"}  `}
     >
-      <div className="p-10 lg:p-[72px]">
+      <div className="p-10 sm:p-20 lg:p-[72px]">
         <div
           className={`absolute inset-0 w-[90%] md:w-[85%]  ${
             authPage ? "lg:w-full" : "lg:w-4/5"

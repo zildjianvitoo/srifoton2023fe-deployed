@@ -16,7 +16,7 @@ export default function AuthSidebar() {
     "hover:bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] ";
 
   return (
-    <div className="flex flex-row lg:flex-col text-[#494B7C] relative mt-24 mb-10 xs:gap-x-2  font-medium w-full gap-y-[8px] px-1 justify-center">
+    <div className="lg:flex flex-row lg:flex-col text-[#494B7C] dark:text-white relative mt-24 mb-10 xs:gap-x-2  font-medium w-full gap-y-[8px] px-1 justify-center">
       {/* <Link
         href="/dashboard/data-akun"
         className={`flex items-center gap-2 p-2 cursor-pointer ${
@@ -28,7 +28,7 @@ export default function AuthSidebar() {
       </Link> */}
       <Link
         href="/dashboard"
-        className={`flex items-center gap-2 p-2 cursor-pointer rounded-xl  ${hoverStyle} ${
+        className={`flex items-center gap-2 p-2 px-3 cursor-pointer rounded-xl  ${hoverStyle} ${
           router.pathname === "/dashboard" && activeStyle
         }`}
       >
@@ -36,13 +36,16 @@ export default function AuthSidebar() {
         <p className="text-base lg:text-xl hover:font-semibold">Data Diri</p>
       </Link>
       <div
-        className={`flex items-center p-2 cursor-pointer rounded-xl ${hoverStyle} ${
+        className={`flex items-center p-2 px-3 cursor-pointer rounded-xl ${hoverStyle} ${
           (router.pathname === "/dashboard/kegiatan/kompetisi" ||
             router.pathname === "/dashboard/kegiatan/kompetisi") &&
           activeStyle
         }`}
       >
-        <div onClick={() => setShowActivity((prev) => !prev)}>
+        <div
+          onClick={() => setShowActivity((prev) => !prev)}
+          className="w-full"
+        >
           <div className="flex items-center gap-2">
             <BsCalendarWeek className="text-xl" />
             <p className="text-base lg:text-xl hover:font-semibold">Kegiatan</p>

@@ -2,8 +2,13 @@ import AuthSidebar from "@/components/AuthSidebar";
 import LayoutMain from "@/components/LayoutMain";
 import Navbar from "@/components/Navbar";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
+import { useUserStore } from "@/store/userStore";
 
 export default function Kompetisi() {
+  const user = useUserStore((state) => state.user);
+
+  console.log(user);
+
   return (
     <>
       <Navbar />

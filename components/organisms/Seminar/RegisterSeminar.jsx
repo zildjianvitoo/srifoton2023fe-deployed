@@ -18,7 +18,7 @@ export default function RegisterSeminar() {
       />
       <div className="flex  flex-col w-[85%] md:w-[80%] lg:w-[74%] px-3 gap-4  py-10 lg:pb-16 mx-auto rounded-[50px]">
         <h1
-          className={`pb-2 text-4xl font-semibold tracking-wider text-center lg:text-5xl register-seminar-header dark:register-seminar-header-dark ${ethnocentric.className}`}
+          className={`pb-2 text-2xl md:text-4xl font-semibold tracking-wider text-center lg:text-5xl register-seminar-header dark:register-seminar-header-dark ${ethnocentric.className}`}
         >
           Daftarkan Dirimu!
         </h1>

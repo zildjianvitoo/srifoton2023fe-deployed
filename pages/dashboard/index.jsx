@@ -55,15 +55,15 @@ function Dashboard() {
             <LayoutCredentials id="dashboard-data-diri" authPage>
               <div className="z-10 flex flex-col justify-start w-full ">
                 {" "}
-                <h1 className="text-[#494B7C] text-4xl lg:text-6xl font-bold text-center -translate-y-4">
+                <h1 className="text-[#494B7C] dark:text-white text-4xl lg:text-6xl font-bold text-center -translate-y-4">
                   Data Diri
                 </h1>
                 <form
-                  className="w-full mr-auto"
+                  className="w-full mt-4 mr-auto"
                   onSubmit={handleSubmit(onSubmitHandler)}
                 >
                   <div className="flex flex-col w-full gap-4">
-                    <div className="flex flex-col w-full">
+                    <div className="flex flex-col">
                       <InputForm
                         type={"text"}
                         labelText={"Nama"}
