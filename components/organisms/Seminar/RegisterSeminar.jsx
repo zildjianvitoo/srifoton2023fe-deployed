@@ -3,6 +3,7 @@ import FormFirstField from "../Kompetisi/DaftarKompetisi/FormFirstField";
 import PaymentNote from "@/components/molecules/PaymentNote";
 import RegisterSeminarForm from "./RegisterSeminarForm";
 import NoSSR from "@/components/NoSSR";
+import { ethnocentric } from "@/public/fonts/fonts";
 
 export default function RegisterSeminar() {
   const { theme } = useTheme();
@@ -16,7 +17,9 @@ export default function RegisterSeminar() {
         }}
       />
       <div className="flex  flex-col w-[85%] md:w-[80%] lg:w-[74%] px-3 gap-4  py-10 lg:pb-16 mx-auto rounded-[50px]">
-        <h1 className="pb-2 text-4xl font-semibold tracking-wider text-center lg:text-6xl register-seminar-header dark:register-seminar-header-dark">
+        <h1
+          className={`pb-2 text-4xl font-semibold tracking-wider text-center lg:text-5xl register-seminar-header dark:register-seminar-header-dark ${ethnocentric.className}`}
+        >
           Daftarkan Dirimu!
         </h1>
         <div className="flex flex-col gap-8 lg:mt-6 lg:flex-row">

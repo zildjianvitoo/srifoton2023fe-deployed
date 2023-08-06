@@ -49,11 +49,15 @@ function Navbar() {
   };
 
   const onLogoutHandler = async () => {
-    await doLogout();
-    removeUser();
-    removeAccessToken();
-    localStorage.removeItem("user-srifoton");
-    localStorage.removeItem("token-srifoton");
+    try {
+      await doLogout();
+      removeUser();
+      removeAccessToken();
+      localStorage.removeItem("user-srifoton");
+      localStorage.removeItem("token-srifoton");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -195,7 +199,11 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="flex lg:mr-10 md:gap-x-4 navbar-end">
+      <div
+        className={`flex ${
+          user ? "gap-x-0" : "gap-x-4"
+        } lg:mr-10 md:gap-x-4 navbar-end`}
+      >
         {/* <p>{user?.name}</p> */}
         <div className="cursor-pointer" onClick={toggleTheme}>
           <Image

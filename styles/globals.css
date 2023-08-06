@@ -534,7 +534,7 @@ input[type="number"] {
     background: -webkit-linear-gradient(
       -45deg,
       var(--pink-srifoton) 0%,
-      var(--blue-srifoton) 75%
+      var(--blue-srifoton) 95%
     );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
