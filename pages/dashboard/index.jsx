@@ -28,16 +28,10 @@ function Dashboard() {
   const { isSubmitting, isDirty, errors } = formState;
 
   const onSubmitHandler = async (formValue) => {
-    console.log(formValue);
-    const { name, college, nim, phoneNumber, genderType } = formValue;
     try {
-      const { data } = await updateDataUser(
-        name,
-        college,
-        nim,
-        phoneNumber,
-        genderType
-      );
+      const { data } = await updateDataUser({
+        ...formValue,
+      });
       console.log(data);
     } catch (error) {
       console.log(error.response.data.message);

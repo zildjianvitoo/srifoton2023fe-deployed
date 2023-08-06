@@ -22,7 +22,6 @@ export default function RegisterSeminarForm() {
   });
 
   const onSubmitHandler = async (formValue) => {
-    console.log(formValue);
     const {
       name,
       email,
