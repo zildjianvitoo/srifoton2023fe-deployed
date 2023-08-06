@@ -16,7 +16,7 @@ export default function AuthSidebar() {
     "hover:bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] ";
 
   return (
-    <div className="lg:flex flex-row lg:flex-col text-[#494B7C] dark:text-white relative mt-24 mb-10 xs:gap-x-2  font-medium w-full gap-y-[8px] px-1 justify-center">
+    <div className="flex flex-col md:gap-x-8 md:flex-row lg:flex-col text-[#494B7C] dark:text-white relative mt-24 mb-10 xs:gap-x-2  font-medium w-full gap-y-[8px] px-1 justify-center">
       {/* <Link
         href="/dashboard/data-akun"
         className={`flex items-center gap-2 p-2 cursor-pointer ${
