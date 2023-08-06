@@ -70,7 +70,7 @@ function Navbar() {
           <label
             tabIndex={0}
             className="text-primary btn btn-ghost lg:hidden"
-            onClick={handleDropdownClick}
+            onClick={() => setIsOpen((prev) => !prev)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -124,17 +124,6 @@ function Navbar() {
                 }`}
               >
                 Seminar
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/kontak"
-                className={`active:bg-transparent ${
-                  routerNameEquals("/kontak") &&
-                  "text-[#DE55E8] dark:text-[#F56AFF]"
-                }`}
-              >
-                Kontak
               </Link>
             </li>
           </ul>
@@ -237,7 +226,7 @@ function Navbar() {
                 </div>
 
                 {isDropdownActive && (
-                  <ul className="absolute z-[2] flex flex-col pt-[68px] xs:pt-12  lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6 lg:pl-10">
+                  <ul className="absolute z-[2] flex flex-col pt-12  lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6 lg:pl-10">
                     <Link href="/dashboard" className="flex items-center gap-2">
                       <MdDashboardCustomize />
                       <p>Dashboard</p>

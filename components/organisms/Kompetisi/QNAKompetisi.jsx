@@ -25,7 +25,7 @@ export default function QNAKompetisi({ competitionTypePage }) {
             }`}
           >
             Tanya Jawab Singkat{" "}
-            <span className="lg:block bg-gradient-to-r from-[#FC39FC] to-[#337EF0] bg-clip-text text-transparent  w-fit mx-auto  mt-1">
+            <span className="lg:block bg-gradient-to-r from-[#FC39FC] to-[#337EF0] bg-clip-text text-transparent tracking-widest lg:tracking-wide  w-fit mx-auto  mt-1">
               Yuk...
             </span>
           </h1>

@@ -92,18 +92,18 @@ export default function CompetitiveProgramming() {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center gap-6 px-8">
+          <div className="flex flex-col items-center justify-center gap-6 px-6 lg:px-8">
             <h1
-              className={`text-3xl text-center lg:p-2 pl-[2px] md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
+              className={`text-3xl text-center  lg:p-2 md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
             >
-              <span className="text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
+              <span className="text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton">
                 Web{" "}
               </span>
-              <span className="competition-type-header dark:text-[#02053e]">
+              <span className="competition-type-header pl-1 dark:text-[#02053e]">
                 Development
               </span>
             </h1>
-            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-9 px-4 lg:px-8 w-full lg:w-[65%] mx-auto text-center">
+            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-9 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis. et
               velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit
@@ -120,7 +120,7 @@ export default function CompetitiveProgramming() {
       >
         <div className="flex flex-col items-center justify-center gap-6 lg:gap-10">
           <h2
-            className={`text-2xl pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-5xl competition-type-timeline-header dark:text-[#02053e] ${ethnocentric.className}`}
+            className={`text-2xl pl-1 font-semibold md:text-3xl tracking-wider lg:text-5xl competition-type-timeline-header dark:text-[#02053e] ${ethnocentric.className}`}
           >
             Alur Acara
           </h2>
@@ -148,7 +148,7 @@ export default function CompetitiveProgramming() {
             width={300}
             height={300}
           />
-          <div className="flex flex-col gap-10 ">
+          <div className="flex flex-col gap-6 lg:gap-10 ">
             <h2
               className={`text-2xl pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-[45px] competition-type-cta-header  dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
             >
