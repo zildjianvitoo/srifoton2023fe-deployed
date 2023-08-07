@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -38,9 +38,9 @@ function Login() {
     try {
       const { data } = await doLogin({ email, password });
       console.log(data);
-      router.push("/dashboard");
       setAccessToken(data.token);
       setUser(data.user);
+      router.push("/dashboard");
     } catch (error) {
       if (error instanceof AxiosError) {
         console.error(error);
@@ -57,6 +57,7 @@ function Login() {
       <Head>
         <title>SRIFOTON | Login</title>
       </Head>
+
       <LayoutMain>
         <LayoutCredentials id={"login-section"}>
           <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
