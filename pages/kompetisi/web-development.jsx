@@ -184,8 +184,8 @@ export default function CompetitiveProgramming() {
               </NoSSR>
               <NoSSR>
                 <Link
-                  href="/kompetisi/register font-semibold"
-                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%]"
+                  href="/kompetisi/register"
+                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%] font-semibold"
                 >
                   <Button
                     style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
