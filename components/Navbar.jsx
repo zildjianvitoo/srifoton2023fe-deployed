@@ -11,13 +11,11 @@ import { TbLogout } from "react-icons/tb";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { useUserStore } from "@/store/userStore";
 import { useAccessTokenStore } from "@/store/tokenStore";
-import useBreakpoint from "@/hooks/useBreakPoint";
 import { doLogout } from "@/utils/api";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownActive, setDropdownActive] = useState(false);
-  const breakpoint = useBreakpoint();
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const user = useUserStore((state) => state.user);
@@ -31,7 +29,6 @@ function Navbar() {
   const handleDropdownClick = () => {
     setIsOpen((prev) => !prev);
   };
-  console.log(isOpen);
 
   useEffect(() => {
     setDropdownActive(false);
@@ -223,7 +220,7 @@ function Navbar() {
                 </div>
 
                 {isDropdownActive && (
-                  <ul className="absolute z-[2] md:text-lg lg:text-xl pt-4 flex flex-col mt-12 lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6  ">
+                  <ul className="absolute z-[2] md:text-lg pt-4 flex flex-col mt-12 lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6  ">
                     <Link href="/dashboard" className="flex items-center gap-2">
                       <MdDashboardCustomize />
                       <p>Dashboard</p>

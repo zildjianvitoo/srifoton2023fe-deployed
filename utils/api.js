@@ -39,13 +39,15 @@ async function doLogin({ email, password }) {
 }
 
 async function getDataUser() {
-  const { data, status } = api.post(
-    "/api/me",
-    {},
-    {
-      headers: { Authorization: `Bearer ${getAccessToken()}` },
-    }
-  ); // get ?? post ??
+  const { data, status } = api.get("/api/me", {
+    headers: { Authorization: `Bearer ${getAccessToken()}` },
+  }); // get ?? post ??
+
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+
+  return { data };
 }
 
 async function doLogout() {

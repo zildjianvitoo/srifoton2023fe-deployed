@@ -15,8 +15,20 @@ export default function Modal({
       />
       <div className="modal ">
         <div className="modal-box text-[#494B7C] dark:text-[#E5EEFF] bg-[#FCF2FF] dark:bg-[#141754] ">
-          <h3 className="text-lg font-bold">{messageHeader}</h3>
-          <p className="py-4">{message}!</p>
+          <h3
+            className={`text-lg font-bold  ${
+              messageHeader !== "Berhasil" ? "text-red-500" : "text-green-500"
+            }`}
+          >
+            {messageHeader}
+          </h3>
+          <p
+            className={`py-4 ${
+              messageHeader !== "Berhasil" ? "text-red-500" : "text-green-500"
+            }`}
+          >
+            {message}!
+          </p>
           <div className="modal-action">
             <label
               htmlFor="my_modal_6"

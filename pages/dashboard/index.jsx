@@ -11,8 +11,19 @@ import Button from "@/components/atoms/Button";
 import { updateDataUser } from "@/utils/api";
 import { useUserStore } from "@/store/userStore";
 import { updateUserRules } from "@/utils/formRules";
+import { useState } from "react";
+import Modal from "@/components/atoms/Modal";
+import useModal from "@/hooks/useModal";
 
 function Dashboard() {
+  const {
+    message,
+    showModal,
+    setMessage,
+    setShowModal,
+    messageHeader,
+    setMessageHeader,
+  } = useModal();
   const user = useUserStore((state) => state.user);
 
   const { register, handleSubmit, formState } = useForm({
@@ -33,8 +44,13 @@ function Dashboard() {
         ...formValue,
       });
       console.log(data);
+      setShowModal(true);
+      setMessageHeader("Berhasil");
+      setMessage(data.message);
     } catch (error) {
-      console.log(error.response.data.message);
+      setShowModal(true);
+      setMessageHeader("Gagal");
+      setMessage(error.response.data.message);
     }
   };
   return (
@@ -42,10 +58,10 @@ function Dashboard() {
       <Navbar />
       <LayoutMain>
         <div className="flex flex-col lg:flex-row  w-full mx-auto mt-10 lg:gap-16 lg:w-[85%]">
-          <div className="lg:w-[22rem] lg:mt-10">
+          <div className="lg:w-[22rem] lg:mt-8">
             <AuthSidebar />
           </div>
-          <div className="w-full">
+          <div className="w-full md:mt-10 lg:mt-20">
             <LayoutCredentials id="dashboard-data-diri" authPage>
               <div className="z-10 flex flex-col justify-start w-full ">
                 {" "}
@@ -172,6 +188,14 @@ function Dashboard() {
                     Simpan
                   </Button>
                 </form>
+                {showModal && (
+                  <Modal
+                    messageHeader={messageHeader}
+                    message={message}
+                    showModal={showModal}
+                    setShowModal={setShowModal}
+                  />
+                )}
               </div>
             </LayoutCredentials>
           </div>
