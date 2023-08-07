@@ -167,7 +167,7 @@ export default function CompetitiveProgramming() {
             </p>
             <div className="flex flex-col gap-x-6 gap-y-2 lg:flex-row">
               <Link
-                href="/kompetisi/register/competitive-programming"
+                href="/kompetisi/register/competitive-programming font-semibold"
                 className="mt-3 w-3/4 md:w-[35%] lg:w-[35%]"
               >
                 <NoSSR>
@@ -184,7 +184,7 @@ export default function CompetitiveProgramming() {
               </Link>
               <Link
                 href="/kompetisi/register/"
-                className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%]"
+                className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%] font-semibold"
               >
                 <NoSSR>
                   <Button
