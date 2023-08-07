@@ -1,7 +1,7 @@
 import AuthSidebar from "@/components/AuthSidebar";
 import LayoutMain from "@/components/LayoutMain";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
-import NotRegistered from "@/components/organisms/Dashboard/NotRegister";
+import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
 import { useUserStore } from "@/store/userStore";
 
 export default function Seminar() {

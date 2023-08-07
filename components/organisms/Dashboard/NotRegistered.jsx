@@ -5,6 +5,7 @@ import { ethnocentric } from "@/public/fonts/fonts";
 import Button from "@/components/atoms/Button";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import NoSSR from "@/components/NoSSR";
 
 export default function NotRegistered({ type }) {
   const { theme } = useTheme();
@@ -25,7 +26,7 @@ export default function NotRegistered({ type }) {
             height={170}
           />
         </div>
-        <p className="text-[#494B7C] text-xl font-medium text-center">
+        <p className="text-[#494B7C] dark:text-white text-xl font-medium text-center">
           Anda belum terdaftar di {type}{" "}
           <span
             className={`${ethnocentric.className} bg-gradient-to-r from-pink-srifoton to-blue-srifoton text-transparent bg-clip-text ml-0.5`}
@@ -33,32 +34,36 @@ export default function NotRegistered({ type }) {
             SRIFOTON 2023
           </span>
         </p>
-        <p className="text-center">
+        <p className="text-center text-[#494B7C] dark:text-white">
           Tekan tombol di bawah ini <br />
           untuk mengetahui info lebih lanjut.
         </p>
         <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-2 lg:gap-4 md:w-4/5 lg:w-full xl:w-[60%] ">
-          <Link href="/kompetisi/register" className="w-3/4 mt-3 font-semibold">
-            <Button
-              style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${
-                theme === "light"
-                  ? "button-competition-type"
-                  : "button-competition-type-dark"
-              }  `}
-            >
-              Info Kompetisi
-            </Button>
+          <Link href={`/${type}`} className="w-3/4 mt-3 font-semibold">
+            <NoSSR>
+              <Button
+                style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${
+                  theme === "light"
+                    ? "button-competition-type"
+                    : "button-competition-type-dark"
+                }  `}
+              >
+                Info {type.charAt(0).toUpperCase() + type.slice(1)}
+              </Button>
+            </NoSSR>
           </Link>
           <Link href="/kompetisi/register" className="w-3/4 mt-3 font-semibold">
-            <Button
-              style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
-                theme === "light"
-                  ? "button-competition-type"
-                  : "button-competition-type-dark"
-              }  `}
-            >
-              Buku Panduan
-            </Button>
+            <NoSSR>
+              <Button
+                style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
+                  theme === "light"
+                    ? "button-competition-type"
+                    : "button-competition-type-dark"
+                }  `}
+              >
+                Buku Panduan
+              </Button>
+            </NoSSR>
           </Link>
         </div>
       </div>

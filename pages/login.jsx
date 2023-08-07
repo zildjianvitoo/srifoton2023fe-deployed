@@ -38,9 +38,9 @@ function Login() {
     try {
       const { data } = await doLogin({ email, password });
       console.log(data);
+      router.push("/dashboard");
       setAccessToken(data.token);
       setUser(data.user);
-      router.push("/dashboard");
     } catch (error) {
       if (error instanceof AxiosError) {
         console.error(error);

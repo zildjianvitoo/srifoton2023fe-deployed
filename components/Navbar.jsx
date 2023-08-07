@@ -51,6 +51,8 @@ function Navbar() {
       await doLogout();
       removeUser();
       removeAccessToken();
+      localStorage.removeItem("user-srifoton");
+      localStorage.removeItem("token-srifoton");
     } catch (error) {
       console.log(error);
     }
