@@ -26,11 +26,12 @@ function Navbar() {
     (state) => state.removeAccessToken
   );
 
-  const userNameForMobile = user?.name.split(" ");
+  const validUsername = user?.name.split(" ");
 
   const handleDropdownClick = () => {
     setIsOpen((prev) => !prev);
   };
+  console.log(isOpen);
 
   useEffect(() => {
     setDropdownActive(false);
@@ -53,8 +54,6 @@ function Navbar() {
       await doLogout();
       removeUser();
       removeAccessToken();
-      localStorage.removeItem("user-srifoton");
-      localStorage.removeItem("token-srifoton");
     } catch (error) {
       console.log(error);
     }
@@ -214,9 +213,7 @@ function Navbar() {
                   <PiUserCircleFill className="hidden text-xl md:block" />
                   <p className="text-sm lg:text-lg">
                     {" "}
-                    {breakpoint !== "sm"
-                      ? user?.name
-                      : userNameForMobile[0] + " " + userNameForMobile[1]}
+                    {validUsername[0] + " " + validUsername[1]}
                   </p>
                   {isDropdownActive ? (
                     <IoIosArrowDown className="lg:text-xl" />
@@ -226,7 +223,7 @@ function Navbar() {
                 </div>
 
                 {isDropdownActive && (
-                  <ul className="absolute z-[2] flex flex-col pt-12  lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6 lg:pl-10">
+                  <ul className="absolute z-[2] md:text-lg lg:text-xl pt-4 flex flex-col mt-12 lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6  ">
                     <Link href="/dashboard" className="flex items-center gap-2">
                       <MdDashboardCustomize />
                       <p>Dashboard</p>
