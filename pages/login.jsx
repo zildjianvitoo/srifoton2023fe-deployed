@@ -58,7 +58,7 @@ function Login() {
         <title>SRIFOTON | Login</title>
       </Head>
       <LayoutMain>
-        <LayoutCredentials id={"login-section"} loginPage>
+        <LayoutCredentials id={"login-section"}>
           <form className="w-full" onSubmit={handleSubmit(onSubmitHandler)}>
             <CredentialsCard>
               <div className="relative z-10 flex flex-col w-full gap-4">

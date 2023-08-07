@@ -10,6 +10,7 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import Button from "@/components/atoms/Button";
 import { updateDataUser } from "@/utils/api";
 import { useUserStore } from "@/store/userStore";
+import { useAccessTokenStore } from "@/store/tokenStore";
 import { updateUserRules } from "@/utils/formRules";
 import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
@@ -25,6 +26,8 @@ function Dashboard() {
   } = useModal();
 
   const user = useUserStore((state) => state.user);
+
+  const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
 
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
@@ -53,6 +56,7 @@ function Dashboard() {
       setShowModal(true);
     }
   };
+
   return (
     <>
       <Navbar />

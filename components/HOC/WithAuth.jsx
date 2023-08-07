@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useUserStore } from "@/store/userStore";
+import { useAccessTokenStore } from "@/store/tokenStore";
 import NoSSR from "../NoSSR";
 
 const RequireLogin = (WrappedComponent) => {
   const WithAuthentication = () => {
     const router = useRouter();
-    const isLoggedIn = useUserStore((state) => state.user);
+    const isLoggedIn = useAccessTokenStore((state) => state.accessToken);
     useEffect(() => {
       if (!isLoggedIn) {
         router.replace("/");

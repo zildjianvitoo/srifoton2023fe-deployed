@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useUserStore } from "@/store/userStore";
+import { useAccessTokenStore } from "@/store/tokenStore";
 
 const RedirectIfLoggedIn = (WrappedComponent) => {
   const WithRedirect = () => {
     const router = useRouter();
-    const isLoggedIn = useUserStore((state) => state.user);
+    const isLoggedIn = useAccessTokenStore((state) => state.accessToken);
     useEffect(() => {
       if (isLoggedIn) {
         router.replace("/dashboard");
