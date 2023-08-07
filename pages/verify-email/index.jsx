@@ -6,12 +6,12 @@ import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredenti
 import { useTheme } from "next-themes";
 import { sendEmailVerification } from "@/utils/api";
 import Modal from "@/components/atoms/Modal";
+import useModal from "@/hooks/useModal";
 
 export default function VerifyEmail({ email }) {
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
+  const { showModal, setShowModal, modalMessage, setModalMessage } = useModal();
   const { theme } = useTheme();
 
   const imageSource =

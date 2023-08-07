@@ -11,19 +11,19 @@ import Button from "@/components/atoms/Button";
 import { updateDataUser } from "@/utils/api";
 import { useUserStore } from "@/store/userStore";
 import { updateUserRules } from "@/utils/formRules";
-import { useState } from "react";
 import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
 
 function Dashboard() {
   const {
-    message,
+    modalMessage,
     showModal,
-    setMessage,
+    modalMessageHeader,
+    setModalMessage,
     setShowModal,
-    messageHeader,
-    setMessageHeader,
+    setModalMessageHeader,
   } = useModal();
+
   const user = useUserStore((state) => state.user);
 
   const { register, handleSubmit, formState } = useForm({
@@ -44,13 +44,13 @@ function Dashboard() {
         ...formValue,
       });
       console.log(data);
-      setShowModal(true);
-      setMessageHeader("Berhasil");
-      setMessage(data.message);
+      setModalMessageHeader("Berhasil");
+      setModalMessage(data.message);
     } catch (error) {
+      setModalMessageHeader("Gagal");
+      setModalMessage(error.response.data.message);
+    } finally {
       setShowModal(true);
-      setMessageHeader("Gagal");
-      setMessage(error.response.data.message);
     }
   };
   return (
@@ -190,8 +190,8 @@ function Dashboard() {
                 </form>
                 {showModal && (
                   <Modal
-                    messageHeader={messageHeader}
-                    message={message}
+                    messageHeader={modalMessageHeader}
+                    message={modalMessage}
                     showModal={showModal}
                     setShowModal={setShowModal}
                   />

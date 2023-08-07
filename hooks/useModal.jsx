@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function useModal() {
   const [showModal, setShowModal] = useState(false);
-  const [message, setMessage] = useState("");
-  const [messageHeader, setMessageHeader] = useState("");
+  const [modalMessage, setModalMessage] = useState("");
+  const [modalMessageHeader, setModalMessageHeader] = useState("");
 
   return {
     showModal,
     setShowModal,
-    message,
-    setMessage,
-    messageHeader,
-    setMessageHeader,
+    modalMessage,
+    setModalMessage,
+    modalMessageHeader,
+    setModalMessageHeader,
   };
 }
