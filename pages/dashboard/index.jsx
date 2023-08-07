@@ -59,7 +59,6 @@ function Dashboard() {
 
   return (
     <>
-      <Navbar />
       <LayoutMain>
         <div className="flex flex-col lg:flex-row  w-full mx-auto mt-10 lg:gap-16 lg:w-[85%]">
           <div className="lg:w-[22rem] lg:mt-8">
