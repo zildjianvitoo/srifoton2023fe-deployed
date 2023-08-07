@@ -169,7 +169,7 @@ export default function CompetitiveProgramming() {
               <NoSSR>
                 <Link
                   href="/kompetisi/register/uiux-design"
-                  className="w-3/4 md:w-[35%] lg:w-[35%] "
+                  className="w-3/4 md:w-[35%] lg:w-[35%] font-semibold"
                 >
                   <Button
                     style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-competition-type ${
@@ -185,7 +185,7 @@ export default function CompetitiveProgramming() {
               <NoSSR>
                 <Link
                   href="/kompetisi/register"
-                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%]"
+                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%] font-semibold"
                 >
                   <Button
                     style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
