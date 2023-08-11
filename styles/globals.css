@@ -462,18 +462,26 @@ input[type="number"] {
 
   /* DaftarKompetisi Page */
   .field-header {
-    background: -webkit-linear-gradient(0deg, #2e7bef 0%, #f86e45 95%);
+    color: #eedbfe;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--blue-srifoton) 0%,
+      var(--pink-srifoton) 95%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
-    color: #ebe9f6;
     letter-spacing: 3px;
   }
 
   .field-header-dark {
-    background: -webkit-linear-gradient(0deg, #e924e8 0%, #d5da00 95%);
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
     color: #242750;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--blue-srifoton) 0%,
+      var(--pink-srifoton) 95%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
     letter-spacing: 3px;
   }
 
@@ -636,6 +644,37 @@ input[type="number"] {
     border-radius: 30px;
     border: 3.5px dashed #050b47;
     background: linear-gradient(#050b47 0 0) padding-box,
+      linear-gradient(
+          to bottom left,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+
+  .gradient-border-seminar-pn {
+    border-radius: 30px;
+    border: 3.5px dashed #eddcfe;
+    background: linear-gradient(#eddcfe 0 0) padding-box,
+      linear-gradient(
+          to bottom left,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+  .gradient-border-seminar-pn-dark {
+    border-radius: 30px;
+    border: 3.5px dashed #281464;
+    background: linear-gradient(#281464 0 0) padding-box,
       linear-gradient(
           to bottom left,
           var(--blue-srifoton),
