@@ -656,7 +656,7 @@ input[type="number"] {
     -o-border-radius: 30px;
   }
 
-  .gradient-border-seminar-pn {
+  .gradient-border-registerkompetisi-pn {
     border-radius: 30px;
     border: 3.5px dashed #eddcfe;
     background: linear-gradient(#eddcfe 0 0) padding-box,
@@ -671,7 +671,7 @@ input[type="number"] {
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
   }
-  .gradient-border-seminar-pn-dark {
+  .gradient-border-registerkompetisi-pn-dark {
     border-radius: 30px;
     border: 3.5px dashed #281464;
     background: linear-gradient(#281464 0 0) padding-box,

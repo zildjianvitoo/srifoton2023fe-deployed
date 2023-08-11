@@ -4,7 +4,7 @@ export default function PaymentNote({ seminarPage }) {
       className={`text-sm lg:text-lg  px-4 py-2 mt-2 ${
         seminarPage
           ? "text-[#000000] dark:text-[#EDEDED]"
-          : "text-[#464646] border-[3px] gradient-border-seminar-pn dark:gradient-border-seminar-pn-dark"
+          : "text-[#464646] border-[3px] ggradient-border-registerkompetisi-pn dark:gradient-border-registerkompetisi-pn-dark"
       } lg:text-[#464646] dark:text-[#EDEDED] rounded-lg leading-snug`}
     >
       <p>Pembayaran dapat dikirimkan melalui :</p>
