@@ -25,20 +25,37 @@ export default function FirstField({
         > */}
         {jenisKompetisi === "competitive programming" ? (
           <>
-            <h1 className="tracking-[10%]  mx-auto  text-center lg:leading-[3.5rem] ">
-              Competitive
-            </h1>
-            <h1 className="tracking-[10%] pl-[2px] -mt-3 xs:mt-0 lg:mt-3 mx-auto ">
-              Programming
+            <h1
+              className={` text-center text-xl pr-5 xs:pr-0 md:text-4xl mx-auto  lg:text-5xl font-black lg:mb-8 ${ethnocentric.className}  mt-5 flex flex-col`}
+            >
+              <span
+                className={`text-2xl  md:text-4xl lg:text-5xl  text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton `}
+              >
+                Competitive
+              </span>
+
+              <span className="pl-1 field-header dark:field-header-dark lg:!tracking-[5px] translate-y-2 ">
+                Programming
+              </span>
             </h1>
           </>
         ) : jenisKompetisi === "uiux design" ? (
-          <h1 className="tracking-[10%] mx-auto p-1 text-center lg:leading-[3.5rem]">
-            UI/UX DESIGN
+          <h1
+            className={` text-center text-xl pr-5 xs:pr-0 md:text-4xl mx-auto  lg:text-5xl font-black lg:mb-8 ${ethnocentric.className}  mt-5`}
+          >
+            <span
+              className={`text-2xl  md:text-4xl lg:text-5xl  text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton `}
+            >
+              {" "}
+              UI/UX
+            </span>{" "}
+            <span className="pl-1 field-header dark:field-header-dark lg:!tracking-[5px]">
+              DESIGN
+            </span>
           </h1>
         ) : (
           <h1
-            className={` text-center text-xl pr-5 xs:pr-0 md:text-4xl mx-auto  lg:text-5xl font-black lg:mb-8 ${ethnocentric.className}  `}
+            className={` text-center text-xl pr-5 xs:pr-0 md:text-4xl mx-auto  lg:text-5xl font-black lg:mb-8 ${ethnocentric.className}  mt-5`}
           >
             <span
               className={`text-2xl  md:text-4xl lg:text-5xl  text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton `}

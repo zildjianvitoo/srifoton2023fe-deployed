@@ -485,6 +485,13 @@ input[type="number"] {
     letter-spacing: 3px;
   }
 
+  @media screen and (max-width: 768px) {
+    .field-header,
+    .field-header-dark {
+      -webkit-text-stroke: 3.5px transparent;
+    }
+  }
+
   .member-form-header {
     background: -webkit-linear-gradient(0deg, #f86e45 0%, #f86e45 95%);
     -webkit-background-clip: text;
@@ -657,7 +664,6 @@ input[type="number"] {
   }
 
   .gradient-border-registerkompetisi-pn {
-    border-radius: 30px;
     border: 3.5px dashed #eddcfe;
     background: linear-gradient(#eddcfe 0 0) padding-box,
       linear-gradient(
@@ -666,13 +672,8 @@ input[type="number"] {
           var(--pink-srifoton)
         )
         border-box;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
   }
   .gradient-border-registerkompetisi-pn-dark {
-    border-radius: 30px;
     border: 3.5px dashed #281464;
     background: linear-gradient(#281464 0 0) padding-box,
       linear-gradient(
@@ -681,10 +682,6 @@ input[type="number"] {
           var(--pink-srifoton)
         )
         border-box;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
   }
 
   .narahubung-header {
