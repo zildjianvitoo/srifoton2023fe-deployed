@@ -1,8 +1,9 @@
 import NarahubungCard from "@/components/molecules/NarahubungCard";
+import NarahubungGrid from "@/components/molecules/NarahubungGrid";
 import { ethnocentric } from "@/public/fonts/fonts";
 import React from "react";
 
-export default function Narahubung() {
+export default function Narahubung({ contacts }) {
   return (
     <section id="narahubung-seminar" className="mt-8 lg:mt-16">
       <div className="bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#5F7AC2]/30 dark:to-[#E5AFE5]/40 h-full py-8">
@@ -12,10 +13,7 @@ export default function Narahubung() {
           >
             Narahubung
           </h1>
-          <div className="flex flex-col justify-center gap-8 mt-12 md:gap-20 lg:gap-36 lg:flex-row">
-            <NarahubungCard />
-            <NarahubungCard />
-          </div>
+          <NarahubungGrid contact={contacts} />
         </div>
       </div>
     </section>

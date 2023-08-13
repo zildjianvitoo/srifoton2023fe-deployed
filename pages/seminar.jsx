@@ -6,6 +6,7 @@ import RegisterSeminar from "@/components/organisms/Seminar/RegisterSeminar";
 import TimeLineSeminar from "@/components/organisms/Seminar/TimeLineSeminar";
 import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import QNASeminar from "@/components/organisms/Seminar/QNASeminar";
+import { narahubungSeminar } from "@/utils/narahubungList";
 
 function seminar() {
   return (
@@ -18,7 +19,7 @@ function seminar() {
         <Intro />
         <TimeLineSeminar />
         <RegisterSeminar />
-        <Narahubung />
+        <Narahubung contacts={narahubungSeminar} />
         <QNASeminar />
         <div className="mb-96"></div>
       </LayoutMain>
