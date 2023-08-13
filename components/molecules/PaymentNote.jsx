@@ -1,7 +1,7 @@
 export default function PaymentNote({ seminarPage }) {
   return (
     <div
-      className={`text-sm lg:text-lg  px-4 py-2 mt-2 rounded-[20px] lg:rounded-[30px]  ${
+      className={`text-sm lg:text-lg  px-4 py-2 mt-2 !rounded-[25px] md:!rounded-[27px] lg:!rounded-[30px]  ${
         seminarPage
           ? "text-[#000000] dark:text-[#EDEDED]"
           : "text-[#464646] border-[3px] gradient-border-registerkompetisi-pn dark:gradient-border-registerkompetisi-pn-dark"

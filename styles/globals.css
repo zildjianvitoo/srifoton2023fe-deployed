@@ -485,18 +485,58 @@ input[type="number"] {
     letter-spacing: 3px;
   }
 
-  @media screen and (max-width: 768px) {
-    .field-header,
-    .field-header-dark {
-      -webkit-text-stroke: 3.5px transparent;
-    }
+  .gradient-border-registerkompetisi-pn {
+    border: 3.5px dashed #eddcfe;
+    background: linear-gradient(#eddcfe 0 0) padding-box,
+      linear-gradient(
+          to bottom left,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
+  }
+  .gradient-border-registerkompetisi-pn-dark {
+    border: 3.5px dashed #281464;
+    background: linear-gradient(#281464 0 0) padding-box,
+      linear-gradient(
+          to bottom left,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
+  }
+
+  .gradient-border-registerkompetisi-member {
+    border: 3.5px dashed #e5defd;
+    background: linear-gradient(#e5defd 0 0) padding-box,
+      linear-gradient(
+          to bottom right,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
+  }
+
+  .gradient-border-registerkompetisi-member-dark {
+    border: 3.5px dashed #1a1862;
+    background: linear-gradient(#1a1862 0 0) padding-box,
+      linear-gradient(
+          to bottom right,
+          var(--blue-srifoton),
+          var(--pink-srifoton)
+        )
+        border-box;
   }
 
   .member-form-header {
-    background: -webkit-linear-gradient(0deg, #f86e45 0%, #f86e45 95%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--blue-srifoton) 0%,
+      var(--pink-srifoton) 95%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
-    color: #ebe9f6;
+    color: #e5defd;
     letter-spacing: 3px;
   }
   .member-form-header-dark {
@@ -663,27 +703,6 @@ input[type="number"] {
     -o-border-radius: 30px;
   }
 
-  .gradient-border-registerkompetisi-pn {
-    border: 3.5px dashed #eddcfe;
-    background: linear-gradient(#eddcfe 0 0) padding-box,
-      linear-gradient(
-          to bottom left,
-          var(--blue-srifoton),
-          var(--pink-srifoton)
-        )
-        border-box;
-  }
-  .gradient-border-registerkompetisi-pn-dark {
-    border: 3.5px dashed #281464;
-    background: linear-gradient(#281464 0 0) padding-box,
-      linear-gradient(
-          to bottom left,
-          var(--blue-srifoton),
-          var(--pink-srifoton)
-        )
-        border-box;
-  }
-
   .narahubung-header {
     color: #e7eeff;
     background: -webkit-linear-gradient(
@@ -741,4 +760,12 @@ input[type="number"] {
     -o-border-radius: 30px;
   }
   /* End Credentials Page */
+
+  /** Responsive **/
+  @media screen and (max-width: 768px) {
+    .field-header,
+    .field-header-dark {
+      -webkit-text-stroke: 3.5px transparent;
+    }
+  }
 }
