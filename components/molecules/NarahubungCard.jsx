@@ -6,11 +6,11 @@ export default function NarahubungCard({ name, number }) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center lg:w-[35%]  mt-6  gap-6 p-8  bg-center bg-no-repeat bg-contain md:p-24 lg:p-32"
+      className="flex flex-col items-center justify-center lg:w-[35%] mt-6 md:mt-3 gap-4 lg:gap-6 xl:gap-8 p-8 bg-center bg-no-repeat bg-contain md:p-24 lg:p-32"
       style={{ backgroundImage: "url(/assets/frame-contact-img.svg) " }}
     >
       <h2
-        className={`text-xl md:text-2xl lg:!leading-[2.5rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-srifoton to-blue-srifoton font-bold lg:text-3xl text-center ${ethnocentric.className} `}
+        className={`text-2xl lg:!leading-[2.5rem] xl:!leading-[3rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-srifoton to-blue-srifoton font-bold lg:text-3xl xl:text-4xl text-center ${ethnocentric.className}`}
       >
         {name}
       </h2>
@@ -21,7 +21,7 @@ export default function NarahubungCard({ name, number }) {
           width={30}
           height={30}
         />
-        <p className="text-base font-medium text-black md:text-lg lg:text-xl">
+        <p className="text-base font-medium text-black dark:text-white md:text-lg lg:text-xl">
           {number}
         </p>
       </div>
