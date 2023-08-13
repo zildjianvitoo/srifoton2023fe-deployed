@@ -609,16 +609,21 @@ input[type="number"] {
     z-index: 10;
   }
 
-  .gradient-border-qna {
+  .gradient-border-qna::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     border-radius: 20px;
-    border: 3.5px dashed #fff;
-    background: linear-gradient(#f3edfe 0 0) padding-box,
-      linear-gradient(
-          to bottom right,
-          var(--blue-srifoton),
-          var(--pink-srifoton)
-        )
-        border-box;
+    padding: 3px;
+    background: linear-gradient(
+      45deg,
+      var(--pink-srifoton),
+      var(--blue-srifoton)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -707,8 +712,8 @@ input[type="number"] {
     color: #e7eeff;
     background: -webkit-linear-gradient(
       0deg,
-      var(--blue-srifoton) 0%,
-      var(--pink-srifoton) 95%
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 95%
     );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
@@ -718,8 +723,8 @@ input[type="number"] {
     color: #242b69;
     background: -webkit-linear-gradient(
       0deg,
-      var(--blue-srifoton) 0%,
-      var(--pink-srifoton) 95%
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 95%
     );
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
