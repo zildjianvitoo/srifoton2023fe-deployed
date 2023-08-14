@@ -11,7 +11,7 @@ const RequireLogin = (WrappedComponent) => {
       if (!isLoggedIn) {
         router.replace("/");
       }
-    }, [isLoggedIn]);
+    }, []);
 
     return isLoggedIn ? (
       <NoSSR>

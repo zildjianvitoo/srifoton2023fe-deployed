@@ -39,9 +39,10 @@ function Register() {
         password_confirmation: confirmPassword,
       });
       console.log(data);
-      await setAccessToken(data.token);
-      await setUser(data.user);
-      router.push(`/verify-email?email=${email}`); // push ke login ?? dashboard
+      setAccessToken(data.token);
+      setUser(data.user);
+      router.replace(`/verify-email?email=${email}`);
+      // push ke login ?? dashboard
     } catch (error) {
       console.log(error);
       setErrorMessage(error.response.data.errors);

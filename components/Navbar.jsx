@@ -53,6 +53,7 @@ function Navbar() {
       removeAccessToken();
       localStorage.removeItem("user-srifoton");
       localStorage.removeItem("token-srifoton");
+      router.replace("/");
     } catch (error) {
       console.log(error);
     }
@@ -212,7 +213,9 @@ function Navbar() {
                   <PiUserCircleFill className="hidden text-xl md:block" />
                   <p className="text-sm lg:text-lg">
                     {" "}
-                    {validUsername[0] + " " + validUsername[1]}
+                    {validUsername[0] +
+                      " " +
+                      (validUsername.length > 1 ? validUsername[1] : "")}
                   </p>
                   {isDropdownActive ? (
                     <IoIosArrowDown className="lg:text-xl" />
