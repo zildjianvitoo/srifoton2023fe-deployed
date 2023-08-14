@@ -4,6 +4,11 @@ export const narahubungSeminar = [
 ];
 
 export const narahubungWebDev = [
-  { name: "Muhammad Adrian", whatsappNumber: "089626926582" },
-  { name: "Muhammad Davero", whatsappNumber: "081272027640" },
+  { name: "Muhammad Adrian", whatsappNumber: "0896-2692-6582" },
+  { name: "Muhammad Davero", whatsappNumber: "0812-7202-7640" },
+];
+
+export const narahubungUiUx = [
+  { name: "Adnan Al Qadri", whatsappNumber: "0831-7715-2410" },
+  { name: "Satria D. Romadhon", whatsappNumber: "0877-2772-3668" },
 ];

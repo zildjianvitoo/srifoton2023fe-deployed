@@ -4,7 +4,9 @@ import Button from "@/components/atoms/Button";
 import TimelineBox from "@/components/molecules/TimelineBox";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import QNAKompetisi from "@/components/organisms/Kompetisi/QNAKompetisi";
+import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import { ethnocentric } from "@/public/fonts/fonts";
+import { narahubungUiUx } from "@/utils/narahubungList";
 import { uiuxDesignQnaList } from "@/utils/qnaList";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -203,20 +205,7 @@ export default function CompetitiveProgramming() {
           </div>
         </div>
       </LayoutCredentials>
-      <section
-        id="narahubung-cp"
-        className="relative h-full mt-12 overflow-hidden lg:mt-24"
-      >
-        <div className="bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#5F7AC2]/30 dark:to-[#E5AFE5]/40 min-h-screen">
-          <div className="flex flex-col p-8">
-            <h2
-              className={`pb-2 mt-6 text-2xl md:text-4xl font-semibold text-center lg:text-6xl narahubung-header dark:narahubung-header-dark ${ethnocentric.className}`}
-            >
-              Narahubung
-            </h2>
-          </div>
-        </div>
-      </section>
+      <Narahubung contacts={narahubungUiUx} id={"narahubung-uiuxdesing"} />
       <QNAKompetisi competitionTypePage qnaList={uiuxDesignQnaList} />
       <div className="mb-60"></div>
     </LayoutMain>
