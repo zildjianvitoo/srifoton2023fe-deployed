@@ -5,6 +5,7 @@ import TimelineBox from "@/components/molecules/TimelineBox";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import QNAKompetisi from "@/components/organisms/Kompetisi/QNAKompetisi";
 import { ethnocentric } from "@/public/fonts/fonts";
+import { uiuxDesignQnaList } from "@/utils/qnaList";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -169,7 +170,7 @@ export default function CompetitiveProgramming() {
               <NoSSR>
                 <Link
                   href="/kompetisi/register/uiux-design"
-                  className="w-3/4 md:w-[35%] lg:w-[35%] font-semibold"
+                  className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
                     style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-competition-type ${
@@ -185,7 +186,7 @@ export default function CompetitiveProgramming() {
               <NoSSR>
                 <Link
                   href="/kompetisi/register"
-                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%] font-semibold"
+                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
                     style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
@@ -216,7 +217,7 @@ export default function CompetitiveProgramming() {
           </div>
         </div>
       </section>
-      <QNAKompetisi competitionTypePage />
+      <QNAKompetisi competitionTypePage qnaList={uiuxDesignQnaList} />
       <div className="mb-60"></div>
     </LayoutMain>
   );

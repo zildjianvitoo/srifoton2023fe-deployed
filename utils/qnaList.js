@@ -75,3 +75,47 @@ export const webdevQnaList = [
     answer: "Boleh, selama peserta tersebut bukan sebagai ketua tim.",
   },
 ];
+
+export const uiuxDesignQnaList = [
+  {
+    id: 1,
+    question:
+      "Apakah karya yang akan diperlombakan boleh menggunakan karya yang sudah pernah diikutsertakan dalam kompetisi lain?",
+    answer:
+      "Tidak diperbolehkan. Apabila ketahuan melakukan hal tersebut, makan panitia Srifoton berhak memberikan sanksi terhadap peserta yang bersangkutan.",
+  },
+  {
+    id: 2,
+    question:
+      "Jika saya telah mengikuti salah satu cabang lomba SRIFOTON 2023 (misal : UI/UX Design), Apakah saya boleh juga mengikuti cabang lomba yang lain (misal: Web Development)?",
+    answer:
+      "Boleh. Setiap peserta boleh mengikuti semua cabang lomba yang ada di SRIFOTON 2023 dengan catatan hanya boleh menjadi ketua tim untuk satu cabang lomba saja (misal: mengikuti semua lomba tetapi hanya menjadi ketua tim untuk lomba UI/UX Design saja).",
+  },
+  {
+    id: 3,
+    question:
+      "Bolehkah satu tim terdiri atas anggota yang berbeda universitas atau perguruan tinggi?",
+    answer:
+      "Tidak boleh. Setiap tim harus beranggotakan mahasiswa yang berasal dari satu universitas atau perguruan tinggi yang sama.",
+  },
+  {
+    id: 4,
+    question:
+      "Bolehkah dalam satu tim mendaftar jika anggotanya berasal dari jenjang pendidikan berbeda (Misalkan D3 dan S1 dalam satu tim yang sama) maupun dari jurusan yang berbeda?",
+    answer:
+      "Diperbolehkan. Asalkan anggotanya berasal dari satu universitas atau perguruan tinggi yang sama.",
+  },
+  {
+    id: 5,
+    question:
+      "Jika tim saya dinyatakan lolos ke tahap final tetapi kami tidak dapat hadir pada acara presentasi final maka konsekuensi apa yang akan didapat?",
+    answer:
+      "Tim tersebut akan dinyatakan mengundurkan diri dari tahap presentasi final",
+  },
+  {
+    id: 6,
+    question: "Berapakah minimal dan jumlah maksimal anggota dalam satu tim?",
+    answer:
+      "Peserta dapat mendaftar pada kompetisi ini secara individu ataupun dengan membentuk Tim selama anggota Tim tidak lebih dari 3 orang.",
+  },
+];
