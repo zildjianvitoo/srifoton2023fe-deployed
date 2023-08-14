@@ -7,6 +7,7 @@ import QNAKompetisi from "@/components/organisms/Kompetisi/QNAKompetisi";
 import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import { ethnocentric } from "@/public/fonts/fonts";
 import { narahubungWebDev } from "@/utils/narahubungList";
+import { webdevQnaList } from "@/utils/qnaList";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -205,7 +206,7 @@ export default function CompetitiveProgramming() {
         </div>
       </LayoutCredentials>
       <Narahubung contacts={narahubungWebDev} id={"narahubung-webdev"} />
-      <QNAKompetisi competitionTypePage />
+      <QNAKompetisi competitionTypePage qnaList={webdevQnaList} />
       <div className="mb-60"></div>
     </LayoutMain>
   );
