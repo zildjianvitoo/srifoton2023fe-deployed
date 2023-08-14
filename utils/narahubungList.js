@@ -12,3 +12,7 @@ export const narahubungUiUx = [
   { name: "Adnan Al Qadri", whatsappNumber: "0831-7715-2410" },
   { name: "Satria D. Romadhon", whatsappNumber: "0877-2772-3668" },
 ];
+
+export const narahubungCP = [
+  { name: "Philifs B. Sipahutar", whatsappNumber: "0831-7715-2410" },
+];

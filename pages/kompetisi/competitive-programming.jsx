@@ -4,7 +4,10 @@ import Button from "@/components/atoms/Button";
 import TimelineBox from "@/components/molecules/TimelineBox";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import QNAKompetisi from "@/components/organisms/Kompetisi/QNAKompetisi";
+import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import { ethnocentric } from "@/public/fonts/fonts";
+import { narahubungCP } from "@/utils/narahubungList";
+import { cpQnaList } from "@/utils/qnaList";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -168,7 +171,7 @@ export default function CompetitiveProgramming() {
             <div className="flex flex-col gap-x-6 gap-y-2 lg:flex-row">
               <Link
                 href="/kompetisi/register/competitive-programming"
-                className="mt-3 w-3/4 md:w-[35%] lg:w-[35%] font-semibold"
+                className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
               >
                 <NoSSR>
                   <Button
@@ -184,7 +187,7 @@ export default function CompetitiveProgramming() {
               </Link>
               <Link
                 href="/kompetisi/register/"
-                className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%] font-semibold"
+                className=" mt-3 w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
               >
                 <NoSSR>
                   <Button
@@ -202,21 +205,8 @@ export default function CompetitiveProgramming() {
           </div>
         </div>
       </LayoutCredentials>
-      <section
-        id="narahubung-cp"
-        className="relative h-full mt-12 overflow-hidden lg:mt-24"
-      >
-        <div className="bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#5F7AC2]/30 dark:to-[#E5AFE5]/40 min-h-screen">
-          <div className="flex flex-col p-8">
-            <h2
-              className={`pb-2 mt-6 text-2xl md:text-4xl font-semibold text-center lg:text-6xl narahubung-header dark:narahubung-header-dark ${ethnocentric.className}`}
-            >
-              Narahubung
-            </h2>
-          </div>
-        </div>
-      </section>
-      <QNAKompetisi competitionTypePage />
+      <Narahubung contacts={narahubungCP} id={"narahubung-cp"} />
+      <QNAKompetisi competitionTypePage qnaList={cpQnaList} />
       <div className="mb-60"></div>
     </LayoutMain>
   );
