@@ -40,14 +40,14 @@ function SpeakerCard({ speaker, secondCard }) {
         <Image
           src={speaker.img}
           alt="Pembicara Seminar Srifoton"
-          width={340}
-          height={320}
+          width={400}
+          height={380}
           quality={100}
           className="rounded-[28px] lg:rounded-[50px] "
         />
         <div
           className={`absolute -bottom-1  w-full transition-all duration-300 ${
-            isHover ? "h-1/2 md:h-2/5" : "h-1/4 md:h-[23%]"
+            isHover ? "h-1/2 md:h-2/5" : "h-1/4 md:h-[20%]"
           } `}
         >
           <div className="absolute inset-0 z-0 w-full glassmorphism rounded-b-[28px] lg:rounded-b-[50px]" />

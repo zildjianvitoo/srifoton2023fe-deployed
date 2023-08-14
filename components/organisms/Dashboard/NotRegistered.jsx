@@ -38,8 +38,11 @@ export default function NotRegistered({ type }) {
           Tekan tombol di bawah ini <br />
           untuk mengetahui info lebih lanjut.
         </p>
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-2 lg:gap-4 md:w-4/5 lg:w-full xl:w-[60%] ">
-          <Link href={`/${type}`} className="w-3/4 mt-3 font-semibold">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-2 lg:gap-4 md:w-4/5 lg:w-full xl:w-[70%] ">
+          <Link
+            href={`/${type}`}
+            className="w-4/5 mt-3 font-semibold lg:w-full"
+          >
             <NoSSR>
               <Button
                 style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${
@@ -52,10 +55,13 @@ export default function NotRegistered({ type }) {
               </Button>
             </NoSSR>
           </Link>
-          <Link href="/kompetisi/register" className="w-3/4 mt-3 font-semibold">
+          <Link
+            href="/kompetisi/register"
+            className="w-4/5 mt-3 font-semibold lg:w-full"
+          >
             <NoSSR>
               <Button
-                style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
+                style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${
                   theme === "light"
                     ? "button-competition-type"
                     : "button-competition-type-dark"
