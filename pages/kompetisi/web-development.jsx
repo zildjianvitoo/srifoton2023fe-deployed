@@ -4,7 +4,9 @@ import Button from "@/components/atoms/Button";
 import TimelineBox from "@/components/molecules/TimelineBox";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import QNAKompetisi from "@/components/organisms/Kompetisi/QNAKompetisi";
+import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import { ethnocentric } from "@/public/fonts/fonts";
+import { narahubungWebDev } from "@/utils/narahubungList";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -150,7 +152,7 @@ export default function CompetitiveProgramming() {
           />
           <div className="flex flex-col gap-6 lg:gap-10 ">
             <h2
-              className={`text-2xl pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-[45px] competition-type-cta-header  dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
+              className={`text-2xl xl:leading-[2.5rem] pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-4xl xl:text-[45px] competition-type-cta-header  dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
             >
               <span className="competition-type-cta-header dark:text-[#02053e]">
                 {" "}
@@ -165,11 +167,11 @@ export default function CompetitiveProgramming() {
               vulputate libero et velit interdum, ac aliquet odio mattis. et
               velit interdum, ac aliquet odio mattis.
             </p>
-            <div className="flex flex-col gap-x-6 gap-y-2 lg:flex-row">
+            <div className="flex flex-col w-full gap-x-6 gap-y-2 xl:flex-row">
               <NoSSR>
                 <Link
                   href="/kompetisi/register/web-development"
-                  className="w-3/4 md:w-[35%] lg:w-[35%] font-semibold "
+                  className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
                     style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-competition-type ${
@@ -185,7 +187,7 @@ export default function CompetitiveProgramming() {
               <NoSSR>
                 <Link
                   href="/kompetisi/register"
-                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[35%] font-semibold"
+                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
                     style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
@@ -202,20 +204,7 @@ export default function CompetitiveProgramming() {
           </div>
         </div>
       </LayoutCredentials>
-      <section
-        id="narahubung-cp"
-        className="relative h-full mt-12 overflow-hidden lg:mt-24"
-      >
-        <div className="bg-gradient-to-b from-[#E6EFFF] to-[#F0E1FF] dark:from-[#5F7AC2]/30 dark:to-[#E5AFE5]/40 min-h-screen">
-          <div className="flex flex-col p-8">
-            <h2
-              className={`pb-2 mt-6 text-2xl md:text-4xl font-semibold text-center lg:text-6xl narahubung-header dark:narahubung-header-dark ${ethnocentric.className}`}
-            >
-              Narahubung
-            </h2>
-          </div>
-        </div>
-      </section>
+      <Narahubung contacts={narahubungWebDev} id={"narahubung-webdev"} />
       <QNAKompetisi competitionTypePage />
       <div className="mb-60"></div>
     </LayoutMain>

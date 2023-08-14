@@ -19,7 +19,7 @@ function seminar() {
         <Intro />
         <TimeLineSeminar />
         <RegisterSeminar />
-        <Narahubung contacts={narahubungSeminar} />
+        <Narahubung contacts={narahubungSeminar} id={"narahubung-seminar"} />
         <QNASeminar />
         <div className="mb-96"></div>
       </LayoutMain>
