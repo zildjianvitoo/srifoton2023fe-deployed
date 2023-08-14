@@ -630,16 +630,21 @@ input[type="number"] {
     -o-border-radius: 20px;
   }
 
-  .gradient-border-qna-dark {
+  .gradient-border-qna-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     border-radius: 20px;
-    border: 3.5px dashed #02053e;
-    background: linear-gradient(#02053e 0 0) padding-box,
-      linear-gradient(
-          to bottom right,
-          var(--blue-srifoton),
-          var(--pink-srifoton)
-        )
-        border-box;
+    padding: 3px;
+    background: linear-gradient(
+      45deg,
+      var(--pink-srifoton),
+      var(--blue-srifoton)
+    );
+    -webkit-mask: linear-gradient(#02053e 0 0) content-box,
+      linear-gradient(#02053e 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
