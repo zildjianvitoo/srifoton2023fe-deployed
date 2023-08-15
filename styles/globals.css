@@ -807,7 +807,8 @@ input[type="number"] {
   /** Responsive **/
   @media screen and (max-width: 768px) {
     .field-header,
-    .field-header-dark {
+    .field-header-dark,
+    .competition-type-header {
       -webkit-text-stroke: 3.5px transparent;
     }
   }

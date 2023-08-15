@@ -64,7 +64,7 @@ export const webdevQnaList = [
   {
     id: 4,
     question:
-      "Bolehkah dalam satu tim mendaftar jika berasal dari jenjang pendidikan berbeda (Misalkan D3 dan S1 dalam satu tim yang sama) maupun dari jurusan yang berbeda ?",
+      "Bolehkah dalam satu tim mendaftar jika berasal dari jenjang pendidikan berbeda (Misal D3 dan S1 dalam tim yang sama) maupun dari jurusan yang berbeda ?",
     answer:
       "Diperbolehkan. Asalkan anggotanya berasal dari satu universitas atau perguruan tinggi yang sama.",
   },
@@ -101,7 +101,7 @@ export const uiuxDesignQnaList = [
   {
     id: 4,
     question:
-      "Bolehkah dalam satu tim mendaftar jika anggotanya berasal dari jenjang pendidikan berbeda (Misalkan D3 dan S1 dalam satu tim yang sama) maupun dari jurusan yang berbeda?",
+      "Bolehkah dalam satu tim mendaftar jika berasal dari jenjang pendidikan berbeda (Misal D3 dan S1 dalam tim yang sama) maupun dari jurusan yang berbeda ?",
     answer:
       "Diperbolehkan. Asalkan anggotanya berasal dari satu universitas atau perguruan tinggi yang sama.",
   },
@@ -149,7 +149,7 @@ export const cpQnaList = [
   {
     id: 5,
     question:
-      "Bolehkah dalam satu tim mendaftar jika berasal dari jenjang pendidikan berbeda (Misalkan D3 dan S1 dalam satu tim yang sama) maupun dari jurusan yang berbeda?",
+      "Bolehkah dalam satu tim mendaftar jika berasal dari jenjang pendidikan berbeda (Misal D3 dan S1 dalam tim yang sama) maupun dari jurusan yang berbeda ?",
     answer: "Diperbolehkan. Asalkan tidak berbeda universitas/instansi.",
   },
   {
