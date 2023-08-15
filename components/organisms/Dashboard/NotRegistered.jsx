@@ -45,7 +45,7 @@ export default function NotRegistered({ type }) {
           >
             <NoSSR>
               <Button
-                style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${
+                style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
                   theme === "light"
                     ? "button-competition-type"
                     : "button-competition-type-dark"
@@ -61,7 +61,7 @@ export default function NotRegistered({ type }) {
           >
             <NoSSR>
               <Button
-                style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${
+                style={`w-full relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
                   theme === "light"
                     ? "button-competition-type"
                     : "button-competition-type-dark"

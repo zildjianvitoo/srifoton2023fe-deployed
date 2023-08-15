@@ -175,7 +175,7 @@ export default function CompetitiveProgramming() {
                   className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
-                    style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] button-competition-type ${
+                    style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
                       theme === "light"
                         ? "button-competition-type"
                         : "button-competition-type-dark"
@@ -191,7 +191,7 @@ export default function CompetitiveProgramming() {
                   className=" mt-3 w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
-                    style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${
+                    style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${"button-style"}  ${
                       theme === "light"
                         ? "button-competition-type"
                         : "button-competition-type-dark"

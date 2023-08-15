@@ -83,7 +83,7 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           </p>
           <NoSSR>
             <Button
-              style={` mt-3 w-[35%] md:w-[30%] lg:w-[25%]  relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0]  ${
+              style={` mt-3 w-[35%] md:w-[30%] lg:w-[25%]  relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${"button-style"}  ${
                 theme === "light" ? "button-intro" : "button-intro-dark"
               }`}
               onClickHandler={() => router.push(`/${buttonText.toLowerCase()}`)}
