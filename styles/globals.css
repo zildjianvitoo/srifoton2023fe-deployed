@@ -89,7 +89,9 @@ input[type="number"] {
 .button-intro:hover::before,
 .button-intro-dark:hover::before,
 .button-competition-type:hover::before,
-.button-competition-type-dark:hover::before {
+.button-competition-type-dark:hover::before,
+.button-swiper-competition-blue:hover::before,
+.button-swiper-competition-pink:hover::before {
   background: none;
 }
 
@@ -102,7 +104,8 @@ input[type="number"] {
 .button-intro:hover,
 .button-competition-type:hover,
 .button-intro-dark:hover,
-.button-competition-type-dark:hover {
+.button-competition-type-dark:hover,
+.button-swiper-competition-blue:hover {
   background-image: linear-gradient(
     to right,
     var(--pink-srifoton),
@@ -231,6 +234,36 @@ input[type="number"] {
   z-index: -1;
 }
 
+.button-swiper-competition-blue {
+  --border-width: 2.5px;
+  --border-radius: 30px;
+  font: inherit;
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  -webkit-border-radius: calc(var(--border-radius) - var(--border-width));
+  -moz-border-radius: calc(var(--border-radius) - var(--border-width));
+  -ms-border-radius: calc(var(--border-radius) - var(--border-width));
+  -o-border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: 2;
+  color: #fb5dfb;
+}
+
+.button-swiper-competition-blue::before {
+  content: "";
+  display: block;
+  height: calc(100% - calc(var(--border-width) * 2));
+  width: calc(100% - calc(var(--border-width) * 2));
+  background: #ddebff;
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  z-index: -1;
+}
+
 /*End Button Styles */
 
 /* Swiper Styles */
@@ -250,7 +283,7 @@ input[type="number"] {
 }
 
 .swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
+  background-color: #ddebff;
 }
 
 .swiper-slide:nth-child(2n) {
@@ -258,7 +291,7 @@ input[type="number"] {
 }
 
 .swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
+  background-color: #ddebff;
 }
 /* End Swiper Styles */
 

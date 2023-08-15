@@ -136,7 +136,7 @@ export const cpQnaList = [
   },
   {
     id: 3,
-    question: "Apa syarat untuk mendapatkan sertifikat?",
+    question: "Adakah syarat khusus bagi peserta untuk mendapatkan sertifikat?",
     answer:
       "Peserta harus menyelesaikan minimum 3 soal di babak penyisihan untuk bisa mendapatkan sertifikat.",
   },
