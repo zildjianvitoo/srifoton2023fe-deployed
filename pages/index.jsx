@@ -31,9 +31,7 @@ export default function Home() {
         <title>SRIFOTON | Home</title>
         <style>
           {`
-            h1 {
-              font-family: "Ethnocentric", arial;
-            }
+           
           `}
         </style>
       </Head>

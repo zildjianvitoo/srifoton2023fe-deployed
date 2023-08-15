@@ -70,7 +70,7 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
               isBlue
                 ? "intro-header-kompetisi dark:intro-header-kompetisi-dark"
                 : "bg-white text-right intro-header-seminar dark:intro-header-seminar-dark justify-items-end items-end w-fit "
-            }`}
+            } ${ethnocentric.className}`}
           >
             {header}
           </h1>
