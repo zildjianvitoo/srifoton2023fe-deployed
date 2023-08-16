@@ -6,7 +6,7 @@ export default function NarahubungCard({ name, number }) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center lg:w-[35%] mt-6 md:mt-3 gap-4 lg:gap-6 xl:gap-8 p-8 bg-center bg-no-repeat bg-contain md:p-24 lg:p-32"
+      className="flex flex-col items-center justify-center xl:w-[35%] mt-6 md:mt-3 gap-4 lg:gap-6 xl:gap-8 p-8 bg-center bg-no-repeat bg-contain md:p-24 "
       style={{ backgroundImage: "url(/assets/frame-contact-img.svg) " }}
     >
       <h2
@@ -14,7 +14,7 @@ export default function NarahubungCard({ name, number }) {
       >
         {name}
       </h2>
-      <div className="flex items-center justify-center gap-3 font-poppins">
+      <div className="flex items-center justify-center w-full gap-3 font-poppins">
         <Image
           src={"/assets/icon-whatsapp.svg"}
           alt="Icon Whatsapp"

@@ -43,7 +43,7 @@ export default function SwiperKompetisiCard() {
           >
             <NoSSR>
               <Button
-                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-swiper-competition-blue"} `}
+                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${"button-swiper-competition-blue"} `}
               >
                 Info Lainnya
               </Button>
