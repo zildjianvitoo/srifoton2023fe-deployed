@@ -13,7 +13,7 @@ export default function Jumbotron() {
           backgroundImage: "url(assets/Seminar/jumbotron-seminar-bgimg.svg)",
         }}
       ></div>
-      <div className="flex flex-col-reverse w-full h-full gap-20 p-8 mt-12 lg:mt-16 lg:flex-row">
+      <div className="flex flex-col-reverse w-full h-full gap-20 p-8 mt-12 lg:mt-4 xl:mt-16 lg:flex-row">
         <div className="flex items-center lg:w-[50%] ">
           <Image
             priority

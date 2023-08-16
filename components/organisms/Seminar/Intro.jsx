@@ -37,7 +37,7 @@ export default function Intro() {
     <section className="mt-10">
       <div className="flex flex-col justify-center w-full p-6 lg:p-10 gap-14 lg:flex-row">
         <div className="flex lg:w-[35%] lg:mt-16 ">
-          <h1 className=" text-[36px] xs:text-[44px]  leading-[3rem] lg:text-[60px] lg:leading-[4rem] font-semibold tracking-wider  p-1 pb-2 text-center lg:text-start mt-10 intro-seminar-header dark:intro-seminar-header-dark">
+          <h1 className=" text-[36px] xs:text-[44px]  leading-[3rem] xl:text-[60px] lg:leading-[4rem] font-semibold tracking-wider  p-1 pb-2 text-center lg:text-start mt-10 intro-seminar-header dark:intro-seminar-header-dark">
             <span className=" bg-gradient-to-br bg-clip-text text-transparent from-[#FC39FC] to-[#337EF0]">
               Ayo! <br />
             </span>{" "}

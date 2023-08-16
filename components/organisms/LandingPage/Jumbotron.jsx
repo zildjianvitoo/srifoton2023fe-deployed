@@ -32,7 +32,7 @@ const Jumbotron = () => {
                 className="lg:w-[85%] py-4"
               />
             </div>
-            <h3 className="font-poppins text-xl md:text-2xl lg:text-2xl z-[1] lg:w-[55%] text-[#797979] dark:text-[#CFCFCF]  lg:-mt-14 ">
+            <h3 className="text-xl md:text-2xl lg:text-2xl z-[1] lg:w-[55%] text-[#797979] dark:text-[#CFCFCF]  lg:-mt-14 ">
               Sriwijaya Informatics Exhibition atau yang biasa dikenali dengan
               Srifoton adalah forum kompetitif berskala nasional yang mewadahi
               mahasiswa untuk menyalurkan minat dan bakat mereka dalam dunia

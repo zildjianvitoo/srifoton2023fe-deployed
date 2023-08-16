@@ -33,7 +33,9 @@ function SpeakerCard({ speaker, secondCard }) {
         `}
       </style>
       <div
-        className={`relative rounded-[50px] ${secondCard && "mt-10 lg:mt-28"} `}
+        className={`relative rounded-[50px] ${
+          secondCard && "mt-10 md:mt-16 lg:mt-28"
+        } `}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
