@@ -1,3 +1,4 @@
+import { get } from "react-hook-form";
 import api from "./axiosInstance";
 import { getToken } from "@/store/tokenStore";
 
@@ -41,9 +42,9 @@ async function doLogin({ email, password }) {
 async function getDataUser() {
   const { data, status } = api.get("/api/me", {
     headers: { Authorization: `Bearer ${getAccessToken()}` },
-  }); // get ?? post ??
+  });
 
-  if (status !== 200) {
+  if (status >= 400 && status < 500) {
     throw new Error(data.message);
   }
 

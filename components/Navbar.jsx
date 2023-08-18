@@ -24,10 +24,26 @@ function Navbar() {
     (state) => state.removeAccessToken
   );
 
-  const validUsername = user?.name.split(" ");
-
   const handleDropdownClick = () => {
     setIsOpen((prev) => !prev);
+  };
+  const validUsername = user?.name.split(" ");
+
+  const userNameValid = () => {
+    if (validUsername.length >= 2) {
+      return (
+        validUsername[0] +
+        " " +
+        validUsername[1] +
+        " " +
+        validUsername[2].slice(0, 1) +
+        "."
+      );
+    } else if (validUsername.length >= 1) {
+      return validUsername[0] + " " + validUsername[1];
+    } else {
+      return validUsername[0];
+    }
   };
 
   useEffect(() => {
@@ -155,7 +171,7 @@ function Navbar() {
           <li>
             <Link
               href="/"
-              className={`active:!bg-transparent active:!text-[#DE55E8] ${
+              className={`active:!bg-transparent active:!text-[#DE55E8] hover:text-[#DE55E8] ${
                 routerNameEquals("/") &&
                 "  !text-[#DE55E8] dark:!text-[#F56AFF]"
               }`}
@@ -166,9 +182,9 @@ function Navbar() {
           <li>
             <Link
               href="/kompetisi"
-              className={`active:!bg-transparent active:!text-[#DE55E8] ${
+              className={`active:!bg-transparent active:!text-[#DE55E8] hover:text-[#DE55E8] ${
                 routerNameEquals("/kompetisi") &&
-                "!text-[#DE55E8] dark:!text-[#F56AFF]"
+                "!text-[#DE55E8] dark:!text-[#F56AFF] "
               }`}
             >
               Kompetisi
@@ -177,7 +193,7 @@ function Navbar() {
           <li>
             <Link
               href="/seminar"
-              className={`active:!bg-transparent active:!text-[#DE55E8] ${
+              className={`active:!bg-transparent active:!text-[#DE55E8] hover:text-[#DE55E8] ${
                 routerNameEquals("/seminar") &&
                 "!text-[#DE55E8] dark:!text-[#F56AFF]"
               }`}
@@ -211,16 +227,7 @@ function Navbar() {
                   onClick={() => setDropdownActive((prev) => !prev)}
                 >
                   <PiUserCircleFill className="hidden text-xl md:block" />
-                  <p className="text-sm lg:text-lg">
-                    {" "}
-                    {validUsername[0] +
-                      " " +
-                      (validUsername.length >= 1
-                        ? validUsername[1]
-                        : validUsername.length >= 2
-                        ? validUsername[2]?.slice(0, 1) + "."
-                        : "")}
-                  </p>
+                  <p className="text-sm lg:text-lg">{userNameValid()} </p>
                   {isDropdownActive ? (
                     <IoIosArrowDown className="lg:text-xl" />
                   ) : (

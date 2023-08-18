@@ -8,14 +8,16 @@ import { useForm } from "react-hook-form";
 import InputRadio from "@/components/atoms/InputRadio";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
 import Button from "@/components/atoms/Button";
-import { updateDataUser } from "@/utils/api";
+import { getDataUser, updateDataUser } from "@/utils/api";
 import { useUserStore } from "@/store/userStore";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { updateUserRules } from "@/utils/formRules";
 import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
+import { useEffect, useState } from "react";
 
 function Dashboard() {
+  const [user, setUser] = useState(useUserStore((state) => state.user));
   const {
     modalMessage,
     showModal,
@@ -25,7 +27,13 @@ function Dashboard() {
     setModalMessageHeader,
   } = useModal();
 
-  const user = useUserStore((state) => state.user);
+  useEffect(() => {
+    const getUserData = async () => {
+      const { data } = await getDataUser();
+      console.log(data);
+    };
+    getUserData();
+  }, []);
 
   const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
 
