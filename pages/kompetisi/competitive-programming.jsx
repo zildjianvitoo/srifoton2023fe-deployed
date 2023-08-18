@@ -153,13 +153,13 @@ export default function CompetitiveProgramming() {
           />
           <div className="flex flex-col gap-10 ">
             <h2
-              className={`text-2xl pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-[45px] competition-type-cta-header  dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
+              className={`text-2xl pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-[45px] competition-type-cta-header lg:!leading-[2.5rem] dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
             >
               <span className="competition-type-cta-header dark:text-[#02053e]">
                 {" "}
                 Daftarkan{" "}
               </span>{" "}
-              <span className="competition-type-cta-header dark:text-[#02053e]">
+              <span className="competition-type-cta-header dark:text-[#02053e] ">
                 Dirimu!
               </span>
             </h2>
@@ -187,7 +187,7 @@ export default function CompetitiveProgramming() {
               </Link>
               <Link
                 href="/kompetisi/register/"
-                className=" mt-3 w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
+                className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
               >
                 <NoSSR>
                   <Button

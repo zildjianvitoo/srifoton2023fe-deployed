@@ -153,7 +153,7 @@ export default function CompetitiveProgramming() {
           />
           <div className="flex flex-col gap-6 lg:gap-10 ">
             <h2
-              className={`text-2xl xl:leading-[2.5rem] pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-4xl xl:text-[45px] competition-type-cta-header  dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
+              className={`text-2xl xl:leading-[2.5rem] pl-0.5 font-semibold md:text-3xl tracking-wider lg:text-4xl xl:text-[45px] competition-type-cta-header lg:!leading-[2.5rem]  dark:text-[#02053e] !z-[-10] ${ethnocentric.className}`}
             >
               <span className="competition-type-cta-header dark:text-[#02053e]">
                 {" "}
@@ -175,7 +175,7 @@ export default function CompetitiveProgramming() {
                   className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
-                    style={`mt-3 w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
+                    style={` w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
                       theme === "light"
                         ? "button-competition-type"
                         : "button-competition-type-dark"

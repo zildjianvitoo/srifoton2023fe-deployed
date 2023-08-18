@@ -37,6 +37,7 @@ function Dashboard() {
       nim: user?.nim,
       phoneNumber: user?.phone_number,
       genderType: user?.gender,
+      instagram: user?.instagram,
     },
   });
   const { isSubmitting, isDirty, errors } = formState;
