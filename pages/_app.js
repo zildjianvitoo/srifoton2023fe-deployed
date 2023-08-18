@@ -3,7 +3,10 @@ import HydrationContext from "@/context/HydrationContext";
 import "@/styles/globals.css";
 import { outfit, poppins } from "@/public/fonts/fonts";
 import { ThemeProvider, useTheme } from "next-themes";
+import NextNProgress from "nextjs-progressbar";
+
 import Head from "next/head";
+import Spinner from "@/components/atoms/Spinner";
 
 export default function App({ Component, pageProps }) {
   const { theme } = useTheme();
@@ -26,8 +29,10 @@ export default function App({ Component, pageProps }) {
         enableSystem={false}
         defaultTheme="dark"
       >
+        <NextNProgress color="linear-gradient(to right, #FC39FC, #337EF0)" />
         <div className={` ${poppins.variable} ${outfit.className}`}>
           <Navbar />
+          <Spinner />
           <Component {...pageProps} />
         </div>
       </ThemeProvider>
