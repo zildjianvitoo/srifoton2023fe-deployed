@@ -101,10 +101,11 @@ async function updateDataUser({
   name,
   college,
   nim,
-  phone_number,
+  phoneNumber,
   gender,
   instagram,
 }) {
+  const phone_number = phoneNumber;
   const { data, status } = await api.put(
     "/api/update-data-user",
     {

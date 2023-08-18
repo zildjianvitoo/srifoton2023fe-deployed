@@ -42,6 +42,7 @@ function Dashboard() {
   const { isSubmitting, isDirty, errors } = formState;
 
   const onSubmitHandler = async (formValue) => {
+    console.log(formValue);
     try {
       const { data } = await updateDataUser({
         ...formValue,
