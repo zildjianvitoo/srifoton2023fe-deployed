@@ -47,12 +47,12 @@ async function getDataUser() {
   if (status >= 400 && status < 500) {
     throw new Error(data.message);
   }
+  console.log(data);
 
   return { data };
 }
 
 async function doLogout() {
-  console.log(getAccessToken());
   const { data, status } = await api.post(
     "/api/logout",
     {},

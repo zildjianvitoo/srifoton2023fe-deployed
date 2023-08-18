@@ -30,16 +30,16 @@ function Navbar() {
   const validUsername = user?.name.split(" ");
 
   const userNameValid = () => {
-    if (validUsername.length >= 2) {
+    if (validUsername.length >= 3) {
       return (
         validUsername[0] +
         " " +
         validUsername[1] +
         " " +
-        validUsername[2].slice(0, 1) +
+        validUsername[2]?.slice(0, 1) +
         "."
       );
-    } else if (validUsername.length >= 1) {
+    } else if (validUsername.length >= 2) {
       return validUsername[0] + " " + validUsername[1];
     } else {
       return validUsername[0];
