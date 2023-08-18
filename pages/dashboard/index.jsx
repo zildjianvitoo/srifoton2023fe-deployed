@@ -128,10 +128,10 @@ function Dashboard() {
                     </div>
                     <div className="flex flex-col">
                       <InputForm
-                        type={"number"}
+                        type={"text"}
                         labelText={"No Telepon (WA)"}
                         labelFor={"phoneNumber"}
-                        placeholder={"contoh: 0902123456789"}
+                        placeholder={"contoh: 08123456789"}
                         register={register}
                         rules={updateUserRules.phoneNumber}
                       />
