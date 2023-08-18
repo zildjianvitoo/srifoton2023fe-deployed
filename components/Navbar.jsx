@@ -215,9 +215,9 @@ function Navbar() {
                     {" "}
                     {validUsername[0] +
                       " " +
-                      (validUsername.length > 1
+                      (validUsername.length >= 1
                         ? validUsername[1]
-                        : validUsername.length > 2
+                        : validUsername.length >= 2
                         ? validUsername[2]?.slice(0, 1) + "."
                         : "")}
                   </p>
