@@ -32,7 +32,6 @@ export default function App({ Component, pageProps }) {
         <NextNProgress color="linear-gradient(to right, #FC39FC, #337EF0)" />
         <div className={` ${poppins.variable} ${outfit.className}`}>
           <Navbar />
-          <Spinner />
           <Component {...pageProps} />
         </div>
       </ThemeProvider>
