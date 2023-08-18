@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Button from "../../atoms/Button";
 import { ethnocentric } from "@/public/fonts/fonts";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import NoSSR from "@/components/NoSSR";
@@ -55,7 +54,7 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           <Image
             src={introImage}
             alt="gambar kompetisi"
-            width={isBlue ? 300 : 400}
+            width={isBlue ? 300 : 500}
             height={isBlue ? 300 : 240}
             className="lg:-mr-12"
           />

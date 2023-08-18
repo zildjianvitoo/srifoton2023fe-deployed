@@ -77,11 +77,6 @@ export default function FirstField({
           />
           <div className="flex flex-col w-full lg:mt-2 lg:w-1/2">
             <PaymentNote />
-            <img
-              src={imageSource}
-              alt="icon register kompetisi"
-              className="hidden mt-6 lg:flex w-[80%] mx-auto"
-            />
           </div>
         </div>
       </div>

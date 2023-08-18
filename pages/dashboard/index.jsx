@@ -17,7 +17,9 @@ import useModal from "@/hooks/useModal";
 import { useEffect, useState } from "react";
 
 function Dashboard() {
-  const [user, setUser] = useState(useUserStore((state) => state.user));
+  const user = useUserStore((state) => state.user);
+  const setUserSrifoton = useUserStore((state) => state.setUser);
+
   const {
     modalMessage,
     showModal,
@@ -27,20 +29,21 @@ function Dashboard() {
     setModalMessageHeader,
   } = useModal();
 
-  useEffect(() => {
-    const getUserData = async () => {
-      const { data } = await getDataUser();
-      console.log(data);
-    };
-    getUserData();
-  }, []);
+  // useEffect(() => {
+  //   const getUserData = async () => {
+  //     const { data } = await getDataUser();
+  //     setUserSrifoton(data);
+  //     console.log(data);
+  //   };
+  //   getUserData();
+  // }, [setUserSrifoton]);
 
   const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
 
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
       name: user.name,
-      email: user?.email,
+      email: user.email,
       college: user?.college,
       nim: user?.nim,
       phoneNumber: user?.phone_number,
@@ -56,6 +59,8 @@ function Dashboard() {
       const { data } = await updateDataUser({
         ...formValue,
       });
+      const user = await getDataUser();
+      setUserSrifoton(user.data);
       console.log(data);
       setModalMessageHeader("Berhasil");
       setModalMessage(data.message);
@@ -124,7 +129,7 @@ function Dashboard() {
                     </div>
                     <div className="flex flex-col">
                       <InputForm
-                        type={"number"}
+                        type={"text"}
                         labelText={"Nomor Induk Mahasiswa (NIM)"}
                         labelFor={"nim"}
                         placeholder={"contoh: 0902123456789"}

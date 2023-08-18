@@ -13,16 +13,19 @@ import { useForm } from "react-hook-form";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { DevTool } from "@hookform/devtools";
 import Head from "next/head";
+import useModal from "@/hooks/useModal";
+import Modal from "@/components/atoms/Modal";
 
 export default function ResetPassword({ token, email }) {
-  const [successMessage, setSuccessMessage] = useState("");
+  const [isError, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const { showModal, setShowModal, modalMessage, setModalMessage } = useModal();
+
   const {
     control,
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({ mode: "onChange" });
 
   const showPasswordHandler = () => {
@@ -38,9 +41,15 @@ export default function ResetPassword({ token, email }) {
         password: newPassword,
         password_confirmation: confirmNewPassword,
       });
+      setError(false);
+      setModalMessage("Password Berhasil Diubah");
       console.log(data);
     } catch (error) {
+      setError(true);
+      setModalMessage("Terjadi Kesalaha,silahkan coba beberapa saat lagi");
       console.log(error);
+    } finally {
+      setShowModal(true);
     }
   };
 
@@ -114,13 +123,28 @@ export default function ResetPassword({ token, email }) {
                   )}
                 </div>
                 <div className="flex justify-end mt-20">
-                  <Button variant={"submitButton"} style={"w-3/5 lg:w-2/5"}>
+                  <Button
+                    variant={"submitButton"}
+                    style={"w-3/5 lg:w-2/5"}
+                    loading={isSubmitting}
+                  >
                     Submit
                   </Button>
                 </div>
               </div>
             </CredentialsCard>
           </form>
+          {showModal && (
+            <Modal
+              message={modalMessage}
+              showModal={showModal}
+              setShowModal={setShowModal}
+              messageHeader={isError ? "Gagal" : "Berhasil"}
+              redirect={isError ? false : true}
+              redirectTo={"/login"}
+              buttonRedirectMessage={"Pergi Ke Halaman Login"}
+            />
+          )}
           <DevTool control={control} />
         </LayoutCredentials>
       </LayoutMain>

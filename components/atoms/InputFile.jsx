@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BsImage } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import ErrorMessage from "./ErrorMessage";
+import { toast } from "react-toastify";
 
 export default function InputFile({
   labelText,
@@ -18,7 +19,8 @@ export default function InputFile({
       "image/png",
       "image/jpeg",
       "image/jpg",
-      "image/heic",
+      "image/svg",
+      "image/pdf",
     ];
     const ALLOWED_SIZE = 2000000;
     if (
@@ -33,18 +35,33 @@ export default function InputFile({
       reader.readAsDataURL(selectedImage);
       setWrongType(false);
       setProof(selectedImage);
-      alert("Gambar berhasil diunggah");
+      toast.success("Berhasil mengunggah file");
     } else if (!selectedImage) {
       return;
-    } else {
+    } else if (selectedImage.size > ALLOWED_SIZE) {
       setWrongType(true);
-      alert("Gambar gagal diunggah");
+      toast.error("Ukuran file terlalu besar");
+    } else if (!ALLOWED_TYPES.includes(selectedImage.type)) {
+      setWrongType(true);
+      toast.error("Format file tidak didukung");
+    } else {
+      return;
     }
   };
 
   const removeImage = () => {
     setProof(null);
     setImage(null);
+  };
+
+  const isRequiredFImage = () => {
+    if (labelFor === "idCard2") {
+      return false;
+    } else if (labelFor === "idCard3") {
+      return false;
+    } else {
+      return true;
+    }
   };
 
   return (
@@ -54,7 +71,9 @@ export default function InputFile({
         className="text-lg lg:text-xl font-medium text-[#494B7C] dark:text-white "
       >
         {labelText}
-        <span className=" text-[#F86E45] dark:text-[#D5DA00]">*</span>
+        {isRequiredFImage() && (
+          <span className=" text-[#F86E45] dark:text-[#D5DA00]">*</span>
+        )}
       </label>
       <div className={"flex items-center w-full z-10 mt-1 font-sans  "}>
         <label

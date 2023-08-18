@@ -50,24 +50,66 @@ export default function SwiperKompetisiCard() {
             </NoSSR>
           </Link>
         </SwiperSlide>
-        <SwiperSlide className="p-10">
-          <Link
-            className="flex w-full h-full "
-            href="/kompetisi/competitive-programming"
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6">
+          <Image
+            src={"/assets/Kompetisi/jumbotron-cp-img.png"}
+            alt="Cp Icon"
+            width={210}
+            height={210}
+            className="w-[130px] sm:w-[150px] md:w-[185px] mx-auto lg:w-[210px]"
+          />
+          <h1
+            className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col`}
           >
-            <button className="bg-[#33C25B] flex mx-auto self-end p-3 ">
-              Daftar Disini
-            </button>
+            <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
+              UI/UX{" "}
+            </span>
+            <span className="competition-type-header tracking-widest !text-[#f5dff5] pl-1">
+              Design
+            </span>
+          </h1>
+          <Link
+            href={`/kompetisi/uiux-design`}
+            className="flex items-end justify-end w-2/3 mx-auto mt-3 font-semibold lg:w-1/3"
+          >
+            <NoSSR>
+              <Button
+                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${"button-swiper-competition-pink"} `}
+              >
+                Info Lainnya
+              </Button>
+            </NoSSR>
           </Link>
         </SwiperSlide>
-        <SwiperSlide className="p-10">
-          <Link
-            className="flex w-full h-full "
-            href="/kompetisi/competitive-programming"
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6">
+          <Image
+            src={"/assets/Kompetisi/jumbotron-cp-img.png"}
+            alt="Cp Icon"
+            width={210}
+            height={210}
+            className="w-[130px] sm:w-[150px] md:w-[185px] mx-auto lg:w-[210px]"
+          />
+          <h1
+            className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col`}
           >
-            <button className="bg-[#33C25B] flex mx-auto self-end p-4 relative border-none bg-gradient-to-r  from-[#FC39FC] to-[#337EF0] button-swiper-competition-blue">
-              Daftar Disini
-            </button>
+            <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
+              Web{" "}
+            </span>
+            <span className="competition-type-header tracking-widest !text-[#ddebff] pl-1">
+              Development
+            </span>
+          </h1>
+          <Link
+            href={`/kompetisi/web-development`}
+            className="flex items-end justify-end w-2/3 mx-auto mt-3 font-semibold lg:w-1/3"
+          >
+            <NoSSR>
+              <Button
+                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${"button-swiper-competition-blue"} `}
+              >
+                Info Lainnya
+              </Button>
+            </NoSSR>
           </Link>
         </SwiperSlide>
       </Swiper>

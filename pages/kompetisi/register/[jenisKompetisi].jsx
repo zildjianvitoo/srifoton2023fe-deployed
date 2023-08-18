@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Button from "@/components/atoms/Button";
 import {
@@ -13,6 +13,9 @@ import {
   doCompetitiveProgrammingRegistration,
   doUiUXRegistration,
 } from "@/utils/api";
+import { useUserStore } from "@/store/userStore";
+import Modal from "@/components/atoms/Modal";
+import useModal from "@/hooks/useModal";
 
 export default function DaftarKompetisi() {
   const [proof, setProof] = useState(null);
@@ -21,14 +24,23 @@ export default function DaftarKompetisi() {
   const [errorMessageIdCard1, setErrorMessageIdCard1] = useState("");
   const [idCard2, setIdCard2] = useState(null);
   const [idCard3, setIdCard3] = useState(null);
+  const [isError, setError] = useState(false);
+  const { showModal, setShowModal, modalMessage, setModalMessage } = useModal();
 
   const router = useRouter();
+
+  const user = useUserStore((state) => state.user);
   const {
     control,
     handleSubmit,
     register,
-    formState: { errors },
-  } = useForm();
+    formState: { errors, isSubmitting },
+  } = useForm({
+    defaultValues: {
+      email: user?.email,
+      college: user?.college,
+    },
+  });
 
   const jenisKompetisi = router.query.jenisKompetisi.split("-").join(" ");
 
@@ -55,7 +67,8 @@ export default function DaftarKompetisi() {
           idCard2,
           idCard3,
         });
-        console.log(data);
+        setError(false);
+        setModalMessage("Pendaftaran berhasil");
       } else if (jenisKompetisi === "competitive programming") {
         const { data } = await doCompetitiveProgrammingRegistration({
           ...formValue,
@@ -64,7 +77,8 @@ export default function DaftarKompetisi() {
           idCard2,
           idCard3,
         });
-        console.log(data);
+        setError(false);
+        setModalMessage("Pendaftaran berhasil");
       } else if (jenisKompetisi === "uiux design") {
         const { data } = await doUiUXRegistration({
           ...formValue,
@@ -73,16 +87,21 @@ export default function DaftarKompetisi() {
           idCard2,
           idCard3,
         });
-        console.log(data);
+        setError(false);
+        setModalMessage("Pendaftaran berhasil");
       }
     } catch (error) {
+      setError(true);
+      setModalMessage(error.response.data.message);
       console.log(error);
+    } finally {
+      setShowModal(true);
     }
   };
 
   return (
     <LayoutMain>
-      <div className="p-8 lg:px-24">
+      <div className="p-8 lg:px-24 lg:mt-10">
         <LayoutField>
           <form
             className="z-10 flex flex-col"
@@ -106,10 +125,22 @@ export default function DaftarKompetisi() {
             <Button
               variant={"submitButton"}
               style={"w-[87%] lg:w-3/5 mx-auto mt-6"}
+              loading={isSubmitting}
             >
               Submit
             </Button>
           </form>
+          {showModal && (
+            <Modal
+              message={modalMessage}
+              showModal={showModal}
+              setShowModal={setShowModal}
+              messageHeader={isError ? "Gagal" : "Berhasil"}
+              redirect={isError ? false : true}
+              redirectTo={"/dashboard/kegiatan/kompetisi"}
+              buttonRedirectMessage={"Pergi Ke Halaman Kegiatan"}
+            />
+          )}
         </LayoutField>
       </div>
     </LayoutMain>

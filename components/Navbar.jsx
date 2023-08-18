@@ -123,7 +123,10 @@ function Navbar() {
               <Link
                 href="/kompetisi"
                 className={`active:bg-transparent ${
-                  routerNameEquals("/kompetisi") &&
+                  (routerNameEquals("/kompetisi") ||
+                    routerNameEquals("/kompetisi/competitive-programming") ||
+                    routerNameEquals("/kompetisi/web-development") ||
+                    routerNameEquals("/kompetisi/uiux-design")) &&
                   "text-[#DE55E8] dark:text-[#F56AFF]"
                 }`}
               >
@@ -183,8 +186,11 @@ function Navbar() {
             <Link
               href="/kompetisi"
               className={`active:!bg-transparent active:!text-[#DE55E8] hover:text-[#DE55E8] ${
-                routerNameEquals("/kompetisi") &&
-                "!text-[#DE55E8] dark:!text-[#F56AFF] "
+                (routerNameEquals("/kompetisi") ||
+                  routerNameEquals("/kompetisi/competitive-programming") ||
+                  routerNameEquals("/kompetisi/web-development") ||
+                  routerNameEquals("/kompetisi/uiux-design")) &&
+                "!text-[#DE55E8] dark:!text-[#F56AFF]"
               }`}
             >
               Kompetisi

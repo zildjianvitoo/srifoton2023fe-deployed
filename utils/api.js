@@ -40,14 +40,13 @@ async function doLogin({ email, password }) {
 }
 
 async function getDataUser() {
-  const { data, status } = api.get("/api/me", {
+  const { data, status } = await api.get("/api/me", {
     headers: { Authorization: `Bearer ${getAccessToken()}` },
   });
 
   if (status >= 400 && status < 500) {
     throw new Error(data.message);
   }
-  console.log(data);
 
   return { data };
 }
@@ -106,6 +105,8 @@ async function updateDataUser({
   genderType,
   instagram,
 }) {
+  console.log(phoneNumber);
+  console.log(genderType);
   const phone_number = phoneNumber;
   const gender = genderType;
   const { data, status } = await api.put(
@@ -138,6 +139,7 @@ async function doSeminarRegistration({
   proof,
   payment_method,
 }) {
+  console.log(proof);
   const { data, status } = await api.post(
     "/api/seminar/register",
     {

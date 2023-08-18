@@ -1,9 +1,16 @@
+import { useRouter } from "next/router";
+
 export default function Modal({
   showModal,
   setShowModal,
   message,
+  redirect,
+  buttonRedirectMessage,
+  redirectTo,
   messageHeader = "Berhasil",
 }) {
+  const router = useRouter();
+
   return (
     <>
       <label htmlFor="my_modal_6" />
@@ -30,13 +37,23 @@ export default function Modal({
             {message}!
           </p>
           <div className="modal-action">
-            <label
-              htmlFor="my_modal_6"
-              className="text-white btn bg-[#2E7BEF] dark:bg-[#E924E8] outline-none border-none w-1/5 "
-              onClick={() => setShowModal(false)}
-            >
-              Close
-            </label>
+            {redirect ? (
+              <label
+                htmlFor="my_modal_6"
+                className="text-white btn bg-[#2E7BEF] dark:bg-[#E924E8] outline-none border-none w-3/4  sm:w-1/2 "
+                onClick={() => router.push(redirectTo)}
+              >
+                {buttonRedirectMessage}
+              </label>
+            ) : (
+              <label
+                htmlFor="my_modal_6"
+                className="text-white btn bg-[#2E7BEF] dark:bg-[#E924E8] outline-none border-none w-1/5 "
+                onClick={() => setShowModal(false)}
+              >
+                Close
+              </label>
+            )}
           </div>
         </div>
       </div>

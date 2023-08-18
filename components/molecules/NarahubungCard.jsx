@@ -3,10 +3,16 @@ import { ethnocentric } from "@/public/fonts/fonts";
 
 export default function NarahubungCard({ name, number }) {
   const validName = name.split(" ");
+  const validNumber = number
+    .split("-")
+    .toString()
+    .replaceAll(",", "")
+    .replace(/^0/, "62");
+  console.log(validNumber);
 
   return (
     <div
-      className="flex flex-col items-center justify-center xl:w-[35%] mt-6 md:mt-3 gap-4 lg:gap-6 xl:gap-8 p-8 bg-center bg-no-repeat bg-contain md:p-24 "
+      className="flex flex-col items-center justify-center xl:w-[35%] mt-6 md:mt-3 gap-4 lg:gap-6 xl:gap-8  bg-center bg-no-repeat bg-contain p-12 sm:p-24 "
       style={{ backgroundImage: "url(/assets/frame-contact-img.svg) " }}
     >
       <h2
@@ -21,9 +27,12 @@ export default function NarahubungCard({ name, number }) {
           width={30}
           height={30}
         />
-        <p className="text-base font-medium text-black dark:text-white md:text-lg lg:text-xl">
+        <a
+          href={`https://wa.me/${validNumber}`}
+          className="text-base font-medium text-black dark:text-white md:text-lg lg:text-xl"
+        >
           {number}
-        </p>
+        </a>
       </div>
     </div>
   );

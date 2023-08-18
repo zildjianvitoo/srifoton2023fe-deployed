@@ -12,7 +12,7 @@ export default function Accordion({ toggle, isOpen, question, answer }) {
       onClick={toggle}
     >
       <div
-        className={`flex items-center justify-center w-full  p-4 font-medium cursor-pointer md:text-lg lg:text-base xl:text-lg ${
+        className={`flex items-center justify-between w-full  p-4 font-medium cursor-pointer md:text-lg lg:text-base xl:text-lg ${
           !isOpen && "h-full"
         }`}
       >

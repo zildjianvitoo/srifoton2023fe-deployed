@@ -8,18 +8,40 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import { seminarFormRules } from "@/utils/formRules";
 import { doSeminarRegistration } from "@/utils/api";
 import { useForm } from "react-hook-form";
+import { useUserStore } from "@/store/userStore";
+import { toast } from "react-toastify";
 
 export default function RegisterSeminarForm() {
   const [proof, setProof] = useState(null);
+  const [errorMessageProof, setErrorMessageProof] = useState("");
+
+  const user = useUserStore((state) => state.user);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
     mode: "onChange",
+    defaultValues: {
+      name: user?.name,
+      email: user?.email,
+      college: user?.college,
+      nim: user?.nim,
+      phoneNumber: user?.phone_number,
+    },
   });
 
   const onSubmitHandler = async (formValue) => {
+    if (!user) {
+      toast.error("Anda harus login terlebih dahulu");
+      return;
+    }
+    if (!proof) {
+      setErrorMessageProof("Bukti pembayaran tidak boleh kosong");
+      return;
+    }
+    setErrorMessageProof("");
+    console.log(proof);
     const {
       name,
       email,
@@ -37,8 +59,8 @@ export default function RegisterSeminarForm() {
         college,
         phone_number: phoneNumber,
         type: seminarType,
+        proof,
         payment_method: paymentMethod,
-        proof: proof,
       });
       console.log(data);
     } catch (error) {
@@ -93,7 +115,7 @@ export default function RegisterSeminarForm() {
               labelFor={"nim"}
               labelText={"NIM (optional)"}
               placeholder={"Contoh: 09021382227140"}
-              type={"number"}
+              type={"text"}
               register={register}
               rules={seminarFormRules.nim}
             />
@@ -104,7 +126,7 @@ export default function RegisterSeminarForm() {
               labelFor={"phoneNumber"}
               labelText={"No Hp"}
               placeholder={"Contoh: 08123456789"}
-              type={"number"}
+              type={"text"}
               register={register}
               rules={seminarFormRules.phoneNumber}
             />
@@ -143,6 +165,7 @@ export default function RegisterSeminarForm() {
             labelText={"Bukti Pembayaran"}
             proof={proof}
             setProof={setProof}
+            errorMessage={errorMessageProof}
           />
 
           <Button variant={"submitButton"} style={"w-3/4 mx-auto mt-2 lg:mt-4"}>

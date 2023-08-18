@@ -5,6 +5,7 @@ import TimelineBox from "@/components/molecules/TimelineBox";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import QNAKompetisi from "@/components/organisms/Kompetisi/QNAKompetisi";
 import Narahubung from "@/components/organisms/Seminar/Narahubung";
+import useBreakpoint from "@/hooks/useBreakPoint";
 import { ethnocentric } from "@/public/fonts/fonts";
 import { narahubungUiUx } from "@/utils/narahubungList";
 import { uiuxDesignQnaList } from "@/utils/qnaList";
@@ -34,7 +35,7 @@ const timelineContent = [
 
 export default function CompetitiveProgramming() {
   const router = useRouter();
-
+  const breakPoint = useBreakpoint();
   const { theme } = useTheme();
 
   const blueCirlceImgSource =
@@ -78,18 +79,18 @@ export default function CompetitiveProgramming() {
                 className="top-0 hidden z-[2] lg:flex -translate-x-4"
               />
             </div>
-            <div className="flex flex-wrap -translate-x-24 ">
+            <div className="flex flex-wrap justify-center -translate-x-24 lg:flex-nowrap ">
               <Image
                 src={pinkCirlceImgSource}
                 alt={"blue cirlce"}
-                width={430}
+                width={breakPoint !== "lg" ? 430 : 375}
                 height={430}
                 className="self-end translate-x-32 justify-self-end z-1"
               />
               <Image
                 src={blueCirlceImgSource}
                 alt={"blue cirlce"}
-                width={500}
+                width={breakPoint !== "lg" ? 500 : 445}
                 height={500}
                 className="z-0 translate-x-20 -translate-y-32 lg:translate-x-0 lg:translate-y-0"
               />
@@ -168,7 +169,7 @@ export default function CompetitiveProgramming() {
               vulputate libero et velit interdum, ac aliquet odio mattis. et
               velit interdum, ac aliquet odio mattis.
             </p>
-            <div className="flex flex-col gap-x-6 gap-y-2 lg:flex-row">
+            <div className="flex flex-col items-center gap-x-6 gap-y-2 lg:flex-row">
               <NoSSR>
                 <Link
                   href="/kompetisi/register/uiux-design"

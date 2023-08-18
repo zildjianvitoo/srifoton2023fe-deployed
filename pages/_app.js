@@ -4,9 +4,10 @@ import "@/styles/globals.css";
 import { outfit, poppins } from "@/public/fonts/fonts";
 import { ThemeProvider, useTheme } from "next-themes";
 import NextNProgress from "nextjs-progressbar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 import Head from "next/head";
-import Spinner from "@/components/atoms/Spinner";
 
 export default function App({ Component, pageProps }) {
   const { theme } = useTheme();
@@ -33,6 +34,7 @@ export default function App({ Component, pageProps }) {
         <div className={` ${poppins.variable} ${outfit.className}`}>
           <Navbar />
           <Component {...pageProps} />
+          <ToastContainer position="top-center" theme="colored" />
         </div>
       </ThemeProvider>
       {/* </HydrationContext> */}

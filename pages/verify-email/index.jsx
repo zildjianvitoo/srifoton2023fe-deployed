@@ -82,6 +82,9 @@ export default function VerifyEmail({ email }) {
             showModal={showModal}
             setShowModal={setShowModal}
             messageHeader={isError ? "Gagal" : "Berhasil"}
+            redirect={isError ? false : true}
+            redirectTo={"/dashboard"}
+            buttonRedirectMessage={"Pergi Ke Halaman Dashboard"}
           />
         )}
       </LayoutCredentials>
