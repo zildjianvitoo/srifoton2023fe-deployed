@@ -24,7 +24,7 @@ export default function Jumbotron() {
           `}
         </style>
       </Head>
-      <section className="relative min-h-screen mt-12 overflow-x-hidden lg:min-h-screen lg:mt-6">
+      <section className="relative min-h-full mt-12 overflow-hidden lg:min-h-screen lg:mt-6">
         <div className="flex flex-col justify-center p-8 mt-12 lg:px-20 xl:px-32 lg:mt-32 lg:flex-row">
           <div className="flex flex-col justify-center w-fit lg:w-1/2">
             <h1 className="p-[2px] text-4xl font-bold leading-snug lg:leading-[4.65rem] tracking-wide w-fit  lg:text-[60px] jumbotron-kompetisi-header dark:jumbotron-kompetisi-header-dark ">
@@ -32,9 +32,8 @@ export default function Jumbotron() {
             </h1>
             <p className="mt-3 lg:!leading-8 text-lg lg:text-xl text-[#767676] dark:text-[#B4C0D5] lg:w-[80%]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit{" "}
-              <span className="font-poppins">interdum</span>, ac aliquet odio
-              mattis. et velit interdum, ac aliquet odio mattis.
+              vulputate libero et velit interdum, ac aliquet odio mattis. et
+              velit interdum, ac aliquet odio mattis.
             </p>
           </div>
 
@@ -58,7 +57,7 @@ export default function Jumbotron() {
                 />
               </div>
             </div>
-            <div className="hidden lg:flex">
+            <div className="hidden overflow-y-hidden lg:flex">
               <Image
                 src={blueCirlceImgSource}
                 alt={"blue cirlce"}
