@@ -146,7 +146,7 @@ export default function CompetitiveProgramming() {
           </div>
         </div>
       </section>
-      <LayoutCredentials>
+      <LayoutCredentials notUseLogo>
         <div className="z-10 flex flex-col gap-10 px-6 lg:flex-row lg:py-12">
           <Image
             src={"/assets/Kompetisi/competition-type-cta-img.svg"}

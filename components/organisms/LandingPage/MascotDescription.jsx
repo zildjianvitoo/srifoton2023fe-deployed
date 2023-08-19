@@ -3,9 +3,9 @@ import React from "react";
 
 export default function MascotExplanation() {
   return (
-    <section id="mascot-description" className="mt-10">
-      <div className="flex justify-center lg:px-20">
-        <div className="flex flex-col w-[20%] gap-14">
+    <section id="mascot-description" className="lg:mt-24 lg:mb-16">
+      <div className="flex justify-center gap-10 lg:px-20">
+        <div className="flex flex-col w-[20%] gap-28">
           <div className="flex w-full gap-3">
             <div className="flex flex-col text-right">
               <h3 className="text-2xl font-bold lg:text-3xl text-[#494B7C] w-[200px]">
@@ -43,15 +43,14 @@ export default function MascotExplanation() {
               className="mt-2 mb-auto"
             />
           </div>
-          <div className="flex w-full gap-3">
+          <div className="flex w-full gap-3 mt-6">
             <div className="flex flex-col text-right">
               <h3 className="text-2xl font-bold lg:text-3xl text-[#494B7C]   w-[200px]">
-                Tombol Power
+                FUEGO
               </h3>
               <p className="w-full">
-                Berbentuk segi lima yang terletak di dada mascot
-                merepresentasikan kali kelima acara Srifoton ini
-                diselenggarakan.
+                Diambil dari Bahasa Spanyol yang memiliki arti{" "}
+                <span className="font-semibold ">Api.</span>
               </p>
             </div>
             <Image
@@ -72,7 +71,7 @@ export default function MascotExplanation() {
             quality={100}
           />
         </div>
-        <div className="flex flex-col w-[20%] gap-14">
+        <div className="flex flex-col w-[20%] gap-28">
           <div className="flex w-full gap-3">
             <Image
               src={"/assets/LandingPage/vector-topright-mascotdesc.svg"}

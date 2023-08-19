@@ -4,7 +4,7 @@ export default function LayoutCredentials({
   authPage,
   children,
   id,
-  verifyEmailPage,
+  notUseLogo,
 }) {
   return (
     <section
@@ -34,7 +34,7 @@ export default function LayoutCredentials({
           } flex   z-10 gap-20`}
         >
           {children}
-          {!authPage && !verifyEmailPage && (
+          {!authPage && !notUseLogo && (
             <div className="items-center justify-center hidden m-auto lg:flex h-fit">
               <Image
                 width={400}

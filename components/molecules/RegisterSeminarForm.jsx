@@ -16,11 +16,7 @@ export default function RegisterSeminarForm() {
   const [errorMessageProof, setErrorMessageProof] = useState("");
 
   const user = useUserStore((state) => state.user);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+  const { register, handleSubmit, formState } = useForm({
     mode: "onChange",
     defaultValues: {
       name: user?.name,
@@ -30,6 +26,8 @@ export default function RegisterSeminarForm() {
       phoneNumber: user?.phone_number,
     },
   });
+
+  const { errors, isSubmitting } = formState;
 
   const onSubmitHandler = async (formValue) => {
     if (!user) {
@@ -65,6 +63,7 @@ export default function RegisterSeminarForm() {
       console.log(data);
     } catch (error) {
       console.log(error);
+      toast.error(error.response.data.message);
     }
   };
 
@@ -168,7 +167,11 @@ export default function RegisterSeminarForm() {
             errorMessage={errorMessageProof}
           />
 
-          <Button variant={"submitButton"} style={"w-3/4 mx-auto mt-2 lg:mt-4"}>
+          <Button
+            variant={"submitButton"}
+            style={"w-3/4 mx-auto mt-2 lg:mt-4"}
+            loading={isSubmitting}
+          >
             Daftar
           </Button>
         </div>

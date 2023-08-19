@@ -54,7 +54,7 @@ export default function InputFile({
     setImage(null);
   };
 
-  const isRequiredFImage = () => {
+  const isRequiredImage = () => {
     if (labelFor === "idCard2") {
       return false;
     } else if (labelFor === "idCard3") {
@@ -71,7 +71,7 @@ export default function InputFile({
         className="text-lg lg:text-xl font-medium text-[#494B7C] dark:text-white "
       >
         {labelText}
-        {isRequiredFImage() && (
+        {isRequiredImage() && (
           <span className=" text-[#F86E45] dark:text-[#D5DA00]">*</span>
         )}
       </label>
@@ -107,7 +107,7 @@ export default function InputFile({
             id={labelFor}
             type="file"
             className="hidden"
-            accept="image/png, image/jpeg, image/jpg, image/heic"
+            accept="image/png, image/jpeg, image/jpg, image/svg, image/pdf"
             onChange={uploadImage}
           />
         </label>
