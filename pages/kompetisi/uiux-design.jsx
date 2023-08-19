@@ -56,7 +56,7 @@ export default function CompetitiveProgramming() {
         <div className="relative flex flex-col mt-12 lg:gap-16 md:mt-20 lg:mt-24">
           <div className="flex items-center justify-center w-full mx-auto relative lg:w-[70%] h-[70vh] lg:h-full">
             <Image
-              src={"/assets/Kompetisi/jumbotron-webdev-img.png"}
+              src={"/assets/Kompetisi/jumbotron-uiux-img.png"}
               alt="Jumbotron Big Icon"
               width={500}
               height={450}
@@ -107,13 +107,16 @@ export default function CompetitiveProgramming() {
                 Design
               </span>
             </h1>
-            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-9 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. et
-              velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Nunc vulputate libero et velit
-              interdum, ac aliquet odio mattis. et velit interdum, ac aliquet
-              odio mattis.
+            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
+               Tema yang diangkat pada lomba UI/UX Design SRIFOTON 2023 ini
+              adalah{" "}
+              <span className="italic font-semibold">
+                {"”"}Developing Innovative Technology To Compete In The Digital
+                Era
+                {"”"}
+              </span>{" "}
+              dan berfokus pada desain membuat tampilan pengguna dalam ruang
+              lingkup kesehatan lingkungan.
             </p>
           </div>
         </div>
@@ -165,11 +168,11 @@ export default function CompetitiveProgramming() {
               </span>
             </h2>
             <p className="text-base  dark:text-white text-[#767676] font-poppins lg:w-4/5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. et
-              velit interdum, ac aliquet odio mattis.
+              Jadilah bagian dari perjalanan luar biasa ini! Ayo, tunjukkan
+              bakat terbaikmu dan raih prestasi baru dalam kompetisi. Daftar
+              sekarang dan buktikan bahwa kamu adalah yang terbaik di bidangmu!
             </p>
-            <div className="flex flex-col items-center gap-x-6 gap-y-2 lg:flex-row">
+            <div className="flex flex-col items-center gap-x-6 gap-y-4 lg:flex-row">
               <NoSSR>
                 <Link
                   href="/kompetisi/register/uiux-design"
@@ -189,7 +192,7 @@ export default function CompetitiveProgramming() {
               <NoSSR>
                 <Link
                   href="/kompetisi/register"
-                  className=" mt-3 w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
+                  className="w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <Button
                     style={`w-full relative border-none bg-gradient-to-r from-[#FC39FC] to-[#337EF0] ${"button-style"} ${

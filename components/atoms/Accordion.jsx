@@ -16,7 +16,7 @@ export default function Accordion({ toggle, isOpen, question, answer }) {
           !isOpen && "h-full"
         }`}
       >
-        <p>{question}</p>
+        <p className="text-sm sm:text-base">{question}</p>
         <div className="grid w-8 h-8 md:w-10 lg:w-12 md:h-10 lg:h-12 place-items-center">
           {isOpen ? (
             <AiFillMinusCircle className="text-3xl" />
@@ -26,7 +26,7 @@ export default function Accordion({ toggle, isOpen, question, answer }) {
         </div>
       </div>
       <div className={`${isOpen ? "visible p-4 pt-0" : "invisible"}`}>
-        <p className="">{answer}</p>
+        <p className="text-sm sm:text-base">{answer}</p>
       </div>
     </div>
   );

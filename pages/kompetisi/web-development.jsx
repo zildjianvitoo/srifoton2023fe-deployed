@@ -109,13 +109,11 @@ export default function CompetitiveProgramming() {
                 Development
               </span>
             </h1>
-            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-9 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. et
-              velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Nunc vulputate libero et velit
-              interdum, ac aliquet odio mattis. et velit interdum, ac aliquet
-              odio mattis.
+            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
+              Web Development bertujuan untuk menguji kemampuan yang dimiliki
+              para peserta dalam berkreasi dan berinovasi memberikan suatu
+              solusi berupa penyelesaian masalah (problem solving) dengan cara
+              membangun sebuah website.
             </p>
           </div>
         </div>
@@ -167,11 +165,11 @@ export default function CompetitiveProgramming() {
               </span>
             </h2>
             <p className="text-base  dark:text-white text-[#767676] font-poppins lg:w-4/5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. et
-              velit interdum, ac aliquet odio mattis.
+              Jadilah bagian dari perjalanan luar biasa ini! Ayo, tunjukkan
+              bakat terbaikmu dan raih prestasi baru dalam kompetisi. Daftar
+              sekarang dan buktikan bahwa kamu adalah yang terbaik di bidangmu!
             </p>
-            <div className="flex flex-col items-center gap-x-6 gap-y-2 xl:flex-row">
+            <div className="flex flex-col items-center gap-x-6 gap-y-4 xl:flex-row">
               <NoSSR>
                 <Link
                   href="/kompetisi/register/web-development"

@@ -26,6 +26,7 @@ export default function SwiperKompetisiCard() {
             width={210}
             height={210}
             className="w-[130px] sm:w-[150px] md:w-[185px] mx-auto lg:w-[210px]"
+            quality={100}
           />
           <h1
             className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
@@ -52,11 +53,12 @@ export default function SwiperKompetisiCard() {
         </SwiperSlide>
         <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#f5dff5]">
           <Image
-            src={"/assets/Kompetisi/jumbotron-cp-img.png"}
-            alt="Cp Icon"
+            src={"/assets/Kompetisi/jumbotron-uiux-img.png"}
+            alt="UiUx Icon"
             width={210}
             height={210}
             className="w-[130px] sm:w-[150px] md:w-[185px] mx-auto lg:w-[210px]"
+            quality={100}
           />
           <h1
             className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col`}
@@ -83,11 +85,12 @@ export default function SwiperKompetisiCard() {
         </SwiperSlide>
         <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff]">
           <Image
-            src={"/assets/Kompetisi/jumbotron-cp-img.png"}
-            alt="Cp Icon"
+            src={"/assets/Kompetisi/jumbotron-webdev-img.png"}
+            alt="WebDev Icon"
             width={210}
             height={210}
             className="w-[130px] sm:w-[150px] md:w-[185px] mx-auto lg:w-[210px]"
+            quality={100}
           />
           <h1
             className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col`}
