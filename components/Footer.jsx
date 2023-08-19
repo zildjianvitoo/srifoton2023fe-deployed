@@ -69,7 +69,7 @@ export default function Footer() {
                     </p>
                   </div>
                   <ul>
-                    <li>srifoton@gmail.com</li>
+                    <li>srifoton.unsri23@gmail.com</li>
                   </ul>
                 </div>
               </div>
@@ -117,18 +117,6 @@ export default function Footer() {
               © SRIFOTON 2023
             </p>
             <div className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-10">
-              <Image
-                src={"/assets/icon-twitter.svg"}
-                alt="icon twitter"
-                width={26}
-                height={26}
-              />
-              <Image
-                src={"/assets/icon-facebook.svg"}
-                alt="icon facebook"
-                width={14}
-                height={14}
-              />
               <Link href={"https://instagram.com/srifoton.official"}>
                 <Image
                   src={"/assets/icon-instagram.svg"}
@@ -137,13 +125,6 @@ export default function Footer() {
                   height={24}
                 />
               </Link>
-
-              <Image
-                src={"/assets/icon-tiktok.svg"}
-                alt="icon tiktok"
-                width={30}
-                height={30}
-              />
             </div>
           </div>
         </div>

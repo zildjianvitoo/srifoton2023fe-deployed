@@ -756,15 +756,4 @@ input[type="number"] {
       color: #f6e8fb;
     }
   }
-
-  @media (prefers-color-scheme: dark) {
-    /* .jumbotron-2023-text {
-      color: #3a3169;
-    } */
-    @media screen and (max-width: 640px) {
-      .jumbotron-2023-text {
-        color: #131b53;
-      }
-    }
-  }
 }
