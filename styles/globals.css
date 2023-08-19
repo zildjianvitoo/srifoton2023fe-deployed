@@ -210,6 +210,25 @@ input[type="number"] {
       -1px -1px 0 #494b7c;
   } */
 
+  .countdown-box {
+    box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .srifoton-big-header {
+    text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .jumbotron-2023-text {
+    color: #f5ddf7;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 55%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+  }
+
   .intro-header-kompetisi {
     color: #fcf2ff;
     background: -webkit-linear-gradient(
@@ -713,6 +732,26 @@ input[type="number"] {
     .field-header-dark,
     .competition-type-header {
       -webkit-text-stroke: 3.5px transparent;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .jumbotron-2023-text {
+      color: #f6e8fb;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .countdown-box {
+      box-shadow: inset 3px 4px 5px rgba(255, 255, 255, 0.25);
+    }
+
+    .jumbotron-2023-text {
+      color: #3a3169;
+    }
+    @media screen and (max-width: 640px) {
+      .jumbotron-2023-text {
+        color: #131b53;
+      }
     }
   }
 }

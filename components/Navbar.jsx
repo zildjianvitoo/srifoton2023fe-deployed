@@ -151,10 +151,6 @@ function Navbar() {
           href="/"
           className="flex gap-2 text-xl normal-case xs:ml-2 lg:ml-10 btn btn-ghost"
         >
-          {/* <img
-            src="/assets/logo-srifoton2023.svg"
-            className=" w-[110px] -translate-x-3 h-[25px] sm:w-[110px] sm:h-[30px] lg:w-[160px] lg:h-[40px]"
-          /> */}
           <Image
             priority
             src="/assets/logo-srifoton2023.png"
