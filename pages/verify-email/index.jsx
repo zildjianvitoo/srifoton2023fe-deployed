@@ -40,7 +40,7 @@ export default function VerifyEmail({ email }) {
 
   return (
     <LayoutMain>
-      <LayoutCredentials id={"verify-email-section"}>
+      <LayoutCredentials id={"verify-email-section"} verifyEmailPage>
         <div className="z-10 flex flex-col items-center justify-center w-full pb-4 lg:pb-2 gap-9">
           <Image
             width={240}
