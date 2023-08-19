@@ -16,6 +16,7 @@ import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function Dashboard() {
   const user = useUserStore((state) => state.user);
@@ -74,6 +75,9 @@ function Dashboard() {
 
   return (
     <>
+      <Head>
+        <title>SRIFOTON | Dashboard</title>
+      </Head>
       <LayoutMain>
         <div className="flex flex-col lg:flex-row  w-full mx-auto mt-10 lg:gap-16 lg:w-[85%]">
           <div className="lg:w-[22rem] lg:mt-8">

@@ -5,6 +5,7 @@ import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
 import RegisteredCompetitions from "@/components/organisms/Dashboard/RegisteredCompetitions";
 import { useUserStore } from "@/store/userStore";
 import { getDataUser } from "@/utils/api";
+import Head from "next/head";
 import { useEffect } from "react";
 
 export default function Kompetisi() {
@@ -30,6 +31,9 @@ export default function Kompetisi() {
 
   return (
     <>
+      <Head>
+        <title>SRIFOTON | Dashboard Kompetisi</title>
+      </Head>
       <LayoutMain>
         <div className="flex flex-col lg:flex-row  w-full mx-auto mt-10 lg:gap-16 lg:w-[85%]">
           <div className="lg:w-[22rem] lg:mt-8">

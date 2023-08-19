@@ -3,6 +3,7 @@ import LayoutMain from "@/components/LayoutMain";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
 import { useUserStore } from "@/store/userStore";
+import Head from "next/head";
 
 export default function Seminar() {
   const user = useUserStore((state) => state.user);
@@ -11,6 +12,9 @@ export default function Seminar() {
 
   return (
     <>
+      <Head>
+        <title>SRIFOTON | Dashboard Seminar</title>
+      </Head>
       <LayoutMain>
         <div className="flex flex-col lg:flex-row  w-full mx-auto mt-10 lg:gap-16 lg:w-[85%]">
           <div className="lg:w-[22rem] lg:mt-8">
