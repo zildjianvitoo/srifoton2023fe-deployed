@@ -24,7 +24,7 @@ export default function Jumbotron() {
           `}
         </style>
       </Head>
-      <section className="relative min-h-screen mt-12 overflow-hidden lg:min-h-screen lg:mt-6">
+      <section className="relative min-h-screen mt-12 overflow-x-hidden lg:min-h-screen lg:mt-6">
         <div className="flex flex-col justify-center p-8 mt-12 lg:px-20 xl:px-32 lg:mt-32 lg:flex-row">
           <div className="flex flex-col justify-center w-fit lg:w-1/2">
             <h1 className="p-[2px] text-4xl font-bold leading-snug lg:leading-[4.65rem] tracking-wide w-fit  lg:text-[60px] jumbotron-kompetisi-header dark:jumbotron-kompetisi-header-dark ">
