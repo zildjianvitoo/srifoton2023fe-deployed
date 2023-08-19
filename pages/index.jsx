@@ -5,6 +5,7 @@ import Benefit from "@/components/organisms/LandingPage/Benefit";
 import Timeline from "@/components/organisms/LandingPage/Timeline";
 import Sponsor from "@/components/organisms/LandingPage/Sponsor";
 import LayoutMain from "@/components/LayoutMain";
+import MascotExplanation from "@/components/organisms/LandingPage/MascotDescription";
 
 export default function Home({}) {
   return (
@@ -14,6 +15,7 @@ export default function Home({}) {
       </Head>
       <LayoutMain>
         <Jumbotron />
+        <MascotExplanation />
         <Intro />
         <Timeline />
         <Benefit />

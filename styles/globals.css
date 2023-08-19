@@ -214,6 +214,10 @@ input[type="number"] {
     box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.25);
   }
 
+  .countdown-box-dark {
+    box-shadow: inset 3px 4px 5px rgba(255, 255, 255, 0.25);
+  }
+
   .srifoton-big-header {
     text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.1);
   }
@@ -741,13 +745,9 @@ input[type="number"] {
   }
 
   @media (prefers-color-scheme: dark) {
-    .countdown-box {
-      box-shadow: inset 3px 4px 5px rgba(255, 255, 255, 0.25);
-    }
-
-    .jumbotron-2023-text {
+    /* .jumbotron-2023-text {
       color: #3a3169;
-    }
+    } */
     @media screen and (max-width: 640px) {
       .jumbotron-2023-text {
         color: #131b53;

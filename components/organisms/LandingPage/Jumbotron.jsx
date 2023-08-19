@@ -38,7 +38,7 @@ const Jumbotron = () => {
         <div
           className={`flex flex-col mx-auto w-fit ${ethnocentric.className} `}
         >
-          <h2 className="z-0 self-end px-2 text-3xl translate-y-3 lg:text-5xl xl:text-6xl jumbotron-2023-text sm:translate-y-5 md:translate-y-7">
+          <h2 className="z-0 self-end px-2 text-3xl translate-y-3 lg:text-5xl xl:text-6xl jumbotron-2023-text sm:translate-y-5 md:translate-y-7 dark:text-[#3a3169]">
             2023
           </h2>
           <h1
@@ -55,7 +55,7 @@ const Jumbotron = () => {
           Seminar.
         </p>
         <div className="flex justify-center items-center gap-2 md:gap-6 mt-6 text-[#494B7C] dark:text-[#F6F6F6]">
-          <div className="flex flex-col items-center justify-center w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box">
+          <div className="flex flex-col items-center justify-center w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
             {" "}
             <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem] ">
               {hours}
@@ -65,7 +65,7 @@ const Jumbotron = () => {
           <span className="text-[2rem] sm:text-[3rem] lg:text-[5rem] mb-3">
             :
           </span>
-          <div className="flex flex-col items-center justify-center w-[80px] h-[80px]  sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box">
+          <div className="flex flex-col items-center justify-center w-[80px] h-[80px]  sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
             {" "}
             <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem]">
               {minutes}
@@ -75,7 +75,7 @@ const Jumbotron = () => {
           <span className="text-[2rem] sm:text-[3rem] lg:text-[5rem] mb-3 ">
             :
           </span>
-          <div className="flex flex-col items-center justify-center w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box">
+          <div className="flex flex-col items-center justify-center w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
             {" "}
             <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem]">
               {seconds}
