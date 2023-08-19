@@ -5,7 +5,7 @@ export default function Jumbotron() {
   return (
     <section
       id="#"
-      className="relative overflow-hidden h-full  bg-gradient-to-b  from-[#E5AFE5] to-[#337EF0]/80 dark:from-[#E5AFE5]/70 dark:to-[#5F7AC2] lg:h-screen opacity-90 mt-12 lg:mt-6"
+      className="relative overflow-x-hidden h-full  bg-gradient-to-b  from-[#E5AFE5] to-[#337EF0]/80 dark:from-[#E5AFE5]/70 dark:to-[#5F7AC2] lg:h-screen opacity-90 mt-12 lg:mt-6"
     >
       <div
         className="absolute inset-0 h-full lg:h-screen bg-center bg-no-repeat bg-cover opacity-60 z-[-1] "

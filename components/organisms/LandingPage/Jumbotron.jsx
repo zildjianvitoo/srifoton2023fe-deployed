@@ -27,7 +27,7 @@ const Jumbotron = () => {
   return (
     <section
       id="#jumbotron-landingpage"
-      className="relative overflow-hidden  py-24  bg-[#FCF2FF] dark:bg-[#02053E] lg:h-full opacity-85 mt-12 lg:mt-6"
+      className="relative overflow-x-hidden  py-24  bg-[#FCF2FF] dark:bg-[#02053E] lg:h-full opacity-85 mt-12 lg:mt-6"
     >
       <div
         className="absolute inset-0 h-full bg-center bg-no-repeat bg-cover "

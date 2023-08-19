@@ -53,7 +53,7 @@ export default function CompetitiveProgramming() {
     <LayoutMain>
       <section
         id="jumbotron-cp"
-        className="relative h-full mt-12 overflow-hidden lg:mt-6"
+        className="relative h-full mt-12 overflow-x-hidden lg:mt-6"
       >
         <div className="relative flex flex-col mt-12 lg:gap-16 md:mt-20 lg:mt-24">
           <div className="flex items-center justify-center w-full mx-auto relative lg:w-[70%] h-[70vh] lg:h-full">
@@ -120,7 +120,7 @@ export default function CompetitiveProgramming() {
       </section>
       <section
         id="timeline-cp"
-        className="relative h-full mt-12 overflow-hidden lg:mt-48"
+        className="relative h-full mt-12 overflow-x-hidden lg:mt-48"
       >
         <div className="flex flex-col items-center justify-center gap-6 lg:gap-10">
           <h2
