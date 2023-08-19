@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <section id="footer" className="font-poppins">
+    <footer id="footer" className="bottom-0 left-0  font-poppins">
       <div className="pt-10 md:pt-14 lg:pt-20 bg-[#FCF2FF] dark:bg-[#02053E]">
         <div className="flex flex-col gap-6  py-6 pb-8 md:pb-12 px-8 lg:px-0 w-full  sm:w-[90%] mx-auto relative">
           <div className="h-full ">
@@ -174,6 +174,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
