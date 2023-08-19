@@ -69,7 +69,7 @@ export default function Footer() {
                     </p>
                   </div>
                   <ul>
-                    <li>srifoton.unsri@gmail.com</li>
+                    <li>srifoton@gmail.com</li>
                   </ul>
                 </div>
               </div>
