@@ -21,7 +21,6 @@ function seminar() {
         <RegisterSeminar />
         <Narahubung contacts={narahubungSeminar} id={"narahubung-seminar"} />
         <QNASeminar />
-        <div className="mb-96"></div>
       </LayoutMain>
     </>
   );

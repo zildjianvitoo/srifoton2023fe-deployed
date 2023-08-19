@@ -18,7 +18,6 @@ export default function Home({}) {
         <Timeline />
         <Benefit />
         <Sponsor />
-        <div className="mb-96 bg-gradient-to-r"></div>
       </LayoutMain>
     </>
   );
