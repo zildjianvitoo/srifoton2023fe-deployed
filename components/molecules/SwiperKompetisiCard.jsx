@@ -17,9 +17,9 @@ export default function SwiperKompetisiCard() {
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper w-[300px] h-[280px]  md:w-[350px] md:h-[330px] lg:w-[480px] lg:h-[380px]"
+        className="mySwiper w-[300px] h-[280px]  md:w-[350px] md:h-[330px] lg:w-[480px] lg:h-[380px] "
       >
-        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6">
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff] ">
           <Image
             src={"/assets/Kompetisi/jumbotron-cp-img.png"}
             alt="Cp Icon"
@@ -50,7 +50,7 @@ export default function SwiperKompetisiCard() {
             </NoSSR>
           </Link>
         </SwiperSlide>
-        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6">
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#f5dff5]">
           <Image
             src={"/assets/Kompetisi/jumbotron-cp-img.png"}
             alt="Cp Icon"
@@ -81,7 +81,7 @@ export default function SwiperKompetisiCard() {
             </NoSSR>
           </Link>
         </SwiperSlide>
-        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6">
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff]">
           <Image
             src={"/assets/Kompetisi/jumbotron-cp-img.png"}
             alt="Cp Icon"

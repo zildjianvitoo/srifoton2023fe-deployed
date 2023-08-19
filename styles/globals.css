@@ -192,20 +192,6 @@ input[type="number"] {
   -o-border-radius: 30px;
 }
 
-.swiper-slide:nth-child(1n) {
-  background-color: #ddebff;
-  border: 3.5px dashed #494b7c;
-}
-
-.swiper-slide:nth-child(2n) {
-  background-color: #f5dff5;
-  border: 3.5px dashed #494b7c;
-}
-
-.swiper-slide:nth-child(3n) {
-  background-color: #ddebff;
-  border: 3.5px dashed #494b7c;
-}
 /* End Swiper Styles */
 
 @layer utilities {
