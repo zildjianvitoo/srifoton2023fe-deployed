@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 export default function App({ Component, pageProps }) {
   const { theme } = useTheme();
@@ -21,7 +22,7 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="keywords" content="Seminar, Kompetisi, Srifoton" />
         <meta name="author" content="IT LEAD DEVELOPER TEAM SRIFOTON 2023" />
-        <link rel="icon" href="/assets/logo-srifoton2023.svg" />
+        <link rel="icon" href="/assets/logo-srifoton2023.png" />
       </Head>
       {/* <HydrationContext> */}
       <ThemeProvider
@@ -34,6 +35,7 @@ export default function App({ Component, pageProps }) {
         <div className={` ${poppins.variable} ${outfit.className}`}>
           <Navbar />
           <Component {...pageProps} />
+          <Footer />
           <ToastContainer position="top-center" theme="colored" />
         </div>
       </ThemeProvider>

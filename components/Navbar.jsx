@@ -157,7 +157,7 @@ function Navbar() {
           /> */}
           <Image
             priority
-            src="/assets/logo-srifoton2023.svg"
+            src="/assets/logo-srifoton2023.png"
             alt="Logo Srifoton"
             width={50}
             height={30}

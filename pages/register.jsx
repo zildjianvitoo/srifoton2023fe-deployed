@@ -165,7 +165,7 @@ function Register() {
                   <Button
                     variant={"submitButton"}
                     style={"w-3/5 lg:w-2/5"}
-                    disabled={isSubmitting}
+                    loading={isSubmitting}
                   >
                     Daftar
                   </Button>
