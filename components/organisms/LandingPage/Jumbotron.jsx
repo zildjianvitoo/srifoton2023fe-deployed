@@ -4,17 +4,18 @@ import { ethnocentric } from "@/public/fonts/fonts";
 import { useEffect, useState } from "react";
 
 const Jumbotron = () => {
+  const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const countDownDate = new Date("Aug 23, 2023 00:00:00").getTime();
+  const countDownDate = new Date("Oct 5, 2023 00:00:00").getTime();
 
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
-
+      setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
       setHours(
         Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
       );
@@ -55,32 +56,42 @@ const Jumbotron = () => {
           Seminar.
         </p>
         <div className="flex justify-center items-center gap-2 md:gap-6 mt-6 text-[#494B7C] dark:text-[#F6F6F6]">
-          <div className="flex flex-col items-center justify-center w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
+          <div className="flex flex-col items-center justify-center w-[70px] h-[70px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
             {" "}
             <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem] ">
-              {hours}
+              {days}
             </h3>
-            <p className="m-auto text-lg">Jam</p>
+            <p className="m-auto text-base sm:text-lg">Hari</p>
           </div>
           <span className="text-[2rem] sm:text-[3rem] lg:text-[5rem] mb-3">
             :
           </span>
-          <div className="flex flex-col items-center justify-center w-[80px] h-[80px]  sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
+          <div className="flex flex-col items-center justify-center w-[70px] h-[70px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
+            {" "}
+            <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem] ">
+              {hours}
+            </h3>
+            <p className="m-auto text-base sm:text-lg">Jam</p>
+          </div>
+          <span className="text-[2rem] sm:text-[3rem] lg:text-[5rem] mb-3">
+            :
+          </span>
+          <div className="flex flex-col items-center justify-center w-[70px] h-[70px]  sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
             {" "}
             <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem]">
               {minutes}
             </h3>
-            <p className="m-auto text-lg">Menit</p>
+            <p className="m-auto text-base sm:text-lg">Menit</p>
           </div>
           <span className="text-[2rem] sm:text-[3rem] lg:text-[5rem] mb-3 ">
             :
           </span>
-          <div className="flex flex-col items-center justify-center w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
+          <div className="flex flex-col items-center justify-center w-[70px] h-[70px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
             {" "}
             <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem]">
               {seconds}
             </h3>
-            <p className="m-auto text-lg">Detik</p>
+            <p className="m-auto text-base sm:text-lg">Detik</p>
           </div>
         </div>
         <div className="flex justify-center gap-6 z-[3] mt-8 lg:mt-12">

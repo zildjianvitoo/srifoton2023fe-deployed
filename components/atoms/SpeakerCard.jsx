@@ -49,7 +49,7 @@ function SpeakerCard({ speaker, secondCard }) {
         />
         <div
           className={`absolute -bottom-1  w-full transition-all duration-300 ${
-            isHover ? "h-1/2 md:h-2/5" : "h-1/4 md:h-[20%]"
+            isHover ? "h-1/2 md:h-2/5" : "h-1/4 md:h-1/4 lg:h-1/4 xl:h-1/5"
           } `}
         >
           <div className="absolute inset-0 z-0 w-full glassmorphism rounded-b-[28px] lg:rounded-b-[50px]" />
