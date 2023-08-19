@@ -12,7 +12,7 @@ import { ethnocentric } from "@/public/fonts/fonts";
 
 export default function SwiperKompetisiCard() {
   return (
-    <div className="px-10 lg:px-0">
+    <div className="px-10 lg:px-0 ">
       <Swiper
         effect={"cards"}
         grabCursor={true}
