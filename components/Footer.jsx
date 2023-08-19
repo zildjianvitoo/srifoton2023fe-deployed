@@ -39,8 +39,8 @@ export default function Footer() {
                 <h4 className="text-lg font-semibold tracking-wide text-transparent uppercase bg-gradient-to-br from-pink-srifoton to-blue-srifoton bg-clip-text w-fit">
                   Kontak
                 </h4>
-                <div className="flex flex-col ">
-                  <div className="flex gap-1">
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-1">
                     <Image
                       src={"/assets/icon-whatsapp.svg"}
                       alt="icon whatsapp"
@@ -56,10 +56,10 @@ export default function Footer() {
                     <li>+62 852-6938-3835 (Yolendri Anisyahfitri)</li>
                     <li>+62 878-6178-1143 (Dimas Putra Mufazzal)</li>
                   </ul>
-                  <div className="flex gap-1 mt-2">
+                  <div className="flex items-center gap-1 mt-2">
                     {" "}
                     <Image
-                      src={"assets/icon-email.svg"}
+                      src={"/assets/icon-email.svg"}
                       alt="icon email"
                       width={24}
                       height={24}

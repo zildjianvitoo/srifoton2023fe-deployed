@@ -730,6 +730,19 @@ input[type="number"] {
   }
   /* End Credentials Page */
 
+  /* Dashboard Page */
+  .registered-competitions-header {
+    color: #f5ddf7;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 95%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+  }
+  /* End Dashboard Page */
+
   /** Responsive **/
   @media screen and (max-width: 768px) {
     .field-header,

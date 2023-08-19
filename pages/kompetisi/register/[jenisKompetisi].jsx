@@ -16,6 +16,7 @@ import {
 import { useUserStore } from "@/store/userStore";
 import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
+import { AxiosError } from "axios";
 
 export default function DaftarKompetisi() {
   const [proof, setProof] = useState(null);
@@ -91,9 +92,13 @@ export default function DaftarKompetisi() {
         setModalMessage("Pendaftaran berhasil");
       }
     } catch (error) {
-      setError(true);
-      setModalMessage(error.response.data.message);
       console.log(error);
+      setError(true);
+      if (error instanceof AxiosError) {
+        setModalMessage(error.response.data.message);
+      } else {
+        setModalMessage("Terjadi kesalahan, silahkan coba lagi");
+      }
     } finally {
       setShowModal(true);
     }
