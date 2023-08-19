@@ -1,9 +1,12 @@
+import useBreakpoint from "@/hooks/useBreakPoint";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
 
 export default function MascotExplanation() {
   const { theme } = useTheme();
+
+  const breakPoint = useBreakpoint();
 
   const vectorImageSource =
     theme === "light"
@@ -23,6 +26,10 @@ export default function MascotExplanation() {
           "/assets/LandingPage/vector-midright-mascotdesc-dark.svg",
           "/assets/LandingPage/vector-bottomright-mascotdesc-dark.svg",
         ];
+
+  if (breakPoint === "sm") {
+    return null;
+  }
   return (
     <section id="mascot-description" className="lg:mt-24 lg:mb-16">
       <div className="flex justify-center gap-10 lg:px-20">
