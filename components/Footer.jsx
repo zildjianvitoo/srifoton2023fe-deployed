@@ -153,11 +153,19 @@ export default function Footer() {
             <p className="text-lg font-bold text-transparent uppercase bg-gradient-to-br from-pink-srifoton to-blue-srifoton bg-clip-text w-fit ">
               © SRIFOTON 2023
             </p>
-            <div className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-10">
+            <div className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8">
               <Link href={"https://instagram.com/srifoton.official"}>
                 <Image
                   src={"/assets/icon-instagram.svg"}
                   alt="icon instagram"
+                  width={24}
+                  height={24}
+                />
+              </Link>
+              <Link href={"https://www.tiktok.com/@srifotonunsri2022"}>
+                <Image
+                  src={"/assets/icon-tiktok.svg"}
+                  alt="icon tiktok"
                   width={24}
                   height={24}
                 />
