@@ -15,11 +15,22 @@ import { updateUserRules } from "@/utils/formRules";
 import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function Dashboard() {
   const user = useUserStore((state) => state.user);
   const setUserSrifoton = useUserStore((state) => state.setUser);
+  const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
+  const router = useRouter();
+  const message = router.query?.message;
 
+  useEffect(() => {
+    if (message) {
+      setModalMessageHeader("Berhasil");
+      setModalMessage(message);
+      setShowModal(true);
+    }
+  }, [message]);
   const {
     modalMessage,
     showModal,
@@ -28,17 +39,6 @@ function Dashboard() {
     setShowModal,
     setModalMessageHeader,
   } = useModal();
-
-  // useEffect(() => {
-  //   const getUserData = async () => {
-  //     const { data } = await getDataUser();
-  //     setUserSrifoton(data);
-  //     console.log(data);
-  //   };
-  //   getUserData();
-  // }, [setUserSrifoton]);
-
-  const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
 
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {

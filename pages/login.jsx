@@ -16,6 +16,7 @@ import { doLogin } from "@/utils/api";
 import { credentialsFormRules } from "@/utils/formRules";
 import { useForm } from "react-hook-form";
 import { AxiosError } from "axios";
+import { toast } from "react-toastify";
 
 function Login() {
   const [errorMessage, setErrorMessage] = useState({});
@@ -43,10 +44,10 @@ function Login() {
       router.push("/dashboard");
     } catch (error) {
       if (error instanceof AxiosError) {
-        console.error(error);
+        console.log(error);
         setErrorMessage(error.response.data.errors);
       } else {
-        alert("Terjadi Kesalahan Pada Server,Silahkan Coba Lagi");
+        toast.error("Terjadi Kesalahan Pada Server,Silahkan Coba Lagi");
       }
 
       console.log(errorMessage);

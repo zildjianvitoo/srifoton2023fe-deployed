@@ -487,6 +487,27 @@ async function doResetPassword({
   return { data };
 }
 
+async function checkToken() {
+  const { data, status } = await api.get("/api/check-token", {
+    headers: { Authorization: `Bearer ${getAccessToken()}` },
+  });
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
+}
+
+async function doRefreshToken() {
+  console.log(getAccessToken());
+  const { data, status } = await api.get("/api/refresh-token", {
+    headers: { Authorization: `Bearer ${getAccessToken()}` },
+  });
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
+}
+
 export {
   doRegister,
   doLogin,
@@ -502,4 +523,6 @@ export {
   doCompetitiveProgrammingRegistration,
   doUiUXRegistration,
   doWebDevelopmentRegistration,
+  checkToken,
+  doRefreshToken,
 };

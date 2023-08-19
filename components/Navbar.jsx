@@ -12,6 +12,7 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { useUserStore } from "@/store/userStore";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { doLogout } from "@/utils/api";
+import { toast } from "react-toastify";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +72,7 @@ function Navbar() {
       localStorage.removeItem("token-srifoton");
       router.replace("/");
     } catch (error) {
-      console.log(error);
+      toast.error(error.response.data.message);
     }
   };
 
