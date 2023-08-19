@@ -108,12 +108,6 @@ export const seminarFormRules = {
     },
   },
 
-  nim: {
-    pattern: {
-      value: /^\d+$/,
-      message: "NIM harus berupa angka",
-    },
-  },
   phoneNumber: {
     required: {
       value: true,
@@ -181,10 +175,6 @@ export const competitionFormRules = {
         value: true,
         message: "NIM tidak boleh kosong",
       },
-      pattern: {
-        value: /^\d+$/,
-        message: "NIM harus berupa angka",
-      },
     },
     phoneNumber1: {
       required: {
@@ -208,24 +198,14 @@ export const competitionFormRules = {
         message: "Jenis kelamin tidak boleh kosong",
       },
     },
-    nim2: {
-      pattern: {
-        value: /^\d+$/,
-        message: "NIM harus berupa angka",
-      },
-    },
+
     phoneNumber2: {
       pattern: {
         value: /^\d+$/,
         message: "Nomor telepon harus berupa angka",
       },
     },
-    nim3: {
-      pattern: {
-        value: /^\d+$/,
-        message: "NIM harus berupa angka",
-      },
-    },
+
     phoneNumber3: {
       pattern: {
         value: /^\d+$/,

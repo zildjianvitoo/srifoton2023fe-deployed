@@ -17,6 +17,7 @@ import { useUserStore } from "@/store/userStore";
 import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
 import { AxiosError } from "axios";
+import { toast } from "react-toastify";
 
 export default function DaftarKompetisi() {
   const [proof, setProof] = useState(null);
@@ -45,6 +46,14 @@ export default function DaftarKompetisi() {
 
   const jenisKompetisi = router.query.jenisKompetisi.split("-").join(" ");
 
+  const isUserRegisteredWebDev =
+    user?.registered?.competitions?.web_development;
+  const isUserRegisteredCP =
+    user?.registered?.competitions?.competitive_programming;
+  const isUserRegisteredUIUX = user?.registered?.competitions?.uiux_design;
+
+  console.log(isUserRegisteredWebDev);
+
   const onSubmitHandler = async (formValue) => {
     console.log(formValue);
     if (!proof) {
@@ -61,6 +70,10 @@ export default function DaftarKompetisi() {
     setErrorMessageIdCard1("");
     try {
       if (jenisKompetisi === "web development") {
+        if (isUserRegisteredWebDev) {
+          toast.error("Anda sudah terdaftar pada cabang lomba ini");
+          return;
+        }
         const { data } = await doWebDevelopmentRegistration({
           ...formValue,
           proof,
@@ -68,9 +81,15 @@ export default function DaftarKompetisi() {
           idCard2,
           idCard3,
         });
+
         setError(false);
         setModalMessage("Pendaftaran berhasil");
+        setShowModal(true);
       } else if (jenisKompetisi === "competitive programming") {
+        if (isUserRegisteredCP) {
+          toast.error("Anda sudah terdaftar pada cabang lomba ini");
+          return;
+        }
         const { data } = await doCompetitiveProgrammingRegistration({
           ...formValue,
           proof,
@@ -80,7 +99,12 @@ export default function DaftarKompetisi() {
         });
         setError(false);
         setModalMessage("Pendaftaran berhasil");
+        setShowModal(true);
       } else if (jenisKompetisi === "uiux design") {
+        if (isUserRegisteredUIUX) {
+          toast.error("Anda sudah terdaftar pada cabang lomba ini");
+          return;
+        }
         const { data } = await doUiUXRegistration({
           ...formValue,
           proof,
@@ -88,19 +112,21 @@ export default function DaftarKompetisi() {
           idCard2,
           idCard3,
         });
+
         setError(false);
         setModalMessage("Pendaftaran berhasil");
+        setShowModal(true);
       }
     } catch (error) {
+      setShowModal(true);
       console.log(error);
       setError(true);
       if (error instanceof AxiosError) {
         setModalMessage(error.response.data.message);
-      } else {
-        setModalMessage("Terjadi kesalahan, silahkan coba lagi");
       }
-    } finally {
-      setShowModal(true);
+      // else {
+      //   setModalMessage("Terjadi kesalahan, silahkan coba lagi");
+      // }
     }
   };
 

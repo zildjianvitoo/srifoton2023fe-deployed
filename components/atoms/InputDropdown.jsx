@@ -39,10 +39,28 @@ const InputDropdown = forwardRef(function InputDropDown(
           GOPAY
         </option>
         <option
-          value="linkaja"
+          value="shopeepay"
           className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
         >
-          LINKAJA
+          SHOPEEPAY
+        </option>
+        <option
+          value="bsi"
+          className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
+        >
+          TRANSFER BANK BSI
+        </option>
+        <option
+          value="bca"
+          className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
+        >
+          TRANSFER BANK BCA
+        </option>
+        <option
+          value="mandiri"
+          className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
+        >
+          TRANSFER BANK MANDIRI
         </option>
       </select>
       {errors && <ErrorMessage message={errors.message} />}
