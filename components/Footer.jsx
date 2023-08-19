@@ -53,8 +53,22 @@ export default function Footer() {
                     </p>
                   </div>
                   <ul className="flex flex-col gap-1">
-                    <li>+62 852-6938-3835 (Yolendri Anisyahfitri)</li>
-                    <li>+62 878-6178-1143 (Dimas Putra Mufazzal)</li>
+                    <li>
+                      <Link
+                        href={"https://wa.me/6285269383835"}
+                        className="duration-200 hover:text-pink-srifoton"
+                      >
+                        +62 852-6938-3835 (Yolendri Anisyahfitri)
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"https://wa.me/6287861781143"}
+                        className="hover:text-pink-srifoton"
+                      >
+                        +62 878-6178-1143 (Dimas Putra Mufazzal)
+                      </Link>
+                    </li>
                   </ul>
                   <div className="flex items-center gap-1 mt-2">
                     {" "}
@@ -79,13 +93,25 @@ export default function Footer() {
                 </h4>
                 <ul className="flex flex-col gap-3 md:gap-6">
                   <li>
-                    <Link href={"/"}>Beranda</Link>
+                    <Link href={"/"} className="hover:text-pink-srifoton">
+                      Beranda
+                    </Link>
                   </li>
                   <li>
-                    <Link href={"/kompetisi"}>Kompetisi</Link>
+                    <Link
+                      href={"/kompetisi"}
+                      className="hover:text-pink-srifoton"
+                    >
+                      Kompetisi
+                    </Link>
                   </li>
                   <li>
-                    <Link href={"/seminar"}>Seminar</Link>
+                    <Link
+                      href={"/seminar"}
+                      className="hover:text-pink-srifoton"
+                    >
+                      Seminar
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -95,15 +121,26 @@ export default function Footer() {
                 </h4>
                 <ul className="flex flex-col gap-3 md:gap-6">
                   <li>
-                    <Link href={"/kompetisi/competitive-programming"}>
+                    <Link
+                      href={"/kompetisi/competitive-programming"}
+                      className="hover:text-pink-srifoton"
+                    >
                       Competitive Programming
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/kompetisi/uiux-design"}>UI/UX Design</Link>
+                    <Link
+                      href={"/kompetisi/uiux-design"}
+                      className="hover:text-pink-srifoton"
+                    >
+                      UI/UX Design
+                    </Link>
                   </li>
                   <li>
-                    <Link href={"/kompetisi/web-development"}>
+                    <Link
+                      href={"/kompetisi/web-development"}
+                      className="hover:text-pink-srifoton"
+                    >
                       Web Development
                     </Link>
                   </li>

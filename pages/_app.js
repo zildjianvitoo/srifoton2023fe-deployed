@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import HydrationContext from "@/context/HydrationContext";
+// import HydrationContext from "@/context/HydrationContext";
 import "@/styles/globals.css";
 import { outfit, poppins } from "@/public/fonts/fonts";
 import { ThemeProvider, useTheme } from "next-themes";

@@ -8,7 +8,7 @@ import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import QNASeminar from "@/components/organisms/Seminar/QNASeminar";
 import { narahubungSeminar } from "@/utils/narahubungList";
 
-function seminar() {
+function Seminar() {
   return (
     <>
       <Head>
@@ -26,4 +26,4 @@ function seminar() {
   );
 }
 
-export default seminar;
+export default Seminar;
