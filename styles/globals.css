@@ -217,6 +217,34 @@ input[type="number"] {
     box-shadow: 0 4px 20px rgba(203, 203, 203, 0.2) !important;
   }
 
+  /* Coming Soon Page */
+
+  .comingsoon-header-segera {
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .comingsoon-header-hadir {
+    color: #fcf2ff;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 55%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+  }
+
+  .comingsoon-header-hadir-dark {
+    color: #02053e;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 55%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+  }
+  /* End Coming Soon Page */
   /* Landing Page */
 
   /* .intro-header {
@@ -758,11 +786,29 @@ input[type="number"] {
   /* End Dashboard Page */
 
   /** Responsive **/
+  @media screen and (max-width: 1024px) {
+    .comingsoon-header-hadir {
+      -webkit-text-stroke: 6px transparent;
+    }
+
+    .comingsoon-header-hadir-dark {
+      -webkit-text-stroke: 6px transparent;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .field-header,
     .field-header-dark,
     .competition-type-header {
       -webkit-text-stroke: 3.5px transparent;
+    }
+
+    .comingsoon-header-hadir {
+      -webkit-text-stroke: 4px transparent;
+    }
+
+    .comingsoon-header-hadir-dark {
+      -webkit-text-stroke: 4px transparent;
     }
   }
   @media screen and (max-width: 640px) {

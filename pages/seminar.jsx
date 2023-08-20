@@ -7,6 +7,7 @@ import TimeLineSeminar from "@/components/organisms/Seminar/TimeLineSeminar";
 import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import QNASeminar from "@/components/organisms/Seminar/QNASeminar";
 import { narahubungSeminar } from "@/utils/narahubungList";
+import ComingSoon from "@/components/ComingSoon";
 
 function Seminar() {
   return (
@@ -15,12 +16,13 @@ function Seminar() {
         <title>SRIFOTON | Seminar</title>
       </Head>
       <LayoutMain>
-        <Jumbotron />
+        <ComingSoon />
+        {/* <Jumbotron />
         <Intro />
         <TimeLineSeminar />
         <RegisterSeminar />
         <Narahubung contacts={narahubungSeminar} id={"narahubung-seminar"} />
-        <QNASeminar />
+        <QNASeminar /> */}
       </LayoutMain>
     </>
   );
