@@ -1,10 +1,12 @@
 import { ethnocentric } from "@/public/fonts/fonts";
-import Image from "next/image";
 import React from "react";
 
 export default function ComingSoon() {
   return (
-    <section id="coming-soon">
+    <section
+      id="coming-soon"
+      className="bg-[#FCF2FF] dark:bg-[#02053E] overflow-hidden w-full"
+    >
       <div className="flex flex-col w-4/5 h-full gap-10 mx-auto mt-32 lg:min-h-[80vh]">
         <img
           src="./assets/comingsoon-topdecor-img.svg"

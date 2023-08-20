@@ -15,15 +15,16 @@ function Seminar() {
       <Head>
         <title>SRIFOTON | Seminar</title>
       </Head>
-      <LayoutMain>
-        <ComingSoon />
-        {/* <Jumbotron />
+      <ComingSoon />
+      {/* <LayoutMain>
+       
+        <Jumbotron />
         <Intro />
         <TimeLineSeminar />
         <RegisterSeminar />
         <Narahubung contacts={narahubungSeminar} id={"narahubung-seminar"} />
-        <QNASeminar /> */}
-      </LayoutMain>
+        <QNASeminar />
+      </LayoutMain> */}
     </>
   );
 }
