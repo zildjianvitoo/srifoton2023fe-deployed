@@ -17,19 +17,24 @@ import React from "react";
 
 const timelineContent = [
   {
-    title: "Presale Tiket",
-    date: "18/08/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Pendaftaran",
+    date: "20/08/2023",
+    desc: "Peserta dapat mendaftarkan diri pada kompetisi Web Development.",
   },
   {
-    title: "Penjualan Tiket Umum",
-    date: "20/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Pengumpulan Karya",
+    date: "25/08/2023",
+    desc: "Peserta dapat mengumpulkan karya pada tenggat waktu yang telah di tentukan.",
   },
   {
-    title: "Penutupan Acara & Seminar",
-    date: "21/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Penutupan Pengumpulan Karya",
+    date: "15/10/2023",
+    desc: "Batas waktu pengumpulan karya, jika peserta tidak mengumpulkan maka dianggap gugur.",
+  },
+  {
+    title: "Pengumuman",
+    date: "28/08/2023",
+    desc: "Pengumuman pemenang akan dilaksanakan bersamaan dengan penutupan acara.",
   },
 ];
 
@@ -137,7 +142,7 @@ export default function CompetitiveProgramming() {
                   date={item.date}
                   description={item.desc}
                   dateColor="text-[#337EF0]"
-                  right={index == 1 ? true : false}
+                  right={index % 2 !== 0 ? true : false}
                 />
               ))}
             </div>
