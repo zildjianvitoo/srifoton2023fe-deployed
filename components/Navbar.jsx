@@ -30,7 +30,7 @@ function Navbar() {
   };
   const validUsername = user?.name.split(" ");
 
-  const userNameValid = () => {
+  const getUserNameValid = () => {
     if (validUsername.length >= 3) {
       return (
         validUsername[0] +
@@ -166,7 +166,7 @@ function Navbar() {
           </h3>
         </Link>
       </div>
-      <div className={`hidden navbar-center lg:flex`}>
+      <div className={`hidden navbar-center lg:flex `}>
         <ul className="px-1 text-base menu menu-horizontal">
           <li>
             <Link
@@ -207,51 +207,47 @@ function Navbar() {
         </ul>
       </div>
       <div
-        className={`flex ${
-          user ? "gap-x-0" : "gap-x-4"
-        } lg:mr-10 md:gap-x-4 navbar-end`}
+        className={`flex items-center m-auto ${
+          user ? "gap-x-3 lg:gap-x-0" : "gap-x-4"
+        } lg:mr-10  md:gap-x-4  navbar-end`}
       >
-        {/* <p>{user?.name}</p> */}
-        <div className="cursor-pointer" onClick={toggleTheme}>
+        <div className="mt-0.5 cursor-pointer " onClick={toggleTheme}>
           <Image
             src={theme === "light" ? "/moon-icon.svg" : "/sun-icon.svg"}
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             alt="icon dark and light mode"
             priority
           />
         </div>
         {user ? (
-          <div className="md:ml-3 lg:ml-6 text-[#494B7C] dark:text-white font-medium relative">
+          <div className="md:ml-3 lg:ml-4 text-[#494B7C] dark:text-white font-medium relative">
             <div className="flex items-center justify-center">
               <div className="flex flex-col p-2 rounded-xl">
                 <div
-                  className="z-10 flex items-center gap-2 p-2 cursor-pointer"
+                  className="z-10 flex items-center p-1 cursor-pointer"
                   onClick={() => setDropdownActive((prev) => !prev)}
                 >
-                  <PiUserCircleFill className="hidden text-xl md:block" />
-                  <p className="text-sm lg:text-lg">{userNameValid()} </p>
-                  {isDropdownActive ? (
-                    <IoIosArrowDown className="lg:text-xl" />
-                  ) : (
-                    <IoIosArrowUp className="lg:text-xl" />
-                  )}
+                  <PiUserCircleFill className="text-4xl" />
                 </div>
 
                 {isDropdownActive && (
-                  <ul className="absolute z-[2] md:text-lg pt-4 flex flex-col mt-12 lg:px-4 gap-y-3 lg:gap-y-3 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6  ">
+                  <ul className="absolute z-[2] md:text-lg pt-4 flex flex-col mt-12 lg:px-4 gap-y-3  -translate-x-20 lg:-translate-x-20 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6  ">
+                    <li>
+                      <p className="text-sm lg:text-lg">{getUserNameValid()}</p>
+                    </li>
                     <Link href="/dashboard" className="flex items-center gap-2">
                       <MdDashboardCustomize />
                       <p>Dashboard</p>
                     </Link>
-                    <div
+                    <li
                       href="/dashboard"
                       className="flex items-center gap-2 cursor-pointer"
                       onClick={onLogoutHandler}
                     >
                       <TbLogout />
                       <p>Keluar</p>
-                    </div>
+                    </li>
                   </ul>
                 )}
               </div>

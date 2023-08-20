@@ -4,29 +4,34 @@ import { ethnocentric } from "@/public/fonts/fonts";
 
 const timelineContent = [
   {
-    title: "Pendaftaran",
-    date: "18/08/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Pendaftaran Kompetisi",
+    date: "26/08/2023",
+    desc: "Peserta dapat mendaftarkan diri ke satu atau lebih cabang kompetisi.",
+  },
+  {
+    title: "Pendaftaran Seminar",
+    date: "01/09/2023",
+    desc: "Baik peserta maupun bukan peserta (umum) dapat mendaftarkan diri.",
   },
   {
     title: "Pembukaan Acara",
-    date: "20/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    date: "05/10/2023",
+    desc: "Peresmian dan pembukaan acara SRIFOTON 2023.",
   },
   {
-    title: "Kompetisi",
-    date: "21/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Penutupan Pendaftaran Kompetisi",
+    date: "07/10/2023",
+    desc: "Peserta tidak dapat lagi melakukan registrasi atau mendaftar kompetisi.",
   },
   {
-    title: "Seminar",
-    date: "02/10/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Penutupan Pendaftaran Seminar",
+    date: "27/10/2023",
+    desc: "Peserta tidak dapat lagi melakukan registrasi atau mendaftar seminar.",
   },
   {
-    title: "Penutupan Acara",
-    date: "04/10/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Seminar dan Penutupan Acara",
+    date: "28/10/2023",
+    desc: "Penutupan acara SRIFOTON 2023 dan pelaksanaan seminar.",
   },
 ];
 
@@ -54,7 +59,7 @@ export default function TimeLine() {
                 title={item.title}
                 date={item.date}
                 description={item.desc}
-                right={index == 1 || index == 4 ? true : false}
+                right={index == 1 || index == 3 || index === 5 ? true : false}
               />
             ))}
           </div>
