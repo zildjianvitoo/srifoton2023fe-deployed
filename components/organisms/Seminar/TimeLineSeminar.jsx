@@ -3,19 +3,19 @@ import React from "react";
 
 const timelineContent = [
   {
-    title: "Presale Tiket",
-    date: "18/08/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Pendaftaran",
+    date: "01/09/2023",
+    desc: "Peserta dapat mendaftarkan diri pada Seminar SRIFOTON 2023.",
   },
   {
-    title: "Penjualan Tiket Umum",
-    date: "20/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Penutupan Pendaftaran",
+    date: "27/10/2023",
+    desc: "Pendaftaran dan registrasi seminar ditutup.",
   },
   {
-    title: "Penutupan Acara & Seminar",
-    date: "21/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Penutupan Acara dan Seminar",
+    date: "28/10/2023",
+    desc: "Seminar dilaksanakan bersamaan dengan penutupan acara dan pengumuman pemenang kompetisi.",
   },
 ];
 
