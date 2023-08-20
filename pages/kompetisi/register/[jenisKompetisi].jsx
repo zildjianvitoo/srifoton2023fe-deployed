@@ -52,10 +52,7 @@ export default function DaftarKompetisi() {
     user?.registered?.competitions?.competitive_programming;
   const isUserRegisteredUIUX = user?.registered?.competitions?.uiux_design;
 
-  console.log(isUserRegisteredWebDev);
-
   const onSubmitHandler = async (formValue) => {
-    console.log(formValue);
     if (!proof) {
       setErrorMessageProof("Bukti pembayaran harus diisi");
       window.scrollTo(0, 200);

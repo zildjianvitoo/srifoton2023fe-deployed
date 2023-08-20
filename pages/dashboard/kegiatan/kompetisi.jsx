@@ -92,7 +92,7 @@ export default function Kompetisi() {
                   )}
                   {isUserRegisteredUIUX && (
                     <RegisteredCompetitions
-                      type={"Competitive Programming"}
+                      type={"UI/UX Design"}
                       teamName={teamNameUIUX}
                     />
                   )}
