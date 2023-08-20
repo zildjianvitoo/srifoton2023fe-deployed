@@ -153,7 +153,7 @@ export default function CompetitiveProgramming() {
                   date={item.date}
                   description={item.desc}
                   dateColor="text-[#337EF0]"
-                  right={index == 1 ? true : false}
+                  right={index % 2 !== 0 ? true : false}
                 />
               ))}
             </div>
