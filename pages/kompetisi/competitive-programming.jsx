@@ -17,19 +17,34 @@ import React from "react";
 
 const timelineContent = [
   {
-    title: "Presale Tiket",
-    date: "18/08/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Pendaftaran",
+    date: "23/08/2023",
+    desc: "Peserta dapat mendaftarkan diri pada kompetisi Competitive Programming.",
   },
   {
-    title: "Penjualan Tiket Umum",
-    date: "20/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Penutupan Pendaftaran",
+    date: "07/09/2023",
+    desc: "Pendaftaran dan registrasi kompetisi ditutup.",
   },
   {
-    title: "Penutupan Acara & Seminar",
-    date: "21/09/2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Pemanasan",
+    date: "13/10/2023",
+    desc: "Peserta dapat bersiap dan berlatih sebelum hari perlombaan dimulai.",
+  },
+  {
+    title: "Penyisihan",
+    date: "14/10/2023",
+    desc: "Babak awal atau babak penyisihan dimulai.",
+  },
+  {
+    title: "Pengumuman Finalis",
+    date: "15/10/2023",
+    desc: "Setelah melalui babak penyisihan, akan dipilih beberapa finalis untuk maju ke babak selanjutnya.",
+  },
+  {
+    title: "Final",
+    date: "21/10/2023",
+    desc: "Babak akhir perlombaan.",
   },
 ];
 
