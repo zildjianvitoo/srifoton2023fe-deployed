@@ -93,7 +93,9 @@ input[type="number"] {
 .button-competition-type:hover::before,
 .button-competition-type-dark:hover::before,
 .button-swiper-competition-blue:hover::before,
-.button-swiper-competition-pink:hover::before {
+.button-swiper-competition-pink:hover::before,
+.button-swiper-competition-blue-dark:hover::before,
+.button-swiper-competition-pink-dark:hover::before {
   background: none;
 }
 
@@ -108,7 +110,9 @@ input[type="number"] {
 .button-intro-dark:hover,
 .button-competition-type-dark:hover,
 .button-swiper-competition-blue:hover,
-.button-swiper-competition-pink:hover {
+.button-swiper-competition-pink:hover,
+.button-swiper-competition-blue-dark:hover
+  .button-swiper-competition-pink-dark:hover {
   background-image: linear-gradient(
     to right,
     var(--pink-srifoton),
@@ -171,6 +175,16 @@ input[type="number"] {
 
 .button-swiper-competition-pink {
   --bg-color: #f5dff5;
+  color: #fb5dfb;
+}
+
+.button-swiper-competition-blue-dark {
+  --bg-color: #494b7c;
+  color: #fb5dfb;
+}
+
+.button-swiper-competition-pink-dark {
+  --bg-color: #75497c;
   color: #fb5dfb;
 }
 

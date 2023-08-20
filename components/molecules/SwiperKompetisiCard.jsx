@@ -9,8 +9,11 @@ import NoSSR from "../NoSSR";
 import Button from "../atoms/Button";
 import Image from "next/image";
 import { ethnocentric } from "@/public/fonts/fonts";
+import { useTheme } from "next-themes";
 
 export default function SwiperKompetisiCard() {
+  const { theme } = useTheme();
+
   return (
     <div className="px-10 lg:px-0 ">
       <Swiper
@@ -19,7 +22,7 @@ export default function SwiperKompetisiCard() {
         modules={[EffectCards]}
         className="mySwiper w-[300px] h-[280px]  md:w-[350px] md:h-[330px] lg:w-[480px] lg:h-[380px] "
       >
-        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff] ">
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff] dark:bg-[#494B7C] dark:border-[#ddebff]">
           <Image
             src={"/assets/Kompetisi/jumbotron-cp-img.png"}
             alt="Cp Icon"
@@ -34,7 +37,7 @@ export default function SwiperKompetisiCard() {
             <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
               Competitive{" "}
             </span>
-            <span className="competition-type-header !text-[#ddebff] pl-1">
+            <span className="competition-type-header !text-[#ddebff] dark:!text-[#494B7C]  pl-1">
               Programming
             </span>
           </h1>
@@ -44,14 +47,18 @@ export default function SwiperKompetisiCard() {
           >
             <NoSSR>
               <Button
-                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${"button-swiper-competition-blue"} `}
+                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
+                  theme === "light"
+                    ? "button-swiper-competition-blue "
+                    : "button-swiper-competition-blue-dark"
+                } `}
               >
                 Info Lainnya
               </Button>
             </NoSSR>
           </Link>
         </SwiperSlide>
-        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#f5dff5]">
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#f5dff5] dark:bg-[#75497C] dark:border-[#ddebff]">
           <Image
             src={"/assets/Kompetisi/jumbotron-uiux-img.png"}
             alt="UiUx Icon"
@@ -66,7 +73,7 @@ export default function SwiperKompetisiCard() {
             <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
               UI/UX{" "}
             </span>
-            <span className="competition-type-header tracking-widest !text-[#f5dff5] pl-1">
+            <span className="competition-type-header tracking-widest !text-[#f5dff5] dark:!text-[#75497C] pl-1">
               Design
             </span>
           </h1>
@@ -76,14 +83,18 @@ export default function SwiperKompetisiCard() {
           >
             <NoSSR>
               <Button
-                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${"button-swiper-competition-pink"} `}
+                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"}  ${
+                  theme === "light"
+                    ? "button-swiper-competition-pink "
+                    : "button-swiper-competition-pink-dark"
+                } `}
               >
                 Info Lainnya
               </Button>
             </NoSSR>
           </Link>
         </SwiperSlide>
-        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff]">
+        <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff] dark:bg-[#494B7C] dark:border-[#ddebff]">
           <Image
             src={"/assets/Kompetisi/jumbotron-webdev-img.png"}
             alt="WebDev Icon"
@@ -93,12 +104,12 @@ export default function SwiperKompetisiCard() {
             quality={100}
           />
           <h1
-            className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col`}
+            className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col z-30 relative`}
           >
             <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
               Web{" "}
             </span>
-            <span className="competition-type-header tracking-widest !text-[#ddebff] pl-1">
+            <span className="competition-type-header tracking-widest !text-[#ddebff] dark:!text-[#494B7C] pl-1">
               Development
             </span>
           </h1>
@@ -108,7 +119,11 @@ export default function SwiperKompetisiCard() {
           >
             <NoSSR>
               <Button
-                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${"button-swiper-competition-blue"} `}
+                style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
+                  theme === "light"
+                    ? "button-swiper-competition-blue "
+                    : "button-swiper-competition-blue-dark"
+                } `}
               >
                 Info Lainnya
               </Button>
