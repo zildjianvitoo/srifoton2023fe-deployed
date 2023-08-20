@@ -224,7 +224,6 @@ export default function CompetitiveProgramming() {
       </LayoutCredentials>
       <Narahubung contacts={narahubungCP} id={"narahubung-cp"} />
       <QNAKompetisi competitionTypePage qnaList={cpQnaList} />
-      <div className="mb-60"></div>
     </LayoutMain>
   );
 }

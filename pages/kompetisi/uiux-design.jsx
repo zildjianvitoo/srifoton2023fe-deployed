@@ -221,7 +221,6 @@ export default function CompetitiveProgramming() {
       </LayoutCredentials>
       <Narahubung contacts={narahubungUiUx} id={"narahubung-uiuxdesing"} />
       <QNAKompetisi competitionTypePage qnaList={uiuxDesignQnaList} />
-      <div className="mb-60"></div>
     </LayoutMain>
   );
 }

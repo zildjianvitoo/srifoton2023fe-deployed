@@ -14,7 +14,7 @@ export default function QNAKompetisi({ competitionTypePage, qnaList }) {
   };
 
   return (
-    <section id="qna-kompetisi" className="mt-8 lg:mt-12">
+    <section id="qna-kompetisi" className="mt-8 md:mt-14 lg:mt-24">
       <div className="min-h-screen ">
         <div className="flex flex-col p-8 ">
           <h1

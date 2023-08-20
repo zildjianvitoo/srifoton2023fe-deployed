@@ -15,11 +15,11 @@ export default function QNASeminar() {
   };
 
   return (
-    <section id="qna-seminar" className="mt-8 lg:mt-24">
+    <section id="qna-seminar" className="mt-8 md:mt-14 lg:mt-24">
       <div className="min-h-screen">
         <div className="flex flex-col w-full p-8">
           <h1
-            className={`flex flex-col pb-2 pl-0 mt-2 text-3xl md:text-4xl font-semibold tracking-wider text-center lg:gap-3  qna-kompetisi-header dark:qna-kompetisi-header-dark ${ethnocentric.className} lg:text-5xl"
+            className={`flex flex-col pb-2 pl-0 mt-2 text-3xl md:text-4xl font-semibold tracking-wider text-center lg:gap-3  qna-kompetisi-header dark:qna-kompetisi-header-dark ${ethnocentric.className} lg:text-5xl "
                
             `}
           >
