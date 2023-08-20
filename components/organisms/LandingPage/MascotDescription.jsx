@@ -27,7 +27,7 @@ export default function MascotExplanation() {
           "/assets/LandingPage/vector-bottomright-mascotdesc-dark.svg",
         ];
 
-  if (breakPoint === "sm") {
+  if (breakPoint === "sm" || breakPoint === "md" || breakPoint === "lg") {
     return null;
   }
   return (
@@ -90,7 +90,7 @@ export default function MascotExplanation() {
             />
           </div>
         </div>
-        <div className="relative">
+        <div className="relative lg:translate-x-24 lg:translate-y-10 xl:translate-x-10 xl:translate-y-6">
           <Image
             src={"/assets/LandingPage/mascotdesc-img.png"}
             alt="Mascot Srifoton"
