@@ -139,25 +139,20 @@ async function doSeminarRegistration({
   proof,
   payment_method,
 }) {
-  console.log(proof);
-  const { data, status } = await api.post(
-    "/api/seminar/register",
-    {
-      name,
-      email,
-      nim,
-      college,
-      phone_number,
-      type,
-      proof,
-      payment_method,
-    },
-    {
-      headers: { Authorization: `Bearer ${getAccessToken()}` },
-      "Content-Type": "multipart/form-data",
-      Accept: "application/json",
-    }
-  );
+  const formData = new FormData();
+  formData.append("name", name);
+  formData.append("email", email);
+  formData.append("nim", nim);
+  formData.append("college", college);
+  formData.append("phone_number", phone_number);
+  formData.append("type", type);
+  formData.append("proof", proof);
+  formData.append("payment_method", payment_method);
+  const { data, status } = await api.post("/api/seminar/register", formData, {
+    headers: { Authorization: `Bearer ${getAccessToken()}` },
+    "Content-Type": "multipart/form-data",
+    Accept: "application/json",
+  });
 
   if (status !== 200) {
     throw new Error(data.message);
@@ -360,8 +355,9 @@ async function doUiUXRegistration({
   proof,
   paymentMethod,
 }) {
+  console.log(proof);
   const { data, status } = await api.post(
-    "/api/ui-ux/register",
+    "/api/uiux-design/register",
     {
       team_name: teamName,
       email,

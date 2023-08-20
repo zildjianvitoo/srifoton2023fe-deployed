@@ -10,6 +10,7 @@ import { doSeminarRegistration } from "@/utils/api";
 import { useForm } from "react-hook-form";
 import { useUserStore } from "@/store/userStore";
 import { toast } from "react-toastify";
+import { AxiosError } from "axios";
 
 export default function RegisterSeminarForm() {
   const [proof, setProof] = useState(null);
@@ -38,6 +39,10 @@ export default function RegisterSeminarForm() {
       setErrorMessageProof("Bukti pembayaran tidak boleh kosong");
       return;
     }
+    if (user.registered.competitions.web_development) {
+      toast.error("Email ini sudah terdaftar pada seminar");
+      return;
+    }
     setErrorMessageProof("");
     console.log(proof);
     const {
@@ -62,8 +67,11 @@ export default function RegisterSeminarForm() {
       });
       console.log(data);
     } catch (error) {
-      console.log(error);
-      toast.error(error.response.data.message);
+      if (error instanceof AxiosError) {
+        toast.error(error.response.data.message);
+      } else {
+        toast.error("Terjadi kesalahan");
+      }
     }
   };
 

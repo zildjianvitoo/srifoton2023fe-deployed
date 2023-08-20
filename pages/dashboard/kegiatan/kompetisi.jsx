@@ -1,14 +1,18 @@
 import AuthSidebar from "@/components/AuthSidebar";
 import LayoutMain from "@/components/LayoutMain";
+import NoSSR from "@/components/NoSSR";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
 import RegisteredCompetitions from "@/components/organisms/Dashboard/RegisteredCompetitions";
+import { ethnocentric } from "@/public/fonts/fonts";
 import { useUserStore } from "@/store/userStore";
 import { getDataUser } from "@/utils/api";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { set } from "react-hook-form";
 
 export default function Kompetisi() {
+  const [isRegisteredCompetition, setIsRegisteredCompetition] = useState(false);
   const user = useUserStore((state) => state.user);
   const setUser = useUserStore((state) => state.setUser);
 
@@ -21,13 +25,33 @@ export default function Kompetisi() {
     getNewestDataUser();
   }, [setUser]);
 
+  useEffect(() => {
+    if (user?.registered?.competitions?.web_development) {
+      setIsRegisteredCompetition(true);
+    }
+    if (user?.registered?.competitions?.competitive_programming) {
+      setIsRegisteredCompetition(true);
+    }
+    if (user?.registered?.competitions?.uiux_design) {
+      setIsRegisteredCompetition(true);
+    }
+  }, [user]);
+
   const isUserRegisteredWebDev =
     user?.registered?.competitions?.web_development;
+
   const isUserRegisteredCP =
     user?.registered?.competitions?.competitive_programming;
+
   const isUserRegisteredUIUX = user?.registered?.competitions?.uiux_design;
 
-  const teamName = user?.registered?.competitions?.web_development?.team_name;
+  const teamNameWebdev =
+    user?.registered?.competitions?.web_development?.team_name;
+
+  const teamNameCP =
+    user?.registered?.competitions?.competitive_programming?.team_name;
+
+  const teamNameUIUX = user?.registered?.competitions?.uiux_design?.team_name;
 
   return (
     <>
@@ -40,29 +64,65 @@ export default function Kompetisi() {
             <AuthSidebar />
           </div>
           <div className="w-full md:mt-10 lg:mt-20">
-            {isUserRegisteredWebDev ? (
-              <RegisteredCompetitions
-                type={"Web Development"}
-                teamName={teamName}
-              />
-            ) : (
-              <NotRegistered type={"kompetisi"} />
-            )}
-            {isUserRegisteredCP && (
-              <RegisteredCompetitions
-                type={"Competitive Programming"}
-                teamName={teamName}
-              />
-            )}
-            {isUserRegisteredUIUX && (
-              <RegisteredCompetitions
-                type={"Competitive Programming"}
-                teamName={teamName}
-              />
-            )}
+            <NoSSR>
+              {isRegisteredCompetition ? (
+                <div className="flex flex-col">
+                  <h1 className="mx-auto text-3xl font-bold md:text-4xl lg:text-5xl text-[#494B7C] dark:text-white mt-10 md:mt-0">
+                    Kompetisi
+                  </h1>
+                  <p className="mx-auto mt-3 text-lg text-center text-black dark:text-white">
+                    Menampilkan kompetisi yang sudah kamu <br /> daftar di{" "}
+                    <span
+                      className={`${ethnocentric.className} bg-gradient-to-r from-pink-srifoton to-blue-srifoton text-transparent bg-clip-text`}
+                    >
+                      SRIFOTON 2023
+                    </span>
+                  </p>
+                  {isUserRegisteredWebDev && (
+                    <RegisteredCompetitions
+                      type={"Web Development"}
+                      teamName={teamNameWebdev}
+                    />
+                  )}
+                  {isUserRegisteredCP && (
+                    <RegisteredCompetitions
+                      type={"Competitive Programming"}
+                      teamName={teamNameCP}
+                    />
+                  )}
+                  {isUserRegisteredUIUX && (
+                    <RegisteredCompetitions
+                      type={"Competitive Programming"}
+                      teamName={teamNameUIUX}
+                    />
+                  )}
+                </div>
+              ) : (
+                <NotRegistered type={"kompetisi"} />
+              )}
+            </NoSSR>
           </div>
         </div>
       </LayoutMain>
     </>
   );
 }
+
+//  isUserRegisteredWebDev ? (
+//                   <RegisteredCompetitions
+//                     type={"Web Development"}
+//                     teamName={teamNameWebdev}
+//                   />
+//                 ) :
+//                 isUserRegisteredCP ? (
+//                   <RegisteredCompetitions
+//                     type={"Competitive Programming"}
+//                     teamName={teamNameCP}
+//                   />
+//                 ) :
+//                 isUserRegisteredUIUX ? (
+//                   <RegisteredCompetitions
+//                     type={"UI/UX Design"}
+//                     teamName={teamNameUIUX}
+//                   />
+//                 )
