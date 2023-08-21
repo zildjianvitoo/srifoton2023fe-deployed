@@ -1,6 +1,5 @@
 import SwiperKompetisiCard from "@/components/molecules/SwiperKompetisiCard";
 import { useTheme } from "next-themes";
-import Head from "next/head";
 import Image from "next/image";
 
 export default function Jumbotron() {
@@ -17,12 +16,6 @@ export default function Jumbotron() {
 
   return (
     <>
-      <Head>
-        <style>
-          {`
-          `}
-        </style>
-      </Head>
       <section className="relative h-[80vh] mt-12 overflow-hidden lg:min-h-[90vh] lg:mt-6">
         <div className="flex flex-col justify-center p-8 mt-12 lg:px-20 xl:px-32 lg:mt-32 lg:flex-row">
           <div className="flex flex-col justify-center w-fit lg:w-1/2">

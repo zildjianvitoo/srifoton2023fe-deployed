@@ -252,14 +252,6 @@ input[type="number"] {
       -1px -1px 0 #494b7c;
   } */
 
-  .countdown-box {
-    box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.25);
-  }
-
-  .countdown-box-dark {
-    box-shadow: inset 3px 4px 5px rgba(255, 255, 255, 0.25);
-  }
-
   .srifoton-big-header {
     text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.1);
   }
@@ -273,6 +265,21 @@ input[type="number"] {
     );
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
+  }
+
+  /* .countdown-header {
+    color: #494b7c;
+    background: -webkit-linear-gradient(0deg, #494b7c 0%, #494b7c 55%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+  } */
+
+  .countdown-box {
+    box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .countdown-box-dark {
+    box-shadow: inset 3px 4px 5px rgba(255, 255, 255, 0.25);
   }
 
   .intro-header-kompetisi {

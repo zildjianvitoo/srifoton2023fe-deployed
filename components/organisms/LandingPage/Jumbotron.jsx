@@ -39,9 +39,9 @@ const Jumbotron = () => {
         <div
           className={`flex flex-col mx-auto w-fit ${ethnocentric.className} `}
         >
-          <h2 className="z-0 self-end px-2 text-3xl translate-y-3 lg:text-5xl xl:text-6xl jumbotron-2023-text sm:translate-y-5 md:translate-y-7 dark:text-[#3a3169]">
+          <h4 className="z-0 self-end px-2 text-3xl translate-y-3 lg:text-5xl xl:text-6xl jumbotron-2023-text sm:translate-y-5 md:translate-y-7 dark:text-[#3a3169]">
             2023
-          </h2>
+          </h4>
           <h1
             className={`text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] xl:text-[10rem] uppercase bg-gradient-to-r from-pink-srifoton to to-blue-srifoton font-extrabold bg-clip-text text-transparent w-fit mx-auto srifoton-big-header`}
           >
@@ -55,7 +55,10 @@ const Jumbotron = () => {
           industri teknologi. Event ini memiliki dua acara yaitu Perlombaan dan
           Seminar.
         </p>
-        <div className="flex justify-center items-center gap-2 md:gap-6 mt-6 text-[#494B7C] dark:text-[#F6F6F6]">
+        <h2 className="mt-6 lg:mt-12 text-3xl lg:text-5xl tracking-wider text-center font-semibold font-poppins countdown-header text-[#494B7C] dark:text-[#F6F6F6]">
+          PEMBUKAAN ACARA
+        </h2>
+        <div className="flex justify-center items-center mt-2 gap-2 md:gap-6  text-[#494B7C] dark:text-[#F6F6F6]">
           <div className="flex flex-col items-center justify-center w-[70px] h-[70px] sm:w-[120px] sm:h-[120px] py-3 bg-white dark:bg-[#02053E] rounded-xl countdown-box dark:countdown-box-dark">
             {" "}
             <h3 className=" font-semibold tracking-wide text-[2rem] sm:text-[3rem] lg:text-[5rem] leading-[2rem] sm:!leading-[5rem] ">
@@ -94,7 +97,10 @@ const Jumbotron = () => {
             <p className="m-auto text-base sm:text-lg">Detik</p>
           </div>
         </div>
-        <div className="flex justify-center gap-6 z-[3] mt-8 lg:mt-12">
+        <h5 className="text-xl lg:text-2xl text-center font-poppins text-[#494B7C] dark:text-[#F6F6F6] font-bold mt-3">
+          5 Oktober 2023
+        </h5>
+        {/* <div className="flex justify-center gap-6 z-[3] mt-8 lg:mt-12">
           <a href="#intro-home">
             <Button style="border-[#F56AFF] text-[#F56AFF] hover:bg-[#F56AFF] border-[3px] font-semibold lg:py-3">
               Info Lainnya
@@ -105,7 +111,7 @@ const Jumbotron = () => {
               Mulai Sekarang!
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
