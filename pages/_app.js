@@ -25,12 +25,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/assets/logo-srifoton2023.png" />
       </Head>
       {/* <HydrationContext> */}
-      <ThemeProvider
-        attribute="class"
-        value={theme}
-        enableSystem={false}
-        defaultTheme="dark"
-      >
+      <ThemeProvider attribute="class" value={theme} enableSystem={false}>
         <NextNProgress color="linear-gradient(to right, #FC39FC, #337EF0)" />
         <div className={` ${poppins.variable} ${outfit.className}`}>
           <Navbar />
