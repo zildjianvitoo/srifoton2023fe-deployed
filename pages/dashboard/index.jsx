@@ -55,14 +55,12 @@ function Dashboard() {
   const { isSubmitting, isDirty, errors } = formState;
 
   const onSubmitHandler = async (formValue) => {
-    console.log(formValue);
     try {
       const { data } = await updateDataUser({
         ...formValue,
       });
       const user = await getDataUser();
       setUserSrifoton(user.data);
-      console.log(data);
       setModalMessageHeader("Berhasil");
       setModalMessage(data.message);
     } catch (error) {

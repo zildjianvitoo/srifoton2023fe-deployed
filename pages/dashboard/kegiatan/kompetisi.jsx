@@ -19,7 +19,6 @@ function Kompetisi() {
     const getNewestDataUser = async () => {
       const { data } = await getDataUser();
       setUser(data);
-      console.log(data);
     };
     getNewestDataUser();
   }, [setUser]);

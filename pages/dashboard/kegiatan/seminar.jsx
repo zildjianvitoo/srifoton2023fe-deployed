@@ -8,8 +8,6 @@ import Head from "next/head";
 function Seminar() {
   const user = useUserStore((state) => state.user);
 
-  console.log(user);
-
   return (
     <>
       <Head>

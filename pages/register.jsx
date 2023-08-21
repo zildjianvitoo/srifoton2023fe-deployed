@@ -38,13 +38,11 @@ function Register() {
         password,
         password_confirmation: confirmPassword,
       });
-      console.log(data);
       setAccessToken(data.token);
       setUser(data.user);
       router.replace(`/verify-email?email=${email}`);
       // push ke login ?? dashboard
     } catch (error) {
-      console.log(error);
       setErrorMessage(error.response.data.errors);
     }
   };

@@ -38,19 +38,15 @@ function Login() {
     const { email, password } = formValue;
     try {
       const { data } = await doLogin({ email, password });
-      console.log(data);
       setAccessToken(data.token);
       setUser(data.user);
       router.push("/dashboard");
     } catch (error) {
       if (error instanceof AxiosError) {
-        console.log(error);
         setErrorMessage(error.response.data.errors);
       } else {
         toast.error("Terjadi Kesalahan Pada Server,Silahkan Coba Lagi");
       }
-
-      console.log(errorMessage);
     }
   };
   return (

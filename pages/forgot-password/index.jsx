@@ -21,11 +21,9 @@ export default function ForgotPassword() {
     const { email } = formValue;
     try {
       const { data } = await sendEmailForgotPassword({ email });
-      console.log(data);
       setErrorMessage({});
       setSuccessMessage(data.status);
     } catch (error) {
-      console.log(error);
       setSuccessMessage("");
       setErrorMessage(error.response.data.errors);
     }

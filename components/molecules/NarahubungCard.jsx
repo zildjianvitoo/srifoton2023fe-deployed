@@ -8,7 +8,6 @@ export default function NarahubungCard({ name, number }) {
     .toString()
     .replaceAll(",", "")
     .replace(/^0/, "62");
-  console.log(validNumber);
 
   return (
     <div

@@ -44,7 +44,6 @@ export default function RegisterSeminarForm() {
       return;
     }
     setErrorMessageProof("");
-    console.log(proof);
     const {
       name,
       email,
@@ -65,7 +64,6 @@ export default function RegisterSeminarForm() {
         proof,
         payment_method: paymentMethod,
       });
-      console.log(data);
     } catch (error) {
       if (error instanceof AxiosError) {
         toast.error(error.response.data.message);

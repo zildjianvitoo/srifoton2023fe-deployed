@@ -105,8 +105,6 @@ async function updateDataUser({
   genderType,
   instagram,
 }) {
-  console.log(phoneNumber);
-  console.log(genderType);
   const phone_number = phoneNumber;
   const gender = genderType;
   const { data, status } = await api.put(
@@ -242,7 +240,6 @@ async function doUiUXRegistration({
   proof,
   paymentMethod,
 }) {
-  console.log(proof);
   const { data, status } = await api.post(
     "/api/uiux-design/register",
     {
@@ -381,7 +378,6 @@ async function checkToken() {
 }
 
 async function doRefreshToken() {
-  console.log(getAccessToken());
   const { data, status } = await api.get("/api/refresh-token", {
     headers: { Authorization: `Bearer ${getAccessToken()}` },
   });

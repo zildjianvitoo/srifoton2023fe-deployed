@@ -25,13 +25,11 @@ export default function VerifyEmail({ email }) {
       const { data } = await sendEmailVerification({ email });
       setError(false);
       setModalMessage("Email verifikasi berhasil dikirimkan");
-      console.log(data);
     } catch (error) {
       setError(true);
       setModalMessage(
         `Email verifikasi gagal dikirimkan, ${error.response.data.message}`
       );
-      console.log(error);
     } finally {
       setShowModal(true);
       setLoading(false);

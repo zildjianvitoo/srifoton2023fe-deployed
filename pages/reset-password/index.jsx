@@ -42,11 +42,9 @@ export default function ResetPassword({ token, email }) {
       });
       setError(false);
       setModalMessage("Password Berhasil Diubah");
-      console.log(data);
     } catch (error) {
       setError(true);
       setModalMessage("Terjadi Kesalaha,silahkan coba beberapa saat lagi");
-      console.log(error);
     } finally {
       setShowModal(true);
     }

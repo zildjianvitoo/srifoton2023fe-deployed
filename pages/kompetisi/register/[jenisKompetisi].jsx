@@ -120,7 +120,6 @@ export default function DaftarKompetisi() {
       }
     } catch (error) {
       setShowModal(true);
-      console.log(error);
       setError(true);
       if (error instanceof AxiosError) {
         setModalMessage(error.response.data.message);
