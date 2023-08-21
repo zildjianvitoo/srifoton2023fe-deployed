@@ -53,9 +53,9 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
         >
           <Image
             src={introImage}
-            alt="gambar kompetisi"
-            width={isBlue ? 300 : 500}
-            height={isBlue ? 300 : 240}
+            alt="gambar intro"
+            width={isBlue ? 350 : 500}
+            height={isBlue ? 350 : 240}
             className="lg:-mr-12"
           />
         </div>
