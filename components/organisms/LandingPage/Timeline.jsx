@@ -45,10 +45,10 @@ export default function TimeLine() {
           >
             Alur Acara
           </h1>
-          <p className="text-[#545454] dark:text-[#9BA7BC] lg:w-[65%] text-lg lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno
-            vulputate libero et velit interdum, ac aliquet odio mattis. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit.
+          <p className="text-[#545454] dark:text-[#9BA7BC] lg:w-[65%] text-lg lg:text-xl text-justify">
+            SRIFOTON 2023 akan diadakan dalam beberapa tahapan acara. Untuk
+            mengetahui info selengkapnya kami telah menyediakan rangkaian alur
+            acara sebagai berikut.
           </p>
         </div>
         <div className="container lg:w-[60%] mt-8 lg:mt-0">

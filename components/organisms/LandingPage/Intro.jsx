@@ -7,9 +7,9 @@ import NoSSR from "@/components/NoSSR";
 
 export default function Intro() {
   const text = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "Ajang kompetisi ini merupakan panggung yang bertujuan untuk mewadahi para peserta yang memiliki minat dan bakat pada bidang teknologi khususnya di berbagai cabang lomba yang diselenggarakan. Selain itu, acara ini dapat dijadikan sebagai wadah untuk kolaborasi, bekerja sama, dan unjuk kemampuan peserta.",
 
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno vulputate libero et velit interdum, ac aliquet odio mattis. Vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "Seminar merupakan sebuah kegiatan yang dapat menjadi media untuk saling berbagi informasi, wawasan, dan pengetahuan mengenai topik yang dibahas. Seminar Nasional yang diadakan oleh SRIFOTON 2023 akan menyajikan dua topik pembahasan.",
   ];
 
   return (
@@ -75,7 +75,7 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
           </h1>
           <p
             className={`text-base font-poppins md:text-lg  text-[#747474] dark:text-[#CFCFCF] lg:w-[80%]  ${
-              isPink && "text-right "
+              isPink ? "text-right lg:text-justify " : "text-justify"
             }  `}
           >
             {text}
