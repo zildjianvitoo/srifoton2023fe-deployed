@@ -53,6 +53,10 @@ export default function DaftarKompetisi() {
   const isUserRegisteredUIUX = user?.registered?.competitions?.uiux_design;
 
   const onSubmitHandler = async (formValue) => {
+    if (!user) {
+      toast.error("Anda harus login terlebih dahulu");
+      return;
+    }
     if (!proof) {
       setErrorMessageProof("Bukti pembayaran harus diisi");
       window.scrollTo(0, 200);
