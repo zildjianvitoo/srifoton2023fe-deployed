@@ -38,7 +38,7 @@ function Content({ header, text, buttonText, isPink, isBlue }) {
     : "/assets/LandingPage/intro-seminar-img.png";
 
   return (
-    <section className="mt-24 ">
+    <section id="intro-home" className="mt-24 ">
       <div
         className={`flex ${
           isBlue ? " flex-col lg:flex-row" : "flex-col lg:flex-row-reverse"

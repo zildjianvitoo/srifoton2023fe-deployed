@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import NoSSR from "../NoSSR";
+import { toast } from "react-toastify";
+import LoadingScreen from "../atoms/LoadingScreen";
 
 const RequireLogin = (WrappedComponent) => {
   const WithAuthentication = () => {
@@ -9,6 +11,7 @@ const RequireLogin = (WrappedComponent) => {
     const isLoggedIn = useAccessTokenStore((state) => state.accessToken);
     useEffect(() => {
       if (!isLoggedIn) {
+        toast.error("Anda harus login terlebih dahulu");
         router.replace("/");
       }
     }, []);
@@ -17,7 +20,9 @@ const RequireLogin = (WrappedComponent) => {
       <NoSSR>
         <WrappedComponent />
       </NoSSR>
-    ) : null;
+    ) : (
+      <LoadingScreen />
+    );
   };
 
   return WithAuthentication;

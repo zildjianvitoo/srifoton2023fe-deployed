@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Button from "@/components/atoms/Button";
 import { ethnocentric } from "@/public/fonts/fonts";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Jumbotron = () => {
   const [days, setDays] = useState(0);
@@ -95,12 +95,16 @@ const Jumbotron = () => {
           </div>
         </div>
         <div className="flex justify-center gap-6 z-[3] mt-8 lg:mt-12">
-          <Button style="border-[#F56AFF] text-[#F56AFF] hover:bg-[#F56AFF] border-[3px] font-semibold lg:py-3">
-            Info Lainnya
-          </Button>
-          <Button style="px-2 border-[#337EF0] text-[#337EF0] hover:bg-[#337EF0] border-[3px] font-semibold lg:py-3">
-            Mulai Sekarang!
-          </Button>
+          <a href="#intro-home">
+            <Button style="border-[#F56AFF] text-[#F56AFF] hover:bg-[#F56AFF] border-[3px] font-semibold lg:py-3">
+              Info Lainnya
+            </Button>
+          </a>
+          <Link href={"/login"}>
+            <Button style="px-2 border-[#337EF0] text-[#337EF0] hover:bg-[#337EF0] border-[3px] font-semibold lg:py-3">
+              Mulai Sekarang!
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

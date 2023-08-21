@@ -1,11 +1,11 @@
 import AuthSidebar from "@/components/AuthSidebar";
 import LayoutMain from "@/components/LayoutMain";
-import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
+import RequireLogin from "@/components/HOC/WithAuth";
 import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
 import { useUserStore } from "@/store/userStore";
 import Head from "next/head";
 
-export default function Seminar() {
+function Seminar() {
   const user = useUserStore((state) => state.user);
 
   console.log(user);
@@ -28,3 +28,5 @@ export default function Seminar() {
     </>
   );
 }
+
+export default RequireLogin(Seminar);

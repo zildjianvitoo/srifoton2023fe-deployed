@@ -8,7 +8,6 @@ import { ethnocentric } from "@/public/fonts/fonts";
 import { PiUserCircleFill } from "react-icons/pi";
 import { MdDashboardCustomize } from "react-icons/md";
 import { TbLogout } from "react-icons/tb";
-import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { useUserStore } from "@/store/userStore";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { doLogout } from "@/utils/api";

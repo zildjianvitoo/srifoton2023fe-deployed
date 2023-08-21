@@ -1,7 +1,7 @@
 import AuthSidebar from "@/components/AuthSidebar";
 import LayoutMain from "@/components/LayoutMain";
 import NoSSR from "@/components/NoSSR";
-import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
+import RequireLogin from "@/components/HOC/WithAuth";
 import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
 import RegisteredCompetitions from "@/components/organisms/Dashboard/RegisteredCompetitions";
 import { ethnocentric } from "@/public/fonts/fonts";
@@ -9,9 +9,8 @@ import { useUserStore } from "@/store/userStore";
 import { getDataUser } from "@/utils/api";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { set } from "react-hook-form";
 
-export default function Kompetisi() {
+function Kompetisi() {
   const [isRegisteredCompetition, setIsRegisteredCompetition] = useState(false);
   const user = useUserStore((state) => state.user);
   const setUser = useUserStore((state) => state.setUser);
@@ -108,21 +107,4 @@ export default function Kompetisi() {
   );
 }
 
-//  isUserRegisteredWebDev ? (
-//                   <RegisteredCompetitions
-//                     type={"Web Development"}
-//                     teamName={teamNameWebdev}
-//                   />
-//                 ) :
-//                 isUserRegisteredCP ? (
-//                   <RegisteredCompetitions
-//                     type={"Competitive Programming"}
-//                     teamName={teamNameCP}
-//                   />
-//                 ) :
-//                 isUserRegisteredUIUX ? (
-//                   <RegisteredCompetitions
-//                     type={"UI/UX Design"}
-//                     teamName={teamNameUIUX}
-//                   />
-//                 )
+export default RequireLogin(Kompetisi);

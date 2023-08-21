@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { checkToken, doRefreshToken } from "@/utils/api";
+import LoadingScreen from "../atoms/LoadingScreen";
 
 const RedirectIfLoggedIn = (WrappedComponent) => {
   const WithRedirect = () => {
@@ -21,7 +22,7 @@ const RedirectIfLoggedIn = (WrappedComponent) => {
         router.replace("/dashboard");
       }
     }, []);
-    return isLoggedIn ? null : <WrappedComponent />;
+    return isLoggedIn ? <LoadingScreen /> : <WrappedComponent />;
   };
   return WithRedirect;
 };
