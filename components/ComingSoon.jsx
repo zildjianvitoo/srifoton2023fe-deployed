@@ -22,11 +22,17 @@ export default function ComingSoon() {
             Hadir
           </h1>
         </div>
-
-        <img
-          src="./assets/comingsoon-bottomdecor-img.svg"
-          alt="coming soon bottom decor"
-        />
+        <div className="flex flex-col">
+          <img
+            src="./assets/comingsoon-bottomdecor-img.svg"
+            alt="coming soon bottom decor"
+          />
+          <p
+            className={`ml-auto sm:mr-2 lg:mr-2 xl:mr-4 mt-2 text-sm sm:text-lg md:text-xl text-transparent lg:text-2xl bg-gradient-to-r from-pink-srifoton to-blue-srifoton bg-clip-text font-medium ${ethnocentric.className}`}
+          >
+            Srifoton 2023
+          </p>
+        </div>
       </div>
     </section>
   );
