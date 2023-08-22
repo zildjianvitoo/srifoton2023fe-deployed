@@ -83,6 +83,9 @@ function Kompetisi() {
                       groupLink={
                         " https://chat.whatsapp.com/Hwp4lBgCudvH5rkALiolES"
                       }
+                      submissionLink={
+                        "https://srifoton.hmifunsri.org/kompetisi/web-development/submission"
+                      }
                     />
                   )}
                   {isUserRegisteredCP && (
