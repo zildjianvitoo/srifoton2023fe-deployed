@@ -124,7 +124,7 @@ export default function CompetitiveProgramming() {
                 Programming
               </span>
             </h1>
-            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
+            <p className="text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
               Competitive Programming adalah sebuah kompetisi yang akan menguji
               pengetahuan dan pemahaman peserta dalam Logic and Algorithm.
               Peserta diharuskan untuk memecahkan masalah yang diberikan dengan

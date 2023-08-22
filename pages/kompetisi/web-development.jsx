@@ -114,7 +114,7 @@ export default function CompetitiveProgramming() {
                 Development
               </span>
             </h1>
-            <p className="text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
+            <p className="text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
               Web Development bertujuan untuk menguji kemampuan yang dimiliki
               para peserta dalam berkreasi dan berinovasi memberikan suatu
               solusi berupa penyelesaian masalah (problem solving) dengan cara
