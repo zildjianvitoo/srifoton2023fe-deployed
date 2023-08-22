@@ -17,7 +17,6 @@ function Seminar() {
       </Head>
       <ComingSoon />
       {/* <LayoutMain>
-       
         <Jumbotron />
         <Intro />
         <TimeLineSeminar />

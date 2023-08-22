@@ -18,7 +18,7 @@ export default function Benefit() {
             ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-        <div className=" md:max-w-[70%] lg:max-w-[55%] justify-center items-center lg:mr-10">
+        <div className=" w- md:max-w-[70%] lg:max-w-[55%] justify-center items-center lg:mr-10">
           <SwiperSlider />
         </div>
       </div>

@@ -11,7 +11,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import Image from "next/image";
 
 function SwiperSlider() {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
   const { theme } = useTheme();
 
   const handleSlideChange = (swiper) => {
@@ -33,8 +33,9 @@ function SwiperSlider() {
         ];
 
   return (
-    <div className="grid w-full place-items-center rounded-4xl">
+    <div className="grid place-items-center rounded-4xl">
       <Swiper
+        initialSlide={1}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -58,7 +59,7 @@ function SwiperSlider() {
         className="flex items-center justify-center p-10"
       >
         <SwiperSlide
-          className={`grid lg:max-w-[70%] place-items-center rounded-4xl  ${
+          className={`grid  max-w-[70%] place-items-center rounded-4xl  ${
             currentSlideIndex != 0 ? "slide" : ""
           } `}
         >
@@ -71,7 +72,7 @@ function SwiperSlider() {
           />
         </SwiperSlide>
         <SwiperSlide
-          className={`grid lg:max-w-[70%] place-items-center rounded-4xl   ${
+          className={`grid max-w-[70%] place-items-center rounded-4xl   ${
             currentSlideIndex != 1 && "slide"
           } `}
         >
@@ -84,7 +85,7 @@ function SwiperSlider() {
           />
         </SwiperSlide>
         <SwiperSlide
-          className={`grid lg:max-w-[70%] place-items-center rounded-4xl  ${
+          className={`grid max-w-[70%] place-items-center rounded-4xl  ${
             currentSlideIndex != 2 ? "slide" : ""
           } `}
         >
