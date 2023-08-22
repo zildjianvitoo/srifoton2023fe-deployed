@@ -18,6 +18,7 @@ import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
 import { AxiosError } from "axios";
 import { toast } from "react-toastify";
+import Head from "next/head";
 
 export default function DaftarKompetisi() {
   const [proof, setProof] = useState(null);
@@ -131,50 +132,55 @@ export default function DaftarKompetisi() {
   };
 
   return (
-    <LayoutMain>
-      <div className="p-8 lg:px-24 lg:mt-10">
-        <LayoutField>
-          <form
-            className="z-10 flex flex-col"
-            onSubmit={handleSubmit(onSubmitHandler)}
-          >
-            <FirstField
-              jenisKompetisi={jenisKompetisi}
-              register={register}
-              errors={errors}
-              errorMessageProof={errorMessageProof}
-              setProof={setProof}
-            />
-            <SecondField
-              register={register}
-              errors={errors}
-              setIdCard1={setIdCard1}
-              errorMessageIdCard1={errorMessageIdCard1}
-              setIdCard2={setIdCard2}
-              setIdCard3={setIdCard3}
-            />
-            <Button
-              variant={"submitButton"}
-              style={"w-[87%] lg:w-3/5 mx-auto mt-6"}
-              loading={isSubmitting}
+    <>
+      <Head>
+        <title>SRIFOTON | Register Competition</title>
+      </Head>
+      <LayoutMain>
+        <div className="p-8 lg:px-24 lg:mt-10">
+          <LayoutField>
+            <form
+              className="z-10 flex flex-col"
+              onSubmit={handleSubmit(onSubmitHandler)}
             >
-              Submit
-            </Button>
-          </form>
-          {showModal && (
-            <Modal
-              message={modalMessage}
-              showModal={showModal}
-              setShowModal={setShowModal}
-              messageHeader={isError ? "Gagal" : "Berhasil"}
-              redirect={isError ? false : true}
-              redirectTo={"/dashboard/kegiatan/kompetisi"}
-              buttonRedirectMessage={"Pergi Ke Halaman Kegiatan"}
-            />
-          )}
-        </LayoutField>
-      </div>
-    </LayoutMain>
+              <FirstField
+                jenisKompetisi={jenisKompetisi}
+                register={register}
+                errors={errors}
+                errorMessageProof={errorMessageProof}
+                setProof={setProof}
+              />
+              <SecondField
+                register={register}
+                errors={errors}
+                setIdCard1={setIdCard1}
+                errorMessageIdCard1={errorMessageIdCard1}
+                setIdCard2={setIdCard2}
+                setIdCard3={setIdCard3}
+              />
+              <Button
+                variant={"submitButton"}
+                style={"w-[87%] lg:w-3/5 mx-auto mt-6"}
+                loading={isSubmitting}
+              >
+                Submit
+              </Button>
+            </form>
+            {showModal && (
+              <Modal
+                message={modalMessage}
+                showModal={showModal}
+                setShowModal={setShowModal}
+                messageHeader={isError ? "Gagal" : "Berhasil"}
+                redirect={isError ? false : true}
+                redirectTo={"/dashboard/kegiatan/kompetisi"}
+                buttonRedirectMessage={"Pergi Ke Halaman Kegiatan"}
+              />
+            )}
+          </LayoutField>
+        </div>
+      </LayoutMain>
+    </>
   );
 }
 
