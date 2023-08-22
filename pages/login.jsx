@@ -27,7 +27,7 @@ function Login() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
   const showPasswordHandler = () => {
@@ -129,7 +129,11 @@ function Login() {
                         Registrasi
                       </Link>
                     </div>
-                    <Button variant={"submitButton"} style={"w-3/5 lg:w-2/5"}>
+                    <Button
+                      variant={"submitButton"}
+                      style={"w-3/5 lg:w-2/5"}
+                      loading={isSubmitting}
+                    >
                       Masuk
                     </Button>
                   </div>

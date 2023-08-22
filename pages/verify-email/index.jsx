@@ -87,7 +87,7 @@ export default function VerifyEmail({ email }) {
               messageHeader={isError ? "Gagal" : "Berhasil"}
               redirect={isError ? false : true}
               redirectTo={"/dashboard"}
-              buttonRedirectMessage={"Pergi Ke Halaman Dashboard"}
+              buttonRedirectMessage={"Pergi Ke Dashboard"}
             />
           )}
         </LayoutCredentials>

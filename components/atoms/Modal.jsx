@@ -40,7 +40,7 @@ export default function Modal({
             {redirect ? (
               <label
                 htmlFor="my_modal_6"
-                className="text-white btn bg-[#2E7BEF] dark:bg-[#E924E8] outline-none border-none w-3/4  sm:w-1/2 "
+                className="text-white btn bg-[#2E7BEF] dark:bg-[#E924E8] outline-none border-none w-3/4  sm:w-1/2"
                 onClick={() => router.push(redirectTo)}
               >
                 {buttonRedirectMessage}
