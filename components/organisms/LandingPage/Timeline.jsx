@@ -5,7 +5,7 @@ import { ethnocentric } from "@/public/fonts/fonts";
 const timelineContent = [
   {
     title: "Pendaftaran Kompetisi",
-    date: "26/08/2023",
+    date: "23/08/2023",
     desc: "Peserta dapat mendaftarkan diri ke satu atau lebih cabang kompetisi.",
   },
   {
