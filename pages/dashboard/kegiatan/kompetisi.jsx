@@ -92,6 +92,9 @@ function Kompetisi() {
                       groupLink={
                         "https://chat.whatsapp.com/DJ3lizydOVmBF3nJItlyre"
                       }
+                      submissionLink={
+                        "https://srifoton.hmifunsri.org/kompetisi/competitive-programming/submission"
+                      }
                     />
                   )}
                   {isUserRegisteredUIUX && (
@@ -100,6 +103,9 @@ function Kompetisi() {
                       teamName={teamNameUIUX}
                       groupLink={
                         "https://chat.whatsapp.com/KMfV1b9VpTODBOG0l7VdOZ"
+                      }
+                      submissionLink={
+                        "https://srifoton.hmifunsri.org/kompetisi/uiux-design/submission"
                       }
                     />
                   )}
