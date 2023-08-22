@@ -13,9 +13,9 @@ export default function Benefit() {
             Manfaat
           </h1>
           <p className="text-lg lg:text-xl text-[#545454] dark:text-[#9BA7BC] mt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nuno
-            vulputate libero et velit interdum, ac aliquet odio mattis. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit.
+            Ikuti event ini dan dapatkan manfaat tak terhingga!. Kami memberikan
+            platform untuk kamu tumbuh, belajar, dan terhubung dengan para
+            profesional terbaik dalam industri ini.
           </p>
         </div>
         <div className=" w- md:max-w-[70%] lg:max-w-[55%] justify-center items-center lg:mr-10">

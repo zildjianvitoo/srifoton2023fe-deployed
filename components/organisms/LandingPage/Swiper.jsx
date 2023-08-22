@@ -33,7 +33,7 @@ function SwiperSlider() {
         ];
 
   return (
-    <div className="grid place-items-center rounded-4xl">
+    <div className="grid w-[90%] place-items-center rounded-4xl">
       <Swiper
         initialSlide={1}
         effect={"coverflow"}

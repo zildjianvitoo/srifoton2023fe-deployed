@@ -80,18 +80,27 @@ function Kompetisi() {
                     <RegisteredCompetitions
                       type={"Web Development"}
                       teamName={teamNameWebdev}
+                      groupLink={
+                        " https://chat.whatsapp.com/Hwp4lBgCudvH5rkALiolES"
+                      }
                     />
                   )}
                   {isUserRegisteredCP && (
                     <RegisteredCompetitions
                       type={"Competitive Programming"}
                       teamName={teamNameCP}
+                      groupLink={
+                        "https://chat.whatsapp.com/DJ3lizydOVmBF3nJItlyre"
+                      }
                     />
                   )}
                   {isUserRegisteredUIUX && (
                     <RegisteredCompetitions
                       type={"UI/UX Design"}
                       teamName={teamNameUIUX}
+                      groupLink={
+                        "https://chat.whatsapp.com/KMfV1b9VpTODBOG0l7VdOZ"
+                      }
                     />
                   )}
                 </div>

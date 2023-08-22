@@ -4,7 +4,7 @@ import LayoutCredentials from "../Credentials/LayoutCredentials";
 import { ethnocentric } from "@/public/fonts/fonts";
 import Link from "next/link";
 
-export default function RegisteredCompetitions({ type, teamName }) {
+export default function RegisteredCompetitions({ type, teamName, groupLink }) {
   return (
     <LayoutCredentials id="dashboard-data-diri" authPage>
       <div className="z-10 flex flex-col w-full gap-y-8 lg:gap-y-4">
@@ -19,11 +19,11 @@ export default function RegisteredCompetitions({ type, teamName }) {
         <h2 className=" text-[#494B7C] dark:text-white text-2xl lg:text-3xl px-2 font-semibold uppercase tracking-[1px]">
           {teamName}
         </h2>
-        <Link href={"https://wa.me/grup"} className="self-end mt-14">
+        <a href={groupLink} className="self-end mt-14">
           <button className=" bg-blue-srifoton rounded-[50px] px-5 py-2 flex text-white items-center gap-1 opacity-90 hover:opacity-100">
             <BsWhatsapp className="text-white" /> Gabung Grup
           </button>
-        </Link>
+        </a>
       </div>
     </LayoutCredentials>
   );
