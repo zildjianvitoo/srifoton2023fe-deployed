@@ -208,8 +208,8 @@ export default function CompetitiveProgramming() {
                     </Button>
                   </NoSSR>
                 </Link>
-                <Link
-                  href="/kompetisi/register/"
+                <a
+                  href="https://drive.google.com/file/d/1eYtVF9kOPRR3iLEQNaFsHZDFRGa9rknd/view?usp=sharing"
                   className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <NoSSR>
@@ -223,7 +223,7 @@ export default function CompetitiveProgramming() {
                       Buku Panduan
                     </Button>
                   </NoSSR>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
