@@ -11,22 +11,22 @@ export default function PaymentNote({ seminarPage }) {
       <ul className="flex flex-col gap-1 px-2 lg:px-4 lg:gap-0">
         <li>
           {" "}
-          Dana <span className="lg:ml-[46px]"> : 08127123655 </span>
+          Dana <span className="lg:ml-[46px]"> : 081273123655 </span>
           <span className="font-medium">(a.n Hafiz Kurniawan)</span>
         </li>
         <li>
           {" "}
-          Gopay <span className="lg:ml-9 "> : 08127123655 </span>
+          Gopay <span className="lg:ml-9 "> : 081273123655 </span>
           <span className="font-medium">(a.n Hafiz Kurniawan)</span>
         </li>
         <li>
           OVO
-          <span className="lg:ml-[50px]"> : 08127123655 </span>
+          <span className="lg:ml-[50px]"> : 081273123655 </span>
           <span className="font-medium">(a.n Hafiz Kurniawan)</span>
         </li>
         <li>
           {" "}
-          Shopeepay : 08127123655{" "}
+          Shopeepay : 081273123655{" "}
           <span className="font-medium">(a.n Hafiz Kurniawan)</span>
         </li>
         <p className="mt-5 font-medium"> Transfer Bank</p>
