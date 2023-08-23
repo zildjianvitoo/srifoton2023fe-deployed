@@ -33,7 +33,7 @@ export default function PaymentNote({ seminarPage }) {
         <ul className="flex flex-col gap-1 px-3 lg:px-6 lg:gap-0">
           <li>
             {" "}
-            BSI <span className="ml-9">: 12345678945632 </span>
+            BSI <span className="ml-9">: 7233744705 </span>
             <span className="font-medium"> (a.n Alfina Dwi Rahmi)</span>
           </li>
           <li>
