@@ -39,11 +39,11 @@ const Jumbotron = () => {
         <div
           className={`flex flex-col mx-auto w-fit ${ethnocentric.className} `}
         >
-          <h4 className="z-0 self-end px-2 text-3xl translate-y-3 lg:text-5xl xl:text-6xl jumbotron-2023-text sm:translate-y-5 md:translate-y-7 dark:text-[#3a3169]">
+          <h4 className="z-0 self-end px-2 text-2xl xs:text-3xl translate-y-3 lg:text-5xl xl:text-6xl jumbotron-2023-text sm:translate-y-5 md:translate-y-7 dark:text-[#3a3169]">
             2023
           </h4>
           <h1
-            className={`text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] xl:text-[10rem] uppercase bg-gradient-to-r from-pink-srifoton to to-blue-srifoton font-extrabold bg-clip-text text-transparent w-fit mx-auto srifoton-big-header`}
+            className={`text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] xl:text-[10rem] uppercase bg-gradient-to-r from-pink-srifoton to to-blue-srifoton font-extrabold bg-clip-text text-transparent w-fit mx-auto srifoton-big-header`}
           >
             SRIFOTON
           </h1>

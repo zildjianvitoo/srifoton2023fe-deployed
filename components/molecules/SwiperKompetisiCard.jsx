@@ -20,7 +20,7 @@ export default function SwiperKompetisiCard() {
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper w-[300px] h-[280px]  md:w-[350px] md:h-[330px] lg:w-[480px] lg:h-[380px] "
+        className="mySwiper w-[270px] h-[270px] xs:w-[300px] xs:h-[280px]  md:w-[350px] md:h-[330px] lg:w-[480px] lg:h-[380px] "
       >
         <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff] dark:bg-[#494B7C] dark:border-[#ddebff]">
           <Image
@@ -32,7 +32,7 @@ export default function SwiperKompetisiCard() {
             quality={100}
           />
           <h1
-            className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
+            className={`text-lg xs:text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
           >
             <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
               Competitive{" "}
@@ -68,7 +68,7 @@ export default function SwiperKompetisiCard() {
             quality={100}
           />
           <h1
-            className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col`}
+            className={`text-lg xs:text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col`}
           >
             <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
               UI/UX{" "}
@@ -104,7 +104,7 @@ export default function SwiperKompetisiCard() {
             quality={100}
           />
           <h1
-            className={`text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col z-30 relative`}
+            className={` text-lg xs:text-xl text-center lg:text-3xl  lg:p-2 font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className} flex flex-col z-30 relative`}
           >
             <span className="mx-auto text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
               Web{" "}

@@ -16,21 +16,22 @@ export default function Jumbotron() {
 
   return (
     <>
-      <section className="relative h-screen mt-12 overflow-hidden lg:min-h-[90vh] lg:mt-6">
+      <section className="relative h-full xs:h-screen mt-12 overflow-hidden lg:min-h-[90vh] lg:mt-6">
         <div className="flex flex-col justify-center p-8 mt-12 lg:px-20 xl:px-32 lg:mt-32 lg:flex-row">
           <div className="flex flex-col justify-center w-fit lg:w-1/2">
-            <h1 className="p-[2px] text-4xl font-bold leading-snug lg:leading-[4.65rem] tracking-wide w-fit  lg:text-[60px] jumbotron-kompetisi-header dark:jumbotron-kompetisi-header-dark ">
+            <h1 className="p-[2px] text-3xl xs:text-4xl font-bold leading-snug lg:leading-[4.65rem] tracking-wide w-fit  lg:text-[60px] jumbotron-kompetisi-header dark:jumbotron-kompetisi-header-dark ">
               Ajang Kompetisi <br /> & Raih Prestasi
             </h1>
-            <p className="mt-3 lg:!leading-8 text-lg lg:text-xl text-[#767676] dark:text-[#B4C0D5] lg:w-[80%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. et
-              velit interdum, ac aliquet odio mattis.
+            <p className="mt-3 lg:!leading-8 text-base xs:text-lg lg:text-xl text-[#767676] dark:text-[#B4C0D5] lg:w-[80%]">
+              Menyediakan wadah bagi peserta yang memiliki minat dan bakat pada
+              bidang teknologi khususnya di berbagai cabang lomba yang
+              diselenggarakan. Selain itu, acara ini dapat dijadikan sebagai
+              sarana kolaborasi, bekerja sama, dan unjuk kemampuan peserta.
             </p>
           </div>
 
           <div className="relative z-0 flex mt-10 lg:mt-0 lg:w-1/2 ">
-            <div className="z-10 flex mx-auto -translate-x-7 lg:translate-x-0 lg:absolute -top-10 xl:left-16">
+            <div className="z-10 flex mx-auto -translate-x-10 xs:-translate-x-7 lg:translate-x-0 lg:absolute -top-10 xl:left-16">
               <SwiperKompetisiCard />
               <div className="flex translate-y-56 -translate-x-28 ">
                 <Image
