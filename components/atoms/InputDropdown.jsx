@@ -51,10 +51,10 @@ const InputDropdown = forwardRef(function InputDropDown(
           TRANSFER BANK BSI
         </option>
         <option
-          value="bca"
+          value="bni"
           className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
         >
-          TRANSFER BANK BCA
+          TRANSFER BANK BNI
         </option>
         <option
           value="mandiri"
