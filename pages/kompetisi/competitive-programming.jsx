@@ -120,7 +120,7 @@ export default function CompetitiveProgramming() {
             </div>
             <div className="flex flex-col items-center justify-center gap-6 px-6 lg:px-8">
               <h1
-                className={`text-3xl text-center lg:p-2 pl-[2px] md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
+                className={`text-2xl xs:text-3xl text-center lg:p-2 pl-[2px] md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
               >
                 <span className="text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton ">
                   Competitive{" "}
@@ -129,7 +129,7 @@ export default function CompetitiveProgramming() {
                   Programming
                 </span>
               </h1>
-              <p className="text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
+              <p className="text-base sm:text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
                 Competitive Programming adalah sebuah kompetisi yang akan
                 menguji pengetahuan dan pemahaman peserta dalam Logic and
                 Algorithm. Peserta diharuskan untuk memecahkan masalah yang

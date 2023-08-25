@@ -122,8 +122,8 @@ export default function CompetitiveProgramming() {
                   Design
                 </span>
               </h1>
-              <p className="text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
-                 Tema yang diangkat pada lomba UI/UX Design SRIFOTON 2023 ini
+              <p className="text-base sm:text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
+                Tema yang diangkat pada lomba UI/UX Design SRIFOTON 2023 ini
                 adalah{" "}
                 <span className="italic font-semibold">
                   {"”"}Developing Innovative Technology To Compete In The

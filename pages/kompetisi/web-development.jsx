@@ -73,7 +73,8 @@ export default function CompetitiveProgramming() {
                 width={500}
                 height={450}
                 quality={100}
-                className="absolute z-10 top-[16%] lg:top-auto"
+                className="absolute z-10 lg:top-auto"
+                key={"jumbotron-webdev-img"}
               />
               <div className="flex self-start translate-x-28 justify-self-start">
                 <Image
@@ -110,7 +111,7 @@ export default function CompetitiveProgramming() {
             </div>
             <div className="flex flex-col items-center justify-center gap-6 px-6 lg:px-8">
               <h1
-                className={`text-[27px] xs:text-3xl text-center lg:p-2 md:text-4xl lg:text-[55px] font-semibold tracking-widest  lg:tracking-wider ${ethnocentric.className}`}
+                className={`text-[27px] xs:text-3xl text-center lg:p-2 md:text-4xl lg:text-[55px] font-semibold tracking-widest relative z-10   lg:tracking-wider ${ethnocentric.className}`}
               >
                 <span className="text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton">
                   Web{" "}
@@ -119,7 +120,7 @@ export default function CompetitiveProgramming() {
                   Development
                 </span>
               </h1>
-              <p className="text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center">
+              <p className="text-base sm:text-lg lg:text-xl font-poppins text-[#767676] dark:text-white !leading-8 lg:px-8 w-full lg:w-[65%] mx-auto text-left lg:text-center ">
                 Web Development bertujuan untuk menguji kemampuan yang dimiliki
                 para peserta dalam berkreasi dan berinovasi memberikan suatu
                 solusi berupa penyelesaian masalah (problem solving) dengan cara
