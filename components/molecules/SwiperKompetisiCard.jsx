@@ -20,7 +20,7 @@ export default function SwiperKompetisiCard() {
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper w-[270px] h-[270px] xs:w-[300px] xs:h-[280px]  sm:w-[400px] sm:h-[380px] lg:w-[530px] lg:h-[430px] "
+        className="mySwiper w-[270px] h-[270px] xs:w-[300px] xs:h-[280px] sm:w-[320px] sm:h-[300px] md:w-[370px] md:h-[350px] lg:w-[500px] lg:h-[400px] "
       >
         <SwiperSlide className="flex flex-col items-center justify-center w-full p-3 md:p-6 border-[3.5px] border-[#494b7c] border-dashed bg-[#ddebff] dark:bg-[#494B7C] dark:border-[#ddebff]">
           <Image
