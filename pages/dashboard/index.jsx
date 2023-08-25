@@ -4,12 +4,12 @@ import Navbar from "@/components/Navbar";
 import AuthSidebar from "@/components/AuthSidebar";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import InputForm from "@/components/atoms/InputForm";
-import { useForm } from "react-hook-form";
+import { get, set, useForm } from "react-hook-form";
 import InputRadio from "@/components/atoms/InputRadio";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
 import Button from "@/components/atoms/Button";
 import { getDataUser, updateDataUser } from "@/utils/api";
-import { useUserStore } from "@/store/userStore";
+import { getUser, useUserStore } from "@/store/userStore";
 import { useAccessTokenStore } from "@/store/tokenStore";
 import { updateUserRules } from "@/utils/formRules";
 import Modal from "@/components/atoms/Modal";
@@ -19,8 +19,8 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 function Dashboard() {
-  const user = useUserStore((state) => state.user);
-  const setUserSrifoton = useUserStore((state) => state.setUser);
+  const { user } = useUserStore();
+  const { setUser: setUserSrifoton } = useUserStore();
   const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
   const router = useRouter();
   const message = router.query?.message;
@@ -32,6 +32,15 @@ function Dashboard() {
       setShowModal(true);
     }
   }, [message]);
+
+  useEffect(() => {
+    const getNewestDataUser = async () => {
+      localStorage.removeItem("user-srifoton");
+      const { data } = await getDataUser();
+      setUserSrifoton(data);
+    };
+    getNewestDataUser();
+  }, []);
   const {
     modalMessage,
     showModal,
@@ -43,8 +52,8 @@ function Dashboard() {
 
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
-      name: user.name,
-      email: user.email,
+      name: user?.name,
+      email: user?.email,
       college: user?.college,
       nim: user?.nim,
       phoneNumber: user?.phone_number,
@@ -64,6 +73,7 @@ function Dashboard() {
       setModalMessageHeader("Berhasil");
       setModalMessage(data.message);
     } catch (error) {
+      console.log(error);
       setModalMessageHeader("Gagal");
       setModalMessage(error.response.data.message);
     } finally {

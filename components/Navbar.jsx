@@ -246,7 +246,7 @@ function Navbar() {
                 </div>
 
                 {isDropdownActive && (
-                  <ul className="absolute z-[2] md:text-lg pt-4 flex flex-col mt-12 lg:px-4 gap-y-3  -translate-x-20 lg:-translate-x-20 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl p-2 pb-6  ">
+                  <ul className="absolute z-[2] md:text-lg pt-4 flex flex-col p-4 pb-6  mt-12 lg:px-8 gap-y-3  -translate-x-24 lg:-translate-x-20 bg-gradient-to-r from-[#F0D0F0] to-[#D2E2FD] dark:from-[#452E79] dark:to-[#183569] rounded-xl  ">
                     <li>
                       <p className="text-sm lg:text-lg">{getUserNameValid()}</p>
                     </li>
@@ -268,7 +268,7 @@ function Navbar() {
             </div>
           </div>
         ) : (
-          <Link href="/register">
+          <Link href="/login">
             <button
               className={`text-[#DB66DA] relative px-10 py-2 border-none font-semibold  bg-gradient-to-r from-[#2B8AF9]  to-[#FF92FE] ${
                 theme === "light" ? "button-navbar" : "button-navbar-dark"

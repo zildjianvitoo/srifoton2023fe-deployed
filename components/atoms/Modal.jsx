@@ -51,7 +51,7 @@ export default function Modal({
                 className="text-white btn bg-[#2E7BEF] dark:bg-[#E924E8] outline-none border-none w-1/5 "
                 onClick={() => setShowModal(false)}
               >
-                Close
+                Tutup
               </label>
             )}
           </div>

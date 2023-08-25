@@ -8,3 +8,8 @@ const useUser = (set) => ({
 });
 
 export const useUserStore = create(persist(useUser, { name: "user-srifoton" }));
+
+export const getUser = () => {
+  const user = useUserStore.getState().user;
+  return user;
+};

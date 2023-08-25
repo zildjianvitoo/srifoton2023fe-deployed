@@ -1,7 +1,8 @@
 import LayoutMain from "@/components/LayoutMain";
+import CompetitionInfo from "@/components/organisms/Kompetisi/CompetitionInfo";
 import Jumbotron from "@/components/organisms/Kompetisi/Jumbotron";
 import QNAKompetisi from "@/components/organisms/Kompetisi/QNAKompetisi";
-import { cpQnaList } from "@/utils/qnaList";
+import { kompetisiQnaList } from "@/utils/qnaList";
 import Head from "next/head";
 
 export default function Kompetisi() {
@@ -12,7 +13,8 @@ export default function Kompetisi() {
       </Head>
       <LayoutMain>
         <Jumbotron />
-        <QNAKompetisi qnaList={cpQnaList} />
+        <CompetitionInfo />
+        <QNAKompetisi qnaList={kompetisiQnaList} />
       </LayoutMain>
     </>
   );

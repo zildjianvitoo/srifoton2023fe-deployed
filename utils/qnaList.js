@@ -39,7 +39,7 @@ export const seminarQnaList = [
   },
 ];
 
-export const komeptisiQnaList = [
+export const kompetisiQnaList = [
   {
     id: 1,
     question: "Apa saja kompetisi yang ada pada Srifoton 2023?",

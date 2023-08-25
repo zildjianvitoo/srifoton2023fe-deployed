@@ -45,7 +45,7 @@ export default function TimeLine() {
           >
             Alur Acara
           </h1>
-          <p className="text-[#545454] dark:text-[#9BA7BC] lg:w-[65%] text-lg lg:text-xl text-justify">
+          <p className="text-[#545454] dark:text-[#9BA7BC] lg:w-[65%] text-lg lg:text-xl ">
             SRIFOTON 2023 akan diadakan dalam beberapa tahapan acara. Untuk
             mengetahui info selengkapnya kami telah menyediakan rangkaian alur
             acara sebagai berikut.

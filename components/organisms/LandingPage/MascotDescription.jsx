@@ -134,7 +134,7 @@ export default function MascotExplanation() {
   }
   return (
     <section id="mascot-description" className="lg:mt-24 lg:mb-16">
-      <div className="flex justify-center gap-10 px-10 xl:px-20">
+      <div className="flex justify-center gap-10 px-10 lg:mr-20 xl:mr-10 xl:px-20">
         <div className="flex flex-col w-[20%] gap-28">
           <div className="flex w-full gap-3">
             <div className="flex flex-col gap-1 text-right">
@@ -232,7 +232,7 @@ export default function MascotExplanation() {
                 Merah
               </h3>
               <p className="w-full text-[#747474] dark:text-[#9BA7BC]">
-                merupakan warna yang identik dengan bumi Sriwijaya. (Kegimbaraan
+                Merupakan warna yang identik dengan bumi Sriwijaya. (Kegimbaraan
                 dan Keberanian)
               </p>
             </div>
@@ -250,7 +250,7 @@ export default function MascotExplanation() {
                 Emas
               </h3>
               <p className="w-full text-[#747474] dark:text-[#9BA7BC]">
-                merupakan warna yang identik dengan bumi Sriwijaya. (Keagungan)
+                Merupakan warna yang identik dengan bumi Sriwijaya. (Keagungan)
               </p>
             </div>
           </div>

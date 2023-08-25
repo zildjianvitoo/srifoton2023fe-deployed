@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer id="footer" className="bottom-0 left-0 font-poppins">
       <div className="pt-10 md:pt-14 lg:pt-20 bg-[#FCF2FF] dark:bg-[#02053E]">
-        <div className="flex flex-col gap-6  py-6 pb-8 md:pb-12 px-8 lg:px-0 w-full  sm:w-[90%] mx-auto relative">
+        <div className="relative flex flex-col w-full gap-6 px-8 py-6 pb-8 mx-auto sm:w-[95%] md:pb-12 lg:px-0">
           <div className="h-full ">
             <Image
               fill
@@ -83,7 +83,11 @@ export default function Footer() {
                     </p>
                   </div>
                   <ul>
-                    <li>srifoton.unsri23@gmail.com</li>
+                    <li className="hover:text-pink-srifoton">
+                      <a href="mailto:srifoton.unsri23@gmail.com">
+                        srifoton.unsri23@gmail.com
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
