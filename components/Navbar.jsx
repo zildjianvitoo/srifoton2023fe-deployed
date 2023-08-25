@@ -5,7 +5,6 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 import { ethnocentric } from "@/public/fonts/fonts";
-import { PiUserCircleFill } from "react-icons/pi";
 import { MdDashboardCustomize } from "react-icons/md";
 import { TbLogout } from "react-icons/tb";
 import { useUserStore } from "@/store/userStore";
@@ -80,6 +79,13 @@ function Navbar() {
       className="fixed top-0 z-50 font-normal navbar bg-[#FCF2FF] text-[#464646]  dark:bg-neutral dark:text-white shadow-navbar dark:shadow-navbar-dark lg:px-[4.5rem] "
       onMouseLeave={() => setIsOpen(false)}
     >
+      <svg width="0" height="0">
+        <linearGradient id="pink-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop stopColor="#F574F5" offset="0%" />
+          <stop stopColor="#961496" offset="100%" />
+        </linearGradient>
+      </svg>
+
       <div className="py-2 lg:py-0 navbar-start">
         <div className={`dropdown`}>
           <label
@@ -227,7 +233,16 @@ function Navbar() {
                   className="z-10 flex items-center p-1 cursor-pointer"
                   onClick={() => setDropdownActive((prev) => !prev)}
                 >
-                  <PiUserCircleFill className="text-4xl" />
+                  {/* <PiUserCircleFill
+                    className="text-4xl "
+                    style={{ fill: "url(#pink-gradient)" }}
+                  /> */}
+                  <Image
+                    src={"/assets/icon-user.svg"}
+                    alt="icon user"
+                    width={36}
+                    height={36}
+                  />
                 </div>
 
                 {isDropdownActive && (

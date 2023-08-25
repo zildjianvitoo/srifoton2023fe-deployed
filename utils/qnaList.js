@@ -39,6 +39,46 @@ export const seminarQnaList = [
   },
 ];
 
+export const komeptisiQnaList = [
+  {
+    id: 1,
+    question: "Apa saja kompetisi yang ada pada Srifoton 2023?",
+    answer:
+      "Terdapat 3 perlombaan yang bisa diikuti pada Srifoton 2023, yaitu Competitive Programming, UI/UX Design, dan Web Development",
+  },
+  {
+    id: 2,
+    question: "  Kapan Kompetisi Srifoton 2023 dilaksanakan?",
+    answer:
+      "Kompetisi Srifoton 2023 membuka pendaftaran pada tanggal 23 Agustus 2023 dan penutupan pendaftaran pada tanggal 15 Oktober 2023 (setiap perlombaan berbeda waktu pendaftarannya)",
+  },
+  {
+    id: 3,
+    question:
+      "Apa saja manfaat dari mengikuti kompetisi pada event Srifoton 2023?",
+    answer:
+      "Peserta yang mengikuti event kompetisi Srifoton 2023 mendapat beberapa benefit seperti, hadiah berupa sertifikat & uang pembinaan bagi pemenang, pengalaman dalam mengikuti perlombaan, sertifikat tingkat nasional, dan lain-lain.",
+  },
+  {
+    id: 4,
+    question: "Berapakah minimal dan jumlah maksimal anggota dalam satu tim ?",
+    answer:
+      "Peserta dapat mendaftar pada kompetisi ini secara individu ataupun dengan membentuk tim selama anggota tim tidak lebih dari 3 orang.",
+  },
+  {
+    id: 5,
+    question:
+      "Bolehkah dalam satu tim mendaftar jika berasal dari jenjang pendidikan berbeda (Misalkan D3 dan S1 dalam satu tim yang sama) maupun dari jurusan yang berbeda?",
+    answer: "Diperbolehkan. Asalkan tidak berbeda universitas/instansi.",
+  },
+  {
+    id: 6,
+    question:
+      "Bolehkah peserta mendaftarkan diri pada dua cabang kompetisi yang berbeda?",
+    answer: "Boleh, selama peserta tersebut bukan sebagai ketua tim.",
+  },
+];
+
 export const webdevQnaList = [
   {
     id: 1,
