@@ -15,7 +15,7 @@ export default function FormCard1({
       <h3 className="pb-1 mx-auto text-2xl font-bold text-center text-transparent w-fit md:text-3xl lg:text-4xl bg-gradient-to-r from-blue-srifoton to-pink-srifoton bg-clip-text font-poppins">
         {header}
       </h3>
-      <div className="flex flex-col">
+      <div className="flex flex-col lg:mt-10">
         <InputForm
           labelFor={"name1"}
           labelText={"Nama"}

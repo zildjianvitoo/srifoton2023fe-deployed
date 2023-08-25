@@ -14,16 +14,16 @@ export default function Jumbotron() {
         }}
       ></div>
       <div className="flex flex-col-reverse w-full h-full gap-20 p-8 mt-12 lg:mt-4 xl:mt-16 lg:flex-row">
-        <div className="flex items-center xl:-translate-y-10 lg:w-1/2">
+        <div className="flex items-center xl:-translate-y-14 lg:w-1/2">
           <Image
             priority
-            width={600}
-            height={580}
+            width={400}
+            height={480}
             loading="eager"
-            src="/assets/Seminar/jumbotron-mascot-img.png"
+            src="/assets/Seminar/jumbotron-seminar-img-2.png"
             alt="Srifoton Mascot"
             quality={100}
-            className="lg:w-full"
+            className="hidden w-4/5 mr-6 md:flex lg: lg:ml-auto lg:w-fit "
           />
         </div>
         <div className="flex flex-col gap-6 text-white lg:mt-24 lg:w-[70%]">
