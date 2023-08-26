@@ -27,9 +27,9 @@ export default function RegisteredCompetitions({
         </h2>
         <div className="flex flex-col self-end gap-2 sm:flex-row mt-14">
           <Link href={submissionLink} className="">
-            <div className=" border-[3px] border-pink-srifoton  text-pink-srifoton rounded-[50px] sm:rounded-l-[50px] sm:rounded-r-none px-4 py-2 flex font-medium items-center group gap-1 opacity-90 hover:opacity-100 hover:bg-pink-srifoton hover:text-white">
-              <MdOutlineUploadFile className="text-2xl text-pink-srifoton group-hover:text-white" />{" "}
-              Submit Karya
+            <div className="text-white rounded-[50px] sm:rounded-l-[50px] sm:rounded-r-none px-4 py-2.5 flex font-medium items-center  gap-1 opacity-90 hover:opacity-100 bg-pink-srifoton ">
+              <MdOutlineUploadFile className="text-2xl text-white " /> Submit
+              Karya
             </div>
           </Link>
           <a href={groupLink} className="">
