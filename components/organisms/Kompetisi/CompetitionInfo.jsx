@@ -16,13 +16,27 @@ export default function CompetitionInfo() {
             Kompetisi
           </span>
         </h1>
-        <p className="mt-6 lg:!leading-8 text-center  text-base xs:text-lg lg:text-xl text-[#767676] dark:text-[#B4C0D5] lg:w-[80%] mx-auto">
+        <p className="mt-6 lg:mt-8 lg:!leading-8 text-center  text-base xs:text-lg lg:text-xl text-[#767676] dark:text-[#B4C0D5] lg:w-[80%] mx-auto">
           Mari mulai dari sekarang! <br />
           Pilih lomba yang kamu kuasai dan daftar segera. Ukur kemampuanmu dan
           dapatkan penghargaan.
         </p>
-        <div className="flex flex-wrap justify-center gap-8 mt-6">
-          <PricingCard headers={"Competitive Programming"} price={"100.000"} />
+        <div className="flex flex-wrap justify-center gap-8 mt-7">
+          <PricingCard
+            headers={"Competitive Programming"}
+            price={"100.000"}
+            linkTo={"competitive-programming"}
+          />
+          <PricingCard
+            headers={"UI/UX Design"}
+            price={"80.000"}
+            linkTo={"uiux-design"}
+          />
+          <PricingCard
+            headers={"Web Development"}
+            price={"80.000"}
+            linkTo={"web-development"}
+          />
         </div>
       </div>
     </section>

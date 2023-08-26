@@ -95,7 +95,9 @@ input[type="number"] {
 .button-swiper-competition-blue:hover::before,
 .button-swiper-competition-pink:hover::before,
 .button-swiper-competition-blue-dark:hover::before,
-.button-swiper-competition-pink-dark:hover::before {
+.button-swiper-competition-pink-dark:hover::before,
+.button-pricing-competition:hover::before,
+.button-pricing-competition-dark:hover::before {
   background: none;
 }
 
@@ -111,8 +113,10 @@ input[type="number"] {
 .button-competition-type-dark:hover,
 .button-swiper-competition-blue:hover,
 .button-swiper-competition-pink:hover,
-.button-swiper-competition-blue-dark:hover
-  .button-swiper-competition-pink-dark:hover {
+.button-swiper-competition-blue-dark:hover,
+.button-swiper-competition-pink-dark:hover,
+.button-pricing-competition:hover,
+.button-pricing-competition-dark:hover {
   background-image: linear-gradient(
     to right,
     var(--pink-srifoton),
@@ -185,6 +189,16 @@ input[type="number"] {
 
 .button-swiper-competition-pink-dark {
   --bg-color: #75497c;
+  color: #fb5dfb;
+}
+
+.button-pricing-competition {
+  --bg-color: #fcf2ff;
+  color: #fb5dfb;
+}
+
+.button-pricing-competition-dark {
+  --bg-color: #02053e;
   color: #fb5dfb;
 }
 
@@ -478,7 +492,7 @@ input[type="number"] {
   }
 
   .field-header-dark {
-    color: #242750;
+    color: #1f1663;
     background: -webkit-linear-gradient(
       0deg,
       var(--blue-srifoton) 0%,

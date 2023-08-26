@@ -14,7 +14,9 @@ export default function Kompetisi() {
       <LayoutMain>
         <Jumbotron />
         <CompetitionInfo />
-        <QNAKompetisi qnaList={kompetisiQnaList} />
+        <div className="md:mt-32">
+          <QNAKompetisi qnaList={kompetisiQnaList} />
+        </div>
       </LayoutMain>
     </>
   );

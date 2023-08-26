@@ -16,7 +16,7 @@ export default function Jumbotron() {
 
   return (
     <>
-      <section className="relative h-full] mt-12 overflow-hidden xs:h-[110vh] md:h-full lg:min-h-screen xl:min-h-[90vh] lg:mt-6">
+      <section className="relative h-full mt-12 overflow-hidden xs:h-full md:h-full lg:min-h-screen xl:min-h-[90vh] lg:mt-6">
         <div className="flex flex-col justify-center p-8 mt-12 lg:px-20 xl:px-32 lg:mt-32 md:flex-row">
           <div className="flex flex-col justify-center w-fit lg:w-1/2">
             <h1 className="p-[2px] text-3xl xs:text-4xl md:text-4xl font-bold leading-snug lg:leading-[4.65rem] tracking-wide w-fit  lg:text-[60px] jumbotron-kompetisi-header dark:jumbotron-kompetisi-header-dark ">
