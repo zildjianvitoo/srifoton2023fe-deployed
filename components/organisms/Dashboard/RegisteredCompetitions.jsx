@@ -4,15 +4,21 @@ import LayoutCredentials from "../Credentials/LayoutCredentials";
 import { ethnocentric } from "@/public/fonts/fonts";
 import Link from "next/link";
 import { MdOutlineUploadFile } from "react-icons/md";
+import { RiCalendarTodoFill } from "react-icons/ri";
+import useDateFormat from "@/hooks/useDateFormat";
 
 export default function RegisteredCompetitions({
   type,
   teamName,
   groupLink,
+  registeredDate,
+  needSubmission,
   submissionLink,
 }) {
+  const validDate = useDateFormat(registeredDate);
+
   return (
-    <LayoutCredentials id="dashboard-data-diri" authPage>
+    <LayoutCredentials id="dashboard-data-diri" authPage kegiatanPage>
       <div className="z-10 flex flex-col w-full gap-y-8 lg:gap-y-4">
         <div className="flex items-center justify-between">
           <h3
@@ -20,23 +26,36 @@ export default function RegisteredCompetitions({
           >
             {type}
           </h3>
-          <BsThreeDots className="text-[#9E9E9E] text-3xl md:text-5xl" />
+          {/* <BsThreeDots className="text-[#9E9E9E] text-3xl md:text-5xl" /> */}
         </div>
         <h2 className=" text-[#494B7C] dark:text-white text-2xl lg:text-3xl px-2 font-semibold uppercase tracking-[1px]">
           {teamName}
         </h2>
-        <div className="flex flex-col self-end gap-2 sm:flex-row mt-14">
-          <Link href={submissionLink} className="">
-            <div className="text-white rounded-[50px] sm:rounded-l-[50px] sm:rounded-r-none px-4 py-2.5 flex font-medium items-center  gap-1 opacity-90 hover:opacity-100 bg-pink-srifoton ">
-              <MdOutlineUploadFile className="text-2xl text-white " /> Submit
-              Karya
-            </div>
-          </Link>
-          <a href={groupLink} className="">
-            <button className="  bg-blue-srifoton rounded-[50px] sm:rounded-r-[50px] sm:rounded-l-none px-4 py-2.5 flex text-white items-center gap-2.5 opacity-90 hover:opacity-100">
-              <BsWhatsapp className="text-xl text-white" /> Gabung Grup
-            </button>
-          </a>
+        <div className="flex items-center justify-between mt-14">
+          <div className="items-center hidden gap-2 text-lg md:flex text-blue-srifoton dark:text-pink-srifoton">
+            <RiCalendarTodoFill className="text-2xl" />
+            <p>{validDate}</p>
+          </div>
+          <div className="flex flex-col self-end gap-2 ml-auto text-sm sm:flex-row md:text-base">
+            {needSubmission && (
+              <Link href={submissionLink} className="">
+                <div className="text-white rounded-[50px] sm:rounded-l-[50px] sm:rounded-r-none px-4 py-2.5 flex font-medium items-center  gap-1 opacity-90 hover:opacity-100 bg-pink-srifoton ">
+                  <MdOutlineUploadFile className="text-xl text-white md:text-2xl " />{" "}
+                  Submit Karya
+                </div>
+              </Link>
+            )}
+            <a href={groupLink} className="">
+              <button
+                className={`bg-blue-srifoton rounded-[50px] ${
+                  needSubmission && "sm:rounded-r-[50px] sm:rounded-l-none"
+                } px-4 py-2.5 flex text-white items-center gap-2.5 opacity-90 hover:opacity-100`}
+              >
+                <BsWhatsapp className="text-base text-white md:text-xl" />{" "}
+                Gabung Grup
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </LayoutCredentials>

@@ -86,6 +86,10 @@ function Kompetisi() {
                       submissionLink={
                         "https://srifoton.hmifunsri.org/kompetisi/web-development/submission"
                       }
+                      registeredDate={
+                        user.registered.competitions.web_development.created_at
+                      }
+                      needSubmission
                     />
                   )}
                   {isUserRegisteredCP && (
@@ -95,8 +99,9 @@ function Kompetisi() {
                       groupLink={
                         "https://chat.whatsapp.com/DJ3lizydOVmBF3nJItlyre"
                       }
-                      submissionLink={
-                        "https://srifoton.hmifunsri.org/kompetisi/competitive-programming/submission"
+                      registeredDate={
+                        user.registered.competitions.competitive_programming
+                          .created_at
                       }
                     />
                   )}
@@ -110,6 +115,10 @@ function Kompetisi() {
                       submissionLink={
                         "https://srifoton.hmifunsri.org/kompetisi/uiux-design/submission"
                       }
+                      registeredDate={
+                        user.registered.competitions.uiux_design.created_at
+                      }
+                      needSubmission
                     />
                   )}
                 </div>

@@ -5,6 +5,7 @@ export default function LayoutCredentials({
   children,
   id,
   notUseLogo,
+  kegiatanPage,
 }) {
   return (
     <section
@@ -13,7 +14,11 @@ export default function LayoutCredentials({
         authPage && "!mt-10 md:mt-16 lg:mt-24"
       }  `}
     >
-      <div className="p-10 sm:p-20 lg:p-[50px] xl:p-[65px]">
+      <div
+        className={`p-10  ${
+          kegiatanPage ? "sm:py-10 " : "sm:py-16 "
+        } sm:px-16 md:px-24 lg:p-[50px] xl:p-[65px]`}
+      >
         <div
           className={`absolute inset-0 w-[90%] md:w-[85%]  ${
             authPage ? "lg:w-full" : "lg:w-4/5 "
