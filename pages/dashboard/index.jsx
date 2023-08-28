@@ -14,16 +14,21 @@ import { useAccessTokenStore } from "@/store/tokenStore";
 import { updateUserRules } from "@/utils/formRules";
 import Modal from "@/components/atoms/Modal";
 import useModal from "@/hooks/useModal";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import useRefreshToken from "@/hooks/useRefreshToken";
 
 function Dashboard() {
   const { user } = useUserStore();
   const { setUser: setUserSrifoton } = useUserStore();
-  const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
+  // const setAccessToken = useAccessTokenStore((state) => state.setAccessToken);
   const router = useRouter();
   const message = router.query?.message;
+  const refresh = useRefreshToken();
+  useEffect(() => {
+    refresh();
+  }, []);
 
   useEffect(() => {
     if (message) {
@@ -35,12 +40,14 @@ function Dashboard() {
 
   useEffect(() => {
     const getNewestDataUser = async () => {
-      localStorage.removeItem("user-srifoton");
+      // localStorage.removeItem("user-srifoton");
       const { data } = await getDataUser();
+      console.log(data);
       setUserSrifoton(data);
     };
     getNewestDataUser();
-  }, []);
+  }, [setUserSrifoton]);
+
   const {
     modalMessage,
     showModal,
