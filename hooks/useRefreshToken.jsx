@@ -12,21 +12,22 @@ export default function useRefreshToken() {
     setAccessToken: setToken,
     accessToken: isLoggedIn,
   } = useAccessTokenStore();
-  const { user, removeUser } = useUserStore();
+  const { removeUser } = useUserStore();
+
   const refresh = async () => {
     try {
       const { data } = await checkToken();
-      try {
-        if (data.message == "Token valid") {
+
+      if (data.message === "Token valid") {
+        try {
           const { data } = await doRefreshToken();
           console.log(data);
           setToken(data.token);
+        } catch (error) {
+          console.log(error);
         }
-      } catch (error) {
-        console.log(error);
       }
     } catch (error) {
-      // toast.error("Anda harus login terlebih dahulu");
       removeUser();
       removeAccessToken();
       localStorage.removeItem("token-srifoton");
