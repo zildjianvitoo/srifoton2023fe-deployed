@@ -14,6 +14,7 @@ export default function RegisteredCompetitions({
   registeredDate,
   needSubmission,
   submissionLink,
+  isVerified,
 }) {
   const validDate = useDateFormat(registeredDate);
 
@@ -31,11 +32,12 @@ export default function RegisteredCompetitions({
         <h2 className=" text-[#494B7C] dark:text-white text-2xl lg:text-3xl px-2 font-semibold uppercase tracking-[1px]">
           {teamName}
         </h2>
+        <div className="items-center hidden gap-2 text-lg md:flex text-blue-srifoton dark:text-pink-srifoton">
+          <RiCalendarTodoFill className="text-2xl" />
+          <p>{validDate}</p>
+        </div>
         <div className="flex items-center justify-between mt-14">
-          <div className="items-center hidden gap-2 text-lg md:flex text-blue-srifoton dark:text-pink-srifoton">
-            <RiCalendarTodoFill className="text-2xl" />
-            <p>{validDate}</p>
-          </div>
+          <div></div>
           <div className="flex flex-col self-end gap-2 ml-auto text-sm sm:flex-row md:text-base">
             {needSubmission && (
               <Link href={submissionLink} className="">

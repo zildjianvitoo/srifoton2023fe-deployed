@@ -22,6 +22,10 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="keywords" content="Seminar, Kompetisi, Srifoton" />
         <meta name="author" content="IT LEAD DEVELOPER TEAM SRIFOTON 2023" />
+        <meta
+          name="google-site-verification"
+          content="WxvK7ZNhpKx4HJp5gs0SIy-oAz0zOwwBK4o-kdPMxs8"
+        />
         <link rel="icon" href="/assets/logo-srifoton2023.png" />
       </Head>
       {/* <HydrationContext> */}

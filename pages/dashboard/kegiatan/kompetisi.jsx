@@ -87,6 +87,9 @@ function Kompetisi() {
                       registeredDate={
                         user.registered.competitions.web_development.created_at
                       }
+                      // isVerified={
+                      //   user.registered.competitions.web_development.isVerified
+                      // }
                       needSubmission
                     />
                   )}
