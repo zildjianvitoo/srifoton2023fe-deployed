@@ -14,7 +14,7 @@ export default function PricingCard({ headers, price, linkTo }) {
     <div className="flex flex-col rounded-[25px] border-[5px] border-pink-srifoton hover:scale-105 transition-all duration-200">
       <div className="bg-gradient-to-r from-pink-srifoton to-[#9E5AF7] rounded-t-[20px] ">
         <h2
-          className={`${ethnocentric.className} p-4 text-white text-2xl text-center`}
+          className={`${ethnocentric.className} p-4 text-[#FCF2FF] dark:text-[#02053E] text-2xl text-center`}
         >
           {validHeaders[0]} <br />
           {validHeaders[1]}

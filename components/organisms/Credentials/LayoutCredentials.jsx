@@ -6,6 +6,7 @@ export default function LayoutCredentials({
   id,
   notUseLogo,
   kegiatanPage,
+  submissionPage,
 }) {
   return (
     <section
@@ -36,7 +37,7 @@ export default function LayoutCredentials({
         <div
           className={` ${
             !authPage && "mx-auto md:w-[85%] lg:w-4/5 "
-          } flex   z-10 gap-20`}
+          } flex   z-10  `}
         >
           {children}
           {!authPage && !notUseLogo && (
@@ -46,7 +47,7 @@ export default function LayoutCredentials({
                 height={400}
                 src={"/assets/srifoton-decor.png"}
                 alt="Mascot"
-                className="lg:w-[300px] xl:w-[400px] rounded-br-[25px]   "
+                className=" lg:w-[300px] xl:w-[400px] rounded-br-[25px]   "
               />
             </div>
           )}

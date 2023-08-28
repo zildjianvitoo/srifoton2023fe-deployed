@@ -83,9 +83,7 @@ function Kompetisi() {
                       groupLink={
                         " https://chat.whatsapp.com/Hwp4lBgCudvH5rkALiolES"
                       }
-                      submissionLink={
-                        "https://srifoton.hmifunsri.org/kompetisi/web-development/submission"
-                      }
+                      submissionLink={"/kompetisi/web-development/submission"}
                       registeredDate={
                         user.registered.competitions.web_development.created_at
                       }
@@ -112,9 +110,7 @@ function Kompetisi() {
                       groupLink={
                         "https://chat.whatsapp.com/KMfV1b9VpTODBOG0l7VdOZ"
                       }
-                      submissionLink={
-                        "https://srifoton.hmifunsri.org/kompetisi/uiux-design/submission"
-                      }
+                      submissionLink={"/kompetisi/uiux-design/submission"}
                       registeredDate={
                         user.registered.competitions.uiux_design.created_at
                       }

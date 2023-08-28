@@ -274,3 +274,12 @@ export const updateUserRules = {
     },
   },
 };
+
+export const submissionFormRules = {
+  workTitle: {
+    required: {
+      value: true,
+      message: "Judul Karya tidak boleh kosong",
+    },
+  },
+};

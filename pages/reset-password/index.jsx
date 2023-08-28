@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useState } from "react";
+
 import LayoutMain from "@/components/LayoutMain";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import CredentialsCard from "@/components/atoms/CredentialsCard";

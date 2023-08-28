@@ -387,6 +387,23 @@ async function doRefreshToken() {
   return { data };
 }
 
+async function doWebDevelopmentSubmission({ title, submission }) {
+  const formData = new FormData();
+  formData.append("title", title);
+  formData.append("submission", submission);
+  const { data, status } = await api.post(
+    "/api/web-development/submission",
+    formData,
+    {
+      headers: { Authorization: `Bearer ${getAccessToken()}` },
+    }
+  );
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
+}
+
 export {
   doRegister,
   doLogin,
@@ -403,4 +420,5 @@ export {
   doWebDevelopmentRegistration,
   checkToken,
   doRefreshToken,
+  doWebDevelopmentSubmission,
 };

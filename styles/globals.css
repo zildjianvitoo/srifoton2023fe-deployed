@@ -222,6 +222,19 @@ input[type="number"] {
 
 /* End Swiper Styles */
 
+.file-input {
+  background: none;
+}
+
+.file-input::file-selector-button {
+  background-color: #2e7bef;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /* border-right: 1px solid #7b7b7b; */
+  font-weight: 600;
+  color: white;
+}
+
 @layer utilities {
   .shadow-navbar {
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15) !important;
@@ -805,6 +818,39 @@ input[type="number"] {
     -webkit-text-stroke: 4px transparent;
   }
   /* End Dashboard Page */
+
+  /* Submission Page */
+  .submission-header {
+    color: #f5ddf7;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 95%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+  }
+
+  .submission-header-dark {
+    color: #f5ddf7;
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--pink-srifoton) 0%,
+      var(--blue-srifoton) 95%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+  }
+
+  /* End Submission Page */
+
+  /* Dark Mode */
+  /* @media (prefers-color-scheme: dark) {
+    .file-input::file-selector-button {
+      border-right: 1px solid #ededed;
+    }
+  } */
+  /* End Dark Mode */
 
   /** Responsive **/
   @media screen and (max-width: 1024px) {
