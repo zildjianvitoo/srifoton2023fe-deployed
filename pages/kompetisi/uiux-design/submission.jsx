@@ -7,8 +7,9 @@ import InputForm from "@/components/atoms/InputForm";
 
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import { ethnocentric } from "@/public/fonts/fonts";
-import { doWebDevelopmentSubmission } from "@/utils/api";
+import { doUiUxDesignSubmission } from "@/utils/api";
 import { submissionFormRules } from "@/utils/formRules";
+
 import { AxiosError } from "axios";
 import { useTheme } from "next-themes";
 import Head from "next/head";
@@ -53,9 +54,10 @@ export default function Submission() {
   };
 
   const onSubmitHandler = async (formValue) => {
+    const { workTitle } = formValue;
     try {
-      const { data } = await doWebDevelopmentSubmission({
-        title: formValue.workTitle,
+      const { data } = await doUiUxDesignSubmission({
+        title: workTitle,
         submission: submissionFile,
       });
       console.log(data);
@@ -73,10 +75,10 @@ export default function Submission() {
   return (
     <>
       <Head>
-        <title>SRIFOTON | Web Development Submission</title>
+        <title>SRIFOTON | UI/UX Design Submission</title>
       </Head>
       <LayoutMain>
-        <LayoutCredentials id={"submission-web-development"} submissionPage>
+        <LayoutCredentials id={"submission-uiux-design"} submissionPage>
           <form
             className="w-full lg:w-1/2"
             onSubmit={handleSubmit(onSubmitHandler)}
@@ -97,10 +99,10 @@ export default function Submission() {
                       <span
                         className={`  text-transparent bg-gradient-to-r bg-clip-text from-pink-srifoton to-blue-srifoton `}
                       >
-                        WEB
+                        UI/UX
                       </span>{" "}
                       <span className="pl-1 field-header dark:field-header-dark lg:!tracking-[5px]">
-                        DEVELOPMENT
+                        DESIGN
                       </span>
                     </h1>
                     <div className="flex flex-col ">
