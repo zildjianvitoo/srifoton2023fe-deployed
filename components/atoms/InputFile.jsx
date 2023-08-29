@@ -9,6 +9,8 @@ export default function InputFile({
   labelFor,
   setProof,
   errorMessage,
+  detailTeamPage,
+  imageReadOnly,
 }) {
   const [image, setImage] = useState(null);
   const [wrongType, setWrongType] = useState(false);
@@ -55,9 +57,14 @@ export default function InputFile({
   };
 
   const isRequiredImage = () => {
-    if (labelFor === "idCard2") {
-      return false;
-    } else if (labelFor === "idCard3") {
+    if (
+      labelFor === "idCard2" ||
+      labelFor === "idCard3" ||
+      labelFor === "proofDetailTeam" ||
+      labelFor === "idCard1DetailTeam" ||
+      labelFor === "idCard2DetailTeam" ||
+      labelFor === "idCard3DetailTeam"
+    ) {
       return false;
     } else {
       return true;
@@ -82,34 +89,41 @@ export default function InputFile({
         >
           <div className=" h-[7.5rem] flex items-center justify-center">
             <div className="flex items-center justify-center">
-              {image ? (
+              {image || imageReadOnly ? (
                 <div className="flex w-full ">
                   <div className="relative flex items-center justify-center w-full ">
                     <img
-                      src={image}
+                      src={detailTeamPage ? imageReadOnly : image}
                       alt="image yang diupload"
                       className="object-contain max-w-[240px]  lg:max-w-[280px] md:max-w-sm rounded-md max-h-[10rem] md:max-h-[10rem] z-10"
                     />
                   </div>
-                  <div className="flex justify-end " onClick={removeImage}>
-                    <AiOutlineClose className="absolute z-40 text-lg font-semibold text-black translate-x-5 dark:text-white " />
-                  </div>
+                  {!imageReadOnly && (
+                    <div className="flex justify-end " onClick={removeImage}>
+                      <AiOutlineClose className="absolute z-40 text-lg font-semibold text-black translate-x-5 dark:text-white " />
+                    </div>
+                  )}
                 </div>
               ) : (
                 <div className="flex items-center justify-center gap-2 border border-[#D0D0D0]  dark:border-none dark:bg-transparent py-1 px-4  rounded-md">
                   <BsImage className="dark:text-white" />
-                  <p className="text-sm font-medium dark:text-white">Unggah</p>
+                  <p className="text-sm font-medium dark:text-white">
+                    {detailTeamPage ? "Tidak Ada Foto" : "Unggah"}
+                  </p>
                 </div>
               )}
             </div>
           </div>
-          <input
-            id={labelFor}
-            type="file"
-            className="hidden"
-            accept="image/png, image/jpeg, image/jpg, image/svg, image/pdf"
-            onChange={uploadImage}
-          />
+          {!detailTeamPage && (
+            <input
+              id={labelFor}
+              type="file"
+              className="hidden "
+              accept="image/png, image/jpeg, image/jpg, image/svg, image/pdf"
+              onChange={uploadImage}
+              // readOnly={detailTeamPage}
+            />
+          )}
         </label>
       </div>
       {wrongType && <ErrorMessage message="Ukuran File terlalu besar" />}

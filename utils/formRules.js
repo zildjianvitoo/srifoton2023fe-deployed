@@ -276,7 +276,7 @@ export const updateUserRules = {
 };
 
 export const submissionFormRules = {
-  workTitle: {
+  submissionTitle: {
     required: {
       value: true,
       message: "Judul Karya tidak boleh kosong",

@@ -37,7 +37,7 @@ export default function RegisteredCompetitions({
           {/* <div className="rounded-[50px] grid place-items-center text-blue-srifoton font-poppins font-medium w-fit px-2 border-[3px] border-blue-srifoton">
             <p>Menunggu Verifikasi</p>
           </div> */}
-          <div className="items-center hidden gap-2 text-lg md:flex text-blue-srifoton dark:text-pink-srifoton">
+          <div className="items-center hidden gap-2 text-lg sm:flex text-blue-srifoton dark:text-pink-srifoton">
             <RiCalendarTodoFill className="text-2xl" />
             <p>{validDate}</p>
           </div>

@@ -56,10 +56,10 @@ export default function Submission() {
   };
 
   const onSubmitHandler = async (formValue) => {
-    const { workTitle } = formValue;
+    const { submissionTitle } = formValue;
     try {
       const { data } = await doUiUxDesignSubmission({
-        title: workTitle,
+        title: submissionTitle,
         submission: submissionFile,
       });
       console.log(data);
@@ -112,15 +112,17 @@ export default function Submission() {
                     </h1>
                     <div className="flex flex-col ">
                       <InputForm
-                        labelFor={"workTitle"}
+                        labelFor={"submissionTitle"}
                         labelText={"Judul Karya"}
                         type={"text"}
                         placeholder={"Contoh: WeCare"}
                         register={register}
-                        rules={submissionFormRules.workTitle}
+                        rules={submissionFormRules.submissionTitle}
                       />
-                      {errors.workTitle && (
-                        <ErrorMessage message={errors.workTitle.message} />
+                      {errors.submissionTitle && (
+                        <ErrorMessage
+                          message={errors.submissionTitle.message}
+                        />
                       )}
                     </div>
                     <div className="flex flex-col text-lg lg:text-xl font-medium text-[#494B7C] dark:text-white gap-1">

@@ -1,4 +1,3 @@
-import { useTheme } from "next-themes";
 import FormFirstField from "./FormFirstField";
 import PaymentNote from "@/components/molecules/PaymentNote";
 import { ethnocentric } from "@/public/fonts/fonts";
@@ -10,13 +9,6 @@ export default function FirstField({
   setProof,
   errorMessageProof,
 }) {
-  const { theme } = useTheme();
-
-  const imageSource =
-    theme === "light"
-      ? "/assets/Kompetisi/DaftarKompetisi/daftarkompetisi-img.svg"
-      : "/assets/Kompetisi/DaftarKompetisi/daftarkompetisi-imgdark.svg";
-
   return (
     <section id="daftar-kompetisi-1" className="z-10">
       <div className="flex flex-col w-full gap-8 px-6 pt-6 lg:pt-12 lg:pb-0 lg:px-10">
