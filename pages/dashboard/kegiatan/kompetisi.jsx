@@ -87,9 +87,9 @@ function Kompetisi() {
                       registeredDate={
                         user.registered.competitions.web_development.created_at
                       }
-                      // isVerified={
-                      //   user.registered.competitions.web_development.isVerified
-                      // }
+                      isVerified={
+                        user.registered.competitions.web_development.isVerified
+                      }
                       needSubmission
                     />
                   )}
@@ -104,6 +104,10 @@ function Kompetisi() {
                         user.registered.competitions.competitive_programming
                           .created_at
                       }
+                      isVerified={
+                        user.registered.competitions.competitive_programming
+                          .isVerified
+                      }
                     />
                   )}
                   {isUserRegisteredUIUX && (
@@ -116,6 +120,9 @@ function Kompetisi() {
                       submissionLink={"/kompetisi/uiux-design/submission"}
                       registeredDate={
                         user.registered.competitions.uiux_design.created_at
+                      }
+                      isVerified={
+                        user.registered.competitions.uiux_design.isVerified
                       }
                       needSubmission
                     />

@@ -13,6 +13,7 @@ import { submissionFormRules } from "@/utils/formRules";
 import { AxiosError } from "axios";
 import { useTheme } from "next-themes";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -21,6 +22,7 @@ export default function Submission() {
   const { theme } = useTheme();
   const [submissionFile, setSubmissionFile] = useState("");
   const [wrongType, setWrongType] = useState(false);
+  const router = useRouter();
 
   const {
     control,
@@ -62,10 +64,13 @@ export default function Submission() {
       });
       console.log(data);
       toast.success("Berhasil mengunggah karya");
+      setTimeout(() => {
+        router.push("/dashboard");
+      }, 2500);
     } catch (error) {
       console.log(error);
       if (error instanceof AxiosError) {
-        toast.error(error.response.data.message);
+        toast.error(error?.response?.data?.message);
       } else {
         toast.error("Terjadi kesalahan, silahkan coba lagi");
       }
