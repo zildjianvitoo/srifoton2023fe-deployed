@@ -95,7 +95,7 @@ function Kompetisi() {
                             .created_at
                         }
                         isVerified={
-                          user.registered.competitions.web_development
+                          +user.registered.competitions.web_development
                             .isVerified
                         }
                         needSubmission
@@ -118,7 +118,7 @@ function Kompetisi() {
                             .created_at
                         }
                         isVerified={
-                          user.registered.competitions.competitive_programming
+                          +user.registered.competitions.competitive_programming
                             .isVerified
                         }
                       />
@@ -140,7 +140,7 @@ function Kompetisi() {
                           user.registered.competitions.uiux_design.created_at
                         }
                         isVerified={
-                          user.registered.competitions.uiux_design.isVerified
+                          +user.registered.competitions.uiux_design.isVerified
                         }
                         needSubmission
                       />

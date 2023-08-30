@@ -18,6 +18,8 @@ export default function RegisteredCompetitions({
 }) {
   const validDate = useDateFormat(registeredDate);
 
+  console.log(isVerified);
+
   return (
     <LayoutCredentials id="dashboard-data-diri" authPage kegiatanPage>
       <div className="z-10 flex flex-col w-full gap-y-8 lg:gap-y-4">
