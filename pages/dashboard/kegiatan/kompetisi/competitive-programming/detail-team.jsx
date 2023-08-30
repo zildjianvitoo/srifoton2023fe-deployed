@@ -7,7 +7,6 @@ import { useUserStore } from "@/store/userStore";
 
 export default function DetailTeam() {
   const user = useUserStore((state) => state.user);
-  console.log(user);
   return (
     <>
       <Head>

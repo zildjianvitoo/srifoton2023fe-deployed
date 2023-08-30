@@ -3,7 +3,6 @@ import { ethnocentric } from "@/public/fonts/fonts";
 import InputFile from "@/components/atoms/InputFile";
 import InputForm from "@/components/atoms/InputForm";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import FormCardDetailMember1 from "@/components/molecules/FormCardDetailMember1";
 import FormCardDetailMember2 from "@/components/molecules/FormCardDetailMember2";
@@ -12,8 +11,6 @@ import NoSSR from "@/components/NoSSR";
 import dynamic from "next/dynamic";
 
 function DetailTeamCard({ jenisKompetisi, team }) {
-  const router = useRouter();
-  console.log(team);
   const { register } = useForm({
     defaultValues: {
       teamName: team?.team_name,
@@ -38,8 +35,6 @@ function DetailTeamCard({ jenisKompetisi, team }) {
       instagram3: team?.instagram3,
     },
   });
-
-  console.log();
 
   return (
     <>

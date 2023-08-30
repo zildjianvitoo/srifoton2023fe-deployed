@@ -17,7 +17,6 @@ const RequireLogin = (WrappedComponent) => {
     } = useAccessTokenStore();
     const { user, removeUser } = useUserStore();
     useEffect(() => {
-      console.log(!!isLoggedIn);
       if (!isLoggedIn || !user) {
         toast.error("Anda harus login terlebih dahulu");
         router.replace("/");

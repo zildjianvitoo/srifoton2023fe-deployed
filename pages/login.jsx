@@ -43,7 +43,6 @@ function Login() {
       router.push("/dashboard");
     } catch (error) {
       if (error instanceof AxiosError) {
-        console.log(error);
         setErrorMessage(error.response?.data?.errors);
       } else {
         toast.error("Terjadi Kesalahan Pada Server,Silahkan Coba Lagi");

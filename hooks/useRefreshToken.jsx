@@ -21,7 +21,7 @@ export default function useRefreshToken() {
       if (data.message === "Token valid") {
         try {
           const { data } = await doRefreshToken();
-          console.log(data);
+
           setToken(data.token);
         } catch (error) {
           console.log(error);

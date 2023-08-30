@@ -30,7 +30,6 @@ export default function Submission() {
 
   const onSubmissionFileChangeHandler = (e) => {
     const selectedFile = e.target.files[0];
-    console.log(selectedFile);
     const ALLOWED_TYPES = [
       "zip",
       "application/octet-stream",
@@ -58,10 +57,8 @@ export default function Submission() {
         title: formValue.submissionTitle,
         submission: submissionFile,
       });
-      console.log(data);
       toast.success("Berhasil mengunggah karya");
     } catch (error) {
-      console.log(error);
       if (error instanceof AxiosError) {
         toast.error(error.response.data.message);
       } else {

@@ -42,7 +42,7 @@ function Dashboard() {
     const getNewestDataUser = async () => {
       // localStorage.removeItem("user-srifoton");
       const { data } = await getDataUser();
-      console.log(data);
+
       setUserSrifoton(data);
     };
     getNewestDataUser();
@@ -80,7 +80,6 @@ function Dashboard() {
       setModalMessageHeader("Berhasil");
       setModalMessage(data.message);
     } catch (error) {
-      console.log(error);
       setModalMessageHeader("Gagal");
       setModalMessage(error.response.data.message);
     } finally {
