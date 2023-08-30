@@ -209,7 +209,7 @@ export default function CompetitiveProgramming() {
                   </NoSSR>
                 </Link>
                 <a
-                  href="https://drive.google.com/file/d/1eYtVF9kOPRR3iLEQNaFsHZDFRGa9rknd/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1g0MjBR499d5VuBtQ3nm8BApmhZkEZXBH/view?usp=sharing"
                   className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                 >
                   <NoSSR>

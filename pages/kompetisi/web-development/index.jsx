@@ -39,7 +39,7 @@ const timelineContent = [
   },
 ];
 
-export default function CompetitiveProgramming() {
+export default function WebDevelopment() {
   const router = useRouter();
 
   const breakPoint = useBreakpoint();
@@ -200,7 +200,7 @@ export default function CompetitiveProgramming() {
                 </NoSSR>
                 <NoSSR>
                   <a
-                    href="https://drive.google.com/file/d/1egVbVCrpNpspGAOIQrqaeerIunXL1DGw/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1fw-q7wZFuhwUjjKNQ3a6-S_5wBjkXBdL/view?usp=sharing"
                     className=" w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                   >
                     <Button

@@ -13,7 +13,6 @@ import { useTheme } from "next-themes";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 
 const timelineContent = [
@@ -44,8 +43,7 @@ const timelineContent = [
   },
 ];
 
-export default function CompetitiveProgramming() {
-  const router = useRouter();
+export default function UiUxDesign() {
   const breakPoint = useBreakpoint();
   const { theme } = useTheme();
 
@@ -207,7 +205,7 @@ export default function CompetitiveProgramming() {
                 </NoSSR>
                 <NoSSR>
                   <a
-                    href="https://drive.google.com/file/d/1qi6mMe3HC3cpL-VFdNo6ovRxQOyd3aIm/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1g-bIl15oGpNOvrGWCiv10RU4d6yCEHWk/view?usp=sharing"
                     className="w-3/4 md:w-[50%] lg:w-[58%] xl:w-[40%] font-semibold "
                   >
                     <Button
