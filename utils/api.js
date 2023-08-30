@@ -409,7 +409,7 @@ async function doUiUxDesignSubmission({ title, submission }) {
   formData.append("title", title);
   formData.append("submission", submission);
   const { data, status } = await api.post(
-    "/api/uiux-designt/submission",
+    "/api/uiux-design/submission",
     formData,
     {
       headers: { Authorization: `Bearer ${getAccessToken()}` },

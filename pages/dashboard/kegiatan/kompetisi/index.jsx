@@ -79,7 +79,10 @@ function Kompetisi() {
                     </span>
                   </p>
                   {isUserRegisteredWebDev && (
-                    <Link href="/dashboard/kegiatan/kompetisi/web-development/detail-team">
+                    <Link
+                      href="/dashboard/kegiatan/kompetisi/web-development/detail-team"
+                      className="hover:scale-[1.01] transition-all duration-200 "
+                    >
                       <RegisteredCompetitions
                         type={"Web Development"}
                         teamName={teamNameWebdev}
@@ -100,38 +103,48 @@ function Kompetisi() {
                     </Link>
                   )}
                   {isUserRegisteredCP && (
-                    <RegisteredCompetitions
-                      type={"Competitive Programming"}
-                      teamName={teamNameCP}
-                      groupLink={
-                        "https://chat.whatsapp.com/DJ3lizydOVmBF3nJItlyre"
-                      }
-                      registeredDate={
-                        user.registered.competitions.competitive_programming
-                          .created_at
-                      }
-                      isVerified={
-                        user.registered.competitions.competitive_programming
-                          .isVerified
-                      }
-                    />
+                    <Link
+                      href="/dashboard/kegiatan/kompetisi/competitive-programming/detail-team"
+                      className="hover:scale-[1.01] transition-all duration-200 "
+                    >
+                      <RegisteredCompetitions
+                        type={"Competitive Programming"}
+                        teamName={teamNameCP}
+                        groupLink={
+                          "https://chat.whatsapp.com/DJ3lizydOVmBF3nJItlyre"
+                        }
+                        registeredDate={
+                          user.registered.competitions.competitive_programming
+                            .created_at
+                        }
+                        isVerified={
+                          user.registered.competitions.competitive_programming
+                            .isVerified
+                        }
+                      />
+                    </Link>
                   )}
                   {isUserRegisteredUIUX && (
-                    <RegisteredCompetitions
-                      type={"UI/UX Design"}
-                      teamName={teamNameUIUX}
-                      groupLink={
-                        "https://chat.whatsapp.com/KMfV1b9VpTODBOG0l7VdOZ"
-                      }
-                      submissionLink={"/kompetisi/uiux-design/submission"}
-                      registeredDate={
-                        user.registered.competitions.uiux_design.created_at
-                      }
-                      isVerified={
-                        user.registered.competitions.uiux_design.isVerified
-                      }
-                      needSubmission
-                    />
+                    <Link
+                      href="/dashboard/kegiatan/kompetisi/uiux-design/detail-team"
+                      className="hover:scale-[1.01] transition-all duration-200 "
+                    >
+                      <RegisteredCompetitions
+                        type={"UI/UX Design"}
+                        teamName={teamNameUIUX}
+                        groupLink={
+                          "https://chat.whatsapp.com/KMfV1b9VpTODBOG0l7VdOZ"
+                        }
+                        submissionLink={"/kompetisi/uiux-design/submission"}
+                        registeredDate={
+                          user.registered.competitions.uiux_design.created_at
+                        }
+                        isVerified={
+                          user.registered.competitions.uiux_design.isVerified
+                        }
+                        needSubmission
+                      />
+                    </Link>
                   )}
                 </div>
               ) : (
