@@ -9,6 +9,7 @@ import { useUserStore } from "@/store/userStore";
 import { getDataUser } from "@/utils/api";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 function Kompetisi() {
   const [isRegisteredCompetition, setIsRegisteredCompetition] = useState(false);
@@ -64,12 +65,13 @@ function Kompetisi() {
           <div className="w-full md:mt-10 lg:mt-20">
             <NoSSR>
               {isRegisteredCompetition ? (
-                <div className="flex flex-col">
+                <div className="flex flex-col lg:mt-10">
                   <h1 className="mx-auto text-3xl font-bold md:text-4xl lg:text-5xl text-[#494B7C] dark:text-white mt-10 md:mt-0">
                     Kompetisi
                   </h1>
-                  <p className="mx-auto mt-3 text-lg text-center text-black dark:text-white">
-                    Menampilkan kompetisi yang sudah kamu <br /> daftar di{" "}
+                  <p className="px-4 mx-auto mt-3 text-lg text-center text-black dark:text-white">
+                    Menampilkan kompetisi yang sudah kamu{" "}
+                    <br className="hidden xs:flex" /> daftar di{" "}
                     <span
                       className={`${ethnocentric.className} bg-gradient-to-r from-pink-srifoton to-blue-srifoton text-transparent bg-clip-text`}
                     >
@@ -77,21 +79,25 @@ function Kompetisi() {
                     </span>
                   </p>
                   {isUserRegisteredWebDev && (
-                    <RegisteredCompetitions
-                      type={"Web Development"}
-                      teamName={teamNameWebdev}
-                      groupLink={
-                        " https://chat.whatsapp.com/Hwp4lBgCudvH5rkALiolES"
-                      }
-                      submissionLink={"/kompetisi/web-development/submission"}
-                      registeredDate={
-                        user.registered.competitions.web_development.created_at
-                      }
-                      isVerified={
-                        user.registered.competitions.web_development.isVerified
-                      }
-                      needSubmission
-                    />
+                    <Link href="/dashboard/kegiatan/kompetisi/web-development/detail-team">
+                      <RegisteredCompetitions
+                        type={"Web Development"}
+                        teamName={teamNameWebdev}
+                        groupLink={
+                          " https://chat.whatsapp.com/Hwp4lBgCudvH5rkALiolES"
+                        }
+                        submissionLink={"/kompetisi/web-development/submission"}
+                        registeredDate={
+                          user.registered.competitions.web_development
+                            .created_at
+                        }
+                        isVerified={
+                          user.registered.competitions.web_development
+                            .isVerified
+                        }
+                        needSubmission
+                      />
+                    </Link>
                   )}
                   {isUserRegisteredCP && (
                     <RegisteredCompetitions

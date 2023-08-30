@@ -46,7 +46,7 @@ export default function SecondField({
               errors={errors}
               setIdCard3={setIdCard3}
             />
-            <div className="items-center justify-center hidden w-1/2 h-full mt-20 ml-auto lg:flex ">
+            <div className="items-center justify-center hidden w-1/2 h-full m-auto lg:flex ">
               <Image
                 src={"/assets/srifoton-decor.png"}
                 alt={"decoration"}

@@ -186,7 +186,7 @@ function DetailTeamCard({ jenisKompetisi, team }) {
                   register={register}
                   proof={team?.id_card3}
                 />
-                <div className="items-center justify-center hidden w-1/2 h-full mt-20 ml-auto lg:flex ">
+                <div className="items-center justify-center hidden w-1/2 h-full m-auto lg:flex ">
                   <Image
                     src={"/assets/srifoton-decor.png"}
                     alt={"decoration"}

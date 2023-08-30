@@ -12,6 +12,7 @@ export default function FormCardDetailMember2({ header, register, proof }) {
           labelFor={"name2"}
           labelText={"Nama"}
           type={"text"}
+          disabled
           register={register}
         />
       </div>
@@ -20,6 +21,7 @@ export default function FormCardDetailMember2({ header, register, proof }) {
           labelFor={"nim2"}
           labelText={"ID Mahasiswa"}
           type={"text"}
+          disabled
           register={register}
         />
       </div>
@@ -28,6 +30,7 @@ export default function FormCardDetailMember2({ header, register, proof }) {
           labelFor={"phoneNumber2"}
           labelText={"No Telepon"}
           type={"text"}
+          disabled
           register={register}
         />
       </div>
@@ -36,6 +39,7 @@ export default function FormCardDetailMember2({ header, register, proof }) {
           labelFor={"instagram2"}
           labelText={"Instagram"}
           type={"text"}
+          disabled
           register={register}
         />
       </div>
