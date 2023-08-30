@@ -1,11 +1,12 @@
 import LayoutMain from "@/components/LayoutMain";
 import LayoutField from "@/components/organisms/Kompetisi/DaftarKompetisi/LayoutField";
+import RequireLogin from "@/components/HOC/WithAuth";
 import Head from "next/head";
 import React from "react";
 import DetailTeamCard from "@/components/organisms/Dashboard/DetailTeamCard";
 import { useUserStore } from "@/store/userStore";
 
-export default function DetailTeam() {
+function DetailTeam() {
   const user = useUserStore((state) => state.user);
 
   return (
@@ -28,3 +29,5 @@ export default function DetailTeam() {
     </>
   );
 }
+
+export default RequireLogin(DetailTeam);

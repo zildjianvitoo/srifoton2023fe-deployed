@@ -1,15 +1,13 @@
 import LayoutMain from "@/components/LayoutMain";
 import NoSSR from "@/components/NoSSR";
 import Button from "@/components/atoms/Button";
-
+import RequireLogin from "@/components/HOC/WithAuth";
 import ErrorMessage from "@/components/atoms/ErrorMessage";
 import InputForm from "@/components/atoms/InputForm";
-
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import { ethnocentric } from "@/public/fonts/fonts";
 import { doUiUxDesignSubmission } from "@/utils/api";
 import { submissionFormRules } from "@/utils/formRules";
-
 import { AxiosError } from "axios";
 import { useTheme } from "next-themes";
 import Head from "next/head";
@@ -18,7 +16,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
-export default function Submission() {
+function Submission() {
   const { theme } = useTheme();
   const [submissionFile, setSubmissionFile] = useState("");
   const [wrongType, setWrongType] = useState(false);
@@ -154,3 +152,5 @@ export default function Submission() {
     </>
   );
 }
+
+export default RequireLogin(Submission);
