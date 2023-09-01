@@ -78,7 +78,7 @@ export default function MascotExplanation() {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-1 md:gap-2 -translate-x-1.5 md:translate-x-0">
+              <div className="flex gap-2">
                 {" "}
                 <div className="w-8 h-8">
                   <VscCircleLargeFilled className="text-[#494B7C] dark:text-white w-full  mt-2" />
@@ -89,7 +89,8 @@ export default function MascotExplanation() {
                     FUEGO
                   </h3>
                   <p className="text-[#747474] dark:text-[#9BA7BC] ">
-                    Diambil dari Bahasa Spanyol yang memiliki arti Api.
+                    Nama Fuego adalah kata dalam bahasa Spanyol yang berarti Api
+                    atau lilin. Mencerminkan sifat panas dan berapi-api.
                   </p>
                 </div>
               </div>
@@ -105,8 +106,8 @@ export default function MascotExplanation() {
                     Merah
                   </h3>
                   <p className="text-[#747474] dark:text-[#9BA7BC] ">
-                    Merupakan warna yang identik dengan bumi Sriwijaya.
-                    (Kegimbaraan dan Keberanian)
+                    Warna merah, yang dikaitkan dengan bumi Sriwijaya,
+                    menggambarkan esensi kegembiraan dan keberanian.
                   </p>
                 </div>
               </div>
@@ -121,8 +122,24 @@ export default function MascotExplanation() {
                     Emas
                   </h3>
                   <p className="text-[#747474] dark:text-[#9BA7BC] ">
-                    Merupakan warna yang identik dengan bumi Sriwijaya.
-                    (Keagungan)
+                    Warna Emas, warna yang selalu dikaitkan dengan bumi
+                    Sriwijaya, yang mencerminkan keagungan yang ada di sana.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                {" "}
+                <div className="w-8 h-8">
+                  <VscCircleLargeFilled className="text-[#494B7C] dark:text-white w-full  mt-2" />
+                </div>
+                <div className="flex flex-col">
+                  {" "}
+                  <h3 className=" font-bold text-2xl text-[#494B7C] dark:text-white  w-[200px]">
+                    Burung Phoenix
+                  </h3>
+                  <p className="text-[#747474] dark:text-[#9BA7BC] ">
+                    Melambangkan kebangkitan dan transformasi, mengartikan
+                    kemampuan untuk bangkit dari kehancuran dengan lebih kuat.
                   </p>
                 </div>
               </div>
@@ -134,7 +151,7 @@ export default function MascotExplanation() {
   }
   return (
     <section id="mascot-description" className="lg:mt-24 lg:mb-16">
-      <div className="flex justify-center gap-10 px-10 lg:mr-20 xl:mr-10 xl:px-20">
+      <div className="flex justify-center gap-4 px-10 lg:mr-20 xl:mr-10 xl:px-20">
         <div className="flex flex-col w-[20%] gap-28">
           <div className="flex w-full gap-3">
             <div className="flex flex-col gap-1 text-right">

@@ -19,7 +19,7 @@ function Seminar() {
             <AuthSidebar />
           </div>
           <div className="w-full md:mt-10 lg:mt-20">
-            <NotRegistered type={"seminar"} />
+            <NotRegistered type={"seminar"} guideBookLink={"/"} />
           </div>
         </div>
       </LayoutMain>

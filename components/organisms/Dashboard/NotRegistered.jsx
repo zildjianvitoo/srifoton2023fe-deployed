@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import NoSSR from "@/components/NoSSR";
 
-export default function NotRegistered({ type }) {
+export default function NotRegistered({ type, guideBookLink }) {
   const { theme } = useTheme();
 
   const notRegisteredImageSource =
@@ -55,8 +55,8 @@ export default function NotRegistered({ type }) {
               </Button>
             </NoSSR>
           </Link>
-          <Link
-            href="/kompetisi/register"
+          <a
+            href={guideBookLink}
             className="w-4/5 mt-3 font-semibold lg:w-full"
           >
             <NoSSR>
@@ -70,7 +70,7 @@ export default function NotRegistered({ type }) {
                 Buku Panduan
               </Button>
             </NoSSR>
-          </Link>
+          </a>
         </div>
       </div>
     </LayoutCredentials>

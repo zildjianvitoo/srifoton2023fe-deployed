@@ -87,7 +87,7 @@ function Kompetisi() {
                         type={"Web Development"}
                         teamName={teamNameWebdev}
                         groupLink={
-                          " https://chat.whatsapp.com/Hwp4lBgCudvH5rkALiolES"
+                          "https://chat.whatsapp.com/Hwp4lBgCudvH5rkALiolES"
                         }
                         submissionLink={"/kompetisi/web-development/submission"}
                         registeredDate={
@@ -148,7 +148,12 @@ function Kompetisi() {
                   )}
                 </div>
               ) : (
-                <NotRegistered type={"kompetisi"} />
+                <NotRegistered
+                  type={"kompetisi"}
+                  guideBookLink={
+                    "https://drive.google.com/folderview?id=1fsWuL2suxK2-Hqm6G7yPnMZDbGH9t8fi"
+                  }
+                />
               )}
             </NoSSR>
           </div>
