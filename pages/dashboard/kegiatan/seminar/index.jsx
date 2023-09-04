@@ -4,9 +4,12 @@ import RequireLogin from "@/components/HOC/WithAuth";
 import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
 import { useUserStore } from "@/store/userStore";
 import Head from "next/head";
+import RegisteredActivity from "@/components/organisms/Dashboard/RegisteredActivity";
 
 function Seminar() {
   const user = useUserStore((state) => state.user);
+
+  console.log(user);
 
   return (
     <>
@@ -19,7 +22,17 @@ function Seminar() {
             <AuthSidebar />
           </div>
           <div className="w-full md:mt-10 lg:mt-20">
-            <NotRegistered type={"seminar"} guideBookLink={"/"} />
+            {user.registered?.seminar ? (
+              <RegisteredActivity
+                type={"Seminar"}
+                teamName={user.registered.seminar.name}
+                isVerified={+user.registered.seminar.isVerified}
+                groupLink={"https://chat.whatsapp.com/IvBdyVLsfCN2rgvToJVwUh"}
+                registeredDate={user.registered.seminar.created_at}
+              />
+            ) : (
+              <NotRegistered type={"seminar"} guideBookLink={"seminar"} />
+            )}
           </div>
         </div>
       </LayoutMain>

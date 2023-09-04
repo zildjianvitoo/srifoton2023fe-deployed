@@ -8,7 +8,7 @@ import { RiCalendarTodoFill } from "react-icons/ri";
 import useDateFormat from "@/hooks/useDateFormat";
 import { useRouter } from "next/router";
 
-export default function RegisteredCompetitions({
+export default function RegisteredActivity({
   type,
   teamName,
   groupLink,

@@ -3,7 +3,7 @@ import LayoutMain from "@/components/LayoutMain";
 import NoSSR from "@/components/NoSSR";
 import RequireLogin from "@/components/HOC/WithAuth";
 import NotRegistered from "@/components/organisms/Dashboard/NotRegistered";
-import RegisteredCompetitions from "@/components/organisms/Dashboard/RegisteredCompetitions";
+import RegisteredActivity from "@/components/organisms/Dashboard/RegisteredActivity";
 import { ethnocentric } from "@/public/fonts/fonts";
 import { useUserStore } from "@/store/userStore";
 import { getDataUser } from "@/utils/api";
@@ -83,7 +83,7 @@ function Kompetisi() {
                       href="/dashboard/kegiatan/kompetisi/web-development/detail-team"
                       className="hover:scale-[1.01] transition-all duration-200 "
                     >
-                      <RegisteredCompetitions
+                      <RegisteredActivity
                         type={"Web Development"}
                         teamName={teamNameWebdev}
                         groupLink={
@@ -107,7 +107,7 @@ function Kompetisi() {
                       href="/dashboard/kegiatan/kompetisi/competitive-programming/detail-team"
                       className="hover:scale-[1.01] transition-all duration-200 "
                     >
-                      <RegisteredCompetitions
+                      <RegisteredActivity
                         type={"Competitive Programming"}
                         teamName={teamNameCP}
                         groupLink={
@@ -129,7 +129,7 @@ function Kompetisi() {
                       href="/dashboard/kegiatan/kompetisi/uiux-design/detail-team"
                       className="hover:scale-[1.01] transition-all duration-200 "
                     >
-                      <RegisteredCompetitions
+                      <RegisteredActivity
                         type={"UI/UX Design"}
                         teamName={teamNameUIUX}
                         groupLink={

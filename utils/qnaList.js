@@ -1,41 +1,75 @@
 export const seminarQnaList = [
   {
     id: 1,
-    question:
-      "Bagaimana cara mendaftarkan diri pada kompetisi Web Development Srifoton 2023 ?",
+    question: "Apa itu seminar SRIFOTON?",
     answer:
-      "Ketua Tim sudah melakukan pendaftaran pada laman website resmi Srifoton 2023 https://srifoton.hmifunsri.org dan melengkapi seluruh data pendaftaran  setiap anggota Tim dengan benar. Peserta yang tidak melakukan pendaftaran dan tidak memenuhi persyaratan sampai waktu yang ditentukan akan dinyatakan gugur",
+      "Seminar SRIFOTON ini adalah kegiatan  yang dirancang untuk memberikan wawasan mendalam tentang topik dibidang NON IT dan IT kepada para peserta pastinya ya.",
   },
   {
     id: 2,
-    question:
-      "Jika saya telah mengikuti salah satu cabang lomba SRIFOTON 2023, Apakah saya boleh juga mengikuti cabang lomba yang lain?",
+    question: "Kapan dan di mana acara ini akan berlangsung?",
     answer:
-      "Jika saya telah mengikuti salah satu cabang lomba SRIFOTON 2023, Apakah saya boleh juga mengikuti cabang lomba yang lain?",
+      "Seminar ini akan diselenggarakan pada 28 Oktober 2023 di Palembang atau secara daring melalui platform Zoom Meeting. (Tempat spesifik untuk offline tertera dipamflet)",
   },
   {
     id: 3,
-    question:
-      "Bolehkah dalam satu tim mendaftar jika anggotanya berasal dari jenjang pendidikan berbeda maupun dari jurusan yang berbeda?",
+    question: "Apa manfaat mengikuti seminar ini?",
     answer:
-      "Diperbolehkan. Asalkan anggotanya berasal dari satu universitas atau perguruan tinggi yang sama.",
+      "Dengan mengikuti seminar ini, Anda akan mendapatkan pengetahuan mendalam tentang topik terkait, peluang untuk berinteraksi dengan para ahli di bidangnya loh.",
   },
   {
     id: 4,
-    question:
-      "Apakah karya yang akan diperlombakan boleh menggunakan karya yang sudah pernah diikutsertakan dalam kompetisi lain?",
-    answer: "",
+    question: "Bagaimana cara mendaftar untuk seminar ini?",
+    answer:
+      "Anda dapat mendaftar melalui situs web resmi kami srifoton.hmifunsri.org atau bisa juga menghubungi +6285378309768(Fairuz) untuk panduan pendaftaran, jangan sungkan bertanya yaa.",
   },
   {
     id: 5,
-    question:
-      "Bolehkah satu tim terdiri atas anggota yang berbeda universitas atau perguruan tinggi?",
-    answer: "",
+    question: "Bagaimana saya dapat melakukan pembayaran? ",
+    answer:
+      "Pembayaran dapat dilakukan melalui transfer bank atau platform pembayaran online yang telah ditentukan.",
   },
   {
     id: 6,
-    question: "Berapakah minimal dan jumlah maksimal anggota dalam satu tim?",
-    answer: "",
+    question: "Apa topik yang akan dibahas dalam seminar?",
+    answer:
+      "Seminar ini akan membahas topik tentang IT (Penjelasan mengenai Digital Education For Digital Thinking in The Modern Era) dan topik NON IT (Penjelasan mengenai Pembangunan keyakinan diri dan tujuan yang berarti untuk pemuda mengembangkan rencana dan aksi).",
+  },
+  {
+    id: 7,
+    question: "Berapa biaya pendaftaran untuk seminar ini?",
+    answer:
+      "Biaya pendaftaran adalah 30k. Ini mencakup akses ke semua sesi seminar dan materi terkait.",
+  },
+  {
+    id: 8,
+    question: "Siapa saja pembicara yang akan hadir?",
+    answer:
+      "Tau Presiden Gen Z? Ya kak Rian Fahardi akan menjadi pembicara bidang Non IT pada seminar ini, dan untuk IT bakalan diisi oleh Kak Cendikia yang sudah sangat expert dibidang digital nih temen temen.",
+  },
+  {
+    id: 9,
+    question: "Bagaimana agenda seminar ini?",
+    answer:
+      "Agenda lengkap seminar akan diberikan sebelum acara dimulai. Ini akan mencakup jadwal setiap sesi, istirahat, dan waktu untuk sesi tanya jawab lalu adapun pengumuman pemenang lomba SRIFOTON 2023.",
+  },
+  {
+    id: 10,
+    question: "Apakah saya perlu membawa perlengkapan khusus?",
+    answer:
+      "Untuk peserta yang datang offline anda dapat membawa buku catatan dan pena untuk mencatat materi. Untuk peserta Daring diharapkan menyediakan device yang dibutuhkan seperti laptop dan smartphone serta jaringan yang mendukung.",
+  },
+  {
+    id: 11,
+    question: "Apakah sertifikat kehadiran akan diberikan?",
+    answer:
+      "Jangan khawatir, setelah menyelesaikan seminar, Anda akan menerima sertifikat kehadiran sebagai pengakuan atas partisipasi yaa.",
+  },
+  {
+    id: 12,
+    question: "Apakah ada batasan jumlah peserta?",
+    answer:
+      "Ya, agar interaksi tetap efektif, kami mungkin memiliki batasan jumlah peserta. Pendaftaran akan berlangsung sampai kuota terpenuhi",
   },
 ];
 

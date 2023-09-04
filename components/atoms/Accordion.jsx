@@ -4,7 +4,7 @@ import { AiFillMinusCircle } from "react-icons/ai";
 export default function Accordion({ toggle, isOpen, question, answer }) {
   return (
     <div
-      className={`relative cursor-pointer justify-start font-poppins text-[#494B7C] dark:text-[#E5EEFF] gradient-border-qna dark:gradient-border-qna-dark ${
+      className={`relative cursor-pointer justify-start font-poppins text-[#494B7C] dark:text-[#E5EEFF] gradient-border-qna dark:gradient-border-qna-dark  ${
         isOpen
           ? "  items-center"
           : "h-[140px] md:h-[125px] lg:h-[120px] xl:h-[130px] items-center"

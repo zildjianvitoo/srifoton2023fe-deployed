@@ -64,9 +64,10 @@ export default function RegisterSeminarForm() {
         proof,
         payment_method: paymentMethod,
       });
+      console.log(data);
     } catch (error) {
       if (error instanceof AxiosError) {
-        toast.error(error.response.data.message);
+        toast.error(error.response.data.error);
       } else {
         toast.error("Terjadi kesalahan");
       }
