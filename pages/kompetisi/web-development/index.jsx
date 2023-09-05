@@ -34,7 +34,7 @@ const timelineContent = [
   },
   {
     title: "Pengumuman",
-    date: "28/08/2023",
+    date: "28/10/2023",
     desc: "Pengumuman pemenang akan dilaksanakan bersamaan dengan penutupan acara.",
   },
 ];
