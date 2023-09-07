@@ -5,7 +5,7 @@ const kontak = () => {
   return (
     <>
       <Head>
-        <title>SRIFOTON | Kontak</title>
+        <title>SRIFOTON | Kontak </title>
       </Head>
       <LayoutMain></LayoutMain>
     </>
