@@ -7,6 +7,7 @@ import Sponsor from "@/components/organisms/LandingPage/Sponsor";
 import LayoutMain from "@/components/LayoutMain";
 import MascotExplanation from "@/components/organisms/LandingPage/MascotDescription";
 import { useEffect } from "react";
+import useRefreshToken from "@/hooks/useRefreshToken";
 
 export default function Home({}) {
   const refresh = useRefreshToken();
