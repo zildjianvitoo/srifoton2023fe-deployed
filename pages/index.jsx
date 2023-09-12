@@ -27,7 +27,7 @@ export default function Home({}) {
         <Intro />
         <Timeline />
         <Benefit />
-        {/* <Sponsor /> */}
+        <Sponsor />
       </LayoutMain>
     </>
   );
