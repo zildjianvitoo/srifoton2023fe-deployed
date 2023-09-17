@@ -166,7 +166,7 @@ export default function Footer() {
                   height={24}
                 />
               </Link>
-              <Link href={"https://www.tiktok.com/@srifotonunsri2022"}>
+              <Link href={"https://www.tiktok.com/@srifoton.unsri2023"}>
                 <Image
                   src={"/assets/icon-tiktok.svg"}
                   alt="icon tiktok"
