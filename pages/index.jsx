@@ -10,11 +10,11 @@ import { useEffect } from "react";
 import useRefreshToken from "@/hooks/useRefreshToken";
 
 export default function Home({}) {
-  const refresh = useRefreshToken();
+  // const refresh = useRefreshToken();
 
-  useEffect(() => {
-    refresh();
-  }, []);
+  // useEffect(() => {
+  //   refresh();
+  // }, []);
 
   return (
     <>
