@@ -27,7 +27,7 @@ const timelineContent = [
     desc: "Peserta dapat mengumpulkan karya pada tenggat waktu yang telah di tentukan.",
   },
   {
-    title: "Penutupan Pengumpulan Karya",
+    title: "Penutupan Pendaftaran & Pengumpulan Karya",
     date: "30/09/2023",
     desc: "Batas waktu pengumpulan karya, jika peserta tidak mengumpulkan maka dianggap gugur.",
   },
@@ -37,7 +37,7 @@ const timelineContent = [
     desc: "Setelah peserta mengumpulkan karya, akan dipilih beberapa finalis untuk maju ke babak selanjutnya.",
   },
   {
-    title: "Penutupan Pengumpulan Karya",
+    title: "Presentasi Finalis",
     date: "14/10/2023",
     desc: "Pesreta yang terpilih menjadi finalis wajib mempresentasikan hasil karyanya.",
   },

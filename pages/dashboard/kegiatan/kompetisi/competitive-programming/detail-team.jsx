@@ -18,7 +18,7 @@ function DetailTeam() {
           <LayoutField>
             <div className="z-10 flex flex-col">
               <DetailTeamCard
-                jenisKompetisi="uiux design"
+                jenisKompetisi="Competitive Programming"
                 team={user?.registered?.competitions?.competitive_programming}
               />
             </div>
