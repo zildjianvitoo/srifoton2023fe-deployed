@@ -28,6 +28,7 @@ export default function Sponsor() {
               src={"/assets/LandingPage/logo-dicoding.png"}
               alt="Logo Dicoding"
               quality={100}
+              className="translate-y-2"
             />
           </figure>
           <figure>
