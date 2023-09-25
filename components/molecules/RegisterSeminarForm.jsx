@@ -85,7 +85,7 @@ export default function RegisterSeminarForm() {
             <InputForm
               labelFor="name"
               labelText={"Nama"}
-              placeholder={"Contoh: Tim PakeNanya"}
+              placeholder={"Contoh: Rizky"}
               type={"text"}
               register={register}
               rules={seminarFormRules.name}
@@ -141,6 +141,7 @@ export default function RegisterSeminarForm() {
             )}
           </div>
           <InputDropdown
+            seminarPage
             errors={errors.paymentMethod}
             {...register("paymentMethod", seminarFormRules.paymentMethod)}
           />

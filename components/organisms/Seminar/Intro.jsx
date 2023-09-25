@@ -27,7 +27,7 @@ export default function Intro() {
     {
       name: "Rian Fahardhi",
       img: speaker2ImgSource,
-      role: "Content Creator",
+      role: "Presiden Gen Z",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Corrupti distinctio consequuntur laborum nisi ",
     },

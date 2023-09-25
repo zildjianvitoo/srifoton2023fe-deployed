@@ -32,9 +32,10 @@ export default function Jumbotron() {
             Berbagi Pengalaman
           </h1>
           <p className="lg:w-[70%] -mt-2 text-lg lg:text-xl text-[#DEDEDE] dark:text-[#D0D0D0]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis. et velit
-            interdum, ac aliquet odio mattis.
+            Seminar merupakan sebuah kegiatan yang dapat menjadi media untuk
+            saling berbagi informasi, wawasan, dan pengetahuan mengenai topik
+            yang dibahas. Seminar Nasional yang diadakan oleh SRIFOTON 2023 akan
+            menyajikan dua topik pembahasan
           </p>
           <div className="flex gap-x-6">
             <Link href="#register-seminar">

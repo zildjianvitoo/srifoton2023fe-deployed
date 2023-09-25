@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import ErrorMessage from "./ErrorMessage";
 
 const InputDropdown = forwardRef(function InputDropDown(
-  { onChange, onBlur, name, errors },
+  { onChange, onBlur, name, errors, seminarPage },
   ref
 ) {
   const aaa = "asasa";
@@ -23,9 +23,14 @@ const InputDropdown = forwardRef(function InputDropDown(
         <option value="" selected disabled hidden>
           Pilih Opsi
         </option>
-        <option value="ovo" className="dark:bg-[#2B2D55] dark:text-[#EDEDED] ">
-          OVO
-        </option>
+        {!seminarPage && (
+          <option
+            value="ovo"
+            className="dark:bg-[#2B2D55] dark:text-[#EDEDED] "
+          >
+            OVO
+          </option>
+        )}
         <option
           value="dana"
           className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
@@ -38,24 +43,29 @@ const InputDropdown = forwardRef(function InputDropDown(
         >
           GOPAY
         </option>
+
         <option
           value="shopeepay"
           className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
         >
           SHOPEEPAY
         </option>
-        <option
-          value="bsi"
-          className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
-        >
-          TRANSFER BANK BSI
-        </option>
-        <option
-          value="bni"
-          className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
-        >
-          TRANSFER BANK BNI
-        </option>
+        {!seminarPage && (
+          <>
+            <option
+              value="bsi"
+              className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
+            >
+              TRANSFER BANK BSI
+            </option>
+            <option
+              value="bni"
+              className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
+            >
+              TRANSFER BANK BNI
+            </option>
+          </>
+        )}
         <option
           value="mandiri"
           className="bg-transparent dark:bg-[#2B2D55] dark:text-[#EDEDED] "
