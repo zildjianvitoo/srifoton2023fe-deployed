@@ -13,7 +13,7 @@ export default function Sponsor() {
         >
           Sponsor
         </h1>
-        <div className="flex flex-wrap justify-start w-fit mx-auto gap-8 px-6 py-4 pb-6 mt-10 border-2 border-dashed lg:px-10 lg:py-6 lg:pb-8 border-pink-srifoton rounded-[20px]">
+        <div className="flex items-center flex-wrap justify-start w-fit mx-auto gap-8 px-6 py-4 pb-6 mt-10 border-2 border-dashed lg:px-10 lg:py-6 lg:pb-8 border-pink-srifoton rounded-[20px]">
           {/* {sponsorImage.map((image, index) => (
             <SponsorCard
               key={index}
@@ -21,6 +21,15 @@ export default function Sponsor() {
               blue={isBorderBlue(index) ? true : false}
             />
           ))} */}
+          <figure>
+            <Image
+              width={250}
+              height={90}
+              src={"/assets/LandingPage/logo-dicoding.png"}
+              alt="Logo Dicoding"
+              quality={100}
+            />
+          </figure>
           <figure>
             <Image
               width={250}
