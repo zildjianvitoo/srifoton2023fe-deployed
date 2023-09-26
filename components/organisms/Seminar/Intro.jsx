@@ -22,14 +22,14 @@ export default function Intro() {
       img: speaker1ImgSource,
       role: "Programmer",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Corrupti distinctio consequuntur laborum nisi ",
+        "Seorang programmer yang juga merangkap sebagai content creator, tema yang akan dibawakan yaitu “Digital Education for Digital Thinking in The Modern Era”.",
     },
     {
       name: "Rian Fahardhi",
       img: speaker2ImgSource,
       role: "Presiden Gen Z",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Corrupti distinctio consequuntur laborum nisi ",
+        "Seorang content creator yang kerap kali dijuluki sebagai ‘Presiden Gen Z’ oleh penggemarnya, tema yang diangkat yaitu “Dream Big, Take Action: Empowering Youth for Extraordinary Achievment”. ",
     },
   ];
 

@@ -8,6 +8,7 @@ import Narahubung from "@/components/organisms/Seminar/Narahubung";
 import QNASeminar from "@/components/organisms/Seminar/QNASeminar";
 import { narahubungSeminar } from "@/utils/narahubungList";
 import ComingSoon from "@/components/ComingSoon";
+import SeminarInfo from "@/components/organisms/Seminar/SeminarInfo";
 
 function Seminar() {
   return (
@@ -19,6 +20,7 @@ function Seminar() {
       <LayoutMain>
         <Jumbotron />
         <Intro />
+        <SeminarInfo />
         <TimeLineSeminar />
         <RegisterSeminar />
         <Narahubung contacts={narahubungSeminar} id={"narahubung-seminar"} />

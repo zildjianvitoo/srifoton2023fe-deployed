@@ -6,7 +6,18 @@ import Button from "../atoms/Button";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-export default function PricingCard({ headers, price, linkTo }) {
+const competitionBenefits = [
+  "Uang Pembinaan",
+  "Sertifikat Nasional",
+  " Pengalaman Menarik",
+];
+
+export default function PricingCard({
+  headers,
+  price,
+  linkTo,
+  benefits = competitionBenefits,
+}) {
   const { theme } = useTheme();
   const validHeaders = headers.split(" ");
 
@@ -30,25 +41,15 @@ export default function PricingCard({ headers, price, linkTo }) {
           </p>
         </div>
         <div className="flex flex-col gap-3 mt-6 ml-1 text-xl font-medium">
-          <div className="flex items-center gap-3">
-            <BsCheckCircle className="text-[#13BA74]" />
-            <p className="text-[#494B7C] dark:text-[#F8F8F8]">Uang Pembinaan</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <BsCheckCircle className="text-[#13BA74]" />
-            <p className="text-[#494B7C] dark:text-[#F8F8F8]">
-              Sertifikat Nasional
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <BsCheckCircle className="text-[#13BA74]" />
-            <p className="text-[#494B7C] dark:text-[#F8F8F8]">
-              Pengalaman Menarik
-            </p>
-          </div>
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-center gap-3">
+              <BsCheckCircle className="text-[#13BA74]" />
+              <p className="text-[#494B7C] dark:text-[#F8F8F8]">{benefit}</p>
+            </div>
+          ))}
         </div>
         <Link
-          href={`/kompetisi/register/${linkTo}`}
+          href={`${linkTo}`}
           className="flex items-end justify-end w-[60%] mx-auto mt-7 mb-1 font-semibold "
         >
           <NoSSR>

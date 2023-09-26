@@ -18,6 +18,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import useRefreshToken from "@/hooks/useRefreshToken";
+import VerifiedEmail from "@/components/atoms/VerifiedEmail";
 
 function Dashboard() {
   const { user } = useUserStore();
@@ -28,6 +29,7 @@ function Dashboard() {
   const refresh = useRefreshToken();
   useEffect(() => {
     refresh();
+    console.log(user);
   }, []);
 
   useEffect(() => {
@@ -130,6 +132,7 @@ function Dashboard() {
                         register={register}
                         disabled
                         style={"opacity-60"}
+                        verifiedEmail
                       />
                     </div>
                     <div className="flex flex-col">

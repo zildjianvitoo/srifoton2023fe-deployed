@@ -1,3 +1,5 @@
+import VerifiedEmail from "./VerifiedEmail";
+
 export default function InputForm({
   labelText,
   labelFor,
@@ -6,15 +8,16 @@ export default function InputForm({
   register,
   rules,
   style,
+  verifiedEmail,
   ...props
 }) {
   return (
     <div className="flex flex-col w-full">
       <label
         htmlFor={labelFor}
-        className="text-lg lg:text-xl font-medium text-[#494B7C] dark:text-white"
+        className="text-lg flex gap-1 items-center lg:text-xl font-medium text-[#494B7C] dark:text-white"
       >
-        {labelText}
+        {labelText} {verifiedEmail && <VerifiedEmail />}
       </label>
       <input
         type={type}
