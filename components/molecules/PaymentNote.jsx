@@ -27,7 +27,7 @@ export default function PaymentNote({ seminarPage }) {
           </li>
           <li>
             {" "}
-            Mandiri <span> : 1120020209255</span>
+            Mandiri <span> : 1120020209255 </span>
             <span className="font-medium">(a.n Annisa Reida Raheima)</span>
           </li>
         </ul>
