@@ -15,8 +15,9 @@ export default function RegisteredActivity({
   registeredDate,
   needSubmission,
   submissionLink,
-  isVerified,
+  // isVerified,
 }) {
+  const isVerified = true;
   const validDate = useDateFormat(registeredDate);
   const router = useRouter();
   return (

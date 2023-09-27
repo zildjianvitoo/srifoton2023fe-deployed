@@ -20,6 +20,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.progress::-webkit-progress-value {
+  background-color: var(--blue-srifoton);
+}
+
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
@@ -233,6 +237,10 @@ input[type="number"] {
   /* border-right: 1px solid #7b7b7b; */
   font-weight: 600;
   color: white;
+}
+
+.progress::-moz-progress-bar {
+  background-color: var(--pink-srifoton) !important;
 }
 
 @layer utilities {

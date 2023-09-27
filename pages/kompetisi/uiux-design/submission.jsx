@@ -12,13 +12,21 @@ import { AxiosError } from "axios";
 import { useTheme } from "next-themes";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import api from "@/utils/axiosInstance";
+import { getToken } from "@/store/tokenStore";
+
+function getAccessToken() {
+  const token = getToken();
+  return token;
+}
 
 function Submission() {
   const { theme } = useTheme();
   const [submissionFile, setSubmissionFile] = useState("");
+  const [uploadProgress, setUploadProgress] = useState(0);
   const [wrongType, setWrongType] = useState(false);
   const router = useRouter();
 
@@ -56,15 +64,32 @@ function Submission() {
   const onSubmitHandler = async (formValue) => {
     const { submissionTitle } = formValue;
     try {
-      const { data } = await doUiUxDesignSubmission({
-        title: submissionTitle,
-        submission: submissionFile,
-      });
+      const formData = new FormData();
+      formData.append("title", submissionTitle);
+      formData.append("submission", submissionFile);
+      const { data, status } = await api.post(
+        "/api/uiux-design/submission",
+        formData,
+        {
+          headers: { Authorization: `Bearer ${getAccessToken()}` },
+          onUploadProgress: (progressEvent) => {
+            if (progressEvent) {
+              const percentComplete =
+                (progressEvent.loaded / progressEvent.total) * 100;
+              setUploadProgress(percentComplete);
+            }
+          },
+        }
+      );
+      if (status !== 200) {
+        throw new Error(data.message);
+      }
       toast.success("Berhasil mengunggah karya");
       setTimeout(() => {
         router.push("/dashboard");
       }, 2500);
     } catch (error) {
+      console.log(error);
       if (error instanceof AxiosError) {
         toast.error(error?.response?.data?.message);
       } else {
@@ -132,6 +157,23 @@ function Submission() {
                         accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed"
                         onChange={onSubmissionFileChangeHandler}
                       />
+                      {isSubmitting && (
+                        <div className="relative flex items-center">
+                          <progress
+                            className="w-full h-3 mt-2 progress"
+                            value={uploadProgress}
+                            max="100"
+                          >
+                            {" "}
+                          </progress>
+                          <p
+                            className="absolute text-[13px] top-[0.5px]
+                           left-1/2"
+                          >
+                            {uploadProgress.toFixed(2)} %
+                          </p>
+                        </div>
+                      )}
                     </div>
                     <div className="flex justify-end mt-20">
                       <Button
@@ -139,7 +181,7 @@ function Submission() {
                         style={"w-3/5 lg:w-2/5 !bg-blue-srifoton"}
                         loading={isSubmitting}
                       >
-                        Kumpul Karya
+                        {"Kumpul Karya"}
                       </Button>
                     </div>
                   </div>
