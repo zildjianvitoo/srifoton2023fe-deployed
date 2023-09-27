@@ -31,7 +31,7 @@ export default function PricingCard({
           {validHeaders[1]}
         </h2>
       </div>
-      <div className="flex flex-col p-4 px-6 lg:p-6 lg:px-8 font-poppins">
+      <div className="flex flex-col h-full p-4 px-6 lg:p-6 lg:px-8 font-poppins">
         <div className="flex">
           <p className="text-2xl font-semibold text-[#494B7C] dark:text-[#F8F8F8]">
             RP
@@ -50,11 +50,11 @@ export default function PricingCard({
         </div>
         <Link
           href={`${linkTo}`}
-          className="flex items-end justify-end w-[60%] mx-auto mt-7 mb-1 font-semibold "
+          className="flex items-end justify-end w-[60%]  mx-auto mt-auto  mb-1 font-semibold "
         >
           <NoSSR>
             <Button
-              style={`w-full relative border-none mt-auto bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
+              style={`w-full relative border-none mt-5 bg-gradient-to-r !text-base from-[#FC39FC] to-[#337EF0] ${"button-style"} ${
                 theme === "light"
                   ? "button-pricing-competition "
                   : "button-pricing-competition-dark"

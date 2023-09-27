@@ -34,7 +34,7 @@ export default function Intro() {
   ];
 
   return (
-    <section className="lg:mt-10">
+    <section className="lg:mt-10" id="speaker-seminar">
       <div className="flex flex-col justify-center w-full p-6 lg:p-10 lg:gap-10 xl:gap-14 lg:flex-row">
         <div className="flex lg:w-[40%] xl:w-[35%] lg:mt-16 ">
           <h1 className=" text-[36px] xs:text-[44px]  leading-[3rem] xl:text-[60px] lg:leading-[4rem] font-semibold tracking-wider  p-1 pb-2 text-center lg:text-start mt-10 intro-seminar-header dark:intro-seminar-header-dark">

@@ -29,15 +29,15 @@ export default function SeminarInfo() {
         </p>
         <div className="flex flex-wrap justify-center gap-8 mt-7">
           <PricingCard
-            headers={"Offline Ticket"}
-            price={"50.000"}
+            headers={"Online Ticket"}
+            price={"25.000"}
             benefits={seminarBenefits}
             linkTo={"/seminar#register-seminar"}
           />
           <PricingCard
-            headers={"Online Ticket"}
-            price={"25.000"}
-            benefits={seminarBenefits}
+            headers={"Offline Ticket"}
+            price={"50.000"}
+            benefits={[...seminarBenefits, "Snack + Lunch"]}
             linkTo={"/seminar#register-seminar"}
           />
         </div>

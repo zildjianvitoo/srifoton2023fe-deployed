@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import api from "@/utils/axiosInstance";
 import { getToken } from "@/store/tokenStore";
+import { useUserStore } from "@/store/userStore";
 
 function getAccessToken() {
   const token = getToken();
@@ -25,10 +26,16 @@ function getAccessToken() {
 
 function Submission() {
   const { theme } = useTheme();
+  const { user } = useUserStore();
   const [submissionFile, setSubmissionFile] = useState("");
   const [uploadProgress, setUploadProgress] = useState(0);
   const [wrongType, setWrongType] = useState(false);
   const router = useRouter();
+
+  console.log(user);
+
+  const isAlreadySubmitSubmission =
+    user.registered.competitions.uiux_design.submission;
 
   const {
     control,
@@ -62,6 +69,10 @@ function Submission() {
   };
 
   const onSubmitHandler = async (formValue) => {
+    if (isAlreadySubmitSubmission) {
+      toast.error("Anda sudah mengumpul submission");
+      return;
+    }
     const { submissionTitle } = formValue;
     try {
       const formData = new FormData();
