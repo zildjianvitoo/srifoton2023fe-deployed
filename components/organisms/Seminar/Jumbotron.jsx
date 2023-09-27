@@ -23,7 +23,7 @@ export default function Jumbotron() {
             src="/assets/Seminar/jumbotron-seminar-img-2.png"
             alt="Srifoton Mascot"
             quality={100}
-            className="hidden w-4/5 mr-6 md:flex lg: lg:ml-auto lg:w-fit "
+            className="hidden w-4/5 mt-10 mr-6 md:flex lg: lg:ml-auto lg:w-fit "
           />
         </div>
         <div className="flex flex-col gap-6 text-white lg:mt-24 lg:w-[70%]">
