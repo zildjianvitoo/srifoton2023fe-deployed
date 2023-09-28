@@ -16,8 +16,10 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 function Submission() {
-  const { theme } = useTheme();
   const [submissionFile, setSubmissionFile] = useState("");
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const { theme } = useTheme();
+  const { user } = useUserStore();
   const [wrongType, setWrongType] = useState(false);
 
   const {
@@ -51,12 +53,37 @@ function Submission() {
   };
 
   const onSubmitHandler = async (formValue) => {
+    if (isAlreadySubmitSubmission) {
+      toast.error("Anda sudah mengumpul submission");
+      return;
+    }
+
+    const { submissionTitle } = formValue;
     try {
-      const { data } = await doWebDevelopmentSubmission({
-        title: formValue.submissionTitle,
-        submission: submissionFile,
-      });
+      const formData = new FormData();
+      formData.append("title", submissionTitle);
+      formData.append("submission", submissionFile);
+      const { data, status } = await api.post(
+        "/api/web-development/submission",
+        formData,
+        {
+          headers: { Authorization: `Bearer ${getAccessToken()}` },
+          onUploadProgress: (progressEvent) => {
+            if (progressEvent) {
+              const percentComplete =
+                (progressEvent.loaded / progressEvent.total) * 100;
+              setUploadProgress(percentComplete);
+            }
+          },
+        }
+      );
+      if (status !== 200) {
+        throw new Error(data.message);
+      }
       toast.success("Berhasil mengunggah karya");
+      setTimeout(() => {
+        router.push("/dashboard");
+      }, 2500);
     } catch (error) {
       if (error instanceof AxiosError) {
         toast.error(error.response.data.message);
@@ -125,6 +152,23 @@ function Submission() {
                         accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed"
                         onChange={onSubmissionFileChangeHandler}
                       />
+                      {isSubmitting && (
+                        <div className="relative flex items-center">
+                          <progress
+                            className="w-full h-3 mt-2 progress"
+                            value={uploadProgress}
+                            max="100"
+                          >
+                            {" "}
+                          </progress>
+                          <p
+                            className="absolute text-[13px] top-[0.5px]
+                           left-1/2"
+                          >
+                            {uploadProgress.toFixed(2)} %
+                          </p>
+                        </div>
+                      )}
                     </div>
                     <div className="flex justify-end mt-20">
                       <Button

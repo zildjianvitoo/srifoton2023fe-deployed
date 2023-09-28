@@ -25,10 +25,10 @@ function getAccessToken() {
 }
 
 function Submission() {
-  const { theme } = useTheme();
-  const { user } = useUserStore();
   const [submissionFile, setSubmissionFile] = useState("");
   const [uploadProgress, setUploadProgress] = useState(0);
+  const { theme } = useTheme();
+  const { user } = useUserStore();
   const [wrongType, setWrongType] = useState(false);
   const router = useRouter();
 

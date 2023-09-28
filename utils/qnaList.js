@@ -39,7 +39,7 @@ export const seminarQnaList = [
     id: 7,
     question: "Berapa biaya pendaftaran untuk seminar ini?",
     answer:
-      "Biaya pendaftaran adalah 30k. Ini mencakup akses ke semua sesi seminar dan materi terkait.",
+      "Biaya pendaftaran adalah untuk online 25k dan untuk offline 50k. Ini mencakup akses ke semua sesi seminar dan materi terkait.",
   },
   {
     id: 8,
