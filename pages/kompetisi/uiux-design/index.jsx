@@ -18,7 +18,7 @@ import React from "react";
 const timelineContent = [
   {
     title: "Pendaftaran",
-    date: "23/08/2023 - 29/09/2023",
+    date: "23/08/2023 - 02/10/2023",
     desc: "Peserta dapat mendaftarkan diri pada kompetisi UI/UX Design.",
   },
   {
@@ -28,7 +28,7 @@ const timelineContent = [
   },
   {
     title: "Penutupan Pendaftaran & Pengumpulan Karya",
-    date: "2/10/2023",
+    date: "02/10/2023",
     desc: "Batas waktu pengumpulan karya, jika peserta tidak mengumpulkan maka dianggap gugur.",
   },
   {
