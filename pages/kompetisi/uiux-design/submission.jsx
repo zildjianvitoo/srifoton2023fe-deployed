@@ -47,15 +47,15 @@ function Submission() {
   const onSubmissionFileChangeHandler = (e) => {
     const selectedFile = e.target.files[0];
 
-    const ALLOWED_TYPES = [
-      "zip",
-      "application/octet-stream",
-      "application/zip",
-      "application/x-zip",
-      "application/x-zip-compressed",
-    ];
+    // const ALLOWED_TYPES = [
+    //   "zip",
+    //   "application/octet-stream",
+    //   "application/zip",
+    //   "application/x-zip",
+    //   "application/x-zip-compressed",
+    // ];
 
-    if (selectedFile && ALLOWED_TYPES.includes(selectedFile.type)) {
+    if (selectedFile) {
       setWrongType(false);
       setSubmissionFile(selectedFile);
       toast.success("Berhasil mengunggah file");
