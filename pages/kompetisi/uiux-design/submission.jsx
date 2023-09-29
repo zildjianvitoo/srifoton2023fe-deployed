@@ -61,11 +61,12 @@ function Submission() {
       toast.success("Berhasil mengunggah file");
     } else if (!selectedFile) {
       return;
-    } else if (!ALLOWED_TYPES.includes(selectedFile.type)) {
-      setWrongType(true);
-      toast.error("Format file tidak didukung");
-      setSubmissionFile(null);
     }
+    //  else if (!ALLOWED_TYPES.includes(selectedFile.type)) {
+    //   setWrongType(true);
+    //   toast.error("Format file tidak didukung");
+    //   setSubmissionFile(null);
+    // }
   };
 
   const onSubmitHandler = async (formValue) => {
@@ -165,7 +166,7 @@ function Submission() {
                         id="work-file"
                         type="file"
                         className="w-full font-poppins font-normal file-input file-input-bordered border-[#7B7B7B] dark:border-[#E0E0E0]"
-                        accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed"
+                        // accept="zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed"
                         onChange={onSubmissionFileChangeHandler}
                       />
                       {isSubmitting && (
