@@ -29,6 +29,9 @@ function Seminar() {
                 isVerified={+user.registered.seminar.isVerified}
                 groupLink={"https://chat.whatsapp.com/IvBdyVLsfCN2rgvToJVwUh"}
                 registeredDate={user.registered.seminar.created_at}
+                ticketCode={user.registered.seminar.code}
+                ticketLink={user.registered.seminar.ticket_file}
+                seminarActivity
               />
             ) : (
               <NotRegistered type={"seminar"} guideBookLink={"seminar"} />

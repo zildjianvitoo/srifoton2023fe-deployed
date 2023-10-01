@@ -1,4 +1,4 @@
-import { BsThreeDots, BsWhatsapp } from "react-icons/bs";
+import { BsThreeDots, BsTicketPerforated, BsWhatsapp } from "react-icons/bs";
 import React from "react";
 import LayoutCredentials from "../Credentials/LayoutCredentials";
 import { ethnocentric } from "@/public/fonts/fonts";
@@ -7,6 +7,8 @@ import { MdOutlineUploadFile } from "react-icons/md";
 import { RiCalendarTodoFill } from "react-icons/ri";
 import useDateFormat from "@/hooks/useDateFormat";
 import { useRouter } from "next/router";
+import axios from "axios";
+import useDownloader from "react-use-downloader";
 
 export default function RegisteredActivity({
   type,
@@ -16,8 +18,11 @@ export default function RegisteredActivity({
   needSubmission,
   submissionLink,
   isVerified,
+  ticketLink,
+  ticketCode,
+  seminarActivity,
 }) {
-  // const isVerified = true;
+  const { download } = useDownloader();
   const validDate = useDateFormat(registeredDate);
   const router = useRouter();
   return (
@@ -55,6 +60,23 @@ export default function RegisteredActivity({
                 </button>
               </Link>
             )}
+            {seminarActivity && (
+              <div
+
+              // download={ticketCode}
+              >
+                <button
+                  className={`text-white rounded-[50px]  sm:rounded-r-none px-4 py-2.5 flex font-medium items-center  gap-1 opacity-90 hover:opacity-100 bg-pink-srifoton disabled:opacity-50 disabled:hover:opacity-50 disabled:cursor-not-allowed `}
+                  onClick={() =>
+                    download(ticketLink, `${ticketCode}-${teamName}.jpg`)
+                  }
+                  disabled={!isVerified}
+                >
+                  <BsTicketPerforated className="text-xl text-white md:text-2xl " />{" "}
+                  Unduh Tiket
+                </button>
+              </div>
+            )}
             <a
               href={isVerified ? groupLink : "/"}
               className={`${!isVerified && "tooltip"} `}
@@ -62,7 +84,8 @@ export default function RegisteredActivity({
             >
               <button
                 className={`bg-blue-srifoton rounded-[50px] ${
-                  needSubmission && "sm:rounded-r-[50px] sm:rounded-l-none"
+                  (needSubmission || seminarActivity) &&
+                  "sm:rounded-r-[50px] sm:rounded-l-none"
                 } px-4 py-2.5 flex text-white items-center gap-2.5 opacity-90 hover:opacity-100 disabled:opacity-50 disabled:hover:opacity-50 disabled:cursor-not-allowed relative`}
                 onClick={() => router.push(groupLink)}
                 disabled={!isVerified}
