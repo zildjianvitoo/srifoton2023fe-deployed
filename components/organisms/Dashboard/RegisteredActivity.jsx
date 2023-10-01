@@ -61,21 +61,21 @@ export default function RegisteredActivity({
               </Link>
             )}
             {seminarActivity && (
-              <div
-
-              // download={ticketCode}
+              <Link
+                href={ticketLink}
+                // download={ticketCode}
               >
                 <button
                   className={`text-white rounded-[50px]  sm:rounded-r-none px-4 py-2.5 flex font-medium items-center  gap-1 opacity-90 hover:opacity-100 bg-pink-srifoton disabled:opacity-50 disabled:hover:opacity-50 disabled:cursor-not-allowed `}
-                  onClick={() =>
-                    download(ticketLink, `${ticketCode}-${teamName}.jpg`)
-                  }
+                  // onClick={() =>
+                  //   download(ticketLink, `${ticketCode}-${teamName}.jpg`)
+                  // }
                   disabled={!isVerified}
                 >
                   <BsTicketPerforated className="text-xl text-white md:text-2xl " />{" "}
                   Unduh Tiket
                 </button>
-              </div>
+              </Link>
             )}
             <a
               href={isVerified ? groupLink : "/"}
