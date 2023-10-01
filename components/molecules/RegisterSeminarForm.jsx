@@ -11,10 +11,14 @@ import { useForm } from "react-hook-form";
 import { useUserStore } from "@/store/userStore";
 import { toast } from "react-toastify";
 import { AxiosError } from "axios";
+import Modal from "../atoms/Modal";
+import useModal from "@/hooks/useModal";
 
 export default function RegisterSeminarForm() {
   const [proof, setProof] = useState(null);
+  const [isError, setError] = useState(false);
   const [errorMessageProof, setErrorMessageProof] = useState("");
+  const { showModal, setShowModal, modalMessage, setModalMessage } = useModal();
 
   const user = useUserStore((state) => state.user);
   const { register, handleSubmit, formState } = useForm({
@@ -64,8 +68,11 @@ export default function RegisterSeminarForm() {
         proof,
         payment_method: paymentMethod,
       });
-      console.log(data);
+      setError(false);
+      setModalMessage("Pendaftaran berhasil");
+      setShowModal(true);
     } catch (error) {
+      setError(true);
       if (error instanceof AxiosError) {
         toast.error(error.response.data.error);
       } else {
@@ -183,6 +190,17 @@ export default function RegisterSeminarForm() {
             Daftar
           </Button>
         </div>
+        {showModal && (
+          <Modal
+            message={modalMessage}
+            showModal={showModal}
+            setShowModal={setShowModal}
+            messageHeader={isError ? "Gagal" : "Berhasil"}
+            redirect={isError ? false : true}
+            redirectTo={"/dashboard/kegiatan/seminar"}
+            buttonRedirectMessage={"Pergi Ke Halaman Kegiatan"}
+          />
+        )}
       </form>
     </>
   );
