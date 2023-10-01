@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }) {
           content="WxvK7ZNhpKx4HJp5gs0SIy-oAz0zOwwBK4o-kdPMxs8"
         />
         <link rel="icon" href="/assets/logo-srifoton2023.png" />
+        <title>SRIFOTON 2023</title>
       </Head>
       {/* <HydrationContext> */}
       <ThemeProvider attribute="class" value={theme} enableSystem={false}>
