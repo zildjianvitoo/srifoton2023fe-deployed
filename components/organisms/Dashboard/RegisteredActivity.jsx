@@ -88,7 +88,7 @@ export default function RegisteredActivity({
                   "sm:rounded-r-[50px] sm:rounded-l-none"
                 } px-4 py-2.5 flex text-white items-center gap-2.5 opacity-90 hover:opacity-100 disabled:opacity-50 disabled:hover:opacity-50 disabled:cursor-not-allowed relative`}
                 onClick={() => router.push(groupLink)}
-                disabled={!isVerified}
+                // disabled={!isVerified}
               >
                 <BsWhatsapp className="text-base text-white md:text-xl" />{" "}
                 Gabung Grup
