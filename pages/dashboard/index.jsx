@@ -19,6 +19,8 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import useRefreshToken from "@/hooks/useRefreshToken";
 import VerifiedEmail from "@/components/atoms/VerifiedEmail";
+import Link from "next/link";
+import ModalNotVerified from "@/components/atoms/ModalNotVerified";
 
 function Dashboard() {
   const { user } = useUserStore();
@@ -89,12 +91,17 @@ function Dashboard() {
     }
   };
 
+  console.log(user);
+  const isVerified = user.email_verified_at;
+  const emailUser = user.email;
+
   return (
     <>
       <Head>
         <title>SRIFOTON | Dashboard</title>
       </Head>
       <LayoutMain>
+        <ModalNotVerified />
         <div className="flex flex-col lg:flex-row  w-full mx-auto mt-10 lg:gap-16 lg:w-[85%]">
           <div className="lg:w-[22rem] lg:mt-8">
             <AuthSidebar />
@@ -217,15 +224,31 @@ function Dashboard() {
                       )}
                     </div>
                   </div>
-
-                  <Button
-                    variant={"submitButton"}
-                    style={"ml-auto mt-10 lg:mt-28 w-1/2 lg:w-1/4"}
-                    disabled={!isDirty}
-                    loading={isSubmitting}
-                  >
-                    Simpan
-                  </Button>
+                  <div className="flex items-center justify-end gap-4 mt-10 lg:mt-28 ">
+                    {!isVerified && (
+                      <Link
+                        href={`/verify-email?email=${emailUser}`}
+                        className="w-1/2 lg:w-1/4"
+                      >
+                        <button
+                          className={
+                            "hover:text-[#FCFCFC] hover:dark:text-[#FCFCFC] text-lg flex items-center justify-center gap-1 font-semibold tracking-wider rounded-lg !bg-transparent border-[3px] border-blue-srifoton dark:border-pink-srifoton text-blue-srifoton dark:text-pink-srifoton hover:!bg-blue-srifoton hover:dark:!bg-pink-srifoton py-2 w-full "
+                          }
+                          loading={isSubmitting}
+                        >
+                          Verifikasi Email
+                        </button>
+                      </Link>
+                    )}
+                    <Button
+                      variant={"submitButton"}
+                      style={" w-1/2 lg:w-1/4 "}
+                      disabled={!isDirty}
+                      loading={isSubmitting}
+                    >
+                      Simpan
+                    </Button>
+                  </div>
                 </form>
                 {showModal && (
                   <Modal

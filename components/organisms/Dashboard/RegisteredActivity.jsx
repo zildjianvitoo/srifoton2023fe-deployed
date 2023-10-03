@@ -64,7 +64,7 @@ export default function RegisteredActivity({
               <a
                 href={
                   isVerified
-                    ? ` https://srifoton.hmifunsri.com/api/ticket/${ticketCode}`
+                    ? `https://srifoton.hmifunsri.com/api/ticket/${ticketCode}`
                     : "/"
                 }
                 download
