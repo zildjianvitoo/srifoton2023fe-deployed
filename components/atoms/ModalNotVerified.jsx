@@ -9,21 +9,28 @@ export default function ModalNotVerified() {
 
   return (
     <>
-      <label htmlFor="my_modal_6" />
-      <input type="checkbox" id="my_modal_6" className="modal-toggle" checked />
-      <div className="modal ">
-        <div className="modal-box text-[#494B7C] dark:text-[#E5EEFF] bg-[#FCF2FF] dark:bg-[#141754] ">
-          <h3 className={`text-lg font-bold `}>Header</h3>
-          <p className={`py-4 `}>Pesan</p>
+      <dialog id="my_modal_2" className="modal ">
+        <div className="modal-box text-[#494B7C] border-[3.5px] border-dashed border-pink-srifoton dark:text-[#E5EEFF] bg-[#eaedfd] dark:bg-[#525580]">
+          <img
+            src="/assets/Dashboard/email-warning.svg"
+            alt="icon email warning"
+            className="mx-auto"
+          />
+          <p className={`py-4 lg:px-6`}>
+            Ups... <br />
+            Silahkan lakukan verifikasi e-mail anda terlebih dahulu.
+          </p>
           <div className="modal-action">
             <button
-              htmlFor="my_modal_6"
-              className="text-white btn bg-[#2E7BEF] dark:bg-[#E924E8] outline-none border-none w-3/4  sm:w-1/2"
+              htmlFor="my_modal_8"
+              className=" bg-transparent border-pink-srifoton hover:bg-[#E924E8] outline-none border-[2px] w-1/2  sm:w-[30%] py-1 rounded-[20px] text-pink-srifoton hover:text-white"
               onClick={() => router.push(`/verify-email?email=${user.email}`)}
-            ></button>
+            >
+              Verfikasi Email
+            </button>
           </div>
         </div>
-      </div>
+      </dialog>
     </>
   );
 }

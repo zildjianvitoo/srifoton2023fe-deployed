@@ -9,6 +9,7 @@ import QNASeminar from "@/components/organisms/Seminar/QNASeminar";
 import { narahubungSeminar } from "@/utils/narahubungList";
 import ComingSoon from "@/components/ComingSoon";
 import SeminarInfo from "@/components/organisms/Seminar/SeminarInfo";
+import ModalNotVerified from "@/components/atoms/ModalNotVerified";
 
 function Seminar() {
   return (
@@ -25,6 +26,7 @@ function Seminar() {
         <RegisterSeminar />
         <Narahubung contacts={narahubungSeminar} id={"narahubung-seminar"} />
         <QNASeminar />
+        <ModalNotVerified />
       </LayoutMain>
     </>
   );

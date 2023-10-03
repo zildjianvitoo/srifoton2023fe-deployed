@@ -19,6 +19,7 @@ import useModal from "@/hooks/useModal";
 import { AxiosError } from "axios";
 import { toast } from "react-toastify";
 import Head from "next/head";
+import ModalNotVerified from "@/components/atoms/ModalNotVerified";
 
 export default function DaftarKompetisi() {
   const [proof, setProof] = useState(null);
@@ -37,7 +38,7 @@ export default function DaftarKompetisi() {
     control,
     handleSubmit,
     register,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, submitCount },
   } = useForm({
     defaultValues: {
       email: user?.email,
@@ -52,6 +53,16 @@ export default function DaftarKompetisi() {
   const isUserRegisteredCP =
     user?.registered?.competitions?.competitive_programming;
   const isUserRegisteredUIUX = user?.registered?.competitions?.uiux_design;
+
+  useEffect(() => {
+    const showModalNotVerified = () => {
+      if (submitCount > 0 && !user.email_verified_at) {
+        document.getElementById("my_modal_2").showModal();
+      }
+    };
+    showModalNotVerified();
+    console.log(submitCount);
+  }, [submitCount]);
 
   const onSubmitHandler = async (formValue) => {
     if (!user) {
@@ -177,6 +188,7 @@ export default function DaftarKompetisi() {
                 buttonRedirectMessage={"Pergi Ke Halaman Kegiatan"}
               />
             )}
+            <ModalNotVerified />
           </LayoutField>
         </div>
       </LayoutMain>

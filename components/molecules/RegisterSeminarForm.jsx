@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "@/components/atoms/Button";
 import InputDropdown from "@/components/atoms/InputDropdown";
 import InputFile from "@/components/atoms/InputFile";
@@ -31,8 +31,18 @@ export default function RegisterSeminarForm() {
       phoneNumber: user?.phone_number,
     },
   });
+  console.log(user);
+  const { errors, isSubmitting, submitCount } = formState;
 
-  const { errors, isSubmitting } = formState;
+  useEffect(() => {
+    const showModalNotVerified = () => {
+      if (submitCount > 0 && !user.email_verified_at) {
+        document.getElementById("my_modal_2").showModal();
+      }
+    };
+    showModalNotVerified();
+    console.log(submitCount);
+  }, [submitCount]);
 
   const onSubmitHandler = async (formValue) => {
     if (!user) {
