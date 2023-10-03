@@ -101,7 +101,7 @@ function Dashboard() {
         <title>SRIFOTON | Dashboard</title>
       </Head>
       <LayoutMain>
-        <ModalNotVerified />
+        {/* <ModalNotVerified /> */}
         <div className="flex flex-col lg:flex-row  w-full mx-auto mt-10 lg:gap-16 lg:w-[85%]">
           <div className="lg:w-[22rem] lg:mt-8">
             <AuthSidebar />
