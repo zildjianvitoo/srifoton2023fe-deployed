@@ -421,6 +421,16 @@ async function doUiUxDesignSubmission({ title, submission }) {
   return { data };
 }
 
+async function getSeminarTicket({ ticketCode }) {
+  const { data, status } = await api.get(`/api/ticket/${ticketCode}`, {
+    headers: { Authorization: `Bearer ${getAccessToken()}` },
+  });
+  if (status !== 200) {
+    throw new Error(data.message);
+  }
+  return { data };
+}
+
 export {
   doRegister,
   doLogin,
@@ -439,4 +449,5 @@ export {
   doRefreshToken,
   doWebDevelopmentSubmission,
   doUiUxDesignSubmission,
+  getSeminarTicket,
 };

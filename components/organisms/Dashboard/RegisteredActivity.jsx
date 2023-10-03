@@ -22,7 +22,7 @@ export default function RegisteredActivity({
   ticketCode,
   seminarActivity,
 }) {
-  const { download } = useDownloader();
+  // const { download } = useDownloader();
   const validDate = useDateFormat(registeredDate);
   const router = useRouter();
   return (
@@ -61,21 +61,22 @@ export default function RegisteredActivity({
               </Link>
             )}
             {seminarActivity && (
-              <Link
-                href={ticketLink}
-                // download={ticketCode}
+              <a
+                href={
+                  isVerified
+                    ? ` https://srifoton.hmifunsri.com/api/ticket/${ticketCode}`
+                    : "/"
+                }
+                download
               >
                 <button
-                  className={`text-white rounded-[50px]  sm:rounded-r-none px-4 py-2.5 flex font-medium items-center  gap-1 opacity-90 hover:opacity-100 bg-pink-srifoton disabled:opacity-50 disabled:hover:opacity-50 disabled:cursor-not-allowed `}
-                  // onClick={() =>
-                  //   download(ticketLink, `${ticketCode}-${teamName}.jpg`)
-                  // }
+                  className={`text-white rounded-[50px]  sm:rounded-r-none px-4 py-2.5 md:px-4 md:py-2.5 flex font-medium items-center gap-3  md:gap-2 opacity-90 hover:opacity-100 bg-pink-srifoton disabled:opacity-50 disabled:hover:opacity-50 disabled:cursor-not-allowed `}
                   disabled={!isVerified}
                 >
                   <BsTicketPerforated className="text-xl text-white md:text-2xl " />{" "}
                   Unduh Tiket
                 </button>
-              </Link>
+              </a>
             )}
             <a
               href={isVerified ? groupLink : "/"}
