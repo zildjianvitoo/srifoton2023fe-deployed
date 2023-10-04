@@ -12,7 +12,7 @@ function DetailTeam() {
   return (
     <>
       <Head>
-        <title>SRIFOTON | Detail Tim UI/UX Design</title>
+        <title>SRIFOTON | Detail Tim Web Development</title>
       </Head>
       <LayoutMain>
         <div className="p-8 lg:px-24 lg:mt-10">

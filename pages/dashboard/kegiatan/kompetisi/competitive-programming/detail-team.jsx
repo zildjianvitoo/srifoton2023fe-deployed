@@ -11,14 +11,14 @@ function DetailTeam() {
   return (
     <>
       <Head>
-        <title>SRIFOTON | Detail Tim UI/UX Design</title>
+        <title>SRIFOTON | Detail Tim Competitive Programming</title>
       </Head>
       <LayoutMain>
         <div className="p-8 lg:px-24 lg:mt-10">
           <LayoutField>
             <div className="z-10 flex flex-col">
               <DetailTeamCard
-                jenisKompetisi="Competitive Programming"
+                jenisKompetisi="competitive programming"
                 team={user?.registered?.competitions?.competitive_programming}
               />
             </div>
