@@ -9,21 +9,21 @@ const Jumbotron = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const countDownDate = new Date("Oct 5, 2023 00:00:00").getTime();
+  // const countDownDate = new Date("Oct 5, 2023 00:00:00").getTime();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-      setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
-      setHours(
-        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      );
-      setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-      setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [countDownDate]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const now = new Date().getTime();
+  //     const distance = countDownDate - now;
+  //     setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
+  //     setHours(
+  //       Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  //     );
+  //     setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+  //     setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, [countDownDate]);
   return (
     <section
       id="#jumbotron-landingpage"
