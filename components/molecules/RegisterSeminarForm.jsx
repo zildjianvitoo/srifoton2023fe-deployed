@@ -13,6 +13,7 @@ import { toast } from "react-toastify";
 import { AxiosError } from "axios";
 import Modal from "../atoms/Modal";
 import useModal from "@/hooks/useModal";
+import { useRouter } from "next/router";
 
 export default function RegisterSeminarForm() {
   const [proof, setProof] = useState(null);
@@ -32,6 +33,8 @@ export default function RegisterSeminarForm() {
     },
   });
   const { errors, isSubmitting, submitCount } = formState;
+
+  const router = useRouter();
 
   useEffect(() => {
     const showModalNotVerified = () => {
@@ -79,11 +82,17 @@ export default function RegisterSeminarForm() {
         proof,
         payment_method: paymentMethod,
       });
+      toast.success("Berhasil daftar Seminar");
+      setTimeout(() => {
+        router.push("/dashboard/kegiatan/seminar");
+        router.reload();
+      }, 1500);
       setError(false);
       setModalMessage("Pendaftaran berhasil");
       setShowModal(true);
     } catch (error) {
       console.log(error);
+      setShowModal(true);
       setError(true);
       if (error instanceof AxiosError) {
         toast.error(error.response.data.error);
