@@ -56,8 +56,10 @@ export default function DaftarKompetisi() {
 
   useEffect(() => {
     const showModalNotVerified = () => {
-      if (submitCount > 0 && !user.email_verified_at) {
-        document.getElementById("my_modal_2").showModal();
+      if (user) {
+        if (submitCount > 0 && !user.email_verified_at) {
+          document.getElementById("my_modal_2").showModal();
+        }
       }
     };
     showModalNotVerified();
