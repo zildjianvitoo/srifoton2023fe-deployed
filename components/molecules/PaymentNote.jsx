@@ -22,10 +22,10 @@ export default function PaymentNote({ seminarPage }) {
                 (a.n M. Fairuz Abadi){" "}
                 <CopyToClipboard
                   text={"085378309768"}
-                  className="inline-block ml-1 sm:hidden"
+                  className="inline-block ml-1 cursor-pointer"
                   onCopy={() => toast.info("Berhasil copy")}
                 >
-                  <LuCopy className="cursor-pointer " />
+                  <LuCopy />
                 </CopyToClipboard>
               </span>
             </div>
@@ -37,10 +37,10 @@ export default function PaymentNote({ seminarPage }) {
               (a.n M. Fairuz Abadi){" "}
               <CopyToClipboard
                 text={"085378309768"}
-                className="inline-block ml-1 sm:hidden"
+                className="inline-block ml-1 cursor-pointer"
                 onCopy={() => toast.info("Berhasil copy")}
               >
-                <LuCopy className="cursor-pointer " />
+                <LuCopy />
               </CopyToClipboard>
             </span>
           </li>
@@ -51,10 +51,10 @@ export default function PaymentNote({ seminarPage }) {
               (a.n M. Fairuz Abadi){" "}
               <CopyToClipboard
                 text={"085378309768"}
-                className="inline-block ml-1 sm:hidden"
+                className="inline-block ml-1 cursor-pointer"
                 onCopy={() => toast.info("Berhasil copy")}
               >
-                <LuCopy className="cursor-pointer " />
+                <LuCopy />
               </CopyToClipboard>
             </span>
           </li>
@@ -65,10 +65,10 @@ export default function PaymentNote({ seminarPage }) {
               (a.n Annisa Reida Raheima){" "}
               <CopyToClipboard
                 text={"1120020209255"}
-                className="inline-block ml-1 sm:hidden"
+                className="inline-block ml-1 cursor-pointer"
                 onCopy={() => toast.info("Berhasil copy")}
               >
-                <LuCopy className="cursor-pointer " />
+                <LuCopy />
               </CopyToClipboard>
             </span>
           </li>
@@ -82,10 +82,10 @@ export default function PaymentNote({ seminarPage }) {
               (a.n Hafiz Kurniawan){" "}
               <CopyToClipboard
                 text={"081273123655"}
-                className="inline-block ml-1 sm:hidden"
+                className="inline-block ml-1 cursor-pointer"
                 onCopy={() => toast.info("Berhasil copy")}
               >
-                <LuCopy className="cursor-pointer " />
+                <LuCopy />
               </CopyToClipboard>
             </span>
             <li className="pr-4 ">
@@ -95,10 +95,10 @@ export default function PaymentNote({ seminarPage }) {
                 (a.n Hafiz Kurniawan){" "}
                 <CopyToClipboard
                   text={"081273123655"}
-                  className="inline-block ml-1 sm:hidden"
+                  className="inline-block ml-1 cursor-pointer"
                   onCopy={() => toast.info("Berhasil copy")}
                 >
-                  <LuCopy className="cursor-pointer " />
+                  <LuCopy />
                 </CopyToClipboard>
               </span>
             </li>
@@ -108,10 +108,10 @@ export default function PaymentNote({ seminarPage }) {
               <span className="font-medium">(a.n Hafiz Kurniawan)</span>
               <CopyToClipboard
                 text={"081273123655"}
-                className="inline-block ml-1 sm:hidden"
+                className="inline-block ml-1 cursor-pointer"
                 onCopy={() => toast.info("Berhasil copy")}
               >
-                <LuCopy className="cursor-pointer " />
+                <LuCopy />
               </CopyToClipboard>
             </li>
           </li>
@@ -122,10 +122,10 @@ export default function PaymentNote({ seminarPage }) {
               (a.n Hafiz Kurniawan){" "}
               <CopyToClipboard
                 text={"081273123655"}
-                className="inline-block ml-1 sm:hidden"
+                className="inline-block ml-1 cursor-pointer"
                 onCopy={() => toast.info("Berhasil copy")}
               >
-                <LuCopy className="cursor-pointer " />
+                <LuCopy />
               </CopyToClipboard>
             </span>
           </li>
@@ -139,10 +139,10 @@ export default function PaymentNote({ seminarPage }) {
                 (a.n Alfina Dwi Rahmi){" "}
                 <CopyToClipboard
                   text={"7233744705"}
-                  className="inline-block ml-1 sm:hidden"
+                  className="inline-block ml-1 cursor-pointer "
                   onCopy={() => toast.info("Berhasil copy")}
                 >
-                  <LuCopy className="cursor-pointer " />
+                  <LuCopy />
                 </CopyToClipboard>
               </span>
             </li>
@@ -154,10 +154,10 @@ export default function PaymentNote({ seminarPage }) {
                 (a.n Andini Dwipatricia){" "}
                 <CopyToClipboard
                   text={"1176107810"}
-                  className="inline-block ml-1 sm:hidden"
+                  className="inline-block ml-1 cursor-pointer "
                   onCopy={() => toast.info("Berhasil copy")}
                 >
-                  <LuCopy className="cursor-pointer " />
+                  <LuCopy />
                 </CopyToClipboard>
               </span>
             </li>
@@ -169,10 +169,10 @@ export default function PaymentNote({ seminarPage }) {
                 (a.n Annisa Reida){" "}
                 <CopyToClipboard
                   text={"1120020209255"}
-                  className="inline-block ml-1 sm:hidden"
+                  className="inline-block ml-1 cursor-pointer"
                   onCopy={() => toast.info("Berhasil copy")}
                 >
-                  <LuCopy className="cursor-pointer " />
+                  <LuCopy />
                 </CopyToClipboard>
               </span>
             </li>
