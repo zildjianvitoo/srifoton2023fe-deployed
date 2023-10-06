@@ -20,7 +20,7 @@ export default function RegisterSeminarForm() {
   const [errorMessageProof, setErrorMessageProof] = useState("");
   const { showModal, setShowModal, modalMessage, setModalMessage } = useModal();
 
-  const user = useUserStore((state) => state.user);
+  const { user } = useUserStore();
   const { register, handleSubmit, formState } = useForm({
     mode: "onChange",
     defaultValues: {
@@ -31,13 +31,14 @@ export default function RegisterSeminarForm() {
       phoneNumber: user?.phone_number,
     },
   });
-  console.log(user);
   const { errors, isSubmitting, submitCount } = formState;
 
   useEffect(() => {
     const showModalNotVerified = () => {
-      if (submitCount > 0 && !user.email_verified_at) {
-        document.getElementById("my_modal_2").showModal();
+      if (user) {
+        if (submitCount > 0 && !user.email_verified_at) {
+          document.getElementById("my_modal_2").showModal();
+        }
       }
     };
     showModalNotVerified();
@@ -53,7 +54,7 @@ export default function RegisterSeminarForm() {
       setErrorMessageProof("Bukti pembayaran tidak boleh kosong");
       return;
     }
-    if (user.registered.competitions.web_development) {
+    if (user.registered.seminar) {
       toast.error("Email ini sudah terdaftar pada seminar");
       return;
     }
@@ -82,6 +83,7 @@ export default function RegisterSeminarForm() {
       setModalMessage("Pendaftaran berhasil");
       setShowModal(true);
     } catch (error) {
+      console.log(error);
       setError(true);
       if (error instanceof AxiosError) {
         toast.error(error.response.data.error);

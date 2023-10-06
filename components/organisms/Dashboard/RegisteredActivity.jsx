@@ -79,7 +79,7 @@ export default function RegisteredActivity({
               </a>
             )}
             <a
-              href={isVerified ? groupLink : "/"}
+              href={groupLink}
               className={`${!isVerified && "tooltip"} `}
               data-tip="Kamu belum terverifikasi oleh panitia"
             >
