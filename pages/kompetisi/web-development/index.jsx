@@ -29,7 +29,7 @@ const timelineContent = [
   },
   {
     title: "Penutupan Pendaftaran & Pengumpulan Karya",
-    date: "15/10/2023",
+    date: "18/10/2023",
     desc: "Batas waktu pengumpulan karya, jika peserta tidak mengumpulkan maka dianggap gugur.",
   },
   {

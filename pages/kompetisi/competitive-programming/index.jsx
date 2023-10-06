@@ -24,7 +24,7 @@ const timelineContent = [
   },
   {
     title: "Penutupan Pendaftaran",
-    date: "07/10/2023",
+    date: "11/10/2023",
     desc: "Pendaftaran dan registrasi kompetisi ditutup.",
   },
   {
