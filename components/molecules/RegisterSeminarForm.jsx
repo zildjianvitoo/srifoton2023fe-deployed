@@ -83,10 +83,6 @@ export default function RegisterSeminarForm() {
         payment_method: paymentMethod,
       });
       toast.success("Berhasil daftar Seminar");
-      setTimeout(() => {
-        router.push("/dashboard/kegiatan/seminar");
-        router.reload();
-      }, 1500);
       setError(false);
       setModalMessage("Pendaftaran berhasil");
       setShowModal(true);
