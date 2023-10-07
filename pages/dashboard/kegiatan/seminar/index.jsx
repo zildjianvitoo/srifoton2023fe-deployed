@@ -10,6 +10,7 @@ import { getDataUser, getSeminarTicket } from "@/utils/api";
 
 function Seminar() {
   const user = useUserStore((state) => state.user);
+  const setUser = useUserStore((state) => state.setUser);
 
   useEffect(() => {
     const getNewestDataUser = async () => {

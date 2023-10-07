@@ -6,6 +6,7 @@ import ErrorMessage from "@/components/atoms/ErrorMessage";
 import InputForm from "@/components/atoms/InputForm";
 import LayoutCredentials from "@/components/organisms/Credentials/LayoutCredentials";
 import { ethnocentric } from "@/public/fonts/fonts";
+import { useUserStore } from "@/store/userStore";
 import { doWebDevelopmentSubmission } from "@/utils/api";
 import { submissionFormRules } from "@/utils/formRules";
 import { AxiosError } from "axios";
@@ -14,13 +15,22 @@ import Head from "next/head";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import api from "@/utils/axiosInstance";
+import { getToken } from "@/store/tokenStore";
+import { useRouter } from "next/router";
+
+function getAccessToken() {
+  const token = getToken();
+  return token;
+}
 
 function Submission() {
   const [submissionFile, setSubmissionFile] = useState("");
   const [uploadProgress, setUploadProgress] = useState(0);
+  const [wrongType, setWrongType] = useState(false);
   const { theme } = useTheme();
   const { user } = useUserStore();
-  const [wrongType, setWrongType] = useState(false);
+  const router = useRouter();
 
   const {
     control,
@@ -28,6 +38,9 @@ function Submission() {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm({ mode: "onChange" });
+
+  const isAlreadySubmitSubmission =
+    user.registered.competitions.web_development.submission;
 
   const onSubmissionFileChangeHandler = (e) => {
     const selectedFile = e.target.files[0];
@@ -85,6 +98,7 @@ function Submission() {
         router.push("/dashboard");
       }, 2500);
     } catch (error) {
+      console.log(error);
       if (error instanceof AxiosError) {
         toast.error(error.response.data.message);
       } else {
