@@ -6,7 +6,7 @@ import { useUserStore } from "@/store/userStore";
 import Head from "next/head";
 import RegisteredActivity from "@/components/organisms/Dashboard/RegisteredActivity";
 import { useEffect, useState } from "react";
-import { getSeminarTicket } from "@/utils/api";
+import { getDataUser, getSeminarTicket } from "@/utils/api";
 
 function Seminar() {
   const user = useUserStore((state) => state.user);
