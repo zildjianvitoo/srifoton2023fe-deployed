@@ -11,7 +11,14 @@ import { getSeminarTicket } from "@/utils/api";
 function Seminar() {
   const user = useUserStore((state) => state.user);
 
-  console.log(user);
+  useEffect(() => {
+    const getNewestDataUser = async () => {
+      const { data } = await getDataUser();
+      setUser(data);
+    };
+    getNewestDataUser();
+  }, [setUser]);
+
   return (
     <>
       <Head>
