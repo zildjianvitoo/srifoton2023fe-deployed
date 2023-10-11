@@ -51,6 +51,9 @@ export default function RegisterSeminarForm() {
   const onSubmitHandler = async (formValue) => {
     if (!user) {
       toast.error("Anda harus login terlebih dahulu");
+      setTimeout(() => {
+        router.push("/login");
+      }, 1000);
       return;
     }
     if (!proof) {
