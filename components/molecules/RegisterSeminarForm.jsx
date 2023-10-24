@@ -21,6 +21,11 @@ export default function RegisterSeminarForm() {
   const [errorMessageProof, setErrorMessageProof] = useState("");
   const { showModal, setShowModal, modalMessage, setModalMessage } = useModal();
 
+  const object = {
+    name: "",
+    age: "",
+  };
+
   const { user } = useUserStore();
   const { register, handleSubmit, formState } = useForm({
     mode: "onChange",

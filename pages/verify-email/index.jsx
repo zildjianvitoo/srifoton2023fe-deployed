@@ -25,7 +25,9 @@ export default function VerifyEmail({ email }) {
       setLoading(true);
       const { data } = await sendEmailVerification({ email });
       setError(false);
-      setModalMessage("Email verifikasi berhasil dikirimkan");
+      setModalMessage(
+        "Email verifikasi berhasil dikirimkan,silahkan cek email anda"
+      );
     } catch (error) {
       setError(true);
       setModalMessage(
