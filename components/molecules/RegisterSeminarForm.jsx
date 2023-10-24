@@ -133,7 +133,7 @@ export default function RegisterSeminarForm() {
           <div className="flex flex-col">
             <InputForm
               labelFor={"college"}
-              labelText={"Universitas"}
+              labelText={"Instansi"}
               placeholder={"Contoh: Universitas Sriwijaya"}
               type={"text"}
               register={register}
@@ -146,7 +146,7 @@ export default function RegisterSeminarForm() {
           <div className="flex flex-col">
             <InputForm
               labelFor={"nim"}
-              labelText={"NIM (optional)"}
+              labelText={"NIM/NISN (optional)"}
               placeholder={"Contoh: 09021382227140"}
               type={"text"}
               register={register}
