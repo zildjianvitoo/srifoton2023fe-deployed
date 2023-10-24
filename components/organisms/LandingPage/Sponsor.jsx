@@ -160,25 +160,153 @@ export default function Sponsor() {
               width={185}
               height={88}
               src={"/assets/LandingPage/logo-infokupedia.png"}
-              alt="Logo event mahasiswa"
+              alt="Logo event infokupedia"
+              quality={100}
+            />
+          </figure>
+          <div className="flex flex-wrap items-center justify-center w-full mx-auto gap-x-8 lg:gap-x-12">
+            <figure>
+              <Image
+                width={273}
+                height={52}
+                src={"/assets/LandingPage/logo-seminarinfo.png"}
+                alt="Logo seminar info"
+                quality={100}
+              />
+            </figure>
+            <figure>
+              <Image
+                width={150}
+                height={53}
+                src={"/assets/LandingPage/logo-madingevent.png"}
+                alt="Logo mading event"
+                quality={100}
+              />
+            </figure>
+            <figure>
+              <Image
+                width={285}
+                height={91}
+                src={"/assets/LandingPage/logo-HIMASII.png"}
+                alt="Logo HIMASII"
+                quality={100}
+              />
+            </figure>
+          </div>
+          <figure>
+            <Image
+              width={100}
+              height={100}
+              src={"/assets/LandingPage/logo-DPM-1.png"}
+              alt="Logo DPM"
               quality={100}
             />
           </figure>
           <figure>
             <Image
-              width={273}
-              height={52}
-              src={"/assets/LandingPage/logo-seminarinfo.png"}
-              alt="Logo event mahasiswa"
+              width={110}
+              height={100}
+              src={"/assets/LandingPage/logo-BGF.png"}
+              alt="Logo BGF"
               quality={100}
             />
           </figure>
           <figure>
             <Image
-              width={150}
-              height={53}
-              src={"/assets/LandingPage/logo-madingevent.png"}
-              alt="Logo event mahasiswa"
+              width={110}
+              height={100}
+              src={"/assets/LandingPage/logo-hmif-umdp.png"}
+              alt="Logo hmif umdp"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={110}
+              height={100}
+              src={"/assets/LandingPage/logo-HIMDIKO.png"}
+              alt="Logo HIMDIKO"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={110}
+              height={100}
+              src={"/assets/LandingPage/logo-himsi.png"}
+              alt="Logo himsi"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={200}
+              height={100}
+              src={"/assets/LandingPage/logo-lanugraha.png"}
+              alt="Logo lanugraha"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={110}
+              height={100}
+              src={"/assets/LandingPage/logo-fasco.png"}
+              alt="Logo fasco"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={110}
+              height={100}
+              src={"/assets/LandingPage/logo-bemfasilkom.png"}
+              alt="Logo bem fasilkom"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={110}
+              height={100}
+              src={"/assets/LandingPage/logo-bemfh1.png"}
+              alt="Logo bemfh"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={80}
+              height={100}
+              src={"/assets/LandingPage/logo-bem-fmipa.png"}
+              alt="Logo bem fmipa"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={210}
+              height={100}
+              src={"/assets/LandingPage/logo-orbanfm.png"}
+              alt="Logo orban fm"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={130}
+              height={100}
+              src={"/assets/LandingPage/logo-intel.png"}
+              alt="Logo intel"
+              quality={100}
+            />
+          </figure>
+          <figure>
+            <Image
+              width={380}
+              height={100}
+              src={"/assets/LandingPage/logo-nac.png"}
+              alt="Logo nac"
               quality={100}
             />
           </figure>
