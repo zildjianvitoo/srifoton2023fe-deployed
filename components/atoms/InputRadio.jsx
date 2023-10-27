@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 
 const InputRadio = forwardRef(function InputRadio(
-  { labelFor, labelText, value, onChange, onBlur, name },
+  { labelFor, labelText, value, onChange, onBlur, name, disabled },
   ref
 ) {
   return (
@@ -15,6 +15,7 @@ const InputRadio = forwardRef(function InputRadio(
         name={name}
         ref={ref}
         className="lg:scale-[1.3] cursor-pointer"
+        disabled={disabled}
       />
       <label
         htmlFor={labelFor}

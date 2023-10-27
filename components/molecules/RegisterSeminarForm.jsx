@@ -94,7 +94,11 @@ export default function RegisterSeminarForm() {
       setShowModal(true);
       setError(true);
       if (error instanceof AxiosError) {
-        toast.error(error.response.data.error);
+        if (error.status === 500) {
+          toast.error("Terjadi kesalahan pada sisi server");
+        } else {
+          toast.error(error.response.data.error);
+        }
       } else {
         toast.error("Terjadi kesalahan");
       }
@@ -181,6 +185,7 @@ export default function RegisterSeminarForm() {
                 labelText={"Offline"}
                 value={"offline"}
                 {...register("seminarType", seminarFormRules.seminarType)}
+                disabled
               />
               <InputRadio
                 labelFor={"online"}
